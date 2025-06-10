@@ -1,0 +1,50 @@
+uuid: addb520f-9e65-48dd-9bfe-1f9f6fa3f24d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.user.register
+    - field.field.user.user.tmgmt_translation_skills
+  module:
+    - path
+    - tmgmt_language_combination
+    - user
+id: user.user.register
+targetEntityType: user
+bundle: user
+mode: register
+content:
+  account:
+    weight: -10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  language:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  matomo:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  timezone:
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  tmgmt_translation_skills:
+    type: tmgmt_language_combination_default
+    weight: 31
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

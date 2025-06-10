@@ -1,0 +1,49 @@
+uuid: cf6c0cee-7ec1-4fd7-8a85-c1fc008bba69
+langcode: en
+status: true
+dependencies:
+  config:
+    - workflows.workflow.editorial
+  module:
+    - content_moderation
+    - contextual
+    - file
+    - media
+    - node
+    - paragraphs
+    - path
+    - shortcut
+    - system
+    - taxonomy
+    - toolbar
+id: editor
+label: Editor
+weight: -8
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access files overview'
+  - 'access media overview'
+  - 'access shortcuts'
+  - 'access site in maintenance mode'
+  - 'access taxonomy overview'
+  - 'access toolbar'
+  - 'create media'
+  - 'create url aliases'
+  - 'delete media'
+  - 'delete own files'
+  - 'switch shortcut sets'
+  - 'update media'
+  - 'use editorial transition create_new_draft'
+  - 'use editorial transition restore_to_draft'
+  - 'use editorial transition review'
+  - 'view all media revisions'
+  - 'view all revisions'
+  - 'view all taxonomy revisions'
+  - 'view any unpublished content'
+  - 'view latest version'
+  - 'view the administration theme'
+  - 'view unpublished paragraphs'
+  - 'view vocabulary labels'

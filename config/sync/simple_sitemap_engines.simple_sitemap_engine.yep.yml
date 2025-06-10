@@ -1,0 +1,11 @@
+uuid: ed567aeb-359e-4eeb-aafc-6b624038c36d
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: mTkzVdGxA2hF-_Nwrt8wHOU9fd5EGt6YKCDF2eIlOgw
+id: yep
+label: Yep
+url: null
+index_now_url: 'https://indexnow.yep.com/indexnow?url=[url]&key=[key]'
+sitemap_variants: {  }

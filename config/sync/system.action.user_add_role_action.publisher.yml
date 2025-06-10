@@ -1,0 +1,14 @@
+uuid: 33b82a25-bc11-4452-9208-96db60082861
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.publisher
+  module:
+    - user
+id: user_add_role_action.publisher
+label: 'Add the Publisher role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: publisher

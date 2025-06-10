@@ -1,0 +1,49 @@
+{
+    "name": "ytgov/lagoon-boutique-template",
+    "description": "Starting point for all YG boutique Drupal CMS websites.",
+    "type": "project",
+    "license": "MIT",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:ytgov/lagoon-boutique-base-image.git"
+        }
+    ],
+    "require": {
+        "ytgov/lagoon-boutique-base-image": "dev-prod"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "installer-paths": {
+            "web/core": ["type:drupal-core"],
+            "web/libraries/{$name}": ["type:drupal-library"],
+            "web/modules/contrib/{$name}": ["type:drupal-module"],
+            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
+            "web/themes/contrib/{$name}": ["type:drupal-theme"],
+            "drush/contrib/{$name}": ["type:drupal-drush"]
+        },
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "web/"
+            },
+            "excludes": [
+                "sites/development.services.yml",
+                "sites/example.settings.local.php"
+            ]
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "drupal/core-project-message": false,
+            "drupal/core-composer-scaffold": true,
+            "cweagans/composer-patches": true,
+            "composer/installers": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
+}

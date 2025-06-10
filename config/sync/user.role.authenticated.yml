@@ -1,0 +1,34 @@
+uuid: 6c1a1928-ad9d-45dd-9e92-1be4b1398ab9
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.webform_default
+  module:
+    - filter
+    - fontawesome
+    - help
+    - matomo
+    - media
+    - node
+    - search
+    - shortcut
+    - system
+_core:
+  default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
+id: authenticated
+label: 'Authenticated user'
+weight: -9
+is_admin: false
+permissions:
+  - 'access content'
+  - 'access fontawesome additional settings'
+  - 'access help pages'
+  - 'access shortcuts'
+  - 'opt-in or out of matomo tracking'
+  - 'search content'
+  - 'use advanced search'
+  - 'use text format webform_default'
+  - 'view media'
+  - 'view own unpublished content'
+  - 'view own unpublished media'

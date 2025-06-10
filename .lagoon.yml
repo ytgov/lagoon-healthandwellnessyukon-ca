@@ -1,0 +1,55 @@
+docker-compose-yaml: docker-compose.yml
+project: lagoon-boutique-template
+environment_variables:
+  git_sha: true
+container-registries:
+  github:
+    description: "username and password consumed from environment variables for Yukon github registry for base image"
+    url: ghcr.io
+
+tasks:
+  pre-rollout:
+    - run:
+        name: drush sql-dump
+        command: |
+          mkdir -p /app/private/deploy-backup/ && drush sql-dump --ordered-dump --gzip --result-file=/app/private/deploy-backup/pre-deploy-dump.sql.gz || true
+        service: cli
+  post-rollout:
+    - run:
+        name: Sync DB and Files from uat if we are not on production
+        command: |
+          # Only if we don't have a database yet
+          if tables=$(drush sqlq 'show tables;') && [ -z "$tables" ]; then
+              drush sql-sync @lagoon.lagoon-boutique-template-lagoon-test @self -y
+              drush rsync @lagoon.lagoon-boutique-template-lagoon-test:%files @self:%files -- --omit-dir-times --no-perms --no-group --no-owner --chmod=ugo=rwX
+          fi
+        service: cli
+        when: LAGOON_ENVIRONMENT_TYPE != "production"
+    - run:
+        name: drush cr
+        command: drush cr
+        service: cli
+    - run:
+        name: drush updb
+        command: drush updb -y
+        service: cli
+    - run:
+        name: drush cim
+        command: drush cim -y
+        service: cli
+    - run:
+        name: drush cr
+        command: drush cr
+        service: cli
+
+environments:
+  lagoon-uat:
+    routes:
+      - nginx:
+          - lagoon-boutique-template.test.yukon.ca:
+              insecure: Redirect
+    cronjobs:
+      - name: drush cron
+        schedule: "0 * * * *"
+        command: drush cron
+        service: cli

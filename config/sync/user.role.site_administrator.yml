@@ -1,0 +1,98 @@
+uuid: f8d7d9b1-b6de-460e-afd7-2cefaae9aeb5
+langcode: en
+status: true
+dependencies:
+  config:
+    - workflows.workflow.editorial
+  module:
+    - block_content
+    - content_moderation
+    - content_translation
+    - contextual
+    - entity_reference_revisions
+    - file
+    - locale
+    - media
+    - menu_link_content
+    - node
+    - paragraphs
+    - path
+    - redirect
+    - shortcut
+    - system
+    - taxonomy
+    - tmgmt
+    - tmgmt_local
+    - toolbar
+    - webform
+id: site_administrator
+label: 'Site Administrator'
+weight: -5
+is_admin: null
+permissions:
+  - 'accept translation jobs'
+  - 'access administration pages'
+  - 'access block library'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access files overview'
+  - 'access media overview'
+  - 'access site in maintenance mode'
+  - 'access site reports'
+  - 'access taxonomy overview'
+  - 'access toolbar'
+  - 'access user profiles'
+  - 'access webform help'
+  - 'access webform overview'
+  - 'access webform submission user'
+  - 'administer menu'
+  - 'administer redirects'
+  - 'administer taxonomy'
+  - 'administer translation tasks'
+  - 'administer url aliases'
+  - 'administer webform submission'
+  - 'bypass node access'
+  - 'create content translations'
+  - 'create media'
+  - 'create translation jobs'
+  - 'create url aliases'
+  - 'customize shortcut links'
+  - 'delete all revisions'
+  - 'delete all taxonomy revisions'
+  - 'delete any file'
+  - 'delete any media'
+  - 'delete any webform submission'
+  - 'delete content translations'
+  - 'delete media'
+  - 'delete orphan revisions'
+  - 'delete own files'
+  - 'delete translation jobs'
+  - 'edit any webform submission'
+  - 'provide translation services'
+  - 'revert all revisions'
+  - 'revert all taxonomy revisions'
+  - 'submit translation jobs'
+  - 'switch shortcut sets'
+  - 'translate any entity'
+  - 'translate editable entities'
+  - 'translate interface'
+  - 'translate menu_link_content'
+  - 'update any media'
+  - 'update content translations'
+  - 'update media'
+  - 'use editorial transition archive'
+  - 'use editorial transition create_new_draft'
+  - 'use editorial transition publish'
+  - 'use editorial transition restore'
+  - 'use editorial transition restore_to_draft'
+  - 'use editorial transition review'
+  - 'view all media revisions'
+  - 'view all revisions'
+  - 'view all taxonomy revisions'
+  - 'view any unpublished content'
+  - 'view any webform submission'
+  - 'view latest version'
+  - 'view the administration theme'
+  - 'view unpublished paragraphs'
+  - 'view user email addresses'
+  - 'view vocabulary labels'

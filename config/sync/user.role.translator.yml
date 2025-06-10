@@ -1,0 +1,66 @@
+uuid: 424c8985-813b-402e-b289-822737789546
+langcode: en
+status: true
+dependencies:
+  config:
+    - workflows.workflow.editorial
+  module:
+    - content_moderation
+    - content_translation
+    - contextual
+    - file
+    - locale
+    - media
+    - menu_link_content
+    - node
+    - paragraphs
+    - path
+    - shortcut
+    - system
+    - taxonomy
+    - tmgmt
+    - tmgmt_local
+    - toolbar
+id: translator
+label: Translator
+weight: -7
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access files overview'
+  - 'access media overview'
+  - 'access shortcuts'
+  - 'access site in maintenance mode'
+  - 'access taxonomy overview'
+  - 'access toolbar'
+  - 'create content translations'
+  - 'create media'
+  - 'create translation jobs'
+  - 'create url aliases'
+  - 'delete content translations'
+  - 'delete media'
+  - 'delete own files'
+  - 'delete translation jobs'
+  - 'provide translation services'
+  - 'submit translation jobs'
+  - 'switch shortcut sets'
+  - 'translate any entity'
+  - 'translate editable entities'
+  - 'translate interface'
+  - 'translate menu_link_content'
+  - 'update content translations'
+  - 'update media'
+  - 'use editorial transition create_new_draft'
+  - 'use editorial transition publish'
+  - 'use editorial transition restore_to_draft'
+  - 'use editorial transition review'
+  - 'view all media revisions'
+  - 'view all revisions'
+  - 'view all taxonomy revisions'
+  - 'view any unpublished content'
+  - 'view latest version'
+  - 'view the administration theme'
+  - 'view unpublished paragraphs'
+  - 'view vocabulary labels'

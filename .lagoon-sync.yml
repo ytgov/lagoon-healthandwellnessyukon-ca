@@ -1,0 +1,7 @@
+lagoon-sync:
+  files:
+    config:
+      sync-directory: "/app/web/sites/default/files"
+    local:
+      config:
+        sync-directory: "/var/www/html/web/sites/default/files"

@@ -1,0 +1,61 @@
+uuid: c7d31233-e8f8-4f21-a25d-9be57065d232
+langcode: en
+status: true
+dependencies:
+  config:
+    - workflows.workflow.editorial
+  module:
+    - content_moderation
+    - content_translation
+    - contextual
+    - file
+    - media
+    - menu_link_content
+    - node
+    - paragraphs
+    - path
+    - shortcut
+    - system
+    - taxonomy
+    - toolbar
+id: publisher
+label: Publisher
+weight: -6
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access files overview'
+  - 'access media overview'
+  - 'access site in maintenance mode'
+  - 'access taxonomy overview'
+  - 'access toolbar'
+  - 'create content translations'
+  - 'create media'
+  - 'create url aliases'
+  - 'delete any media'
+  - 'delete content translations'
+  - 'delete media'
+  - 'delete own files'
+  - 'switch shortcut sets'
+  - 'translate any entity'
+  - 'translate editable entities'
+  - 'translate menu_link_content'
+  - 'update any media'
+  - 'update content translations'
+  - 'update media'
+  - 'use editorial transition archive'
+  - 'use editorial transition create_new_draft'
+  - 'use editorial transition publish'
+  - 'use editorial transition restore'
+  - 'use editorial transition restore_to_draft'
+  - 'use editorial transition review'
+  - 'view all media revisions'
+  - 'view all revisions'
+  - 'view all taxonomy revisions'
+  - 'view any unpublished content'
+  - 'view latest version'
+  - 'view the administration theme'
+  - 'view unpublished paragraphs'
+  - 'view vocabulary labels'

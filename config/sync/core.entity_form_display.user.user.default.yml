@@ -1,0 +1,49 @@
+uuid: 909aeba0-b1ac-4b59-8ea6-93329ec86551
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.user.user.tmgmt_translation_skills
+  module:
+    - path
+    - tmgmt_language_combination
+    - user
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  account:
+    weight: -10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  language:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  matomo:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  timezone:
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  tmgmt_translation_skills:
+    type: tmgmt_language_combination_default
+    weight: 31
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true
