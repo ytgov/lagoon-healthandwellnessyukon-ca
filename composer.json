@@ -14,14 +14,19 @@
         }
     ],
     "require": {
-        "ytgov/lagoon-boutique-base-image": "dev-prod"
+        "ytgov/lagoon-boutique-base-image": "dev-prod",
+        "drupal/bootstrap_sass": "^5.0"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "extra": {
         "installer-paths": {
             "web/core": ["type:drupal-core"],
-            "web/libraries/{$name}": ["type:drupal-library"],
+            "web/libraries/{$name}": [
+                "type:drupal-library",
+                "type:bower-asset",
+                "type:npm-asset"
+            ],
             "web/modules/contrib/{$name}": ["type:drupal-module"],
             "web/profiles/contrib/{$name}": ["type:drupal-profile"],
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
@@ -35,7 +40,11 @@
                 "sites/development.services.yml",
                 "sites/example.settings.local.php"
             ]
-        }
+        },
+        "installer-types": [
+            "bower-asset",
+            "npm-asset"
+        ]
     },
     "config": {
         "allow-plugins": {
@@ -45,5 +54,8 @@
             "composer/installers": true,
             "dealerdirect/phpcodesniffer-composer-installer": true
         }
+    },
+    "require-dev": {
+        "drupal/devel": "^5.3"
     }
 }
