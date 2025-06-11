@@ -1,0 +1,14 @@
+uuid: 75b04563-1d5f-4ec5-a144-400dc35cdb72
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: wIfsVJiWeEtLoD_8AhKOJ8vFwwLq3UYVc2g1XBC3idg
+id: hero_banner_slideshow
+label: 'Hero Banner Slideshow'
+description: 'Crops to the specific aspect ratio of home page slideshow images.'
+aspect_ratio: '688:315'
+soft_limit_width: 2560
+soft_limit_height: 1172
+hard_limit_width: null
+hard_limit_height: null
