@@ -1,0 +1,22 @@
+uuid: 37f33ce3-3e99-4b25-a192-d97baf1efe6f
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - kci_base
+_core:
+  default_config_hash: BZ5tpW7H8X4PVGRm3MImTIHd2tN0eF7zOtp4SpRYUA0
+id: kci_base_messages
+theme: kci_base
+region: highlighted
+weight: -5
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

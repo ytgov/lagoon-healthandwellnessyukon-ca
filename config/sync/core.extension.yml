@@ -95,6 +95,8 @@ module:
   paragraphs: 11
   minimal: 1000
 theme:
-  olivero: 0
   claro: 0
+  bootstrap_barrio: 0
+  kci_base: 0
+  site_theme: 0
 profile: minimal

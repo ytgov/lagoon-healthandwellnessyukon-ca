@@ -1,0 +1,20 @@
+uuid: c6c49a80-aec4-43da-b6dd-8a687e77487f
+langcode: en
+status: true
+dependencies:
+  theme:
+    - kci_base
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: kci_base_primary_admin_actions
+theme: kci_base
+region: highlighted
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }
