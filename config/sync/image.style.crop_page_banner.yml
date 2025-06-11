@@ -1,0 +1,20 @@
+uuid: 06c74e57-18db-4e8e-9a08-c7c569e003e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.page_banner
+  module:
+    - crop
+_core:
+  default_config_hash: BYn1LpQb2VXknsU4cZF3fZ6fzG3kkqEocoh5eWNf2zs
+name: crop_page_banner
+label: 'Cropped: Page Banner'
+effects:
+  ca9cfa07-138b-4031-bbbd-222ef9679039:
+    uuid: ca9cfa07-138b-4031-bbbd-222ef9679039
+    id: crop_crop
+    weight: null
+    data:
+      crop_type: page_banner
+      automatic_crop_provider: null

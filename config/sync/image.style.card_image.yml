@@ -1,0 +1,28 @@
+uuid: 4513f977-4c68-40ea-860e-a9506040b1ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.card_image
+  module:
+    - crop
+_core:
+  default_config_hash: gbhK9VkUZWUhlazaDDHtxedcmdwbtv29sohMeK5s3TU
+name: card_image
+label: 'Card Image'
+effects:
+  8d4bfe99-070e-4339-8a8c-20f2fcf1161e:
+    uuid: 8d4bfe99-070e-4339-8a8c-20f2fcf1161e
+    id: image_scale_and_crop
+    weight: -9
+    data:
+      width: 375
+      height: 92
+      anchor: center-center
+  fe44a07d-fd40-45ca-aa50-03520cf3f9d3:
+    uuid: fe44a07d-fd40-45ca-aa50-03520cf3f9d3
+    id: crop_crop
+    weight: -10
+    data:
+      crop_type: card_image
+      automatic_crop_provider: null

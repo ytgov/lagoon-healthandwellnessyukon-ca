@@ -1,0 +1,17 @@
+uuid: f288a9c7-572a-4c54-b744-51a0c879dd77
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: WLeWu2yKUAs4h-LS2EWJ2G7IcSGla8oUyT2g36BcAsE
+name: news_events_thumbnail
+label: 'News/Events Thumbnail'
+effects:
+  a30341d0-c443-42ef-9841-94ad5979a6e8:
+    uuid: a30341d0-c443-42ef-9841-94ad5979a6e8
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 150
+      height: 150
+      anchor: center-center

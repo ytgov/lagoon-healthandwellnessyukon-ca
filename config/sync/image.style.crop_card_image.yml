@@ -1,0 +1,20 @@
+uuid: 3e4ae4ac-c5a3-4fe9-a9a6-4865489a84a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.card_image
+  module:
+    - crop
+_core:
+  default_config_hash: L_NS1-p2GbBu5sBSjdQiOVM4KwjPEVNlo0NGOnT7624
+name: crop_card_image
+label: 'Cropped: Card Image'
+effects:
+  a04850de-692b-423b-b7d0-65d7399c7189:
+    uuid: a04850de-692b-423b-b7d0-65d7399c7189
+    id: crop_crop
+    weight: null
+    data:
+      crop_type: card_image
+      automatic_crop_provider: null

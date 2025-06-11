@@ -1,0 +1,17 @@
+uuid: d529e2e1-4ecd-49a6-88fe-2797bf90b17c
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: SkN-YS-oSvbt-hlqNxxMiFBvyXhaz1Wy1FOHq3XvAxQ
+name: news_events_grid_thumbnail
+label: 'News/Events Grid Thumbnail'
+effects:
+  3fe424c4-c175-45cf-a352-c112cfdd0a9d:
+    uuid: 3fe424c4-c175-45cf-a352-c112cfdd0a9d
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 800
+      height: 1261
+      anchor: center-center

@@ -1,0 +1,17 @@
+uuid: 0fe58b1f-7e84-47ec-86e8-d9469881f48a
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: sL76PWo5EIXczssj-eAeUXGW-fZKyKJt0cGEjfANCzQ
+name: content_fit
+label: 'Content Fit'
+effects:
+  8400fa43-aea6-4cbe-83e8-8ed8cce705a2:
+    uuid: 8400fa43-aea6-4cbe-83e8-8ed8cce705a2
+    id: image_scale
+    weight: 1
+    data:
+      width: 1400
+      height: null
+      upscale: false

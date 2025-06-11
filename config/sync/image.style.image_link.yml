@@ -1,0 +1,17 @@
+uuid: ea074b7f-6df2-4f04-8841-498cea027ae0
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: eq7zHHXHvxr1XygC-htvUcb0V0kwK1rt7ikyD6rRYW0
+name: image_link
+label: 'Image Link'
+effects:
+  1f3fba33-33af-4d79-9030-c4222f3fada7:
+    uuid: 1f3fba33-33af-4d79-9030-c4222f3fada7
+    id: image_scale
+    weight: 1
+    data:
+      width: 300
+      height: null
+      upscale: false
