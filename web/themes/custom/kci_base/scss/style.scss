@@ -1,0 +1,363 @@
+/*
+Theme Name: KCI Base - Bootstrap 5 Sass
+Description: KCI Base theme, providing Bootstrap 5 with Sass
+*/
+
+// import files
+@import "import";
+
+/* GENERAL STYLES
+-------------------------------------------------*/
+
+html, body, .dialog-off-canvas-main-canvas, #page-wrapper, #page {
+  min-height: 100vh;
+}
+
+body {
+  background: $body-bg;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-family-headings;
+  font-weight: $font-weight-headings;
+}
+
+.floating-local-tasks .contextual {
+  z-index: 995;
+}
+
+#drupal-off-canvas-wrapper {
+  z-index: 1060 !important;
+}
+
+.nav-link:focus-visible,
+.dropdown-item a:focus-visible {
+  box-shadow: $nav-link-focus-box-shadow;
+}
+
+iframe {
+  border: none;
+}
+
+small, .small {
+  line-height: normal;
+}
+
+.lh-normal {
+  line-height: normal;
+}
+
+::-moz-selection { /* Code for Firefox */
+  background: $text-selection-color;
+}
+
+::selection {
+  background: $text-selection-color;
+}
+
+.media-oembed-video-responsive-video {
+  position: relative;
+  &:after {
+    content: "";
+    display: block;
+    padding-bottom: 56.25%;
+  }
+  iframe {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+}
+
+a {
+  .faded-sort-indicator {
+    color: $gray-500;
+  }
+  &:hover .faded-sort-indicator {
+    color: $link-hover-color;
+  }
+}
+
+// New window link accessibility - put an indicator icon after the link.
+a[target="_blank"]:not(.hide-new-window-indicator) {
+  &:after {
+    display: inline-block;
+    vertical-align: text-top;
+    @include font-size(0.6rem);
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f35d";
+    margin-left: 3px;
+    margin-right: 3px;
+    vertical-align: super;
+    color: inherit;
+  }
+}
+
+em.placeholder {
+  display: initial;
+  min-height: auto;
+  vertical-align: initial;
+  cursor: default;
+  background-color: transparent;
+  opacity: $placeholder-opacity-max;
+}
+
+label {
+  font-weight: $field-label-weight;
+  font-style: $field-label-style;
+}
+
+.block,
+.views-row,
+.views-view-grid .row > div,
+.view-content table tr td {
+  position: relative;
+  .dropbutton-wrapper {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 50;
+    width: auto;
+    margin-right: 0 !important;
+    padding-right: 0 !important;
+    .dropbutton-widget {
+      position: relative !important;
+    }
+  }
+}
+
+.dropbutton-wrapper ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  list-style: none;
+  li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    list-style: none;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.align-center {
+  // The default align-center class for block elements tries
+  // to use auto margins, but this is no good for auto-width
+  // elements which is usually the case (like for embedded
+  // images). So we override it here to use flex box.
+  display: flex !important;
+  justify-content: center !important;
+}
+
+span.nav-link {
+  cursor: pointer;
+}
+
+.colon-after {
+  padding-right: 0 !important;
+  &:after {
+    display: inline-block;
+    content: ":\00a0";
+    [lang="fr"] & {
+      content: "\00a0:\00a0";
+    }
+  }
+  &.fw-bold:after {
+    font-weight: bold;
+  }
+}
+
+// Disable pointer events on tooltips so hovering over them cannot interfere
+// with any possible pointer events on elements behind them.
+.tooltip {
+  pointer-events: none !important;
+}
+
+/* COLORS
+--------------------------------------------------*/
+
+h2.title {
+  color: $page-title-color;
+}
+
+a {
+  transition: $standard-transition;
+  .dropbutton-wrapper & {
+    font-weight: normal;
+  }
+}
+
+.bg-inverse {
+  background: $primary-shade !important;
+}
+
+.nav-item.dropdown:last-child > .dropdown-menu {
+  left: auto;
+  right: 0;
+}
+
+.dropdown-item {
+  padding: 0 !important;
+  &:hover {
+    background-color: transparent;
+  }
+  a {
+    display: block;
+    padding: $dropdown-item-padding-y $dropdown-item-padding-x;
+    &:hover {
+      background-color: $dropdown-link-hover-bg;
+    }
+  }
+}
+
+.menu--account li a {
+  color: $primary-shade;
+}
+
+.site-name-slogan a {
+  text-decoration: none;
+}
+
+.card-group img {
+  margin: 0;
+  width: 100%;
+  height: auto;
+}
+
+.card-group .field--type-image {
+  margin: 0;
+}
+
+.slick {
+  width: 100%;
+}
+
+.slick > div {
+  margin: 0 15px;
+}
+
+a.social-media-icon {
+  color: $social-media-icon-color !important;
+  text-decoration: none !important;
+  &:hover {
+    color: $social-media-icon-hover-color !important;
+    text-decoration: none !important;
+  }
+  &:after {
+    // Hide the new window indicator.
+    display: none;
+  }
+  .site-footer & {
+    color: $footer-link-color !important;
+    &:hover {
+      color: $footer-link-hover-color !important;
+    }
+  }
+}
+
+.nav-item.dropdown:nth-last-child(2),
+.nav-item.dropdown:nth-last-child(1) {
+  .dropdown-menu {
+    left: auto !important;
+    right: 0 !important;
+  }
+}
+
+.ui-dialog .ui-dialog-titlebar-close {
+  font-family: 'Font Awesome 5 Free' !important;
+  font-weight: 900;
+  color: $white;
+  &:before {
+    content: "\f00d";
+  }
+}
+
+:target {
+  scroll-margin-top: $anchor-target-clearance;
+  .gin--classic-toolbar.toolbar-fixed.toolbar-horizontal & {
+    scroll-margin-top: $anchor-target-clearance + 40;
+  }
+  .gin--classic-toolbar.toolbar-fixed.toolbar-horizontal.toolbar-tray-open & {
+    scroll-margin-top: $anchor-target-clearance + 80;
+  }
+  .gin--horizontal-toolbar.toolbar-fixed.toolbar-horizontal & {
+    scroll-margin-top: $anchor-target-clearance + 55;
+  }
+  @include media-breakpoint-up(lg) {
+    scroll-margin-top: $anchor-target-clearance + 10;
+    .gin--classic-toolbar.toolbar-fixed.toolbar-horizontal & {
+      scroll-margin-top: $anchor-target-clearance + 50;
+    }
+    .gin--classic-toolbar.toolbar-fixed.toolbar-horizontal.toolbar-tray-open & {
+      scroll-margin-top: $anchor-target-clearance + 90;
+    }
+    .gin--horizontal-toolbar.toolbar-fixed.toolbar-horizontal & {
+      scroll-margin-top: $anchor-target-clearance + 65;
+    }
+  }
+}
+
+// Blockquote
+blockquote {
+  @extend .blockquote;
+  background-color: $blockquote-bg;
+  font-style : $blockquote-font-style;
+  color      : $blockquote-color;
+  padding    : 1.2em 30px 1.2em 75px;
+  border-left: $blockquote-border-width solid $blockquote-border-color;
+  position   : relative;
+
+  @include media-breakpoint-up(lg) {
+    width: $blockqoute-lg-width;
+  }
+
+  &::before {
+    position   : absolute;
+    left       : 10px;
+    top        : 10px;
+    font-family: 'Font Awesome 5 Free';
+    content    : "\f10d";
+    font-weight: $font-weight-bold;
+  }
+  &::after {
+    content: '';
+  }
+}
+
+.ui-widget-content {
+  background-color: $body-bg;
+  color: $body-color;
+}
+
+.ui-autocomplete {
+  @include border-radius($input-border-radius, 0);
+  .ui-menu-item-wrapper {
+    padding: $input-padding-y $input-padding-x;
+    border: none;
+    &:hover, &:focus, &:focus-visible, &.ui-state-active {
+      background: $dropdown-link-hover-bg;
+      color: $dropdown-link-hover-color;
+      border: none;
+      box-shadow: $input-focus-box-shadow;
+    }
+  }
+}
+
+.editing-container {
+  z-index: 1050 !important;
+}

@@ -1,0 +1,64 @@
+/**
+ * @file
+ * Styles for modal dialogs. Overrides the one that comes with barrio.
+ *
+ * Most rules need to have !important to override the default styles.
+ */
+
+.ui-widget-overlay {
+  opacity: 1 !important;
+  background-color: $ui-widget-overlay-bg !important;
+  backdrop-filter: $ui-widget-overlay-backdrop-filter;
+}
+
+.ui-dialog {
+  border-radius: $ui-dialog-border-radius !important;
+  overflow: hidden !important;
+  border: 1px solid $ui-dialog-border-color !important;
+  .ui-dialog-titlebar {
+    background-color: $ui-dialog-titlebar-bg !important;
+    color: $ui-dialog-titlebar-color !important;
+    padding: $ui-dialog-titlebar-padding-y $ui-dialog-titlebar-padding-x !important;
+    .ui-dialog-titlebar-close {
+      top: 0 !important;
+      bottom: 0 !important;
+      transform: translate(0, 0) !important;
+      background-color: $ui-dialog-close-bg !important;
+      color: $ui-dialog-close-color !important;
+      border: none !important;
+      opacity: 1 !important;
+      transition: $standard-transition;
+      .ui-icon.ui-icon-closethick {
+        transform: translate(0, 0) !important;
+        background: svg-load('fa-xmark.svg', fill=$ui-dialog-close-color) 50% no-repeat !important;
+      }
+      &:hover, &:focus, &:focus-visible {
+        background-color: $ui-dialog-close-hover-bg !important;
+        color: $ui-dialog-close-hover-color !important;
+        .ui-icon.ui-icon-closethick {
+          background: svg-load('fa-xmark.svg', fill=$ui-dialog-close-hover-color) 50% no-repeat !important;
+        }
+      }
+      &:focus-visible {
+        outline: none !important;
+        box-shadow: inset 0 0 0 0.2rem $ui-dialog-close-focus-shadow !important;
+      }
+    }
+  }
+  .ui-dialog-content {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+    .form-actions {
+      margin-bottom: 0 !important;
+      text-align: right;
+      button {
+        margin-left: 0.5rem;
+      }
+    }
+    input,
+    select,
+    textarea {
+      font-size: $font-size-base;
+    }
+  }
+}

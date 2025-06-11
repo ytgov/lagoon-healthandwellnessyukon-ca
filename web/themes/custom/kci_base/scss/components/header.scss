@@ -1,0 +1,359 @@
+/* ------------------ Header ------------------ */
+
+.toolbar-oriented .toolbar-bar,
+.admin-toolbar,
+html:not(.admin-toolbar-expanded) .cloned-flyout {
+  z-index: 1050 !important;
+}
+
+.gin--horizontal-toolbar .gin-secondary-toolbar--frontend {
+  top: var(--gin-toolbar-height);
+}
+
+.gin--core-navigation .gin-secondary-toolbar--frontend {
+  transition: margin-left var(--admin-toolbar-transition);
+}
+
+.gin-secondary-toolbar--frontend {
+  z-index: 1040 !important;
+}
+
+.floating-header-placeholder {
+  .gin--classic-toolbar.toolbar-fixed &,
+  .gin--classic-toolbar.toolbar-vertical &,
+  .gin--horizontal-toolbar.toolbar-fixed & {
+    padding-top: var(--gin-toolbar-height);
+    margin-top: calc(var(--gin-toolbar-height) * -1);
+  }
+  .gin--vertical-toolbar.gin--secondary-toolbar-frontend &,
+  .gin--navigation.gin--secondary-toolbar-frontend &,
+  .gin--core-navigation.gin--secondary-toolbar-frontend & {
+    padding-top: var(--gin-toolbar-secondary-height);
+    margin-top: calc(var(--gin-toolbar-secondary-height) * -1);
+  }
+  .gin--classic-toolbar.toolbar-fixed.gin--secondary-toolbar-frontend &,
+  .gin--classic-toolbar.toolbar-vertical.gin--secondary-toolbar-frontend &,
+  .gin--horizontal-toolbar.toolbar-fixed.gin--secondary-toolbar-frontend & {
+    padding-top: calc(var(--gin-toolbar-secondary-height) + var(--gin-toolbar-height));
+    margin-top: calc((var(--gin-toolbar-secondary-height) + var(--gin-toolbar-height)) * -1);
+  }
+}
+
+#header {
+  background-color: $header-background;
+  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+  .has-banner &.floating {
+    background-color: $header-has-banner-background;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    width: 100%;
+  }
+  .gin--classic-toolbar.toolbar-fixed &,
+  .gin--classic-toolbar.toolbar-vertical &,
+  .gin--horizontal-toolbar.toolbar-fixed & {
+    &.affix, &.floating {
+      top: var(--gin-toolbar-height);
+    }
+    .offcanvas {
+      margin-top: var(--gin-toolbar-height);
+    }
+  }
+  .gin--vertical-toolbar &,
+  .gin--navigation &,
+  .gin--core-navigation & {
+    &.affix, &.floating {
+      right: 0;
+      width: auto;
+    }
+  }
+  .gin--vertical-toolbar.gin--secondary-toolbar-frontend &,
+  .gin--navigation.gin--secondary-toolbar-frontend &,
+  .gin--core-navigation.gin--secondary-toolbar-frontend & {
+    &.affix, &.floating {
+      top: var(--gin-toolbar-secondary-height);
+    }
+    .offcanvas {
+      margin-top: var(--gin-toolbar-secondary-height);
+    }
+  }
+  .gin--vertical-toolbar & {
+    &.affix, &.floating {
+      @media all and (min-width: 61em) {
+        left: var(--gin-toolbar-width-collapsed);
+      }
+    }
+  }
+  [data-toolbar-menu=open].gin--vertical-toolbar.gin--secondary-toolbar-frontend & {
+    &.affix, &.floating {
+      @media all and (min-width: 61em) {
+        left: var(--gin-toolbar-width);
+      }
+    }
+  }
+  .gin--navigation &, .gin--core-navigation & {
+    &.affix, &.floating {
+      left: 0;
+      @media all and (min-width: 61em) {
+        left: var(--gin-toolbar-x-offset);
+      }
+    }
+  }
+  .gin--classic-toolbar.toolbar-fixed.gin--secondary-toolbar-frontend &,
+  .gin--classic-toolbar.toolbar-vertical.gin--secondary-toolbar-frontend &,
+  .gin--horizontal-toolbar.toolbar-fixed.gin--secondary-toolbar-frontend & {
+    &.affix, &.floating {
+      top: calc(var(--gin-toolbar-secondary-height) + var(--gin-toolbar-height));
+    }
+    .offcanvas {
+      margin-top: calc(var(--gin-toolbar-secondary-height) + var(--gin-toolbar-height));
+    }
+  }
+  &.double-wide-offcanvas .offcanvas-end {
+    width: $offcanvas-horizontal-width * 2 !important;
+  }
+  .toolbar-fixed.toolbar-vertical.toolbar-tray-open:not(.gin--navigation):not(.gin--core-navigation) {
+    &.affix,
+    &.floating {
+      width: auto;
+      right: 0;
+      @include media-breakpoint-up(lg) {
+        left: var(--gin-toolbar-x-offset);
+      }
+    }
+  }
+  .scrolled &.floating {
+    background-color: $header-background;
+  }
+  .scrolled &.floating,
+  .scrolled &.affix {
+    box-shadow: $header-affix-shadow;
+  }
+  .scrolled &.semi-transparent-on-scroll,
+  .scrolled &.affix.semi-transparent-on-scroll,
+  .scrolled &.floating.semi-transparent-on-scroll {
+    background-color: transparentize($header-background, $header-background-transparency-amount);
+    &:not(.has-offcanvas-menu) {
+      backdrop-filter: blur($header-background-transparency-blur-amount);
+    }
+  }
+  .block-menu {
+    // Common styles for menu blocks anywhere
+    // in the header.
+    .dropdown-menu-wrapper {
+      padding: 0 $dropdown-shadow-offset-x $dropdown-shadow-offset-y;
+      position: absolute;
+      z-index: $zindex-dropdown;
+      top: 100%;
+      left: -$dropdown-shadow-offset-x;
+      overflow: hidden;
+      .dropdown-menu {
+        position: relative;
+      }
+    }
+    .dropdown-menu {
+      overflow: hidden;
+      &.no-shadow {
+        box-shadow: none !important;
+      }
+      @include media-breakpoint-down(lg) {
+        box-shadow: none !important;
+      }
+    }
+    &.has-offcanvas-menu .dropdown-menu {
+      position: static !important;
+    }
+    .dropdown-item {
+      white-space: normal;
+      @include media-breakpoint-up(lg) {
+        white-space: nowrap;
+      }
+      > a:not(.btn) {
+        &:link, &:active, &:focus, &:visited {
+          color: $dropdown-link-color;
+          text-decoration: none;
+          &.active, &.is-active {
+            color: $dropdown-link-active-color;
+            background: $dropdown-link-active-bg;
+          }
+        }
+        &:hover, &.active:hover, &.is-active:hover {
+          color: $dropdown-link-hover-color;
+          background: $dropdown-link-hover-bg;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  #navbar-main .block-menu {
+    // Set main nav colours.
+    .nav {
+      .nav-link {
+        color: $main-nav-link-color;
+        background-color: $main-nav-link-bg-color;
+        // Always have the left and right padding on nav items.
+        padding-right: $navbar-nav-link-padding-x;
+        padding-left: $navbar-nav-link-padding-x;
+        border: none;
+        &:link, &:focus, &:visited {
+          color: $main-nav-link-color;
+          background-color: $main-nav-link-bg-color;
+        }
+        &:active, &.active, &.is-active {
+          color: $main-nav-link-active-color;
+          background-color: $main-nav-link-active-bg-color;
+        }
+        &:hover, &.show {
+          color: $main-nav-link-hover-color;
+          background-color: $main-nav-link-hover-bg-color;
+        }
+      }
+    }
+  }
+  #navbar-top {
+    background-color: $top-navbar-bg-color;
+    .block-menu {
+      // Set top nav colours.
+      .nav {
+        .nav-link {
+          color: $top-nav-link-color;
+          background-color: $top-nav-link-bg-color;
+          // Always have the left and right padding on nav items.
+          padding-right: $navbar-nav-link-padding-x;
+          padding-left: $navbar-nav-link-padding-x;
+          border: none;
+          &:link, &:focus, &:visited {
+            color: $top-nav-link-color;
+            background-color: $top-nav-link-bg-color;
+          }
+          &:active, &.active, &.is-active {
+            color: $top-nav-link-active-color;
+            background-color: $top-nav-link-active-bg-color;
+          }
+          &:hover, &.show {
+            color: $top-nav-link-hover-color;
+            background-color: $top-nav-link-hover-bg-color;
+          }
+        }
+      }
+    }
+  }
+  #block-views-block-advisory-alert-advisory-alert {
+    background-color: $page-top-alerts-bg-color;
+    .view-content {
+      color: $page-top-alerts-text-color;
+      .views-row {
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid $page-top-alerts-divider-color;
+        &:last-child {
+          padding-bottom: 0;
+          margin-bottom: 0;
+          border-bottom: none;
+        }
+      }
+      a {
+        &:link, &:active, &:focus, &:visited {
+          color: $page-top-alerts-link-color;
+          text-decoration: $page-top-alerts-link-decoration;
+        }
+        &:hover {
+          color: $page-top-alerts-link-hover-color;
+          text-decoration: $page-top-alerts-link-hover-decoration
+        }
+      }
+    }
+  }
+  .full-width-navbar {
+    background-color: $full-width-menu-bg;
+  }
+}
+
+.gin--core-navigation.gin--secondary-toolbar-frontend .top-bar {
+  // Hide the core navigation top bar when using the secondary toolbar.
+  // We might want to show it in the future, but for now it doesn't work
+  // that well in combination.
+  display: none;
+}
+
+#navbar-top {
+    padding: 0 1rem;
+}
+
+#navbar-top.navbar-dark .nav-link:hover,
+#navbar-top.navbar-dark .nav-link:focus {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+#navbar-top.navbar-dark .nav-link {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#navbar-top.navbar-light .nav-link:hover,
+#navbar-top.navbar-light .nav-link:focus {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+#navbar-top.navbar-light .nav-link {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.navbar-brand .site-logo {
+    height: $site-logo-height-mobile;
+    transition: $standard-transition;
+    @include media-breakpoint-up(lg) {
+        height: $site-logo-height;
+    }
+}
+
+@media (max-width: 33.9em) {
+    .navbar-toggleable-xs .navbar-nav .nav-item+.nav-item,
+    .navbar-toggleable-xs.collapse.in .navbar-nav .nav-item {
+        margin-left: 0;
+        float: none;
+    }
+}
+
+@media (max-width: 47.9em) {
+    .navbar-toggleable-sm .navbar-nav .nav-item+.nav-item,
+    .navbar-toggleable-xs.collapse.in .navbar-nav .nav-item {
+        margin-left: 0;
+        float: none;
+    }
+}
+
+.nav span.nav-link {
+  cursor: pointer;
+}
+
+.navbar-toggler {
+  @include font-size($font-size-base * 1.8);
+  color: $hamburger-button-color;
+  background-color: $hamburger-button-bg-color;
+  border: 1px solid $hamburger-button-border-color;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  &:hover {
+    color: $hamburger-button-hover-color;
+    background: $hamburger-button-hover-bg-color;
+    border-color: $hamburger-button-hover-border-color;
+  }
+}
+
+// Fix so the gin meta breadcrumbs don't cover the header.
+.region-meta--frontend {
+  .region-breadcrumb {
+    .breadcrumb {
+      padding: 0;
+      margin: 0;
+      ol {
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 976px) {
+  .gin--horizontal-toolbar #toolbar-administration {
+    z-index: 1045 !important;
+  }
+}

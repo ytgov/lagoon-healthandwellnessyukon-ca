@@ -1,0 +1,69 @@
+{#
+/**
+ * @file
+ * Theme override for views bootstrap accordion template.
+ *
+ * The template has re-written to use the bootstrap 5 accordion component.
+ * https://getbootstrap.com/docs/5.0/components/accordion/
+ *
+ * Available variables:
+ * - attributes: Remaining HTML attributes for the element.
+ * - css_name: A css-safe version of the view name.
+ * - css_class: The user-specified classes names, if any.
+ * - header: The optional header.
+ * - footer: The optional footer.
+ * - rows: The results of the view query, if any.
+ * - empty: The content to display if there are no rows.
+ * - pager: The optional pager next/prev links to display.
+ * - exposed: Exposed widget form/info to display.
+ * - feed_icons: Optional feed icons to display.
+ * - more: An optional link to the next page of results.
+ * - title: Title of the view, only used when displaying in the admin preview.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the view title.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the view title.
+ * - attachment_before: An optional attachment view to be displayed before the
+ *   view content.
+ * - attachment_after: An optional attachment view to be displayed after the
+ *   view content.
+ * - dom_id: Unique id for every view being printed to give unique class for
+ *   Javascript.
+ *
+ * @see template_preprocess_views_view()
+ */
+#}
+
+<div id="{{ id }}" {{ attributes.addClass(classes, 'accordion') }}>
+  {% set i = 0 %}
+  {% set len = rows | length %}
+  {% for key, row in rows -%}
+    {% set i = i + 1 %}
+    {% set show_class = (
+        (i == 1 and options.collapse.first is defined and options.collapse.first > 0)
+        or (i == len and options.collapse.last is defined and options.collapse.last > 0)
+        or (i != 1 and i != len and options.collapse.middle is defined and options.collapse.middle > 0)
+        ) ? ' show' : ''
+    %}
+    {% set collapsed_class = (
+        (i == 1 and options.collapse.first is defined and options.collapse.first > 0)
+        or (i == len and options.collapse.last is defined and options.collapse.last > 0)
+        or (i != 1 and i != len and options.collapse.middle is defined and options.collapse.middle > 0)
+        ) ? '' : ' collapsed'
+    %}
+    {% set header_id = (id ~ 'accordion-header-' ~ key)|clean_unique_id %}
+    {% set content_id = (id ~ 'accordion-content-' ~ key)|clean_unique_id %}
+      <div class="accordion-item mb-2">
+        <h2 class="accordion-header" id="{{ header_id }}">
+          <button class="accordion-button fs-4{{ collapsed_class }} " data-bs-toggle="collapse" data-bs-target="#{{ content_id }}" aria-expanded="{{ collapse_class_boolean }}" aria-controls="{{ content_id }}">
+            {{ row.title }}
+          </button>
+        </h2>
+        <div id="{{ content_id }}" class="accordion-collapse collapse{{ show_class }}" aria-labelledby="{{ header_id }}" data-bs-parent="#{{ id }}">
+          <div class="accordion-body">
+            {{row.content}}
+          </div>
+        </div>
+      </div>
+  {%- endfor %}
+</div>

@@ -1,0 +1,38 @@
+{#
+/**
+ * @file
+ * Default theme implementation for displaying a tablesort indicator.
+ *
+ * Available variables:
+ * - style: Either 'asc' or 'desc', indicating the sorting direction.
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set classes = [
+    'tablesort',
+    'tablesort--' ~ style,
+    'w-auto',
+    'h-auto',
+    'm-0',
+  ]
+%}
+<span{{ attributes.addClass(classes) }} style="background-image: none !important;">
+  <span class="visually-hidden">
+    {% if style == 'asc' -%}
+      {{ 'Sort ascending'|t }}
+    {% elseif style == 'desc' -%}
+      {{ 'Sort descending'|t }}
+    {% elseif style == 'inactive' -%}
+      {{ 'Sortable'|t }}
+    {% endif %}
+  </span>
+    {% if style == 'asc' -%}
+      <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    {% elseif style == 'desc' -%}
+      <i class="fas fa-arrow-down" aria-hidden="true"></i>
+    {% elseif style == 'inactive' -%}
+      <i class="fas fa-sort-amount-down-alt faded-sort-indicator" aria-hidden="true"></i>
+    {% endif %}
+</span>

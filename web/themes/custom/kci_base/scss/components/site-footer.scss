@@ -1,0 +1,64 @@
+/**
+ * @file
+ * Footer Styling.
+ */
+
+ .site-footer {
+  padding: $spacer 0;
+  margin-top: $footer-spacing;
+  background-color: $footer-bg !important;
+  color: $footer-color;
+  body.node--type-homepage &,
+  body.node--type-landing-page & {
+    margin-top: 0;
+  }
+  .layout-container {
+      padding: 0 $spacer;
+  }
+  a {
+    color: $footer-link-color;
+    text-decoration: $footer-link-decoration;
+    &:hover {
+      color: $footer-link-hover-color;
+      text-decoration: $footer-link-hover-decoration;
+    }
+  }
+  a.navbar-brand {
+    margin: 0;
+    padding: 0;
+    white-space: normal !important;
+    display: block !important;
+    text-decoration: none !important;
+    @include font-size($font-size-base);
+    text-align: center !important;
+    &:hover {
+      text-decoration: none !important;
+    }
+  }
+  .navbar-brand * {
+    display: block !important;
+    margin: 0 auto !important;
+  }
+}
+
+#block-site-theme-footercopyright a:after {
+  display: none;
+}
+
+/* Footer Top Styling. */
+
+.site-footer__top .content {
+  margin-top: 0;
+}
+
+
+/* Footer Bottom Styling. */
+
+.site-footer__bottom .block {
+  margin: calc($spacer / 2) 0;
+}
+
+.site-footer__bottom .content {
+  padding: calc($spacer / 2) 0;
+  margin-top: 0;
+}

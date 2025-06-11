@@ -1,0 +1,236 @@
+@use "sass:color";
+
+/* VARIABLES */
+
+// colors
+$primary-shade: #0057a4;
+$primary-light: color.adjust($primary-shade, $lightness: 37%);
+$primary-dark: color.adjust($primary-shade, $lightness: -12%);
+$accent-shade: #e89f00;
+$accent-light: color.adjust($accent-shade, $lightness: 37%);
+$accent-dark: color.adjust($accent-shade, $lightness: -12%);
+// Reassign color vars to semantic color scheme
+$red: #dc3545;
+$yellow: #ffc107;
+$green: #28a745;
+$cyan: #17a2b8;
+$white: #fff;
+$black: #000;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$theme-colors: ( primary: $primary-shade, secondary: $accent-shade, success: $green, info: $cyan, warning: $yellow, danger: $red, light: $gray-100, dark: $gray-800);
+$brand-primary: $primary-dark;
+//$brand-success: $green;
+//$brand-info: $teal;
+//$brand-warning: $orange;
+//$brand-danger: $red;
+$brand-inverse: $primary-shade;
+
+// Body
+//
+// Settings for the `<body>` element.
+$body-bg: $white;
+$body-color: $gray-800;
+$inverse-bg: $primary-shade;
+$inverse-color: $white;
+// Links
+//
+// Style anchor elements.
+$link-color: $primary-shade;
+$link-decoration: none;
+$link-hover-color: $primary-dark;
+$link-hover-decoration: underline;
+
+// Field label styles.
+$field-label-weight: bold;
+$field-label-style: normal;
+
+// Alert styles.
+$page-top-alerts-bg-color: $yellow;
+$page-top-alerts-text-color: $black;
+$page-top-alerts-link-color: $black;
+$page-top-alerts-link-decoration: underline;
+$page-top-alerts-link-hover-color: rgba($black, 0.3);
+$page-top-alerts-link-hover-decoration: underline;
+$page-top-alerts-divider-color: color.adjust($yellow, $lightness: -20%);
+
+$site-logo-height: 50px;
+
+// Main nav styles.
+$main-nav-link-color          : $black;
+$main-nav-link-bg-color       : transparent;
+$main-nav-link-hover-color    : rgba($black, 0.3);
+$main-nav-link-hover-bg-color : $gray-400;
+$main-nav-link-active-color   : $black;
+$main-nav-link-active-bg-color: $gray-400;
+
+$full-width-menu-bg: rgba($primary-shade, 0.8);
+
+$dropdown-bg:                       $white;
+$dropdown-link-color:               $gray-900;
+$dropdown-link-hover-color:         $gray-900;
+$dropdown-link-hover-bg:            $gray-400;
+
+$dropdown-link-active-color:        $primary-shade;
+$dropdown-link-active-bg:           $gray-300;
+
+$dropdown-link-disabled-color:      $gray-500;
+
+$dropdown-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+
+// Breadcrumb styles.
+$breadcrumb-font-size:              0.9rem;
+$breadcrumb-padding-y:              1rem;
+$breadcrumb-padding-x:              0;
+$breadcrumb-item-padding-x:         .5rem;
+$breadcrumb-margin-bottom:          1rem;
+$breadcrumb-bg:                     null;
+$breadcrumb-divider-color:          $gray-600;
+$breadcrumb-active-color:           $gray-600;
+$breadcrumb-divider:                quote("/");
+$breadcrumb-border-radius:          null;
+
+// Footer variables.
+$footer-bg: $gray-800;
+$footer-color: $gray-200;
+$footer-spacing: 2rem;
+$footer-link-color: $gray-200;
+$footer-link-decoration: underline;
+$footer-link-hover-color: rgba($gray-100, 0.3);
+$footer-link-hover-decoration: none;
+
+// Social media icon colors. If in the footer, these will
+// be overridden by the footer link colors.
+$social-media-icon-color: $black;
+$social-media-icon-hover-color: $white;
+
+// Grid block style variables. Grid blocks apply to views that
+// have a grid box format, such as the "Home News Box Grid"
+// display of the news view.
+// Note, there is no variable for padding. If
+// padding is desired, apply Bootsrap spacing
+// classes in the view.
+$grid-block-border-color: $gray-400;
+$grid-block-border-width: 1px;
+$grid-block-border-radius: 20px;
+$grid-block-box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.15);
+$grid-block-background-color: $gray-200;
+$grid-block-text-color: $gray-800;
+// These apply to grid-block-link only:
+$grid-block-hover-text-color: $primary-dark;
+$grid-block-hover-background-color: $gray-100;
+$grid-block-hover-border-color: $gray-400;
+$grid-block-hover-box-shadow:2px 2px 15px rgba(0, 0, 0, 0.15);
+$grid-block-link-no-thumbnail-bg: $gray-400;
+// These apply to any links inside grid-block only:
+$grid-block-inner-link-text-color: $primary-shade;
+$grid-block-inner-link-text-decoration: none;
+$grid-block-inner-link-hover-text-color: $primary-dark;
+$grid-block-inner-link-hover-text-decoration: none;
+
+// Banner CTA menu styles.
+$banner-cta-menu-overlay-banner: true;
+$banner-cta-menu-overlay-transparency-amount: 0.15;
+$banner-cta-menu-overlay-transparency-blur-amount: 20px;
+$banner-cta-menu-bg: $primary-dark;
+$banner-cta-menu-btn-text: $white;
+$banner-cta-menu-btn-hover-text: $primary-dark;
+$banner-cta-menu-btn-hover-bg: $gray-100;
+$banner-cta-menu-btn-hover-text-decoration: none;
+
+// CTA buttons with icon styles.
+$cta-buttons-with-icon-bg: $primary-dark;
+$cta-buttons-with-icon-btn-text: $white;
+$cta-buttons-with-icon-btn-hover-text: $accent-shade;
+$cta-buttons-with-icon-btn-hover-bg: $gray-100;
+$cta-buttons-with-icon-btn-hover-text-decoration: none;
+
+// CTA with background image styles.
+$cta-background-image-overlay-color: $black;
+$cta-background-image-overlay-transparency: 0.6;
+$cta-background-button-bg-color: $gray-600;
+$cta-background-button-color: $white;
+
+// Webform paragraph styles.
+$webform-paragraph-landing-page-border-radius: 15px;
+$webform-paragraph-landing-page-box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
+$webform-paragraph-landing-page-bg-color: $white;
+
+// Email styles
+
+$body-table-bg: #fafafa;
+$email-header-text-color: #808080;
+
+$header-background: $white;
+$header-background-transparency-amount: 0.15;
+$header-background-transparency-blur-amount: 20px;
+$header-affix-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+
+$hamburger-button-color: $black;
+$hamburger-button-bg-color: transparent;
+$hamburger-button-hover-color: $white;
+$hamburger-button-hover-bg-color: $black;
+$hamburger-button-border-color: transparent;
+
+//Bootstrap Accordion Styles.
+
+// Accordion Content
+$accordion-color:                         $body-color;
+$accordion-bg:                            $body-bg;
+
+// Accordion Heading
+$accordion-button-color:                  $primary-shade;
+$accordion-button-bg:                     $gray-400;
+$accordion-button-hover-color:            $white;
+$accordion-button-hover-bg:               $primary-shade;
+$accordion-button-active-color:           $white;
+$accordion-button-active-bg:              $brand-primary;
+
+// Accordion Icon
+$accordion-icon-width:                    1.25rem;
+$accordion-icon-padding:                  1rem;
+$accordion-icon-bg-radius:                50%;
+$accordion-icon-color:                    $primary-shade;
+$accordion-icon-bg:                       $white;
+$accordion-icon-active-bg:                $white;
+$accordion-icon-active-color:             $brand-primary;
+
+//Accordion Borders
+$accordion-border-width:                  0;
+$accordion-border-color:                  $brand-primary;
+$accordion-border-radius:                 0;
+$accordion-inner-border-radius:           0;
+$accordion-button-focus-border-color:     none;
+$accordion-button-focus-box-shadow:       none;
+
+//Accordion Padding and Margins.
+$accordion-padding-y:                     0.5rem;
+$accordion-padding-x:                     1rem;
+$accordion-item-vertical-gutter:          0.5rem;
+$accordion-body-padding-y:                $accordion-padding-y;
+$accordion-body-padding-x:                $accordion-padding-x;
+$accordion-button-padding-y:              $accordion-padding-y;
+$accordion-button-padding-x:              $accordion-padding-x;
+
+// Mega menu
+$mega-menu-enabled: false;
+
+// Pagination colours:
+$pagination-active-color: $white;
+$pagination-active-bg: $primary-shade;
+$pagination-active-border-color: $primary-shade;
+
+// Input focus.
+$input-focus-box-shadow: 0 0 1px 3px $accent-shade;
+$form-select-focus-box-shadow: $input-focus-box-shadow;
+$form-check-input-focus-box-shadow: $input-focus-box-shadow;
+$form-range-thumb-focus-box-shadow: $input-focus-box-shadow;
+
+$text-selection-color: rgb($primary-shade, 0.35);

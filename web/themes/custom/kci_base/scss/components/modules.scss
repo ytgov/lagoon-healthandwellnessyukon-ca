@@ -1,0 +1,61 @@
+.grid-block {
+  // Note that padding should be controlled
+  // using Bootstrap spacing classes, so there
+  // is no variable for that here.
+  overflow: hidden;
+  text-decoration: none;
+  color: $grid-block-text-color;
+  border-radius: $grid-block-border-radius;
+  border: $grid-block-border-width solid $grid-block-border-color;
+  box-shadow: $grid-block-box-shadow;
+  background-color: $grid-block-background-color;
+  a {
+    &:link, &:active, &:visited {
+      color: $grid-block-inner-link-text-color;
+      text-decoration: $grid-block-inner-link-text-decoration;
+    }
+    &:hover {
+      color: $grid-block-inner-link-hover-text-color;
+      text-decoration: $grid-block-inner-link-hover-text-decoration;
+    }
+  }
+}
+
+.grid-block-link {
+  // Note that padding should be controlled
+  // using Bootstrap spacing classes, so there
+  // is no variable for that here.
+  overflow: hidden;
+  text-decoration: none;
+  color: $grid-block-text-color;
+  border-radius: $grid-block-border-radius;
+  border: $grid-block-border-width solid $grid-block-border-color;
+  box-shadow: $grid-block-box-shadow;
+  background-color: $grid-block-background-color;
+  transition: 0.2s all ease-in-out;
+  .no-thumbnail {
+    width: 100%;
+    padding-top: 56.25%;
+    position: relative;
+    background: $grid-block-link-no-thumbnail-bg;
+    color: $grid-block-text-color;
+    i {
+      display: block;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      @include font-size(6rem);
+    }
+  }
+  &:hover {
+    text-decoration: none;
+    color: $grid-block-hover-text-color;
+    background: $grid-block-hover-background-color;
+    border-color: $grid-block-hover-border-color;
+    box-shadow: $grid-block-hover-box-shadow;
+    .no-thumbnail {
+      color: $grid-block-text-color;
+    }
+  }
+}

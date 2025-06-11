@@ -1,0 +1,122 @@
+/**
+ * @file
+ * Visual styles for Bootstrap Barrio's node component.
+ */
+
+ .node__content {
+  @include font-size($font-size-base);
+  margin-top: $spacer;
+  body.node--type-homepage &,
+  body.node--type-landing-page & {
+    margin-top: 0;
+  }
+}
+
+
+/* View mode teaser styles. */
+
+.node--view-mode-teaser {
+    border-bottom: $border-width solid $border-color;
+    margin-bottom: $spacer;
+    padding-bottom: $spacer;
+}
+
+.node--view-mode-teaser h2 {
+    margin-top: 0;
+    padding-top: 0.5em;
+}
+
+.node--view-mode-teaser.node--sticky {
+    background: #f9f9f9;
+    background: rgba(0, 0, 0, 0.024);
+    border: $border-width solid $border-color;
+    padding: 0 $spacer $spacer;
+}
+
+.node--view-mode-teaser .node__content {
+    clear: none;
+    @include font-size($font-size-base);
+    line-height: $line-height-base;
+}
+
+
+/* Node metadata styles. */
+
+.node__meta {
+    @include font-size($font-size-sm);
+    margin-bottom: -5px;
+}
+
+.node__meta .field--name-field-user-picture img {
+    float: left;
+    /* LTR */
+    margin: 1px $spacer 0 0;
+    /* LTR */
+}
+
+[dir="rtl"] .node__meta .field--name-field-user-picture img {
+    float: right;
+    margin-left: $spacer;
+    margin-right: 0;
+}
+
+
+/* Node links styles. */
+
+.node__links {
+    text-align: right;
+    /* LTR */
+    @include font-size($font-size-base);
+}
+
+[dir="rtl"] .node__links {
+    text-align: left;
+}
+
+
+/* Unpublished node styles. */
+
+.node--unpublished {
+    padding: $spacer $spacer 0;
+}
+
+.node--unpublished .comment-text .comment-arrow {
+    border-left: $border-width solid #fff4f4;
+    border-right: $border-width solid #fff4f4;
+}
+
+.node-preview-container {
+  z-index: 1040 !important;
+  .gin--core-navigation & {
+    padding-left: var(--gin-toolbar-x-offset) !important;
+    transition: padding-left var(--admin-toolbar-transition);
+  }
+  .node-preview-form-select {
+    .form-type-select {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      margin-bottom: 0 !important;
+      margin-left: 0 !important;
+      @include font-size($font-size-base * 0.8);
+      label {
+        text-wrap: nowrap;
+        font-weight: normal;
+        &:after {
+          content: ":";
+          display: inline;
+        }
+      }
+      .form-select {
+        @include font-size($font-size-base * 0.8);
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+      }
+    }
+    .previewmode-text {
+      margin: 0 !important;
+      font-weight: bold;
+      @include font-size($font-size-base * 1.2);
+    }
+  }
+}

@@ -1,0 +1,234 @@
+// Use when you need to set or overide heading text styles
+@mixin all_headings {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @content;
+  }
+}
+
+// Determined the % of vertical padding needed to maintain aspect ratio
+// For when the child element is position absolute.
+@function responsive_padding($width, $height) {
+  $result: calc($height / $width) * 100%;
+  @return $result;
+}
+
+@mixin responsive_banner_media {
+  img,
+  video {
+    display: block;
+    width: auto;
+    height: 100%;
+    max-width: initial;
+    margin: 0;
+    @include media-breakpoint-up(lg) {
+      width: 100%;
+      height: auto;
+    }
+  }
+  iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: initial;
+    margin: 0;
+  }
+}
+
+@mixin banner-color-overlay($color) {
+  background: $color;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+@mixin banner_caption_overlay($text_color) {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  @if $banner-caption-vertical-position == "center" {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  @else if $banner-caption-vertical-position == "bottom" {
+    bottom: 0;
+  }
+  @else {
+    top: $banner-caption-vertical-position;
+  }
+  text-align: center;
+  color: $text_color;
+  .container {
+    @include media-breakpoint-down(md) {
+      max-width: 70% !important;
+    }
+  }
+  @include all_headings {
+    color: $text_color;
+    @include media-breakpoint-down(sm) {
+      line-height: normal;
+    }
+  }
+  h1 {
+    font-weight: $font-weight-bold;
+  }
+  p {
+    color: $text_color;
+    margin: auto;
+    @include font-size($banner-caption-font-size);
+    @include media-breakpoint-down(sm) {
+      @include font-size($font-size-base);
+      line-height: normal;
+    }
+    @include media-breakpoint-up(sm) {
+      max-width: 90%;
+    }
+    @include media-breakpoint-up(lg) {
+      max-width: 900px;
+    }
+  }
+  @content;
+}
+
+@mixin responsive_media_wrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: auto;
+  min-width: 100%;
+  height: 100%;
+  div.responsive-media-content {
+    height: 100%;
+  }
+  @include media-breakpoint-up(lg) {
+    width: 100%;
+    height: auto;
+    div.responsive-media-content {
+      height: auto;
+    }
+  }
+  @include responsive_banner_media;
+}
+
+@mixin responsive_media_slideshow($width, $height) {
+  @if ($banner-cta-menu-overlay-banner) {
+    $height: $height + 75;
+  }
+  .carousel {
+    width: 100%;
+    .carousel-item {
+      overflow: hidden;
+      height: 0;
+      padding-top: 100%;
+      @include media-breakpoint-up(md) {
+        padding-top: 80%;
+      }
+      @include media-breakpoint-up(lg) {
+        padding-top: responsive_padding($width, $height);
+        .has-floating-header & {
+          padding-top: responsive_padding($width, $height + 100px);
+        }
+      }
+      .background-media {
+        @include responsive_media_wrapper;
+        .field--type-entity-reference {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+@mixin responsive_media_banner($width, $height) {
+  @if ($banner-cta-menu-overlay-banner) {
+    $height: $height + 75;
+  }
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  .banner-row-inner {
+    height: 0;
+    padding-top: 100%;
+    @include media-breakpoint-up(md) {
+      padding-top: $height;
+      .has-floating-header & {
+        padding-top: $height + 100px;
+      }
+    }
+    @include media-breakpoint-up(lg) {
+      padding-top: responsive_padding($width, $height);
+      .has-floating-header & {
+        padding-top: responsive_padding($width, $height + 100);
+      }
+    }
+    .banner-background-media {
+      @include responsive_media_wrapper;
+      .field--type-entity-reference {
+        margin: 0;
+      }
+    }
+  }
+  .banner-wrapper {
+    height: 0;
+    padding-top: 100%;
+    @include media-breakpoint-up(md) {
+      padding-top: $height;
+    }
+    @include media-breakpoint-up(xl) {
+      padding-top: responsive_padding($width, $height);
+    }
+    .banner-image {
+      @include responsive_media_wrapper;
+    }
+  }
+}
+
+// Apply bootstrap grid to element with optional responsive breakpoints
+// Arguments:  base columns, breakpoint-md cols, breakpoint-lg cols
+// ie: @include flex_grid (12, 6, 4)  // 1 column for mobile, 2 for tablet and 3 for labtop+
+@mixin flex_grid($cols, $cols-md: null, $cols-lg: null) {
+  @include make-row();
+  > * {
+    @extend .col-#{$cols};
+    @if $cols-md {
+      @extend .col-md-#{$cols-md};
+    }
+    @if $cols-lg {
+      @extend .col-lg-#{$cols-lg};
+    }
+  }
+}
+
+// Add a background image that highlights to a specified colour on hover
+// Arguments:  $bg_url = the relative path to the image source.  $bg_color:  the hover color as variable or hex value
+// ie: @include bg_image_with_hover("../images/icons/facebook.png", $dark-grey)
+@mixin bg_image_with_hover($bg_url, $bg_color) {
+  background-image: url(#{$bg_url});
+  &:hover {
+    background-image: linear-gradient(rgba($color: $bg_color, $alpha: 0.5), rgba($color: $bg_color, $alpha: 0.5)),
+      url(#{$bg_url});
+  }
+}
+
+@mixin standard_view_rows($spacing, $border_color) {
+  .views-row {
+    &:not(:last-child) {
+      &::after {
+        content: "";
+        display: block;
+        border-top: 1px solid $border_color;
+        margin-top: $spacing;
+        margin-bottom: $spacing;
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+/* TYPOGRAPHY */
+
+/* Google Fonts
+
+NOTE: Do NOT use @import statements to include Google fonts here. Newer
+Google font URLs contain semi-colons, which causes CSS compression and
+aggregation to have issues and result in a broken compressed CSS file.
+As such, add your Google fonts to the theme libraries file like this:
+
+css:
+  component:
+    //fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap: { type: external }
+    css/style.css: {}
+
+You can then define variables for your Google font families below, per examples.
+*/
+
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+$font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$font-family-serif: Georgia, "Times New Roman", Times, serif !default;
+$font-family-base: $font-family-sans-serif !default;
+$font-family-headings: $font-family-serif !default;
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+$font-size-lg: $font-size-base * 1.25 !default;
+$font-size-sm: $font-size-base * .875 !default;
+$font-size-xs: $font-size-base * .75 !default;
+$font-weight-normal: normal !default;
+$font-weight-bold: bold !default;
+$font-weight-base: $font-weight-normal !default;
+$font-weight-headings: $font-weight-normal !default;
+$line-height-base: 1.8 !default;
+$h1-font-size: $font-size-base * 2.5 !default;
+$h2-font-size: $font-size-base * 2 !default;
+$h3-font-size: $font-size-base * 1.75 !default;
+$h4-font-size: $font-size-base * 1.5 !default;
+$h5-font-size: $font-size-base * 1.25 !default;
+$h6-font-size: $font-size-base !default;
+
+$display-font-sizes: (
+  1: $h1-font-size,
+  2: $h2-font-size,
+  3: $h3-font-size,
+  4: $h4-font-size,
+  5: $h5-font-size,
+  6: $h6-font-size
+) !default;
+
+$display-font-weight: 600 !default;

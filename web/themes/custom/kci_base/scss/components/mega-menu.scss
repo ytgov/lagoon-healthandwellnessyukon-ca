@@ -1,0 +1,25 @@
+@if $mega-menu-enabled {
+  #header {
+    .block.menu--main {
+      position: unset;
+      .mega_menu {
+        .dropdown-mega-menu {
+          width: 100%;
+        }
+        .menu_link_content {
+          .nav.navbar-nav {
+            margin-top: 1.25rem;
+            justify-content: center;
+            .nav-item {
+              padding: 0.5rem;
+              a.nav-link, .nav-link {
+                @extend .btn;
+                @extend .btn-primary;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

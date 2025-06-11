@@ -1,0 +1,20 @@
+{#
+/**
+ * @file
+ * Theme override to display a formatted image field.
+ *
+ * Available variables:
+ * - image: A collection of image data.
+ * - image_style: An optional image style.
+ * - path: An optional array containing the link 'path' and link 'options'.
+ * - url: An optional URL the image can be linked to.
+ * - link_attributes: An optional array of attributes if the image is to be a link.
+ * @see template_preprocess_image_formatter()
+ */
+#}
+
+{% if url %}
+  <a href="{{ url }}"{{ link_attributes.addClass('hide-new-window-indicator') }}>{{ image }}</a>
+{% else %}
+  {{ image }}
+{% endif %}

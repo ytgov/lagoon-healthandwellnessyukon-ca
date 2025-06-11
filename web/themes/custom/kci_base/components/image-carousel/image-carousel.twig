@@ -1,0 +1,12 @@
+
+	<div class="ic-splide position-relative" aria-label="image carousel">
+		<div class="splide__track">
+			<ul class="splide__list">
+				{% for thumbnail in thumbnails %}
+					<li class="splide__slide">
+							{{ thumbnail }}
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>

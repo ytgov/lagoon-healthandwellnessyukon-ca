@@ -1,0 +1,17 @@
+{% set section_id = 'section'|clean_unique_id %}
+{% set content_id = section_id ~ '--content' %}
+
+<div class="accordion" id="{{ section_id }}">
+  <div class="accordion-item">
+    <h3 class="field__item accordion-header" id="{{ section_id }}--heading">
+      <button class="accordion-button collapsed faq-question faq-section" type="button" data-bs-toggle="collapse" data-bs-target="#{{content_id}}" aria-expanded="true" aria-controls="{{ content_id }}">
+        {{ heading }}
+      </button>
+    </h3>
+    <div id="{{ content_id }}" class="accordion-collapse collapse" aria-labelledby="{{ section_id }}--heading" data-bs-parent="#{{ section_id }}">
+      <div class="accordion-body position-relative">
+        {{ content }}
+      </div>
+    </div>
+  </div>
+</div>

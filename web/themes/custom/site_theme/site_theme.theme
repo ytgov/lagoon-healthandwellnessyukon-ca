@@ -1,0 +1,55 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the SASS Starterkit subtheme.
+ */
+
+declare(strict_types=1);
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Link;
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_form_system_theme_settings_alter() for settings form.
+ *
+ * Replace Barrio setting options with subtheme ones.
+ */
+function site_theme_form_system_theme_settings_alter(&$form, FormStateInterface $form_state) {
+  $form['components']['navbar']['bootstrap_barrio_navbar_top_background']['#options'] = [
+    'bg-primary' => t('Primary'),
+    'bg-secondary' => t('Secondary'),
+    'bg-light' => t('Light'),
+    'bg-dark' => t('Dark'),
+    'bg-white' => t('White'),
+    'bg-transparent' => t('Transparent'),
+  ];
+  $form['components']['navbar']['bootstrap_barrio_navbar_background']['#options'] = [
+    'bg-primary' => t('Primary'),
+    'bg-secondary' => t('Secondary'),
+    'bg-light' => t('Light'),
+    'bg-dark' => t('Dark'),
+    'bg-white' => t('White'),
+    'bg-transparent' => t('Transparent'),
+  ];
+}
+
+/**
+ * Implements hook_preprocess_field().
+ */
+function site_theme_preprocess_field(array &$variables): void {
+  if ($variables['field_name'] == 'field_button_link' && $variables['element']['#entity_type'] == 'paragraph') {
+    $link_classes = [
+      'btn',
+      'btn-feature',
+      'btn-secondary',
+      'hide-new-window-indicator',
+    ];
+    foreach ($variables['items'] as $item) {
+      $link_options = $item['content']['#url']->getOptions();
+      $link_options['attributes']['class'] = $link_classes;
+      $item['content']['#url']->setOptions($link_options);
+    }
+  }
+}

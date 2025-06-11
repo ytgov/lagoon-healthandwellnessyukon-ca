@@ -1,0 +1,17 @@
+/* Media Slideshow */
+.paragraph-slideshow-field {
+  margin: 0;
+  // Arguments should match the width and height of the applied image style
+  @include responsive_media_slideshow ($slideshow-width, $slideshow-height);
+  .background-cover {
+    @include banner-color-overlay($banner-overlay-bg-color);
+  }
+  .slideshow-caption {
+    @include banner_caption_overlay($banner-caption-text-color);
+    @if $banner-cta-menu-overlay-banner {
+      @include media-breakpoint-up(lg) {
+        margin-top: -35px;
+      }
+    }
+  }
+}

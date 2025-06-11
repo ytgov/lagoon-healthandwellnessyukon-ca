@@ -1,0 +1,10 @@
+name: Thumbnail Gallery
+group: Image Gallery
+description: Thumbnail images combine it with a main gallery.
+props:
+  type: object
+  properties:
+    thumbnails:
+      type: array
+      title: Thumbnails
+      description: A slideshow of thumbnails.
