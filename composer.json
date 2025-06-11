@@ -21,7 +21,11 @@
         "ytgov/lagoon-boutique-base-image": "dev-prod",
         "drupal/bootstrap_sass": "^5.0",
         "oomphinc/composer-installers-extender": "^2.0",
-        "npm-asset/splidejs--splide": "^4.1"
+        "npm-asset/splidejs--splide": "^4.1",
+        "drupal/block_visibility_conditions": "^2.1",
+        "drupal/blockgroup": "^2.0",
+        "drupal/block_classes": "^1.0",
+        "drupal/fences": "^3.0"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
