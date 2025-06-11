@@ -19,6 +19,7 @@ module:
   config_translation: 0
   content_moderation: 0
   contextual: 0
+  crop: 0
   datetime: 0
   datetime_range: 0
   dblog: 0
@@ -26,6 +27,7 @@ module:
   easy_breadcrumb: 0
   editor: 0
   entity_reference_revisions: 0
+  fences: 0
   field: 0
   field_group: 0
   field_ui: 0
@@ -35,9 +37,11 @@ module:
   file_mdm_font: 0
   filter: 0
   fontawesome: 0
+  fullcalendar_view: 0
   help: 0
   image: 0
   image_effects: 0
+  image_widget_crop: 0
   language: 0
   link: 0
   link_attributes: 0
@@ -48,6 +52,7 @@ module:
   matomo: 0
   media: 0
   media_library: 0
+  media_library_edit: 0
   menu_block: 0
   menu_link_content: 0
   menu_ui: 0
@@ -60,15 +65,18 @@ module:
   page_cache: 0
   path: 0
   path_alias: 0
+  pathologic: 0
   redirect: 0
   redirect_404: 0
   redirect_domain: 0
   responsive_image: 0
   search: 0
   shortcut: 0
+  simple_gmap: 0
   simple_sitemap: 0
   simple_sitemap_engines: 0
   simple_sitemap_views: 0
+  smart_date: 0
   svg_image_field: 0
   symfony_mailer: 0
   system: 0
@@ -83,10 +91,13 @@ module:
   tmgmt_local: 0
   tmgmt_locale: 0
   token: 0
+  token_filter: 0
   toolbar: 0
   twig_tweak: 0
   update: 0
   user: 0
+  viewfield: 0
+  views_bootstrap: 0
   views_bulk_operations: 0
   views_infinite_scroll: 0
   views_ui: 0
@@ -97,6 +108,7 @@ module:
   content_translation: 10
   views: 10
   paragraphs: 11
+  linked_field: 100
   minimal: 1000
 theme:
   claro: 0
