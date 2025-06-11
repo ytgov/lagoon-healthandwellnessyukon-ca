@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - node.type.homepage
+    - node.type.page
     - workflows.workflow.editorial
   module:
     - content_moderation
@@ -32,12 +34,19 @@ permissions:
   - 'access taxonomy overview'
   - 'access toolbar'
   - 'create content translations'
+  - 'create homepage content'
   - 'create media'
+  - 'create page content'
   - 'create url aliases'
   - 'delete any media'
   - 'delete content translations'
   - 'delete media'
   - 'delete own files'
+  - 'edit any homepage content'
+  - 'edit any page content'
+  - 'edit own homepage content'
+  - 'edit own page content'
+  - 'revert page revisions'
   - 'switch shortcut sets'
   - 'translate any entity'
   - 'translate editable entities'
@@ -56,6 +65,7 @@ permissions:
   - 'view all taxonomy revisions'
   - 'view any unpublished content'
   - 'view latest version'
+  - 'view page revisions'
   - 'view the administration theme'
   - 'view unpublished paragraphs'
   - 'view vocabulary labels'

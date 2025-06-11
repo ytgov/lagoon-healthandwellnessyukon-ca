@@ -1,0 +1,31 @@
+uuid: 80e28e4c-751b-4626-abb7-ed86627e497d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_news_image
+    - media.type.image
+    - node.type.news
+_core:
+  default_config_hash: JCLXiAJjj6Ei2DsBqdm8cpff63qDq1rAF6roIE97N-o
+id: node.news.field_news_image
+field_name: field_news_image
+entity_type: node
+bundle: news
+label: Image
+description: 'This image will be displayed as a thumbnail in news listings and as a banner on the page itself. It will also be used as the thumbnail when sharing this news article on social media.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

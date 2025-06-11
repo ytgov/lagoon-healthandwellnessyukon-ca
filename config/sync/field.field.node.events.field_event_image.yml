@@ -1,0 +1,31 @@
+uuid: bdc0fdd2-6cfb-47b0-8e27-7e8d4505e870
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_image
+    - media.type.image
+    - node.type.events
+_core:
+  default_config_hash: 8GlG-Xns3jv_fSL5bGjgQahuZK-h_hhd7z8yLxElUNQ
+id: node.events.field_event_image
+field_name: field_event_image
+entity_type: node
+bundle: events
+label: 'Event Image'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

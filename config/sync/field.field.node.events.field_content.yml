@@ -1,0 +1,108 @@
+uuid: 2f5a37d6-0a89-490b-8555-02230ca5bfab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content
+    - node.type.events
+    - paragraphs.paragraphs_type.accordion
+    - paragraphs.paragraphs_type.cta_background_image
+    - paragraphs.paragraphs_type.file_attachments
+    - paragraphs.paragraphs_type.google_map
+    - paragraphs.paragraphs_type.image_gallery
+    - paragraphs.paragraphs_type.large_image
+    - paragraphs.paragraphs_type.text_content
+    - paragraphs.paragraphs_type.text_content_full_width
+    - paragraphs.paragraphs_type.two_column_text_content
+    - paragraphs.paragraphs_type.webform
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: Zu38NW5tRGW4zBg0RXxJaGiiqJcJch5YpFTTFR1EAWM
+id: node.events.field_content
+field_name: field_content
+entity_type: node
+bundle: events
+label: Content
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      text_content_full_width: text_content_full_width
+      text_content: text_content
+      two_column_text_content: two_column_text_content
+      accordion: accordion
+      cta_background_image: cta_background_image
+      file_attachments: file_attachments
+      google_map: google_map
+      image_gallery: image_gallery
+      large_image: large_image
+      webform: webform
+    negate: 0
+    target_bundles_drag_drop:
+      accordion:
+        weight: -52
+        enabled: true
+      accordion_content:
+        weight: -51
+        enabled: false
+      cta_background_image:
+        weight: -48
+        enabled: true
+      featured_content:
+        weight: -45
+        enabled: false
+      file_attachments:
+        weight: -44
+        enabled: true
+      google_map:
+        weight: -43
+        enabled: true
+      image_gallery:
+        weight: -41
+        enabled: true
+      image_with_link:
+        weight: -40
+        enabled: false
+      images_with_links:
+        weight: -42
+        enabled: false
+      large_image:
+        weight: -37
+        enabled: true
+      map_with_contact_info:
+        weight: -36
+        enabled: false
+      page_banner:
+        weight: -35
+        enabled: false
+      slideshow:
+        weight: -34
+        enabled: false
+      slideshow_item:
+        weight: -33
+        enabled: false
+      slideshow_with_caption:
+        weight: -32
+        enabled: false
+      text_content:
+        weight: -54
+        enabled: true
+      text_content_full_width:
+        weight: -55
+        enabled: true
+      two_column_text_content:
+        weight: -53
+        enabled: true
+      view:
+        weight: -30
+        enabled: false
+      webform:
+        weight: -29
+        enabled: true
+field_type: entity_reference_revisions

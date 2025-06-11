@@ -1,0 +1,24 @@
+uuid: d17e088a-79b6-4911-ae08-4652440c9a30
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_accent_colour
+    - taxonomy.vocabulary.cta_colour_options
+  module:
+    - color_field
+_core:
+  default_config_hash: tJnsby-il345Uv4Fza9hba4DDalyJMXCi3G8rUjwhPQ
+id: taxonomy_term.cta_colour_options.field_accent_colour
+field_name: field_accent_colour
+entity_type: taxonomy_term
+bundle: cta_colour_options
+label: 'Accent Colour'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type

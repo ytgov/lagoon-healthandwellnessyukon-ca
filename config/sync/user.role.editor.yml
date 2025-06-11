@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - node.type.homepage
+    - node.type.page
     - workflows.workflow.editorial
   module:
     - content_moderation
@@ -30,10 +32,16 @@ permissions:
   - 'access site in maintenance mode'
   - 'access taxonomy overview'
   - 'access toolbar'
+  - 'create homepage content'
   - 'create media'
+  - 'create page content'
   - 'create url aliases'
   - 'delete media'
   - 'delete own files'
+  - 'edit any homepage content'
+  - 'edit any page content'
+  - 'edit own homepage content'
+  - 'edit own page content'
   - 'switch shortcut sets'
   - 'update media'
   - 'use editorial transition create_new_draft'

@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - node.type.homepage
+    - node.type.page
     - workflows.workflow.editorial
   module:
     - content_moderation
@@ -48,8 +50,10 @@ permissions:
   - 'switch shortcut sets'
   - 'translate any entity'
   - 'translate editable entities'
+  - 'translate homepage node'
   - 'translate interface'
   - 'translate menu_link_content'
+  - 'translate page node'
   - 'update content translations'
   - 'update media'
   - 'use editorial transition create_new_draft'

@@ -1,0 +1,120 @@
+uuid: ccdbb5bd-0037-46ef-8457-0bf32c153ad7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_page_banner
+    - node.type.events
+    - paragraphs.paragraphs_type.page_banner
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: p-Okxsabi0aTJAJK9tumKhMjPUiViykJ1qbz3lqImDw
+id: node.events.field_page_banner
+field_name: field_page_banner
+entity_type: node
+bundle: events
+label: 'Page Banner'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      page_banner: page_banner
+    negate: 0
+    target_bundles_drag_drop:
+      accordion:
+        weight: 33
+        enabled: false
+      accordion_content:
+        weight: 34
+        enabled: false
+      button_with_icon:
+        weight: 12
+        enabled: false
+      buttons_with_icon:
+        weight: 35
+        enabled: false
+      card:
+        weight: 37
+        enabled: false
+      cta_background_image:
+        weight: 38
+        enabled: false
+      dene_law_group:
+        weight: 40
+        enabled: false
+      dene_laws:
+        weight: 39
+        enabled: false
+      embedded_audio:
+        weight: 41
+        enabled: false
+      embedded_video:
+        weight: 14
+        enabled: false
+      featured_content:
+        weight: 15
+        enabled: false
+      file_attachments:
+        weight: 16
+        enabled: false
+      google_map:
+        weight: 47
+        enabled: false
+      image_gallery:
+        weight: 49
+        enabled: false
+      image_with_link:
+        weight: 50
+        enabled: false
+      images_with_links:
+        weight: 48
+        enabled: false
+      large_icon_cta:
+        weight: 51
+        enabled: false
+      large_icon_ctas:
+        weight: 52
+        enabled: false
+      large_image:
+        weight: 17
+        enabled: false
+      map_with_contact_info:
+        weight: 54
+        enabled: false
+      page_banner:
+        weight: 18
+        enabled: true
+      slideshow:
+        weight: 56
+        enabled: false
+      slideshow_item:
+        weight: 20
+        enabled: false
+      slideshow_with_caption:
+        weight: 58
+        enabled: false
+      social_media_icon_link:
+        weight: 59
+        enabled: false
+      text_content:
+        weight: 21
+        enabled: false
+      text_content_full_width:
+        weight: 61
+        enabled: false
+      two_column_text_content:
+        weight: 62
+        enabled: false
+      view:
+        weight: 22
+        enabled: false
+      webform:
+        weight: 64
+        enabled: false
+field_type: entity_reference_revisions
