@@ -9,11 +9,11 @@ dependencies:
   theme:
     - site_theme
 _core:
-  default_config_hash: KWAiziL39uEzmOJEql_wbUP2RtqGceL3WM2CfxhMelE
+  default_config_hash: rx9IrdDv7Ldc4kpalZAxdhIPZfYIeOMh1N-qKoQZwHo
 id: site_theme_main_menu
 theme: site_theme
 region: primary_menu
-weight: 0
+weight: -8
 provider: null
 plugin: 'system_menu_block:main'
 settings:
@@ -22,6 +22,6 @@ settings:
   label_display: '0'
   provider: system
   level: 1
-  depth: 2
+  depth: 0
   expand_all_items: true
 visibility: {  }

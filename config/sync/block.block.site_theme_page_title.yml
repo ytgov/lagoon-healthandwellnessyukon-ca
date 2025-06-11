@@ -5,11 +5,11 @@ dependencies:
   theme:
     - site_theme
 _core:
-  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
 id: site_theme_page_title
 theme: site_theme
-region: alerts
-weight: -5
+region: content
+weight: -8
 provider: null
 plugin: page_title_block
 settings:

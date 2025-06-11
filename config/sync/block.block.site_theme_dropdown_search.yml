@@ -1,0 +1,23 @@
+uuid: 7b5b6c07-95f5-43ff-ab91-7ff2bdc902c3
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.search
+  module:
+    - views
+  theme:
+    - site_theme
+id: site_theme_dropdown_search
+theme: site_theme
+region: primary_menu
+weight: -9
+provider: null
+plugin: 'views_exposed_filter_block:search-page'
+settings:
+  id: 'views_exposed_filter_block:search-page'
+  label: 'Dropdown Search'
+  label_display: '0'
+  provider: views
+  views_label: 'Dropdown Search'
+visibility: {  }

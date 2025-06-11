@@ -1,0 +1,31 @@
+uuid: 73ed15d1-3df1-4c8f-a5e2-79d683cd4b7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - block_classes
+    - system
+  theme:
+    - site_theme
+third_party_settings:
+  block_classes:
+    block_class: 'd-flex justify-content-center'
+_core:
+  default_config_hash: kkISXE1LT2FJEoYnqCrCpeFB-2pmGmMxMklVk7rQcfg
+id: site_theme_footer
+theme: site_theme
+region: footer_first
+weight: -7
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: 'Footer menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }
