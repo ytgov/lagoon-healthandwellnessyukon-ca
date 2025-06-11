@@ -2,11 +2,8 @@ uuid: 5be4c204-69a6-4f7b-8e86-baa66bae00a6
 langcode: en
 status: true
 dependencies:
-  config:
-    - views.view.search
   module:
     - system
-    - views
   theme:
     - site_theme
 _core:

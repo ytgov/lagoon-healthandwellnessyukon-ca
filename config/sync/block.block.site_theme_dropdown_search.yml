@@ -2,10 +2,6 @@ uuid: 7b5b6c07-95f5-43ff-ab91-7ff2bdc902c3
 langcode: en
 status: false
 dependencies:
-  config:
-    - views.view.search
-  module:
-    - views
   theme:
     - site_theme
 id: site_theme_dropdown_search
