@@ -1,0 +1,40 @@
+uuid: 651369bd-31f0-4cf9-9453-937ca95db75d
+langcode: und
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_image
+    - media.type.image
+  module:
+    - image
+_core:
+  default_config_hash: sNUZNqqiK8VlajVlqBY1U53LWJ9NkhD0-TBwmfRbLPE
+id: media.image.field_media_image
+field_name: field_media_image
+entity_type: media
+bundle: image
+label: Image
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: images
+  file_extensions: 'png gif jpg jpeg heic'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image
