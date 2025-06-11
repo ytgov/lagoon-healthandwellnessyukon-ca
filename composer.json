@@ -11,11 +11,17 @@
         {
             "type": "vcs",
             "url": "git@github.com:ytgov/lagoon-boutique-base-image.git"
+        },
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
         }
     ],
     "require": {
         "ytgov/lagoon-boutique-base-image": "dev-prod",
-        "drupal/bootstrap_sass": "^5.0"
+        "drupal/bootstrap_sass": "^5.0",
+        "oomphinc/composer-installers-extender": "^2.0",
+        "npm-asset/splidejs--splide": "^4.1"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
@@ -52,7 +58,8 @@
             "drupal/core-composer-scaffold": true,
             "cweagans/composer-patches": true,
             "composer/installers": true,
-            "dealerdirect/phpcodesniffer-composer-installer": true
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "oomphinc/composer-installers-extender": true
         }
     },
     "require-dev": {
