@@ -1,0 +1,32 @@
+uuid: 0b76d2e9-67a9-4ff1-ae0e-0a8adba04c66
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+_core:
+  default_config_hash: '-1Idnjj-fnm3Hy9OV-9FqTw0nyyu452awfzgTjgO8NA'
+id: paragraph.field_featured_variant
+field_name: field_featured_variant
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: light
+      label: Light
+    -
+      value: solid
+      label: Solid
+    -
+      value: outline
+      label: Outline
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

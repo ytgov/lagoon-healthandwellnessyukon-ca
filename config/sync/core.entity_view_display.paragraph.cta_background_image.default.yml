@@ -1,0 +1,61 @@
+uuid: 7ed30532-c215-4ff9-a6b9-997cdf646f53
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cta_background_image.field_cta_bg_image
+    - field.field.paragraph.cta_background_image.field_cta_with_bg_link
+    - field.field.paragraph.cta_background_image.field_cta_with_bg_text
+    - field.field.paragraph.cta_background_image.field_cta_with_bg_title
+    - image.style.content_fit
+    - paragraphs.paragraphs_type.cta_background_image
+  module:
+    - link
+    - media
+    - text
+_core:
+  default_config_hash: ZeB4wzRv4y8JSUa8H1hFeG45wFeyh7weFRhmaYoSm4I
+id: paragraph.cta_background_image.default
+targetEntityType: paragraph
+bundle: cta_background_image
+mode: default
+content:
+  field_cta_bg_image:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: content_fit
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_cta_with_bg_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_cta_with_bg_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_cta_with_bg_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_animation_style: true
+  search_api_excerpt: true

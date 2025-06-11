@@ -1,0 +1,85 @@
+uuid: d945d459-597e-4085-ba9a-bc60c73eb36a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.view.field_button_link
+    - field.field.paragraph.view.field_embedded_view
+    - field.field.paragraph.view.field_heading
+    - paragraphs.paragraphs_type.view
+  module:
+    - fences
+    - field_group
+    - link
+    - viewfield
+third_party_settings:
+  field_group:
+    group_view_title_row:
+      children:
+        - field_heading
+        - field_button_link
+      label: 'View Title Row'
+      parent_name: ''
+      region: content
+      weight: 0
+      format_type: html_element
+      format_settings:
+        classes: 'd-lg-flex justify-content-between align-items-start'
+        show_empty_fields: false
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+_core:
+  default_config_hash: QPcXDpC7x2-lejefktbmh-6qf62sD4RnGrfz6o8O7iY
+id: paragraph.view.default
+targetEntityType: paragraph
+bundle: view
+mode: default
+content:
+  field_button_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: 'mb-5 mb-lg-0'
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 2
+    region: content
+  field_embedded_view:
+    type: viewfield_default
+    label: hidden
+    settings:
+      view_title: hidden
+      always_build_output: true
+      empty_view_title: hidden
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_heading:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_animation_style: true
+  search_api_excerpt: true

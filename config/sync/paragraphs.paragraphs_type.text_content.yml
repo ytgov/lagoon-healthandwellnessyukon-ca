@@ -1,0 +1,12 @@
+uuid: 8161e372-f82d-4fe1-8042-2238d1defa71
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: _aD_xVsNEYAQ5Jq2j8zJZmDVmexaG5XkN5exoVOVG2A
+id: text_content
+label: 'Text Content - Narrow Centred'
+icon_uuid: null
+icon_default: null
+description: 'A single column of text, centred on the page.'
+behavior_plugins: {  }

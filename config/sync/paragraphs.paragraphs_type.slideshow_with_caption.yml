@@ -1,0 +1,12 @@
+uuid: 5e33d77e-d50a-4fe3-94ef-61237c916cd1
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 604o4U-wDf39HUzRIl0n04sKfM1qGLT89cw_dBxAI8A
+id: slideshow_with_caption
+label: 'Slideshow with Slide Captions'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

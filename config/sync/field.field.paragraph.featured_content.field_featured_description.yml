@@ -1,0 +1,28 @@
+uuid: b89bcdaf-f111-481d-a6e0-ae95bf111009
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_featured_description
+    - filter.format.rich_text
+    - paragraphs.paragraphs_type.featured_content
+  module:
+    - text
+_core:
+  default_config_hash: c0d7n_2cmhCMIAHjBGOPnioZYi1XJRP4epONxvJsc1c
+id: paragraph.featured_content.field_featured_description
+field_name: field_featured_description
+entity_type: paragraph
+bundle: featured_content
+label: 'Description Text'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats:
+    - rich_text
+field_type: text_with_summary

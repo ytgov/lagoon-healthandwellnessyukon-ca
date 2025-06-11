@@ -1,0 +1,37 @@
+uuid: 2e66b0ad-fb9d-40f3-a172-c6a4a07f192e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.image_with_link.field_image_link_image
+    - field.field.paragraph.image_with_link.field_image_link_link
+    - image.style.image_link
+    - paragraphs.paragraphs_type.image_with_link
+  module:
+    - linked_field
+    - media
+_core:
+  default_config_hash: YjHvQkDx7NAXzGPWQNR4s4u2m2Xh2xN8OsynZXef99c
+id: paragraph.image_with_link.default
+targetEntityType: paragraph
+bundle: image_with_link
+mode: default
+content:
+  field_image_link_image:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: image_link
+    third_party_settings:
+      linked_field:
+        linked: true
+        type: field
+        destination: field_image_link_link
+        advanced: {  }
+        token: ''
+    weight: 0
+    region: content
+hidden:
+  field_image_link_link: true
+  search_api_excerpt: true

@@ -1,0 +1,22 @@
+uuid: 14bc31ed-b7f4-4619-b6dd-24ba92418891
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.google_map
+id: paragraph.google_map.status
+field_name: status
+entity_type: paragraph
+bundle: google_map
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

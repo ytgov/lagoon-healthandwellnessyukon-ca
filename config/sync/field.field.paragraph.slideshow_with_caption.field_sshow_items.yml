@@ -1,0 +1,96 @@
+uuid: b9676311-85c6-4baf-8410-3864d67776b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sshow_items
+    - paragraphs.paragraphs_type.slideshow_item
+    - paragraphs.paragraphs_type.slideshow_with_caption
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: B-FOAAHlNjJ2k1ny-Se_T0O-G-LdstoSiQoy6V80PkU
+id: paragraph.slideshow_with_caption.field_sshow_items
+field_name: field_sshow_items
+entity_type: paragraph
+bundle: slideshow_with_caption
+label: 'Slideshow items'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      slideshow_item: slideshow_item
+    negate: 0
+    target_bundles_drag_drop:
+      accordion:
+        weight: 23
+        enabled: false
+      accordion_content:
+        weight: 24
+        enabled: false
+      button_with_icon:
+        weight: 25
+        enabled: false
+      cta_background_image:
+        weight: 26
+        enabled: false
+      embedded_audio:
+        weight: 27
+        enabled: false
+      embedded_video:
+        weight: 28
+        enabled: false
+      featured_content:
+        weight: 29
+        enabled: false
+      file_attachments:
+        weight: 30
+        enabled: false
+      image_gallery:
+        weight: 32
+        enabled: false
+      image_with_link:
+        weight: 33
+        enabled: false
+      images_with_links:
+        weight: 31
+        enabled: false
+      large_image:
+        weight: 34
+        enabled: false
+      page_banner:
+        weight: 35
+        enabled: false
+      private_file_attachments:
+        weight: 36
+        enabled: false
+      slideshow:
+        weight: 37
+        enabled: false
+      slideshow_item:
+        weight: 38
+        enabled: true
+      slideshow_with_caption:
+        weight: 39
+        enabled: false
+      social_media_icon_link:
+        weight: 40
+        enabled: false
+      text_content:
+        weight: 41
+        enabled: false
+      two_column_text_content:
+        weight: 42
+        enabled: false
+      view:
+        weight: 43
+        enabled: false
+      webform:
+        weight: 44
+        enabled: false
+field_type: entity_reference_revisions

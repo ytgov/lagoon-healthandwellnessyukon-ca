@@ -1,0 +1,26 @@
+uuid: 8863c4c0-8d24-4e0e-949d-1e3a248e9651
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_left_column_text
+    - filter.format.rich_text
+    - paragraphs.paragraphs_type.two_column_text_content
+  module:
+    - text
+_core:
+  default_config_hash: yV2VwhlkK3Ozki9iC_JLU9-nEFbKETt91qdUELaOgiI
+id: paragraph.two_column_text_content.field_left_column_text
+field_name: field_left_column_text
+entity_type: paragraph
+bundle: two_column_text_content
+label: 'Left Column Text'
+description: 'If you want to leave a blank space on the left, enter a line break without any text.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - rich_text
+field_type: text_long

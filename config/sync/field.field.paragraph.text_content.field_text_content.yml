@@ -1,0 +1,26 @@
+uuid: 9a1deda5-6b05-4ec4-8393-465035e3ff67
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_content
+    - filter.format.rich_text
+    - paragraphs.paragraphs_type.text_content
+  module:
+    - text
+_core:
+  default_config_hash: 5KOKJPm_cuqS0xhbo7-5nUNwdpZ8OzO7R_PYyFRvj_c
+id: paragraph.text_content.field_text_content
+field_name: field_text_content
+entity_type: paragraph
+bundle: text_content
+label: Content
+description: 'This block of text will display in a column that is centred on the page and does not take up the full width. If you want to have content that fills the width of the page area, please use one of the other available paragraph types, such as two-column text content.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - rich_text
+field_type: text_long

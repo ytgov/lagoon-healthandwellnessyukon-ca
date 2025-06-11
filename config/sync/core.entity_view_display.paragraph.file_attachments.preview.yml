@@ -1,0 +1,42 @@
+uuid: 64ac63cf-db5f-427e-af82-4d2b5c9ed70a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.file_attachments.field_file_attachments
+    - field.field.paragraph.file_attachments.field_heading
+    - paragraphs.paragraphs_type.file_attachments
+_core:
+  default_config_hash: y970StORa8CWBXQoSl7RmFAzgaERSg1az70rkIkogMY
+id: paragraph.file_attachments.preview
+targetEntityType: paragraph
+bundle: file_attachments
+mode: preview
+content:
+  field_animation_style:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_file_attachments:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_heading:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  extra_field_frontend_editing: true
+  search_api_excerpt: true

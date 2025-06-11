@@ -1,0 +1,21 @@
+uuid: 30342d60-d0d4-40ea-abcf-473aa818b0f8
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+_core:
+  default_config_hash: zH3PISW59y34PRAncdS2BSOFlVc-fSaGvm5clKi3_vM
+id: paragraph.field_cta_with_bg_text
+field_name: field_cta_with_bg_text
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,21 @@
+uuid: 6cb13e3c-336b-4b84-a24d-d335761ec032
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - paragraphs
+_core:
+  default_config_hash: EINWzyT7-bTRQA6J-WfS8edk-lgylo-KWOS9Ib39EM8
+id: paragraph.field_slideshow_button_link
+field_name: field_slideshow_button_link
+entity_type: paragraph
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

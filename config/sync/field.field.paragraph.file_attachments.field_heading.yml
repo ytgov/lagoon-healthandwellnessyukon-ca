@@ -1,0 +1,21 @@
+uuid: febe7e10-c955-4cb9-a1df-69fc929e5df3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading
+    - paragraphs.paragraphs_type.file_attachments
+_core:
+  default_config_hash: ew2MgqTuQ5CAMk8nPtue0iJ3OY4bg7LFewVIMT4Bjck
+id: paragraph.file_attachments.field_heading
+field_name: field_heading
+entity_type: paragraph
+bundle: file_attachments
+label: Heading/Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

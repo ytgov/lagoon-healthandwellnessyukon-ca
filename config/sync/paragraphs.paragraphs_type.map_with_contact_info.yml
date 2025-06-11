@@ -1,0 +1,12 @@
+uuid: c91a8c08-0c5d-4499-b5d6-9a882e4cd9a4
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: vMCbY4is0zRB_54JpyCwMb_btFoNn0TU6lYtkZNukH4
+id: map_with_contact_info
+label: 'Map with Contact Info'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

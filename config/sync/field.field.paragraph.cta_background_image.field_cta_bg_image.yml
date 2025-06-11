@@ -1,0 +1,31 @@
+uuid: 9d8f59b9-bee9-4f77-a86a-98ffbff49f78
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cta_bg_image
+    - media.type.image
+    - paragraphs.paragraphs_type.cta_background_image
+_core:
+  default_config_hash: koYo11OL85tYmHJY-3ZJ3T-6TjPM7458CPZUN5Yjdtg
+id: paragraph.cta_background_image.field_cta_bg_image
+field_name: field_cta_bg_image
+entity_type: paragraph
+bundle: cta_background_image
+label: 'CTA background image'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

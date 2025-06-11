@@ -1,0 +1,73 @@
+uuid: 86d98383-57fb-41ac-968f-b94fee78ad2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.card.field_button_link
+    - field.field.paragraph.card.field_card_image
+    - field.field.paragraph.card.field_card_text
+    - field.field.paragraph.card.field_card_title
+    - field.field.paragraph.card.field_cta_colour_option
+    - paragraphs.paragraphs_type.card
+  module:
+    - linkit_attributes
+    - media_library
+    - text
+id: paragraph.card.default
+targetEntityType: paragraph
+bundle: card
+mode: default
+content:
+  field_button_link:
+    type: linkit_attributes
+    weight: 4
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      linkit_profile: default
+      linkit_auto_link_text: false
+      enabled_attributes:
+        target: true
+        rel: true
+        class: true
+        id: false
+        name: false
+        accesskey: false
+        aria-label: false
+        title: false
+      widget_default_open: expandIfValuesSet
+    third_party_settings: {  }
+  field_card_image:
+    type: media_library_widget
+    weight: 2
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_card_text:
+    type: text_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_card_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_cta_colour_option:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  translation: true

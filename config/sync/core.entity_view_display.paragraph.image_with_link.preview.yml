@@ -1,0 +1,31 @@
+uuid: f5e2cb6b-192c-4a06-bc3e-e7cb5c36c8dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.image_with_link.field_image_link_image
+    - field.field.paragraph.image_with_link.field_image_link_link
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.image_with_link
+  module:
+    - media
+_core:
+  default_config_hash: GWQSRmZ6Rdj5e3YB0MbzccddcGjQXE3_lHZw92EjFN8
+id: paragraph.image_with_link.preview
+targetEntityType: paragraph
+bundle: image_with_link
+mode: preview
+content:
+  field_image_link_image:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: thumbnail
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_image_link_link: true
+  search_api_excerpt: true

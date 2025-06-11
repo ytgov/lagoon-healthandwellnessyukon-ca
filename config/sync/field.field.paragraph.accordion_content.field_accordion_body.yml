@@ -1,0 +1,26 @@
+uuid: 8058bc3a-3dea-458c-8cbd-577beaee62df
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_accordion_body
+    - filter.format.rich_text
+    - paragraphs.paragraphs_type.accordion_content
+  module:
+    - text
+_core:
+  default_config_hash: a6RyQ_926aOCnESORigoBo20rdW20nGG6hR0-3-xBzI
+id: paragraph.accordion_content.field_accordion_body
+field_name: field_accordion_body
+entity_type: paragraph
+bundle: accordion_content
+label: 'Accordion body'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - rich_text
+field_type: text_long

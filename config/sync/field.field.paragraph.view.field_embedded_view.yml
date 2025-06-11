@@ -1,0 +1,63 @@
+uuid: 2d2f35d0-01a0-44d1-bcc6-60e5d583907d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_embedded_view
+    - paragraphs.paragraphs_type.view
+  module:
+    - viewfield
+_core:
+  default_config_hash: AtquZ3wA8UB7uR-SHHYo00MvQPJAZP6NDai0QXjKKM4
+id: paragraph.view.field_embedded_view
+field_name: field_embedded_view
+entity_type: paragraph
+bundle: view
+label: 'Select View'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  force_default: false
+  allowed_views:
+    events: events
+    job_opportunities: job_opportunities
+    news: news
+    verticle_timeline: verticle_timeline
+    advisory_alert: '0'
+    content: '0'
+    block_content: '0'
+    event_categories: '0'
+    files: '0'
+    frontpage: '0'
+    home_landing_page_banner: '0'
+    media: '0'
+    media_library: '0'
+    moderated_content: '0'
+    moderation_dashboard: '0'
+    content_moderation_dashboard_in_review: '0'
+    moderation_dashboard_recent_changes: '0'
+    moderation_dashboard_recently_created: '0'
+    moderation_history: '0'
+    page_banner: '0'
+    pdf_image_entity: '0'
+    user_admin_people: '0'
+    content_recent: '0'
+    redirect: '0'
+    search: '0'
+    taxonomy_term: '0'
+    watchdog: '0'
+    webform_submissions: '0'
+    who_s_new: '0'
+    who_s_online: '0'
+  allowed_display_types:
+    block: block
+    default: '0'
+    embed: '0'
+    feed: '0'
+    page: '0'
+  handler: 'default:view'
+  handler_settings: {  }
+field_type: viewfield

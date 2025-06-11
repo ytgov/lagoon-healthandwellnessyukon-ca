@@ -1,0 +1,12 @@
+uuid: 703a0ce3-6e7e-4ed6-823f-ed0f4219d92a
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: RAbcFTAO9XHYhOrNIET3pWmvKkkKhvD27TVJy5Q3B8g
+id: google_map
+label: 'Google Map'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

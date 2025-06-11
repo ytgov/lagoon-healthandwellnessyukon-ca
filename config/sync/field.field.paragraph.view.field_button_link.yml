@@ -1,0 +1,25 @@
+uuid: a1bcfccf-23a1-49e9-bc1a-9430627a0b9e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_button_link
+    - paragraphs.paragraphs_type.view
+  module:
+    - link
+_core:
+  default_config_hash: AO7_5L2AN_D7qvghExGDlYwDGPyfkwf0wttwNj0P8L4
+id: paragraph.view.field_button_link
+field_name: field_button_link
+entity_type: paragraph
+bundle: view
+label: 'Button Link'
+description: 'Optionally add a button link to appear below the view. This is useful for things like having a "See all News" button below the home page news block that goes to the full news listing page.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 2
+  link_type: 1
+field_type: link

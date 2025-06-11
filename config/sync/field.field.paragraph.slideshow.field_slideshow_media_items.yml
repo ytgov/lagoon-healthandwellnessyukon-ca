@@ -1,0 +1,31 @@
+uuid: b579ff51-eeb0-4171-a0dc-8598f11b060b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_slideshow_media_items
+    - media.type.image
+    - paragraphs.paragraphs_type.slideshow
+_core:
+  default_config_hash: Ta6MW8zMPK2pPBzO_iPphT9TMWk6mOphkgMmFmKF7Ik
+id: paragraph.slideshow.field_slideshow_media_items
+field_name: field_slideshow_media_items
+entity_type: paragraph
+bundle: slideshow
+label: 'Slideshow media items'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: image
+field_type: entity_reference

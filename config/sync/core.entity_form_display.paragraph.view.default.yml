@@ -1,0 +1,58 @@
+uuid: 222bd341-5353-437f-9f40-617de2d8f48e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.view.field_button_link
+    - field.field.paragraph.view.field_embedded_view
+    - field.field.paragraph.view.field_heading
+    - paragraphs.paragraphs_type.view
+  module:
+    - link_attributes
+    - viewfield
+_core:
+  default_config_hash: ecoFFh8K86VAxP-909UbaRSwvpUnIF7Ki1_hZCsob9M
+id: paragraph.view.default
+targetEntityType: paragraph
+bundle: view
+mode: default
+content:
+  field_button_link:
+    type: link_attributes
+    weight: 3
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      enabled_attributes:
+        target: true
+        id: false
+        name: false
+        rel: false
+        class: false
+        accesskey: false
+        aria-label: false
+        title: false
+    third_party_settings: {  }
+  field_embedded_view:
+    type: viewfield_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_heading:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

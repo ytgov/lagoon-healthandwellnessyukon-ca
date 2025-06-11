@@ -1,0 +1,26 @@
+uuid: 2c8b61c2-080a-4c12-84e5-e3225b942f2b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_content
+    - filter.format.rich_text
+    - paragraphs.paragraphs_type.map_with_contact_info
+  module:
+    - text
+_core:
+  default_config_hash: WIeJ7_RG9TVZko3mPWmtuGEofBLGp4ExM8_-dojAk3Y
+id: paragraph.map_with_contact_info.field_text_content
+field_name: field_text_content
+entity_type: paragraph
+bundle: map_with_contact_info
+label: 'Contact Information'
+description: 'Enter contact information in any desired way and format.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - rich_text
+field_type: text_long

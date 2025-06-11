@@ -1,0 +1,69 @@
+uuid: d4f2e370-e12f-4657-ac53-d3a01aa2807b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.two_column_text_content.field_heading
+    - field.field.paragraph.two_column_text_content.field_left_column_text
+    - field.field.paragraph.two_column_text_content.field_right_column_text
+    - paragraphs.paragraphs_type.two_column_text_content
+  module:
+    - field_group
+    - text
+third_party_settings:
+  field_group:
+    group_row:
+      children:
+        - field_left_column_text
+        - field_right_column_text
+      label: Row
+      parent_name: ''
+      region: content
+      weight: 1
+      format_type: html_element
+      format_settings:
+        classes: form-flex-row
+        show_empty_fields: false
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+_core:
+  default_config_hash: unJ07usYCDoN-rIeam4VyjltN8M6l4cTN4-o-oUQZ8Y
+id: paragraph.two_column_text_content.preview
+targetEntityType: paragraph
+bundle: two_column_text_content
+mode: preview
+content:
+  field_animation_style:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_left_column_text:
+    type: text_trimmed
+    label: hidden
+    settings:
+      trim_length: 150
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_right_column_text:
+    type: text_trimmed
+    label: hidden
+    settings:
+      trim_length: 150
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  extra_field_frontend_editing: true
+  field_heading: true
+  search_api_excerpt: true

@@ -1,0 +1,88 @@
+uuid: 1b1c855a-fc03-478c-9783-84e9cc9cd0dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.featured_content.field_cta_colour_option
+    - field.field.paragraph.featured_content.field_description_alignment
+    - field.field.paragraph.featured_content.field_featured_description
+    - field.field.paragraph.featured_content.field_featured_image
+    - field.field.paragraph.featured_content.field_featured_link
+    - field.field.paragraph.featured_content.field_featured_title
+    - field.field.paragraph.featured_content.field_featured_variant
+    - image.style.content_fit_featured_content
+    - paragraphs.paragraphs_type.featured_content
+  module:
+    - link
+    - media
+    - options
+    - text
+_core:
+  default_config_hash: 19YpmiKG16WbkmKZwhWK3stNu7eWPUPvowFDba-RSiU
+id: paragraph.featured_content.default
+targetEntityType: paragraph
+bundle: featured_content
+mode: default
+content:
+  field_cta_colour_option:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_description_alignment:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_featured_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_featured_image:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: content_fit_featured_content
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_featured_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_featured_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_featured_variant:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+hidden:
+  field_animation_style: true
+  search_api_excerpt: true

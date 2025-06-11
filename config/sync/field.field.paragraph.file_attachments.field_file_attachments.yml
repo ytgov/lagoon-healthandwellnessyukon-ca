@@ -1,0 +1,31 @@
+uuid: 0ec22e16-07ea-4450-889f-d1b713ea69ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_file_attachments
+    - media.type.document
+    - paragraphs.paragraphs_type.file_attachments
+_core:
+  default_config_hash: z7wKXwqqdxnT24eeDmmgDsbca_LgPMLPBkN1DyBlAF8
+id: paragraph.file_attachments.field_file_attachments
+field_name: field_file_attachments
+entity_type: paragraph
+bundle: file_attachments
+label: 'File Attachment(s)'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      document: document
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: audio
+field_type: entity_reference

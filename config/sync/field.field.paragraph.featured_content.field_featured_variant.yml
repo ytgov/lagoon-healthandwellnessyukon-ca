@@ -1,0 +1,25 @@
+uuid: cdb919c1-9abb-41a3-9a89-d6b593415c13
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_featured_variant
+    - paragraphs.paragraphs_type.featured_content
+  module:
+    - options
+_core:
+  default_config_hash: yRowh-ZR2Rr3qe6uw3eyA4_wUbO2TlzXfkg_aohHbx0
+id: paragraph.featured_content.field_featured_variant
+field_name: field_featured_variant
+entity_type: paragraph
+bundle: featured_content
+label: Variant
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: light
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,12 @@
+uuid: d1600868-49f1-4015-93bd-d9bcc3330328
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: YHQBao-me22BSesxMjgT8lMNBYzlbr4v7BbWFTAPnRc
+id: cta_background_image
+label: 'CTA with Background Image'
+icon_uuid: null
+icon_default: null
+description: 'Provides CTA with background image'
+behavior_plugins: {  }

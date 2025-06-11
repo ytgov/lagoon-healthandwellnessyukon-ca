@@ -1,0 +1,12 @@
+uuid: c6c0c313-4305-4e83-b836-1ecb46f20615
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: GZmtxcN72_ljjo5pWXhAM_KZrx176uHgnKqL1-99ruY
+id: accordion_content
+label: 'Accordion Content'
+icon_uuid: null
+icon_default: null
+description: 'Provides content for the accordion paragraph'
+behavior_plugins: {  }

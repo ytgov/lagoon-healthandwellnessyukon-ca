@@ -1,0 +1,12 @@
+uuid: f3b74b75-2dce-4118-b90f-81ec9786d129
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: yIeDUk52vUDnnEDQ2EoH6vUWnsVgQTqxMQ75Hzqo4OY
+id: text_content_full_width
+label: 'Text Content - Full Width'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

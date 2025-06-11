@@ -1,0 +1,31 @@
+uuid: 33267b1d-de36-4ba9-be73-791b767872ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.text_content_full_width.field_heading
+    - field.field.paragraph.text_content_full_width.field_text_content
+    - paragraphs.paragraphs_type.text_content_full_width
+  module:
+    - text
+id: paragraph.text_content_full_width.default
+targetEntityType: paragraph
+bundle: text_content_full_width
+mode: default
+content:
+  field_heading:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_text_content:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

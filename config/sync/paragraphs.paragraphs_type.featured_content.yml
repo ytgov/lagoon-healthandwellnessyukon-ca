@@ -1,0 +1,12 @@
+uuid: e8bd89f8-c4b3-4824-86f3-fc6408e11783
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: rnDqQ8GXxqYR96Zt_z2ng3guqIofs1FYeNtGMGh9vrw
+id: featured_content
+label: 'Featured content'
+icon_uuid: null
+icon_default: null
+description: 'This paragraph provides featured content fields for both the featured content types.'
+behavior_plugins: {  }

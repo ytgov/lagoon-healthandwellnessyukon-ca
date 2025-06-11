@@ -1,0 +1,20 @@
+uuid: 110542a2-88d4-40ab-ace1-6a68b6bab42c
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.map_with_contact_info
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '1'
+_core:
+  default_config_hash: kOGUOFePKeka-RYMN-iwngq5xGJISrPqUj8Qi_nhe6M
+id: paragraph.map_with_contact_info
+target_entity_type_id: paragraph
+target_bundle: map_with_contact_info
+default_langcode: site_default
+language_alterable: false
