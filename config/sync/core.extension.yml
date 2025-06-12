@@ -14,6 +14,7 @@ module:
   blockgroup: 0
   breakpoint: 0
   ckeditor5: 0
+  ckeditor_link_styles: 0
   ckeditor_media_resize: 0
   color_field: 0
   config: 0
