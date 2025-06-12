@@ -4,11 +4,11 @@ status: true
 dependencies: {  }
 _core:
   default_config_hash: 9GqE5S5mFnFaNIPmy_X5EsdRjJ7niqCSxO0hKaAQ4AY
-id: card_image
 label: 'Card Image'
+id: card_image
 description: ''
-aspect_ratio: '375:92'
-soft_limit_width: 375
-soft_limit_height: 92
+aspect_ratio: '5:3'
+soft_limit_width: 600
+soft_limit_height: 360
 hard_limit_width: null
 hard_limit_height: null

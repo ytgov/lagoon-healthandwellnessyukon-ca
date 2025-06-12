@@ -10,7 +10,7 @@ dependencies:
     - field.field.paragraph.card.field_cta_colour_option
     - paragraphs.paragraphs_type.card
   module:
-    - linkit_attributes
+    - link_attributes
     - media_library
     - text
 id: paragraph.card.default
@@ -19,14 +19,12 @@ bundle: card
 mode: default
 content:
   field_button_link:
-    type: linkit_attributes
+    type: link_attributes
     weight: 4
     region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
-      linkit_profile: default
-      linkit_auto_link_text: false
       enabled_attributes:
         target: true
         rel: true
