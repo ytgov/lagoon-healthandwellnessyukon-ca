@@ -1,0 +1,18 @@
+uuid: 94c29be0-1e15-402f-a75b-b5dc3009f5b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.cta_colour_options
+id: taxonomy_term.cta_colour_options.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: cta_colour_options
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed
