@@ -11,6 +11,7 @@ dependencies:
     - content_translation
     - contextual
     - file
+    - frontend_editing
     - media
     - menu_link_content
     - node
@@ -29,6 +30,7 @@ permissions:
   - 'access content overview'
   - 'access contextual links'
   - 'access files overview'
+  - 'access frontend editing'
   - 'access media overview'
   - 'access site in maintenance mode'
   - 'access taxonomy overview'

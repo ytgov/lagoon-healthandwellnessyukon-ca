@@ -10,6 +10,7 @@ dependencies:
     - content_moderation
     - contextual
     - file
+    - frontend_editing
     - media
     - node
     - paragraphs
@@ -27,6 +28,7 @@ permissions:
   - 'access content overview'
   - 'access contextual links'
   - 'access files overview'
+  - 'access frontend editing'
   - 'access media overview'
   - 'access shortcuts'
   - 'access site in maintenance mode'

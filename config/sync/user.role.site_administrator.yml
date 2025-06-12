@@ -13,6 +13,7 @@ dependencies:
     - contextual
     - entity_reference_revisions
     - file
+    - frontend_editing
     - locale
     - media
     - menu_link_content
@@ -38,6 +39,7 @@ permissions:
   - 'access content overview'
   - 'access contextual links'
   - 'access files overview'
+  - 'access frontend editing'
   - 'access media overview'
   - 'access site in maintenance mode'
   - 'access site reports'
