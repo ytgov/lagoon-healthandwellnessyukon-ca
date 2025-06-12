@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e689089a5015b55a4dd07a612a17f4ae",
+    "content-hash": "188abf14a6ec5861f01a4dacca7f56aa",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2748,6 +2748,122 @@
             }
         },
         {
+            "name": "drupal/extra_field",
+            "version": "2.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/extra_field.git",
+                "reference": "8.x-2.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/extra_field-8.x-2.3.zip",
+                "reference": "8.x-2.3",
+                "shasum": "ef46b8577b36ff751effbc63d409ee9298471813"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.3",
+                    "datestamp": "1664136134",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^10"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "pcambra",
+                    "homepage": "https://www.drupal.org/user/122101"
+                },
+                {
+                    "name": "sutharsan",
+                    "homepage": "https://www.drupal.org/user/73854"
+                }
+            ],
+            "description": "Provides a plugin type for extra fields that look like real fields, but do not store data.",
+            "homepage": "https://www.drupal.org/project/extra_field",
+            "support": {
+                "source": "https://git.drupalcode.org/project/extra_field"
+            }
+        },
+        {
+            "name": "drupal/extra_field_plus",
+            "version": "3.0.0-beta5",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/extra_field_plus.git",
+                "reference": "3.0.0-beta5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/extra_field_plus-3.0.0-beta5.zip",
+                "reference": "3.0.0-beta5",
+                "shasum": "8e63b31e7421fe55feb5065a95279e6dfdbfdf6a"
+            },
+            "require": {
+                "drupal/core": "^10.3 || ^11",
+                "drupal/extra_field": "^1.0 || ^2.0 || ^3.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "3.0.0-beta5",
+                    "datestamp": "1745411797",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Andrew Tsiupiakh",
+                    "homepage": "https://www.drupal.org/user/3302731",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Anybody",
+                    "homepage": "https://www.drupal.org/u/anybody",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "grevil",
+                    "homepage": "https://www.drupal.org/user/3668491"
+                }
+            ],
+            "description": "Provides an interface and the extra field base plugins with editable display settings.",
+            "homepage": "https://www.drupal.org/project/extra_field_plus",
+            "keywords": [
+                "Drupal",
+                "Extra field",
+                "Extra field settings provider",
+                "Fields",
+                "Pseudo field"
+            ],
+            "support": {
+                "source": "https://www.drupal.org/project/extra_field_plus",
+                "issues": "https://www.drupal.org/project/issues/extra_field_plus"
+            }
+        },
+        {
             "name": "drupal/fences",
             "version": "3.0.7",
             "source": {
@@ -3056,6 +3172,79 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/fontawesome",
                 "issues": "https://drupal.org/project/issues/fontawesome"
+            }
+        },
+        {
+            "name": "drupal/frontend_editing",
+            "version": "2.0.0-alpha2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/frontend_editing.git",
+                "reference": "2.0.0-alpha2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/frontend_editing-2.0.0-alpha2.zip",
+                "reference": "2.0.0-alpha2",
+                "shasum": "3e96c42133f9cc98954e46cf896593060089e2d8"
+            },
+            "require": {
+                "drupal/core": "^9.3 || ^10 || ^11",
+                "drupal/extra_field": "^2.0",
+                "drupal/extra_field_plus": "^3.0",
+                "drupal/paragraphs_edit": "^3.0"
+            },
+            "require-dev": {
+                "drupal/all_entity_preview": "^1.0"
+            },
+            "suggest": {
+                "drupal/all_entity_preview": "^1.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0-alpha2",
+                    "datestamp": "1722434408",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "a.dmitriiev",
+                    "homepage": "https://www.drupal.org/user/3235287"
+                },
+                {
+                    "name": "bbruno",
+                    "homepage": "https://www.drupal.org/user/3691195"
+                },
+                {
+                    "name": "breidert",
+                    "homepage": "https://www.drupal.org/user/135619"
+                },
+                {
+                    "name": "hchonov",
+                    "homepage": "https://www.drupal.org/user/2901211"
+                },
+                {
+                    "name": "norman.lol",
+                    "homepage": "https://www.drupal.org/user/2482808"
+                }
+            ],
+            "description": "Frontend editing.",
+            "homepage": "https://www.drupal.org/project/frontend_editing",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/frontend_editing",
+                "issues": "http://drupal.org/project/issues/frontend_editing"
             }
         },
         {
@@ -3996,6 +4185,66 @@
             "homepage": "https://www.drupal.org/project/paragraphs",
             "support": {
                 "source": "https://git.drupalcode.org/project/paragraphs"
+            }
+        },
+        {
+            "name": "drupal/paragraphs_edit",
+            "version": "3.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/paragraphs_edit.git",
+                "reference": "3.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/paragraphs_edit-3.0.1.zip",
+                "reference": "3.0.1",
+                "shasum": "d9c66cee07e93ca0c209651f569705f274bee0de"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10 || ^11",
+                "drupal/paragraphs": "*"
+            },
+            "require-dev": {
+                "drupal/paragraphs": "^1.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "3.0.1",
+                    "datestamp": "1733468697",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "astonvictor",
+                    "homepage": "https://www.drupal.org/user/3466615"
+                },
+                {
+                    "name": "bbrala",
+                    "homepage": "https://www.drupal.org/user/3366066"
+                },
+                {
+                    "name": "casey",
+                    "homepage": "https://www.drupal.org/user/32403"
+                },
+                {
+                    "name": "timohuisman",
+                    "homepage": "https://www.drupal.org/user/3558376"
+                }
+            ],
+            "description": "Allows users to edit/clone and delete paragraphs.",
+            "homepage": "https://www.drupal.org/project/paragraphs_edit",
+            "support": {
+                "source": "https://git.drupalcode.org/project/paragraphs_edit"
             }
         },
         {
@@ -7617,16 +7866,16 @@
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "3.13.0",
+            "version": "3.13.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPCSStandards/PHP_CodeSniffer.git",
-                "reference": "65ff2489553b83b4597e89c3b8b721487011d186"
+                "reference": "1b71b4dd7e7ef651ac749cea67e513c0c832f4bd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPCSStandards/PHP_CodeSniffer/zipball/65ff2489553b83b4597e89c3b8b721487011d186",
-                "reference": "65ff2489553b83b4597e89c3b8b721487011d186",
+                "url": "https://api.github.com/repos/PHPCSStandards/PHP_CodeSniffer/zipball/1b71b4dd7e7ef651ac749cea67e513c0c832f4bd",
+                "reference": "1b71b4dd7e7ef651ac749cea67e513c0c832f4bd",
                 "shasum": ""
             },
             "require": {
@@ -7697,7 +7946,7 @@
                     "type": "thanks_dev"
                 }
             ],
-            "time": "2025-05-11T03:36:00+00:00"
+            "time": "2025-06-12T15:04:34+00:00"
         },
         {
             "name": "symfony/console",
@@ -11048,6 +11297,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "drupal/frontend_editing": 15,
         "drupal/pathologic": 15,
         "drupal/viewfield": 10,
         "ytgov/lagoon-boutique-base-image": 20

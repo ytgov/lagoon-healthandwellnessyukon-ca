@@ -37,7 +37,8 @@
         "drupal/token_filter": "^2.2",
         "drupal/views_bootstrap": "^5.4",
         "drupal/ckeditor_media_resize": "^1.0",
-        "drupal/media_pdf_thumbnail": "^7.0"
+        "drupal/media_pdf_thumbnail": "^7.0",
+        "drupal/frontend_editing": "^2.0@alpha"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
@@ -66,7 +67,24 @@
         "installer-types": [
             "bower-asset",
             "npm-asset"
-        ]
+        ],
+        "composer-exit-on-patch-failure": true,
+        "enable-patching": true,
+        "patchLevel": {
+            "drupal/core": "-p2"
+        },
+        "patches": {
+            "drupal/media_library_edit": {
+                "3246687 - Don't unset the #submit callback": "https://git.drupalcode.org/project/media_library_edit/-/merge_requests/11.diff"
+            },
+            "drupal/image_widget_crop": {
+                "3214365 - Crop widget not adjusting crop box when crop is applied": "https://www.drupal.org/files/issues/2021-06-09/crop_widget_not_adjusting_to_existing_crop-3214365-9.patch",
+                "3119005 - When Drop Drupal 8.8 Support: Remove call to deprecated Libraries function libraries_detect()": "https://www.drupal.org/files/issues/2023-02-21/3119005-18.patch"
+            },
+            "drupal/paragraphs_edit": {
+                "2914976 - Revisions log does not attribute author or timestamp correctly": "https://git.drupalcode.org/project/paragraphs_edit/-/merge_requests/14.diff"
+            }
+        }
     },
     "config": {
         "allow-plugins": {

@@ -1,7 +1,9 @@
+label: Contenu
 display:
   default:
     display_title: 'Par défaut'
     display_options:
+      title: Contenu
       fields:
         title:
           label: Titre
@@ -24,3 +26,9 @@ display:
         langcode:
           expose:
             label: Langue
+  page_1:
+    display_options:
+      menu:
+        title: Contenu
+      tab_options:
+        title: Contenu

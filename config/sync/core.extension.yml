@@ -28,6 +28,8 @@ module:
   easy_breadcrumb: 0
   editor: 0
   entity_reference_revisions: 0
+  extra_field: 0
+  extra_field_plus: 0
   fences: 0
   field: 0
   field_group: 0
@@ -38,6 +40,7 @@ module:
   file_mdm_font: 0
   filter: 0
   fontawesome: 0
+  frontend_editing: 0
   fullcalendar_view: 0
   help: 0
   image: 0
@@ -50,6 +53,7 @@ module:
   linkit: 0
   linkit_attributes: 0
   locale: 0
+  mailer_transport: 0
   matomo: 0
   media: 0
   media_library: 0
@@ -65,6 +69,7 @@ module:
   openid_connect: 0
   options: 0
   page_cache: 0
+  paragraphs_edit: 0
   path: 0
   path_alias: 0
   pathologic: 0
