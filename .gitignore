@@ -44,3 +44,8 @@ web/sites/default/development.services.local.yml
 
 # Ignore sql file
 *.sql
+
+# KCI specific
+drush/*
+.ddev/commands/web/dsync
+.ddev/commands/web/usync
