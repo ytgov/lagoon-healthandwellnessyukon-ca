@@ -1,6 +1,9 @@
 display:
   default:
     display_options:
+      exposed_form:
+        options:
+          submit_button: Filtrer
       fields:
         title:
           label: Titre
@@ -12,17 +15,26 @@ display:
         operations:
           label: Actions
       filters:
+        uid:
+          expose:
+            label: Fournisseur
         title:
           expose:
             label: Titre
   closed:
+    display_title: Fermé
     display_options:
+      menu:
+        title: Fermé
       fields:
         title:
           label: Titre
         operations:
           label: Actions
       filters:
+        uid:
+          expose:
+            label: Fournisseur
         title:
           expose:
             label: Titre
@@ -34,6 +46,9 @@ display:
         operations:
           label: Actions
       filters:
+        uid:
+          expose:
+            label: Fournisseur
         title:
           expose:
             label: Titre
@@ -45,6 +60,9 @@ display:
         operations:
           label: Actions
       filters:
+        uid:
+          expose:
+            label: Fournisseur
         title:
           expose:
             label: Titre
@@ -56,6 +74,9 @@ display:
         operations:
           label: Actions
       filters:
+        uid:
+          expose:
+            label: Fournisseur
         title:
           expose:
             label: Titre

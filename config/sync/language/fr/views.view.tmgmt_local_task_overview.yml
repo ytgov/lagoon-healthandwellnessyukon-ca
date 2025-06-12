@@ -1,6 +1,9 @@
 display:
   default:
     display_options:
+      exposed_form:
+        options:
+          submit_button: Filtrer
       fields:
         title:
           label: Libellé
@@ -15,6 +18,8 @@ display:
         title:
           expose:
             label: Libellé
+      menu:
+        title: Fermé
   completed:
     display_options:
       fields:

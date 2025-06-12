@@ -3,12 +3,17 @@ display:
     display_title: 'Par défaut'
     display_options:
       fields:
+        nothing:
+          admin_label: Icône
         type:
           label: Type
         timestamp:
           label: Date
         link:
           label: Actions
+      exposed_form:
+        options:
+          submit_button: Filtrer
       filters:
         type:
           expose:

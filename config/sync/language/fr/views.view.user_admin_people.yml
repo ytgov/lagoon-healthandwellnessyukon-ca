@@ -3,8 +3,13 @@ display:
     display_title: 'Par défaut'
     display_options:
       fields:
+        name:
+          label: "Nom d'utilisateur"
         operations:
           label: Actions
+      exposed_form:
+        options:
+          submit_button: Filtrer
   page_1:
     display_options:
       menu:

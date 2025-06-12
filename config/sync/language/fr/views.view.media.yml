@@ -9,6 +9,9 @@ display:
           label: Type
         operations:
           label: Actions
+      exposed_form:
+        options:
+          submit_button: Filtrer
       filters:
         bundle:
           expose:

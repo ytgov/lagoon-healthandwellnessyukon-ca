@@ -4,5 +4,11 @@ display:
       fields:
         label:
           label: Libellé
+        translator:
+          label: Fournisseur
         operations:
           label: Actions
+      filters:
+        translator:
+          expose:
+            label: Fournisseur

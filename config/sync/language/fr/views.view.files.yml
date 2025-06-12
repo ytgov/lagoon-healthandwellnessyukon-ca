@@ -9,6 +9,9 @@ display:
           label: 'Utilisé dans'
         operations:
           label: Actions
+      exposed_form:
+        options:
+          submit_button: Filtrer
   page_2:
     display_options:
       fields:

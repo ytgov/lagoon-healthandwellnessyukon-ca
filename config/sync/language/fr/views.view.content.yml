@@ -5,14 +5,22 @@ display:
       fields:
         title:
           label: Titre
+        type:
+          label: 'Type de contenu'
         langcode:
           label: Langue
         operations:
           label: Actions
+      exposed_form:
+        options:
+          submit_button: Filtrer
       filters:
         title:
           expose:
             label: Titre
+        type:
+          expose:
+            label: 'Type de contenu'
         langcode:
           expose:
             label: Langue
