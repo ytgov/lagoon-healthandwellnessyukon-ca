@@ -18695,3 +18695,405 @@
 .ck-editor__main .ck-content .editing-container {
   z-index: 1050 !important;
 }
+@media (max-width: 47.99875rem) {
+  .ck-editor__main .ck-content .js-drupal-fullcalendar .fc-toolbar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 200px;
+  }
+}
+.ck-editor__main .ck-content .calendar-calendar {
+  width: 100%;
+}
+.ck-editor__main .ck-content .fc-event {
+  border-radius: 5px;
+  padding: 0.5rem 0.0625rem 0.0625rem;
+  border: none;
+  -webkit-box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  outline: 1px solid rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+.ck-editor__main .ck-content .fc-event .fc-content {
+  padding: 0.3125rem;
+  border-radius: 0 0 4px 4px;
+  white-space: normal !important;
+  font-size: 0.7rem;
+  background: #fff;
+}
+.ck-editor__main .ck-content .fc-event .fc-content .fc-time {
+  font-weight: bold;
+  color: #0057a4;
+}
+.ck-editor__main .ck-content .fc-event .fc-content .fc-time:after {
+  content: " - ";
+  display: inline;
+  color: #0057a4;
+}
+.ck-editor__main .ck-content .fc-event .fc-content .fc-title {
+  background: #fff;
+  font-weight: bold;
+  color: #0057a4;
+}
+.ck-editor__main .ck-content .fc-event:hover .fc-content .fc-time, .ck-editor__main .ck-content .fc-event:hover .fc-content .fc-title {
+  color: rgb(0, 54.5341463415, 102.8);
+}
+.ck-editor__main .ck-content .fc-event.fc-not-start .fc-content {
+  min-height: 44px;
+}
+.ck-editor__main .ck-content .fc-event.fc-not-start .fc-content .fc-title {
+  margin-top: 0.6875rem;
+}
+.ck-editor__main .ck-content .fc-timeGridDay-view .fc-event .fc-content, .ck-editor__main .ck-content .fc-timeGridWeek-vew .fc-event .fc-content {
+  max-height: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ck-editor__main .ck-content .view-events .view-footer #legend {
+  padding-top: 2em;
+}
+.ck-editor__main .ck-content .fc-left {
+  margin-top: 2rem;
+}
+.ck-editor__main .ck-content .calendar-calendar .fullcalendar-bottom-btn.add-event-btn {
+  position: absolute;
+  top: 0;
+}
+.ck-editor__main .ck-content .calendar-calendar .fc-head .fc-day-header {
+  background-color: #ced4da;
+  padding: 0.0625rem;
+}
+.ck-editor__main .ck-content .calendar-calendar .fc .fc-row .fc-content-skeleton td a.fc-day-number {
+  text-align: center;
+  padding: 0.625rem 0.3125rem 0 !important;
+  overflow: hidden;
+  line-height: normal;
+}
+.ck-editor__main .ck-content .calendar-calendar .fc .fc-row .fc-content-skeleton td.fc-other-month {
+  background-color: #f4f4f4;
+}
+.ck-editor__main .ck-content .calendar-calendar .fc .fc-row .fc-content-skeleton td.fc-today a.fc-day-number {
+  background-color: #adb5bd;
+  border: 1px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 0.625rem 0.3125rem 0 !important;
+  overflow: hidden;
+  line-height: normal;
+}
+.ck-editor__main .ck-content .calendar-calendar .fc-unthemed td.fc-other-month {
+  background-color: #f4f4f4;
+  opacity: 0.3;
+}
+.ck-editor__main .ck-content .calendar-calendar .fc-unthemed td.fc-today {
+  background-color: white;
+}
+.ck-editor__main .ck-content .fc-timeGridWeek-view .fc-event.fc-time-grid-event .fc-content, .ck-editor__main .ck-content .fc-timeGridWeek-view .fc-event.fc-time-grid-event .fc-content .fc-title {
+  height: 100%;
+}
+.ck-editor__main .ck-content .fc-timeGridDay-view .fc-time-grid .fc-event {
+  width: 25%;
+}
+.ck-editor__main .ck-content .fc-timeGridDay-view .fc-time-grid .fc-event .fc-content, .ck-editor__main .ck-content .fc-timeGridDay-view .fc-time-grid .fc-event .fc-content .fc-title {
+  height: 100%;
+}
+.ck-editor__main .ck-content .fc-time-grid,
+.ck-editor__main .ck-content .fc-time-grid-container,
+.ck-editor__main .ck-content .fc-scroller {
+  height: auto !important;
+}
+.ck-editor__main .ck-content .add-event-btn {
+  margin-top: 1.5rem;
+}
+.ck-editor__main .ck-content .cld-main {
+  width: 100%;
+  color: #343a40;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.ck-editor__main .ck-content .cld-main .cld-datetime {
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1;
+  font-size: calc(1.3rem + 0.6vw);
+}
+@media (min-width: 75rem) {
+  .ck-editor__main .ck-content .cld-main .cld-datetime {
+    font-size: 1.75rem;
+  }
+}
+.ck-editor__main .ck-content .cld-main .cld-datetime .today {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: center;
+}
+.ck-editor__main .ck-content .cld-main .cld-datetime .cld-nav {
+  padding: 0;
+  background: none;
+  border: none;
+  color: #e89f00;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.ck-editor__main .ck-content .cld-main .cld-datetime .cld-nav:hover, .ck-editor__main .ck-content .cld-main .cld-datetime .cld-nav:focus, .ck-editor__main .ck-content .cld-main .cld-datetime .cld-nav:focus-visible {
+  cursor: pointer;
+  color: rgba(232, 159, 0, 0.75);
+}
+.ck-editor__main .ck-content .cld-main .cld-labels, .ck-editor__main .ck-content .cld-main .cld-days {
+  padding: 0;
+}
+.ck-editor__main .ck-content .cld-main .cld-labels {
+  margin-bottom: 1rem;
+}
+.ck-editor__main .ck-content .cld-main .cld-labels .cld-label {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  width: 14.28%;
+  text-align: center;
+}
+.ck-editor__main .ck-content .cld-main .cld-days {
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+.ck-editor__main .ck-content .cld-main .cld-days .cld-day {
+  width: 14.2857142857%;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  border: 1px solid transparent;
+}
+.ck-editor__main .ck-content .cld-main .cld-days .cld-day:before {
+  content: "";
+  display: block;
+  padding-top: 87%;
+}
+.ck-editor__main .ck-content .cld-main .cld-days .cld-day.disableDay {
+  opacity: 0.8;
+}
+.ck-editor__main .ck-content .cld-main .cld-days .cld-day .cld-number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0.1rem;
+  padding: 0.625rem;
+  border-radius: 1rem;
+  background-color: rgba(232, 159, 0, 0.2);
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.ck-editor__main .ck-content .cld-main .cld-days .cld-day .cld-number .cld-number-day {
+  display: block;
+  position: absolute;
+  z-index: 5;
+  line-height: normal;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+       -o-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+@media (min-width: 75rem) {
+  .ck-editor__main .ck-content .cld-main .cld-days .cld-day .cld-number .cld-number-day {
+    left: 10px;
+    bottom: 10px;
+    top: auto;
+    -webkit-transform: none;
+         -o-transform: none;
+            transform: none;
+  }
+}
+.ck-editor__main .ck-content .cld-main .cld-days .cld-day .cld-number .cld-title {
+  position: absolute;
+  z-index: 10;
+  opacity: 0;
+  top: calc(100% - 20px);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+       -o-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding: 0.125rem;
+  min-width: 350px;
+  max-width: 90vw;
+  background: #fff;
+  color: #343a40;
+  border-radius: 1rem;
+  border: 1px solid #adb5bd;
+  text-align: left;
+  font-weight: normal;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  font-size: 0.8rem;
+  --arrow-left: 50%;
+}
+.ck-editor__main .ck-content .cld-main .cld-days .cld-day .cld-number .cld-title:not(.cld-clickable) {
+  pointer-events: none;
+}
+.ck-editor__main .ck-content .cld-main .cld-days .cld-day .cld-number .cld-title:before {
+  content: "";
+  position: absolute;
+  top: -7.5px;
+  left: var(--arrow-left);
+  -webkit-transform: translateX(-50%);
+       -o-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 7.5px solid transparent;
+  border-right: 7.5px solid transparent;
+  border-bottom: 7.5px solid #343a40;
+}
+.ck-editor__main .ck-content .cld-main .cld-days .cld-day .cld-number.eventday.event-active {
+  -webkit-box-shadow: inset 0 0 0 4px rgba(232, 159, 0, 0.8), 0 0 0 4px transparent;
+          box-shadow: inset 0 0 0 4px rgba(232, 159, 0, 0.8), 0 0 0 4px transparent;
+}
+.ck-editor__main .ck-content .cld-main .cld-days .cld-day .cld-number.eventday:before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+       -o-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 50%;
+  height: 0;
+  padding-top: 50%;
+  border-radius: 50%;
+  background-color: rgba(232, 159, 0, 0.6);
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+@media (min-width: 75rem) {
+  .ck-editor__main .ck-content .cld-main .cld-days .cld-day .cld-number.eventday:before {
+    left: auto;
+    right: 10px;
+    top: 10px;
+    -webkit-transform: none;
+         -o-transform: none;
+            transform: none;
+    width: 15px;
+    padding-top: 0.9375rem;
+  }
+}
+.ck-editor__main .ck-content .cld-main .cld-days .cld-day .cld-number.eventday:hover, .ck-editor__main .ck-content .cld-main .cld-days .cld-day .cld-number.eventday:focus-visible {
+  cursor: pointer;
+  outline: none;
+  -webkit-box-shadow: inset 0 0 0 4px transparent, 0 0 0 4px rgba(232, 159, 0, 0.5);
+          box-shadow: inset 0 0 0 4px transparent, 0 0 0 4px rgba(232, 159, 0, 0.5);
+}
+.ck-editor__main .ck-content .cld-main .cld-days .cld-day .cld-number.eventday:hover.event-active, .ck-editor__main .ck-content .cld-main .cld-days .cld-day .cld-number.eventday:focus-visible.event-active {
+  -webkit-box-shadow: inset 0 0 0 4px rgba(232, 159, 0, 0.8), 0 0 0 4px rgba(232, 159, 0, 0.5);
+          box-shadow: inset 0 0 0 4px rgba(232, 159, 0, 0.8), 0 0 0 4px rgba(232, 159, 0, 0.5);
+}
+.ck-editor__main .ck-content .cld-main .cld-days .cld-day .cld-number.eventday:hover .cld-title, .ck-editor__main .ck-content .cld-main .cld-days .cld-day .cld-number.eventday:focus-visible .cld-title {
+  top: 100%;
+  opacity: 1;
+}
+.ck-editor__main .ck-content .cld-main .cld-days .cld-day .cld-number.eventday .cld-number-day {
+  color: #fff;
+}
+@media (min-width: 75rem) {
+  .ck-editor__main .ck-content .cld-main .cld-days .cld-day .cld-number.eventday .cld-number-day {
+    color: #343a40;
+  }
+}
+.ck-editor__main .ck-content .cld-main .cld-days .cld-day .cld-number .event-title {
+  padding: 0.0625rem 0.5rem;
+  background-color: #fff;
+}
+.ck-editor__main .ck-content .cld-main .cld-days .cld-day .cld-number .event-title:first-child {
+  border-top-left-radius: calc(1rem - 2px);
+  border-top-right-radius: calc(1rem - 2px);
+}
+.ck-editor__main .ck-content .cld-main .cld-days .cld-day .cld-number .event-title:last-child {
+  border-bottom-left-radius: calc(1rem - 2px);
+  border-bottom-right-radius: calc(1rem - 2px);
+}
+.ck-editor__main .ck-content .cld-main .cld-days .cld-day .cld-number .event-title:not(:last-child) {
+  margin-bottom: 0.125rem;
+}
+.ck-editor__main .ck-content .cld-main .cld-days .cld-day.today .cld-number {
+  background-color: #0057a4;
+}
+.ck-editor__main .ck-content .events-calendar-widget .carousel {
+  background-color: #fff;
+  border-radius: 1rem;
+}
+.ck-editor__main .ck-content .events-calendar-widget .carousel .carousel-navigation {
+  left: 1rem;
+  right: 1rem;
+  top: 1rem;
+}
+.ck-editor__main .ck-content .events-calendar-widget .carousel .carousel-item .carousel-item-content h3.event-date, .ck-editor__main .ck-content .events-calendar-widget .carousel .carousel-item .carousel-item-content .event-date.h3 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.25rem;
+}
+.ck-editor__main .ck-content .events-calendar-widget .carousel .carousel-item .carousel-item-content .event-item h4, .ck-editor__main .ck-content .events-calendar-widget .carousel .carousel-item .carousel-item-content .event-item .h4 {
+  font-size: 1rem;
+}
+.ck-editor__main .ck-content .events-calendar-widget .carousel .carousel-item .carousel-item-content .event-item h4 a.event-link:link, .ck-editor__main .ck-content .events-calendar-widget .carousel .carousel-item .carousel-item-content .event-item .h4 a.event-link:link, .ck-editor__main .ck-content .events-calendar-widget .carousel .carousel-item .carousel-item-content .event-item h4 a.event-link:active, .ck-editor__main .ck-content .events-calendar-widget .carousel .carousel-item .carousel-item-content .event-item .h4 a.event-link:active, .ck-editor__main .ck-content .events-calendar-widget .carousel .carousel-item .carousel-item-content .event-item h4 a.event-link:visited, .ck-editor__main .ck-content .events-calendar-widget .carousel .carousel-item .carousel-item-content .event-item .h4 a.event-link:visited {
+  color: #000;
+  text-decoration: none;
+  background-color: #ced4da;
+}
+.ck-editor__main .ck-content .events-calendar-widget .carousel .carousel-item .carousel-item-content .event-item h4 a.event-link:focus, .ck-editor__main .ck-content .events-calendar-widget .carousel .carousel-item .carousel-item-content .event-item .h4 a.event-link:focus, .ck-editor__main .ck-content .events-calendar-widget .carousel .carousel-item .carousel-item-content .event-item h4 a.event-link:focus-visible, .ck-editor__main .ck-content .events-calendar-widget .carousel .carousel-item .carousel-item-content .event-item .h4 a.event-link:focus-visible, .ck-editor__main .ck-content .events-calendar-widget .carousel .carousel-item .carousel-item-content .event-item h4 a.event-link:hover, .ck-editor__main .ck-content .events-calendar-widget .carousel .carousel-item .carousel-item-content .event-item .h4 a.event-link:hover {
+  color: #000;
+  outline: none;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-box-shadow: 0 0 0 2px #343a40;
+          box-shadow: 0 0 0 2px #343a40;
+}

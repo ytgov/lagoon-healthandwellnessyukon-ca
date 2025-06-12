@@ -1,0 +1,77 @@
+{#
+/**
+ * @file
+ * Theme override to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ */
+#}
+{% if title %}
+  <h3>{{ title }}</h3>
+{% endif %}
+{%
+  set carousel_id = 'calendar-event'|clean_unique_id
+%}
+<div class="events-calendar-widget row d-flex flex-wrap align-items-stretch mb-3">
+  <div class="col-12 col-lg-7 d-lg-flex justify-content-center align-items-stretch">
+    <div id="caleandar" class="w-100"></div>
+  </div>
+  <div class="col-12 col-lg-5 d-flex justify-content-center align-items-stretch mb-3 mb-lg-0">
+    <div id="{{ carousel_id }}" class="carousel p-3 slide w-100 d-flex flex-column position-relative">
+      <div class="carousel-inner flex-grow-1 d-flex align-items-stretch">
+        {% for event_date, rows in rows_by_date %}
+          {% set row_classes = [
+            'carousel-item',
+            'views-row',
+            (loop.index0 == active_index) ? 'active',
+          ] %}
+          {% set row_attributes = create_attribute() %}
+          <div{{ row_attributes.addClass(row_classes).setAttribute('data-bs-index', loop.index0).setAttribute('data-event-date', event_date) }}>
+            <div class="carousel-item-content h-100 w-100 event-items">
+              <h3 class="event-date mb-3 lh-base text-center">{{ event_date|date('F j, Y') }}</h3>
+              {% for row in rows %}
+                {% set item_attributes = create_attribute() %}
+                <div{{ item_attributes.addClass('event-item') }}>{{ row.content }}</div>
+              {% endfor %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      {% if rows_by_date|length > 1 %}
+        <div class="carousel-navigation position-absolute d-flex justify-content-between align-items-center gap-2">
+          {% set control_classes = [
+            'control-fv',
+            'd-flex flex-column',
+            'align-items-stretch justify-content-center',
+            'rounded-circle chevron-padding'
+          ]
+          %}
+          {% set control_attributes = create_attribute() %}
+          <button tabindex="0" class="carousel-control-prev position-static w-auto"
+            data-bs-target="#{{ carousel_id }}" data-bs-slide="prev">
+            <span{{ control_attributes.addClass(['d-block', 'control-prev']) }}>
+              <i class="fs-3 text-primary fa-solid fa-circle-chevron-left fa-nav-calendar" aria-hidden="true"></i>
+              <span class="sr-only">{{ 'Previous'|t }}</span>
+            </span>
+          </button>
+          <button tabindex="0" class="carousel-control-next position-static w-auto"
+            data-bs-target="#{{ carousel_id }}" data-bs-slide="next">
+            <span{{ control_attributes.addClass(['d-block', 'control-next']) }}>
+              <i class="fs-3 text-primary fa-solid fa-circle-chevron-right fa-nav-calendar" aria-hidden="true"></i>
+              <span class="sr-only">{{ 'Next'|t }}</span>
+            </span>
+          </button>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>

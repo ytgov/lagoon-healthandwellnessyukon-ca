@@ -13,5 +13,9 @@ Sub-theme for this site.
 // Base theme styles
 @import "../../kci_base/scss/style";
 
+// Sub-theme components
+@import "components/calendar";
+
+
 // Sub-theme overrides
 @import "custom";

@@ -8,8 +8,8 @@
 declare(strict_types=1);
 
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Link;
-use Drupal\Core\Url;
+use Drupal\Core\Datetime\DrupalDateTime;
+
 
 /**
  * Implements hook_form_system_theme_settings_alter() for settings form.
@@ -51,5 +51,105 @@ function site_theme_preprocess_field(array &$variables): void {
       $link_options['attributes']['class'] = $link_classes;
       $item['content']['#url']->setOptions($link_options);
     }
+  }
+}
+
+/**
+ * Implements template_preprocess_views_view_unformatted().
+ */
+function site_theme_preprocess_views_view_unformatted__calendar_events(&$variables) {
+  if ($variables['view']->id() == 'events' && $variables['view']->current_display == 'calendar_events') {
+    $events = [];
+    $current_user = \Drupal::currentUser();
+    $timezone = $current_user->getTimeZone() ?: \Drupal::config('system.date')->get('timezone.default');
+    $today = new DrupalDateTime('now', new \DateTimeZone($timezone));
+    $month_end = new DrupalDateTime('last day of this month', new \DateTimeZone($timezone));
+    $nearest_before_date = NULL;
+    $nearest_on_or_after_date = NULL;
+
+    $grouped_rows = [];
+    foreach ($variables['rows'] as $row_data) {
+      $row = $row_data['content']['#row'];
+      $event_title = $row->_entity->getTitle();
+      $start_date = $row->_entity->get('field_event_date')->value;
+      $end_date = $row->_entity->get('field_event_date')->end_value;
+
+      // Convert the start and end dates to the current user's or site's
+      // timezone.
+      $start_date = new DrupalDateTime($start_date, new \DateTimeZone('UTC'));
+      $start_date->setTimezone(new \DateTimeZone($timezone));
+      $end_date = $end_date ? new DrupalDateTime($end_date, new \DateTimeZone('UTC')) : (clone $start_date);
+      $end_date->setTimezone(new \DateTimeZone($timezone));
+
+      if ($end_date->getTimestamp() < $today->getTimestamp()) {
+        $nearest_before_date = clone $end_date;
+      }
+      else {
+        if (empty($nearest_before_date) || $start_date->getTimeStamp() <= $month_end->getTimeStamp()) {
+          $nearest_on_or_after_date = clone $start_date;
+        }
+      }
+
+      // Calculate the number of days between the start and end dates.
+      $days_between = $start_date->diff($end_date)->days;
+
+      $current_date = (clone $start_date);
+      for ($i = 0; $i <= $days_between; $i++) {
+        $formatted_date = $current_date->format('Y-m-d');
+
+        // Add the current row_data to the grouped_rows array.
+        if (!isset($grouped_rows[$formatted_date])) {
+          $grouped_rows[$formatted_date] = [];
+        }
+        $grouped_rows[$formatted_date][] = $row_data;
+
+        // Create the event object for the caleandar.
+        // By default each event will have a left and right caret icon.
+        $prefix = '<span class="event-icon"><i class="fa-solid fa-caret-left" aria-hidden="true"></i></span>';
+        $suffix = '<span class="event-icon text-end"><i class="fa-solid fa-caret-right" aria-hidden="true"></i></span>';
+        if ($i === 0) {
+          // First item in the loop. This should have no prefix and the start
+          // time as a suffix.
+          $prefix = '';
+          $suffix = '<span class="flex-shrink-0">' . $current_date->format('g:ia');
+          if ($days_between > 0) {
+            // If it has additional days, add a right caret icon.
+            $suffix .= ' <i class="fa-solid fa-caret-right" aria-hidden="true"></i>';
+          }
+          $suffix .= '</span>';
+        }
+        if ($days_between > 0 && $i === $days_between) {
+          // Last item in the loop of a multi-day event. This should have the
+          // end time as a suffix and no right caret icon.
+          $suffix = '<span class="flex-shrink-0">' . t('ends @time', ['@time' => $end_date->format('g:ia')]) . '</span>';
+        }
+        $display_title = $prefix . '<span class="flex-grow-1">' . $event_title . '</span>' . $suffix;
+        $event = [
+          'title' => '<span class="d-flex align-items-start gap-2 lh-normal">' . $display_title . '</span>',
+          'date' => $formatted_date,
+        ];
+        $events[] = $event;
+        $current_date->modify("+1 day");
+      }
+
+    }
+    if ($nearest_on_or_after_date) {
+      $active_date = $nearest_on_or_after_date;
+    }
+    elseif ($nearest_before_date) {
+      $active_date = $nearest_before_date;
+    }
+    else {
+      $active_date = $today;
+    }
+    $active_date_formatted = $active_date->format('Y-m-d');
+    $active_index = 0;
+    if (array_key_exists($active_date_formatted, $grouped_rows)) {
+      $active_index = array_search($active_date_formatted, array_keys($grouped_rows));
+    }
+    $variables['active_index'] = $active_index;
+    $variables['rows_by_date'] = $grouped_rows;
+    $variables['#attached']['library'][] = 'site_theme/caleandar-site';
+    $variables['#attached']['drupalSettings']['caleandar_events_data'] = $events;
   }
 }

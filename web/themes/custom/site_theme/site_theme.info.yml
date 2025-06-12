@@ -9,6 +9,8 @@ base theme: kci_base
 libraries:
   - site_theme/global-styling
   - site_theme/scroll-animations
+  - site_theme/caleandar
+  - site_theme/caleandar-site
 ckeditor5-stylesheets:
   - css/ckeditor.css
 regions:

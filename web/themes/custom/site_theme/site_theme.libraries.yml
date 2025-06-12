@@ -13,3 +13,14 @@ email:
   css:
     theme:
       css/mail.css: {}
+caleandar:
+  version: VERSION
+  js:
+    js/caleandar.js: {}
+caleandar-site:
+  version: VERSION
+  js:
+    js/caleandar-site.js: {}
+  dependencies:
+    - site_theme/caleandar
+    - core/drupalSettings
