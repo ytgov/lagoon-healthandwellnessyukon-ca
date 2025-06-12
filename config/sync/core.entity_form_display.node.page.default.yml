@@ -51,13 +51,13 @@ content:
     weight: 2
     region: content
     settings:
-      title: Paragraph
-      title_plural: Paragraphs
+      title: Banner
+      title_plural: Banner
       edit_mode: open
       closed_mode: preview
       autocollapse: none
       closed_mode_threshold: 0
-      add_mode: modal
+      add_mode: button
       form_display_mode: default
       default_paragraph_type: _none
       features:
@@ -100,6 +100,11 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
     third_party_settings: {  }
   url_redirects:
     weight: 6

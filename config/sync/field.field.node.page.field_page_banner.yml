@@ -8,6 +8,10 @@ dependencies:
     - paragraphs.paragraphs_type.page_banner
   module:
     - entity_reference_revisions
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
 _core:
   default_config_hash: aOXpYc0KtMLZdMFY2h1cWvKU7yi2F3iU7WNXwtH87rI
 id: node.page.field_page_banner
@@ -16,7 +20,7 @@ entity_type: node
 bundle: page
 label: 'Page Banner'
 description: ''
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
@@ -28,99 +32,66 @@ settings:
     negate: 0
     target_bundles_drag_drop:
       accordion:
-        weight: 33
+        weight: -36
         enabled: false
       accordion_content:
-        weight: 34
-        enabled: false
-      button_with_icon:
-        weight: 12
-        enabled: false
-      buttons_with_icon:
-        weight: 35
+        weight: -35
         enabled: false
       card:
-        weight: 37
+        weight: -34
         enabled: false
       cta_background_image:
-        weight: 38
-        enabled: false
-      dene_law_group:
-        weight: 40
-        enabled: false
-      dene_laws:
-        weight: 39
-        enabled: false
-      embedded_audio:
-        weight: 41
-        enabled: false
-      embedded_video:
-        weight: 14
+        weight: -33
         enabled: false
       featured_content:
-        weight: 15
-        enabled: false
-      featured_video:
-        weight: 44
-        enabled: false
-      featured_video_group:
-        weight: 45
+        weight: -42
         enabled: false
       file_attachments:
-        weight: 16
+        weight: -41
         enabled: false
       google_map:
-        weight: 47
+        weight: -32
         enabled: false
       image_gallery:
-        weight: 49
+        weight: -30
         enabled: false
       image_with_link:
-        weight: 50
+        weight: -29
         enabled: false
       images_with_links:
-        weight: 48
-        enabled: false
-      large_icon_cta:
-        weight: 51
-        enabled: false
-      large_icon_ctas:
-        weight: 52
+        weight: -31
         enabled: false
       large_image:
-        weight: 17
+        weight: -40
         enabled: false
       map_with_contact_info:
-        weight: 54
+        weight: -28
         enabled: false
       page_banner:
-        weight: 18
+        weight: -43
         enabled: true
       slideshow:
-        weight: 56
+        weight: -27
         enabled: false
       slideshow_item:
-        weight: 20
+        weight: -39
         enabled: false
       slideshow_with_caption:
-        weight: 58
-        enabled: false
-      social_media_icon_link:
-        weight: 59
+        weight: -26
         enabled: false
       text_content:
-        weight: 21
+        weight: -38
         enabled: false
       text_content_full_width:
-        weight: 61
+        weight: -25
         enabled: false
       two_column_text_content:
-        weight: 62
+        weight: -24
         enabled: false
       view:
-        weight: 22
+        weight: -37
         enabled: false
       webform:
-        weight: 64
+        weight: -23
         enabled: false
 field_type: entity_reference_revisions
