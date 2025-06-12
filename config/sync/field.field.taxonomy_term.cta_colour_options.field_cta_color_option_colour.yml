@@ -7,13 +7,17 @@ dependencies:
     - taxonomy.vocabulary.cta_colour_options
   module:
     - color_field
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
 _core:
   default_config_hash: DkPUQ0XQWTv7jJv68t002dBHPax6Ou80Y_YgaNnG1i4
 id: taxonomy_term.cta_colour_options.field_cta_color_option_colour
 field_name: field_cta_color_option_colour
 entity_type: taxonomy_term
 bundle: cta_colour_options
-label: 'Primary Colour'
+label: 'Background Colour'
 description: ''
 required: true
 translatable: false

@@ -7,13 +7,17 @@ dependencies:
     - taxonomy.vocabulary.cta_colour_options
   module:
     - color_field
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
 _core:
   default_config_hash: tJnsby-il345Uv4Fza9hba4DDalyJMXCi3G8rUjwhPQ
 id: taxonomy_term.cta_colour_options.field_accent_colour
 field_name: field_accent_colour
 entity_type: taxonomy_term
 bundle: cta_colour_options
-label: 'Accent Colour'
+label: 'Text Colour'
 description: ''
 required: true
 translatable: false
