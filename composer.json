@@ -36,7 +36,8 @@
         "drupal/pathologic": "^2.0@alpha",
         "drupal/token_filter": "^2.2",
         "drupal/views_bootstrap": "^5.4",
-        "drupal/ckeditor_media_resize": "^1.0"
+        "drupal/ckeditor_media_resize": "^1.0",
+        "drupal/media_pdf_thumbnail": "^7.0"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
