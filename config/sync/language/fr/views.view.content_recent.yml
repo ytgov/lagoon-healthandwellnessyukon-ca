@@ -1,3 +1,5 @@
 display:
+  default:
+    display_title: 'Par défaut'
   block_1:
     display_title: Bloc

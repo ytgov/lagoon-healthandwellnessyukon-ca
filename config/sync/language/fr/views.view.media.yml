@@ -1,0 +1,23 @@
+label: Média
+display:
+  default:
+    display_title: 'Par défaut'
+    display_options:
+      title: Média
+      fields:
+        bundle:
+          label: Type
+        operations:
+          label: Actions
+      filters:
+        bundle:
+          expose:
+            label: Type
+        langcode:
+          expose:
+            label: Langue
+  media_page_list:
+    display_title: Média
+    display_options:
+      menu:
+        title: Média

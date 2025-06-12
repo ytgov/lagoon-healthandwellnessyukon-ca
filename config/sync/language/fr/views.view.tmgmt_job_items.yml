@@ -4,8 +4,14 @@ display:
       fields:
         label:
           label: Libellé
+        type:
+          label: Type
+        operations:
+          label: Actions
   checkout:
     display_options:
       fields:
         label:
           label: Libellé
+        type:
+          label: Type

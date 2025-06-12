@@ -1,0 +1,20 @@
+uuid: 7f7cd426-5c14-4e6b-b9a8-84b98ddb2a2a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.events
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '1'
+_core:
+  default_config_hash: zObuMxQwvezQd1TO9-6mbqDnEyAXqp7j9WV-2NVx6h8
+id: node.events
+target_entity_type_id: node
+target_bundle: events
+default_langcode: site_default
+language_alterable: true

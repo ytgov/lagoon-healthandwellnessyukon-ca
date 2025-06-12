@@ -1,0 +1,11 @@
+display:
+  default:
+    display_options:
+      fields:
+        edit_node:
+          text: Modifier
+  homepage_news:
+    display_options:
+      fields:
+        edit_node:
+          text: Modifier

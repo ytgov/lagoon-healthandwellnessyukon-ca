@@ -1,0 +1,12 @@
+display:
+  default:
+    display_options:
+      fields:
+        langcode:
+          label: Langue
+        redirect_404_operations:
+          label: Actions
+      filters:
+        langcode:
+          expose:
+            label: Langue

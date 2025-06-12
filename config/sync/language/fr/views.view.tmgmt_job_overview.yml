@@ -4,3 +4,5 @@ display:
       fields:
         label:
           label: Libellé
+        operations:
+          label: Actions

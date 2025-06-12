@@ -3,77 +3,66 @@ display:
     display_options:
       fields:
         title:
-          label: Libellé
+          label: Titre
+  assigned:
+    display_options:
+      fields:
+        title:
+          label: Titre
+        operations:
+          label: Actions
+      filters:
+        title:
+          expose:
+            label: Titre
   closed:
     display_options:
       fields:
         title:
-          label: Libellé
+          label: Titre
         operations:
           label: Actions
       filters:
         title:
           expose:
-            label: Libellé
+            label: Titre
   completed:
     display_options:
       fields:
         title:
-          label: Libellé
+          label: Titre
         operations:
           label: Actions
       filters:
         title:
           expose:
-            label: Libellé
-  eligible:
-    display_options:
-      fields:
-        title:
-          label: Libellé
-        operations:
-          label: Actions
-      filters:
-        title:
-          expose:
-            label: Libellé
-  my_tasks:
-    display_options:
-      fields:
-        title:
-          label: Libellé
-        operations:
-          label: Actions
-      filters:
-        title:
-          expose:
-            label: Libellé
+            label: Titre
   pending:
     display_options:
       fields:
         title:
-          label: Libellé
+          label: Titre
         operations:
           label: Actions
       filters:
         title:
           expose:
-            label: Libellé
+            label: Titre
   rejected:
     display_options:
       fields:
         title:
-          label: Libellé
+          label: Titre
         operations:
           label: Actions
       filters:
         title:
           expose:
-            label: Libellé
+            label: Titre
   unassigned:
     display_options:
       fields:
         title:
-          label: Libellé
+          label: Titre
         operations:
           label: Actions

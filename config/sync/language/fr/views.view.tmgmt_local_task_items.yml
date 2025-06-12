@@ -4,5 +4,9 @@ display:
       fields:
         label:
           label: Libellé
+        item_type:
+          label: Type
+        operations:
+          label: Actions
   block_1:
     display_title: Bloc

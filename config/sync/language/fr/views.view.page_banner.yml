@@ -1,5 +1,5 @@
 display:
   default:
     display_title: 'Par défaut'
-  block_1:
+  page_banner_block:
     display_title: Bloc

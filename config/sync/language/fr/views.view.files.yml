@@ -1,0 +1,16 @@
+display:
+  default:
+    display_title: 'Par défaut'
+    display_options:
+      fields:
+        filename:
+          label: Nom
+        count:
+          label: 'Utilisé dans'
+        operations:
+          label: Actions
+  page_2:
+    display_options:
+      fields:
+        type:
+          label: "Type d'entité"
