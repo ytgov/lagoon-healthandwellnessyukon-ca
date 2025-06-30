@@ -8,6 +8,10 @@ dependencies:
     - paragraphs.paragraphs_type.page_banner
   module:
     - entity_reference_revisions
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
 _core:
   default_config_hash: p-Okxsabi0aTJAJK9tumKhMjPUiViykJ1qbz3lqImDw
 id: node.events.field_page_banner
@@ -16,7 +20,7 @@ entity_type: node
 bundle: events
 label: 'Page Banner'
 description: ''
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
@@ -33,29 +37,11 @@ settings:
       accordion_content:
         weight: 34
         enabled: false
-      button_with_icon:
-        weight: 12
-        enabled: false
-      buttons_with_icon:
-        weight: 35
-        enabled: false
       card:
         weight: 37
         enabled: false
       cta_background_image:
         weight: 38
-        enabled: false
-      dene_law_group:
-        weight: 40
-        enabled: false
-      dene_laws:
-        weight: 39
-        enabled: false
-      embedded_audio:
-        weight: 41
-        enabled: false
-      embedded_video:
-        weight: 14
         enabled: false
       featured_content:
         weight: 15
@@ -75,12 +61,6 @@ settings:
       images_with_links:
         weight: 48
         enabled: false
-      large_icon_cta:
-        weight: 51
-        enabled: false
-      large_icon_ctas:
-        weight: 52
-        enabled: false
       large_image:
         weight: 17
         enabled: false
@@ -98,9 +78,6 @@ settings:
         enabled: false
       slideshow_with_caption:
         weight: 58
-        enabled: false
-      social_media_icon_link:
-        weight: 59
         enabled: false
       text_content:
         weight: 21

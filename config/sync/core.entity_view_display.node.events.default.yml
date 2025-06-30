@@ -1,0 +1,100 @@
+uuid: 3abcf842-4a85-4ba2-891e-9bf959c40e9a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.events.field_community
+    - field.field.node.events.field_content
+    - field.field.node.events.field_event_date
+    - field.field.node.events.field_event_image
+    - field.field.node.events.field_event_type
+    - field.field.node.events.field_page_banner
+    - field.field.node.events.field_related_content
+    - field.field.node.events.field_sharing_thumbnail
+    - node.type.events
+  module:
+    - datetime_range
+    - entity_reference_revisions
+    - fences
+    - frontend_editing
+    - link
+    - user
+id: node.events.default
+targetEntityType: node
+bundle: events
+mode: default
+content:
+  field_community:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_content:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+      frontend_editing:
+        ajax_content_update: '1'
+        move_up_down: '1'
+        add_items: '1'
+    weight: 2
+    region: content
+  field_event_date:
+    type: daterange_default
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: long
+      from_to: both
+      separator: 'to '
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    weight: 1
+    region: content
+  field_related_content:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  addtoany: true
+  field_event_image: true
+  field_event_type: true
+  field_page_banner: true
+  field_sharing_thumbnail: true
+  langcode: true
