@@ -16,7 +16,7 @@ matchers:
     settings:
       metadata: '[node:content-type:name] #[node:nid] | [node:created:medium] by [node:author]'
       bundles: {  }
-      group_by_bundle: false
+      group_by_bundle: true
       substitution_type: canonical
       limit: 100
       include_unpublished: false
