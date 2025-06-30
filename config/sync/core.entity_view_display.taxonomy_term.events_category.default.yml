@@ -1,0 +1,33 @@
+uuid: 655639c6-0527-44cb-8efb-2eee968782a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.events_category.field_category_colour
+    - taxonomy.vocabulary.events_category
+  module:
+    - color_field
+    - text
+id: taxonomy_term.events_category.default
+targetEntityType: taxonomy_term
+bundle: events_category
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_category_colour:
+    type: color_field_formatter_text
+    label: hidden
+    settings:
+      format: hex
+      opacity: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true
