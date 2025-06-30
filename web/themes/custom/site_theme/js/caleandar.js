@@ -248,7 +248,13 @@ function createCalendar(calendar, element, adjuster) {
       for (var n = 0; n < calendar.Model.length; n++) {
         var evDate = calendar.Model[n].Date;
         var toDate = new Date(calendar.Selected.Year, calendar.Selected.Month, (i + 1));
+
         if (evDate.getTime() == toDate.getTime()) {
+          var evColour = calendar.Model[n].Colour;
+          // Add style="--event-color: #hex;" to the number element
+          if (evColour) {
+            number.setAttribute('style', '--event-color: ' + evColour + ';');
+          }
           number.setAttribute('tabindex', '0');
           number.classList.add("eventday");
           var appendToNumber = false;

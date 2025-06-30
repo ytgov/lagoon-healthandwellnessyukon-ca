@@ -20,6 +20,7 @@
         events.push({
           Date: new Date(year, month, day),
           Title: eventsData[i].title,
+          Colour: eventsData[i].colour || '#000000', // Default to black if no colour is provided.
         });
       }
 

@@ -1,188 +1,16 @@
-//variables
+// Caleandar styles.
+$site-box-shadow: rgba(0, 0, 0, 0.5) 0 0.1rem 0.3rem 0;
+$side-nav-bg-color: rgba($accent-shade, 0.2);
+$side-nav-bg-active-color: rgba($accent-shade, 0.1);
 
-$cell-color-today: $gray-500;
-
-.js-drupal-fullcalendar {
-  .fc-toolbar {
-    @include media-breakpoint-down(md) {
-      flex-direction: column;
-      height: 200px;
-    }
-    // .fc-button {
-    //   &.fc-button-primary:not(:disabled) {
-    //     background-color: map-get($theme-colors , primary );
-    //     border-color: $standard-btn-bg;
-    //     &.fc-button-active, &:active, &:hover {
-    //       background-color: $standard-btn-hoverbg;
-    //       border-color: $standard-btn-hoverbg;
-    //     }
-    //   }
-    // }
-
-  }
-}
-
-.calendar-calendar {
-  width: 100%;
-}
-
-
-// Event Card Style
-.fc-event {
-  border-radius: 5px;
-  padding: 0.5rem 1px 1px;
-  border: none;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-  outline: 1px solid rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-  .fc-content {
-    padding: 5px;
-    border-radius: 0 0 4px 4px;
-    white-space: normal !important;
-    @include font-size(0.7rem);
-    background: $body-bg;
-    .fc-time {
-      font-weight: bold;
-      color: $link-color;
-      &:after {
-        content: " - ";
-        display: inline;
-        color: $link-color;
-      }
-    }
-    .fc-title {
-      background: $body-bg;
-      font-weight: bold;
-      color: $link-color;
-    }
-  }
-  &:hover .fc-content .fc-time,
-  &:hover .fc-content .fc-title {
-    color: $link-hover-color;
-  }
-  &.fc-not-start {
-    .fc-content {
-      min-height: 44px;
-      .fc-title {
-        margin-top: 11px;
-      }
-    }
-  }
-  .fc-timeGridDay-view &,
-  .fc-timeGridWeek-vew & {
-    .fc-content {
-      max-height: 100%;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-  }
-}
-
-.view-events {
-  .view-footer {
-    #legend {
-      padding-top: 2em;
-    }
-  }
-}
-
-.fc-left {
-  margin-top: 2rem;
-}
-.calendar-calendar {
-  .fullcalendar-bottom-btn.add-event-btn {
-    position: absolute;
-    top: 0;
-  }
-  .fc-head {
-    .fc-day-header {
-      background-color: $gray-400;
-      padding: 1px;
-    }
-  }
-  .fc .fc-row .fc-content-skeleton td {
-
-    a.fc-day-number {
-      text-align: center;
-      padding: 10px 5px 0px !important;
-      overflow: hidden;
-      line-height: normal;
-    }
-    &.fc-other-month {
-      background-color: #f4f4f4;
-    }
-    &.fc-today {
-      a.fc-day-number {
-        background-color: $cell-color-today;
-        border: 1px;
-        border-radius: 50%;
-        width: 30px;
-        height: 30px;
-        text-align: center;
-        padding: 10px 5px 0px !important;
-        overflow: hidden;
-        line-height: normal;
-      }
-    }
-  }
-  .fc-unthemed {
-    td.fc-other-month {
-      background-color: #f4f4f4;
-      opacity: 0.3;
-    }
-    td.fc-today {
-      background-color: white;
-    }
-  }
-}
-
-.fc-timeGridWeek-view {
-  .fc-event {
-    &.fc-time-grid-event  {
-      .fc-content {
-        &,.fc-title {
-          height: 100%;
-        }
-      }
-    }
-  }
-}
-
-.fc-timeGridDay-view {
-  .fc-time-grid {
-    .fc-event {
-      width: 25%;
-      .fc-content {
-        &, .fc-title {
-          height: 100%;
-        }
-      }
-    }
-  }
-}
-
-.fc-time-grid,
-.fc-time-grid-container,
-.fc-scroller {
-  height: auto !important;
-}
-
-.add-event-btn {
-  margin-top: 1.5rem;
-  a {
-    @extend .btn;
-    @extend .btn-primary;
-  }
-}
-
-// New Calendar Widget.
 .cld-main {
   width: 100%;
   color: $body-color;
   background-color: $white;
   padding: 1rem;
   border-radius: 1rem;
-  // box-shadow: $site-box-shadow;
+  box-shadow: $site-box-shadow;
+
   .cld-datetime {
     margin-bottom: 1rem;
     display: flex;
@@ -193,27 +21,36 @@ $cell-color-today: $gray-500;
     font-family: $font-family-base;
     line-height: 1;
     @include font-size($h3-font-size);
+
     .today {
       flex-grow: 1;
       text-align: center;
     }
+
     .cld-nav {
       padding: 0;
       background: none;
       border: none;
       color: $accent-shade;
       transition: $standard-transition;
-      &:hover, &:focus, &:focus-visible {
+
+      &:hover,
+      &:focus,
+      &:focus-visible {
         cursor: pointer;
         color: rgba($accent-shade, 0.75);
       }
     }
   }
-  .cld-labels, .cld-days {
+
+  .cld-labels,
+  .cld-days {
     padding: 0;
   }
+
   .cld-labels {
     margin-bottom: 1rem;
+
     .cld-label {
       box-sizing: border-box;
       display: inline-block;
@@ -221,11 +58,13 @@ $cell-color-today: $gray-500;
       text-align: center;
     }
   }
+
   .cld-days {
     margin: 0;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
     .cld-day {
       width: calc(100% / 7);
       position: relative;
@@ -234,14 +73,17 @@ $cell-color-today: $gray-500;
       align-items: center;
       text-align: center;
       border: 1px solid transparent;
+
       &:before {
         content: "";
         display: block;
         padding-top: 87%;
       }
+
       &.disableDay {
         opacity: 0.8;
       }
+
       .cld-number {
         position: absolute;
         top: 0;
@@ -253,6 +95,7 @@ $cell-color-today: $gray-500;
         border-radius: 1rem;
         background-color: rgba($accent-shade, 0.2);
         transition: $standard-transition;
+
         .cld-number-day {
           display: block;
           position: absolute;
@@ -262,6 +105,7 @@ $cell-color-today: $gray-500;
           top: 50%;
           transform: translate(-50%, -50%);
           transition: $standard-transition;
+
           @include media-breakpoint-up(xl) {
             left: 10px;
             bottom: 10px;
@@ -269,6 +113,7 @@ $cell-color-today: $gray-500;
             transform: none;
           }
         }
+
         .cld-title {
           position: absolute;
           z-index: 10;
@@ -286,12 +131,14 @@ $cell-color-today: $gray-500;
           text-align: left;
           font-weight: normal;
           transition: $standard-transition;
-          // box-shadow: $site-box-shadow;
+          box-shadow: $site-box-shadow;
           @include font-size($font-size-base * 0.8);
           --arrow-left: 50%;
+
           &:not(.cld-clickable) {
             pointer-events: none;
           }
+
           &:before {
             content: '';
             position: absolute;
@@ -305,10 +152,12 @@ $cell-color-today: $gray-500;
             border-bottom: 7.5px solid $gray-800;
           }
         }
+
         &.eventday {
           &.event-active {
             box-shadow: inset 0 0 0 4px rgba($accent-shade, 0.8), 0 0 0 4px transparent;
           }
+
           &:before {
             content: "";
             position: absolute;
@@ -320,8 +169,10 @@ $cell-color-today: $gray-500;
             height: 0;
             padding-top: 50%;
             border-radius: 50%;
-            background-color: rgba($accent-shade, 0.6);
+            // BG need to be dynamic based on the event type.
+            background-color: var(--event-color, rgba($accent-shade, 0.6));
             transition: $standard-transition;
+
             @include media-breakpoint-up(xl) {
               left: auto;
               right: 10px;
@@ -331,41 +182,52 @@ $cell-color-today: $gray-500;
               padding-top: 15px;
             }
           }
-          &:hover, &:focus-visible {
+
+          &:hover,
+          &:focus-visible {
             cursor: pointer;
             outline: none;
             box-shadow: inset 0 0 0 4px transparent, 0 0 0 4px rgba($accent-shade, 0.5);
+
             &.event-active {
               box-shadow: inset 0 0 0 4px rgba($accent-shade, 0.8), 0 0 0 4px rgba($accent-shade, 0.5);
             }
+
             .cld-title {
               top: 100%;
               opacity: 1;
             }
           }
+
           .cld-number-day {
             color: $white;
+
             @include media-breakpoint-up(xl) {
               color: $body-color;
             }
           }
         }
+
         .event-title {
           padding: 1px 8px;
           background-color: $white;
+
           &:first-child {
             border-top-left-radius: calc(1rem - 2px);
             border-top-right-radius: calc(1rem - 2px);
           }
+
           &:last-child {
             border-bottom-left-radius: calc(1rem - 2px);
             border-bottom-right-radius: calc(1rem - 2px);
           }
+
           &:not(:last-child) {
             margin-bottom: 2px;
           }
         }
       }
+
       &.today .cld-number {
         background-color: $primary-shade;
       }
@@ -377,33 +239,72 @@ $cell-color-today: $gray-500;
   .carousel {
     background-color: $white;
     border-radius: 1rem;
-    // box-shadow: $site-box-shadow;
+    box-shadow: $site-box-shadow;
+
     .carousel-navigation {
       left: 1rem;
       right: 1rem;
       top: 1rem;
     }
+
     .carousel-item {
       .carousel-item-content {
         h3.event-date {
           font-family: $font-family-base;
           @include font-size($h5-font-size);
         }
+
         .event-item {
           h4 {
             @include font-size($font-size-base);
-            a.event-link {
-              &:link, &:active, &:visited {
-                color: $black;
-                text-decoration: none;
-                background-color: $main-nav-link-active-bg-color;
+
+            .event-item-wrapper {
+              background-color: $side-nav-bg-active-color;
+
+              a.event-link {
+
+                &:link,
+                &:active,
+                &:visited {
+                  color: $black;
+                  text-decoration: none;
+                }
+
+                &:focus,
+                &:focus-visible,
+                &:hover {
+                  color: $black;
+                  outline: none;
+                  text-decoration: none;
+                }
               }
-              &:focus, &:focus-visible, &:hover {
-                color: $black;
-                outline: none;
-                text-decoration: none;
-                background-color: $main-nav-link-bg-color;
+
+              .event-content {
+                .container {
+                  .paragraph:first-child {
+                    margin: 0 !important;
+                  }
+
+                  .paragraph:last-child {
+                    margin-bottom: 0 !important;
+                  }
+                }
+              }
+
+              &:hover {
+                background-color: $side-nav-bg-color;
                 box-shadow: 0 0 0 2px $gray-800;
+
+                a.event-link {
+
+                  &:focus,
+                  &:focus-visible,
+                  &:hover {
+                    color: $black;
+                    outline: none;
+                    text-decoration: none;
+                  }
+                }
               }
             }
           }
