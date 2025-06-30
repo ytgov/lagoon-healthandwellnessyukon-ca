@@ -1,1 +1,28 @@
-// Put site-specific theme code in here.
+// Site feedback form styles.
+.form-item-was-this-page-helpful {
+  position: relative;
+  padding-left: 0;
+}
+
+.yes-no-trigger-wrapper {
+  input.form-radio {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    right: 0;
+
+  }
+
+  label.form-check-label {
+    cursor: pointer;
+  }
+
+  .fa-thumbs-down {
+    //Mirrored
+    transform: scaleX(-1);
+  }
+
+  .selected {
+    color: $form-feedback-selected-option-color;
+  }
+}

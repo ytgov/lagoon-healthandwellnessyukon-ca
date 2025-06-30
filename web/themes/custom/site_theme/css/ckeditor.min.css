@@ -19004,3 +19004,24 @@
   outline: none;
   text-decoration: none;
 }
+.ck-editor__main .ck-content .form-item-was-this-page-helpful {
+  position: relative;
+  padding-left: 0;
+}
+.ck-editor__main .ck-content .yes-no-trigger-wrapper input.form-radio {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  right: 0;
+}
+.ck-editor__main .ck-content .yes-no-trigger-wrapper label.form-check-label {
+  cursor: pointer;
+}
+.ck-editor__main .ck-content .yes-no-trigger-wrapper .fa-thumbs-down {
+  -webkit-transform: scaleX(-1);
+       -o-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+.ck-editor__main .ck-content .yes-no-trigger-wrapper .selected {
+  color: #fff;
+}
