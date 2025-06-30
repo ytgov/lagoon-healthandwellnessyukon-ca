@@ -1,37 +1,26 @@
-uuid: 1878fc90-f481-484a-b0a2-b3053698b279
+uuid: 45898562-9f97-418e-af49-24f8f9f7e861
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.events.field_community
-    - field.field.node.events.field_content
-    - field.field.node.events.field_event_date
-    - field.field.node.events.field_event_image
-    - field.field.node.events.field_event_type
-    - field.field.node.events.field_page_banner
-    - field.field.node.events.field_related_content
-    - field.field.node.events.field_sharing_thumbnail
-    - node.type.events
+    - field.field.node.news.field_content
+    - field.field.node.news.field_date
+    - field.field.node.news.field_news_image
+    - field.field.node.news.field_page_banner
+    - node.type.news
   module:
-    - datetime_range
-    - link_attributes
+    - datetime
     - media_library
     - paragraphs
     - path
-id: node.events.default
+id: node.news.default
 targetEntityType: node
-bundle: events
+bundle: news
 mode: default
 content:
-  field_community:
-    type: options_select
-    weight: 5
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_content:
     type: paragraphs
-    weight: 7
+    weight: 4
     region: content
     settings:
       title: Paragraph
@@ -49,79 +38,53 @@ content:
         convert: convert
         duplicate: duplicate
     third_party_settings: {  }
-  field_event_date:
-    type: daterange_default
-    weight: 3
+  field_date:
+    type: datetime_default
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_event_image:
+  field_news_image:
     type: media_library_widget
-    weight: 6
+    weight: 3
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
-  field_event_type:
-    type: options_select
-    weight: 4
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_page_banner:
     type: paragraphs
-    weight: 2
+    weight: 0
     region: content
     settings:
-      title: Paragraph
-      title_plural: Paragraphs
+      title: Banner`
+      title_plural: Banner
       edit_mode: closed
-      closed_mode: preview
+      closed_mode: summary
       autocollapse: none
       closed_mode_threshold: 0
       add_mode: button
       form_display_mode: default
-      default_paragraph_type: _none
+      default_paragraph_type: page_banner
       features:
-        add_above: '0'
         collapse_edit_all: collapse_edit_all
-        convert: '0'
-        duplicate: '0'
-    third_party_settings: {  }
-  field_related_content:
-    type: link_attributes
-    weight: 8
-    region: content
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-      enabled_attributes:
-        target: true
-        rel: true
-        id: false
-        name: false
-        class: false
-        accesskey: false
-        aria-label: false
-        title: false
-      widget_default_open: collapsed
+        duplicate: duplicate
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 0
+    weight: 5
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   path:
     type: path
-    weight: 11
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 10
+    weight: 8
     region: content
     settings:
       display_label: true
@@ -135,13 +98,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 9
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
   created: true
-  field_sharing_thumbnail: true
   promote: true
   simple_sitemap: true
   simple_sitemap_index_now: true
