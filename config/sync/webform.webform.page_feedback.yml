@@ -275,13 +275,13 @@ handlers:
     settings:
       states:
         - completed
-      to_mail: 'hss@yukon.ca, bettertoknow@yukon.ca'
+      to_mail: hss@yukon.ca
       to_options: {  }
       bcc_mail: ''
       bcc_options: {  }
       cc_mail: ''
       cc_options: {  }
-      from_mail: info@bettertoknow.yk.ca
+      from_mail: info@healthandwellnessyukon.ca
       from_options: {  }
       from_name: _default
       reply_to: ''
@@ -289,22 +289,7 @@ handlers:
       sender_mail: ''
       sender_name: ''
       subject: 'New page feedback for the Better to know website'
-      body: |
-        <p><strong>Submitted on</strong> {{ webform_token('[webform_submission:created]', webform_submission, [], options) }}</p>
-        {% set url = webform_token('[webform_submission:values:page_url:raw]', webform_submission, [], options) %}
-        {% set page_name = webform_token('[webform_submission:values:page_title:raw]', webform_submission, [], options) %}
-        <p><strong>Page: </strong><a href="{{ url }}">{{ page_name }}</a></p>
-        <p><strong>URL: </strong>{{ webform_token('[webform_submission:values:page_url:raw]', webform_submission, [], options) }}</p>
-
-        <p><strong>Feedback:</strong></p>
-        <p><strong>Was this page helpful?: </strong>{{ webform_token('[webform_submission:values:was_this_page_helpful:raw]', webform_submission, [], options) }}</p>
-        {% if webform_token('[webform_submission:values:how_did_this_page_help_you:raw]', webform_submission, [], options) %}
-          <p><strong>How did this page help you?</strong></p>
-          <p>{{ webform_token('[webform_submission:values:how_did_this_page_help_you:raw]', webform_submission, [], options) }}</p>
-        {% else %}
-          <p><strong>How can we improve this page?</strong></p>
-          <p>{{ webform_token('[webform_submission:values:how_can_we_improve_this_page:raw]', webform_submission, [], options) }}</p>
-        {% endif %}
+      body: "<p><strong>Submitted on</strong> {{ webform_token('[webform_submission:created]', webform_submission, [], options) }}</p>\r\n{% set url = webform_token('[webform_submission:values:page_url:raw]', webform_submission, [], options) %}\r\n{% set page_name = webform_token('[webform_submission:values:page_title:raw]', webform_submission, [], options) %}\r\n<p><strong>Page: </strong><a href=\"{{ url }}\">{{ page_name }}</a></p>\r\n<p><strong>URL: </strong>{{ webform_token('[webform_submission:values:page_url:raw]', webform_submission, [], options) }}</p>\r\n\r\n<p><strong>Feedback:</strong></p>\r\n<p><strong>Was this page helpful?: </strong>{{ webform_token('[webform_submission:values:was_this_page_helpful:raw]', webform_submission, [], options) }}</p>\r\n{% if webform_token('[webform_submission:values:how_did_this_page_help_you:raw]', webform_submission, [], options) %}\r\n  <p><strong>How did this page help you?</strong></p>\r\n  <p>{{ webform_token('[webform_submission:values:how_did_this_page_help_you:raw]', webform_submission, [], options) }}</p>\r\n{% else %}\r\n  <p><strong>How can we improve this page?</strong></p>\r\n  <p>{{ webform_token('[webform_submission:values:how_can_we_improve_this_page:raw]', webform_submission, [], options) }}</p>\r\n{% endif %}\r\n"
       excluded_elements:
         search_query: search_query
         department: department
