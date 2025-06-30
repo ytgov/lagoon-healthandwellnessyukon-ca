@@ -3,7 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
+    - node.type.blog
     - node.type.homepage
+    - node.type.news
     - node.type.page
     - workflows.workflow.editorial
   module:
@@ -34,15 +36,21 @@ permissions:
   - 'access site in maintenance mode'
   - 'access taxonomy overview'
   - 'access toolbar'
+  - 'create blog content'
   - 'create homepage content'
   - 'create media'
+  - 'create news content'
   - 'create page content'
   - 'create url aliases'
   - 'delete media'
   - 'delete own files'
+  - 'edit any blog content'
   - 'edit any homepage content'
+  - 'edit any news content'
   - 'edit any page content'
+  - 'edit own blog content'
   - 'edit own homepage content'
+  - 'edit own news content'
   - 'edit own page content'
   - 'switch shortcut sets'
   - 'update media'

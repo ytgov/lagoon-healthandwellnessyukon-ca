@@ -3,7 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
+    - node.type.blog
     - node.type.homepage
+    - node.type.news
     - node.type.page
     - workflows.workflow.editorial
   module:
@@ -38,16 +40,23 @@ permissions:
   - 'create content translations'
   - 'create homepage content'
   - 'create media'
+  - 'create news content'
   - 'create page content'
   - 'create url aliases'
   - 'delete any media'
   - 'delete content translations'
   - 'delete media'
   - 'delete own files'
+  - 'edit any blog content'
   - 'edit any homepage content'
+  - 'edit any news content'
   - 'edit any page content'
+  - 'edit own blog content'
   - 'edit own homepage content'
+  - 'edit own news content'
   - 'edit own page content'
+  - 'revert blog revisions'
+  - 'revert news revisions'
   - 'revert page revisions'
   - 'switch shortcut sets'
   - 'translate any entity'
@@ -66,7 +75,9 @@ permissions:
   - 'view all revisions'
   - 'view all taxonomy revisions'
   - 'view any unpublished content'
+  - 'view blog revisions'
   - 'view latest version'
+  - 'view news revisions'
   - 'view page revisions'
   - 'view the administration theme'
   - 'view unpublished paragraphs'
