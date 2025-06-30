@@ -3,8 +3,10 @@ langcode: en
 status: true
 dependencies:
   config:
+    - filter.format.comment_formatting
     - filter.format.webform_default
   module:
+    - comment
     - filter
     - fontawesome
     - help
@@ -21,13 +23,16 @@ label: 'Authenticated user'
 weight: -9
 is_admin: false
 permissions:
+  - 'access comments'
   - 'access content'
   - 'access fontawesome additional settings'
   - 'access help pages'
   - 'access shortcuts'
   - 'opt-in or out of matomo tracking'
+  - 'post comments'
   - 'search content'
   - 'use advanced search'
+  - 'use text format comment_formatting'
   - 'use text format webform_default'
   - 'view media'
   - 'view own unpublished content'

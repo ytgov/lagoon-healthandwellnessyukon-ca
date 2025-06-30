@@ -1,0 +1,29 @@
+label: Commentaires
+display:
+  default:
+    display_title: 'Par défaut'
+    display_options:
+      title: Commentaires
+      fields:
+        operations:
+          label: Actions
+      exposed_form:
+        options:
+          submit_button: Filtrer
+      filters:
+        langcode:
+          expose:
+            label: Langue
+  page_published:
+    display_options:
+      menu:
+        title: Commentaires
+  page_unapproved:
+    display_options:
+      fields:
+        operations:
+          label: Actions
+      filters:
+        langcode:
+          expose:
+            label: Langue

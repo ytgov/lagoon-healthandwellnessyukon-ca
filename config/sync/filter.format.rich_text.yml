@@ -15,7 +15,7 @@ _core:
   default_config_hash: 0CiQU9S3iRQmwjy-HMbB1ypC7xe2tHmuGo92CDeWEMU
 name: 'Rich text'
 format: rich_text
-weight: -10
+weight: -9
 filters:
   editor_file_reference:
     id: editor_file_reference

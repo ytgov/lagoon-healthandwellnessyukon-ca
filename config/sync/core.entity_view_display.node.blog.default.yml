@@ -3,12 +3,15 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_display.comment.blog_comments.default
+    - field.field.node.blog.field_comments
     - field.field.node.blog.field_content
     - field.field.node.blog.field_date
     - field.field.node.blog.field_news_image
     - field.field.node.blog.field_page_banner
     - node.type.blog
   module:
+    - comment
     - datetime
     - entity_reference_revisions
     - fences
@@ -20,6 +23,15 @@ targetEntityType: node
 bundle: blog
 mode: default
 content:
+  field_comments:
+    type: comment_default
+    label: above
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 4
+    region: content
   field_content:
     type: entity_reference_revisions_entity_view
     label: hidden

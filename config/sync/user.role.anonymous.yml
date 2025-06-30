@@ -2,7 +2,11 @@ uuid: 452c0bdb-7bb7-47bf-99e8-6d361ba8fb6d
 langcode: en
 status: true
 dependencies:
+  config:
+    - filter.format.comment_formatting
   module:
+    - comment
+    - filter
     - media
     - search
     - system
@@ -13,6 +17,9 @@ label: 'Anonymous user'
 weight: -10
 is_admin: false
 permissions:
+  - 'access comments'
   - 'access content'
+  - 'post comments'
   - 'search content'
+  - 'use text format comment_formatting'
   - 'view media'
