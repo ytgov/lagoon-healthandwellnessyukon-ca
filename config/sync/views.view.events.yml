@@ -5,9 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_content
     - field.storage.node.field_event_date
-    - field.storage.node.field_event_image
     - field.storage.node.field_event_type
-    - image.style.news_events_thumbnail
     - node.type.events
     - views.view.event_categories
   module:
@@ -15,7 +13,6 @@ dependencies:
     - datetime_range
     - entity_reference_revisions
     - fullcalendar_view
-    - media
     - node
     - smart_date
     - taxonomy
@@ -710,6 +707,69 @@ display:
     position: 5
     display_options:
       fields:
+        field_event_type:
+          id: field_event_type
+          table: node__field_event_type
+          field: field_event_type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: false
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
         title:
           id: title
           table: node_field_data
@@ -915,7 +975,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<a href=\"{{ view_node }}\" class=\"event-link d-flex align-items-start gap-3 p-3 rounded-4\">\r\n  {% if field_event_image %}\r\n    <span class=\"event-thumbnail\">\r\n      {{ field_event_image }}\r\n    </span>\r\n  {% endif %}\r\n  <span class=\"event-details text-center flex-grow-1\">\r\n    <span class=\"d-block mb-2 event-title fw-bold\">{{ title }}</span>\r\n    <span class=\"d-block event-date small\">{{ field_event_date }}</span>\r\n  </span>\r\n</a>"
+            text: "<div class=\"event-item-wrapper d-flex flex-column gap-3 p-3 rounded-4 position-relative\">\r\n  <a href=\"{{ view_node }}\" class=\"position-absolute w-100 h-100\"></a>\r\n  <span class=\"event-link d-flex align-items-start gap-3\">\r\n    {% if field_sharing_thumbnail %}\r\n      <span class=\"event-thumbnail\">\r\n        {{ field_sharing_thumbnail}}\r\n      </span>\r\n    {% endif %}\r\n    <span class=\"event-details text-center flex-grow-1\">\r\n      <span class=\"d-block mb-2 event-title fw-bold\">{{ title }}</span>\r\n      <span class=\"d-block event-date small\">{{ field_event_date }}</span>\r\n    </span>\r\n  </span>\r\n  <div class=\"event-content rounded-4 bg-white p-2\">\r\n    {{ field_content }}\r\n  </div>\r\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -952,6 +1012,57 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
+        operations:
+          id: operations
+          table: node
+          field: operations
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          plugin_id: entity_operations
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          destination: true
       pager:
         type: none
         options:
@@ -1150,11 +1261,35 @@ display:
         pager: false
         style: false
         row: false
+        relationships: false
         fields: false
         sorts: false
         filters: false
         filter_groups: false
+        header: false
+      relationships:
+        field_event_type:
+          id: field_event_type
+          table: node__field_event_type
+          field: field_event_type
+          relationship: none
+          group_type: group
+          admin_label: 'field_event_type: Taxonomy term'
+          plugin_id: standard
+          required: false
       display_description: ''
+      header:
+        view:
+          id: view
+          table: views
+          field: view
+          relationship: none
+          group_type: group
+          admin_label: 'Event Type Legend'
+          plugin_id: view
+          empty: true
+          view_to_insert: 'event_categories:calendar_legend_block'
+          inherit_arguments: false
       display_extenders: {  }
     cache_metadata:
       max-age: -1
@@ -1165,7 +1300,7 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.field_event_date'
-        # - 'config:field.storage.node.field_event_image'
+        - 'config:field.storage.node.field_event_type'
   home_upcoming_events_slide:
     id: home_upcoming_events_slide
     display_title: 'Home Upcoming Events Slide'
@@ -3035,4 +3170,3 @@ display:
       tags:
         - 'config:field.storage.node.field_content'
         - 'config:field.storage.node.field_event_date'
-        # - 'config:field.storage.node.field_event_image'
