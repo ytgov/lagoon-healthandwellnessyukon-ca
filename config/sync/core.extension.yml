@@ -12,6 +12,7 @@ module:
   block_visibility_conditions: 0
   block_visibility_conditions_node: 0
   blockgroup: 0
+  bpmn_io: 0
   breakpoint: 0
   ckeditor5: 0
   ckeditor_link_styles: 0
@@ -28,6 +29,11 @@ module:
   dblog: 0
   dynamic_page_cache: 0
   easy_breadcrumb: 0
+  eca: 0
+  eca_base: 0
+  eca_content: 0
+  eca_modeller_bpmn: 0
+  eca_ui: 0
   editor: 0
   entity_reference_revisions: 0
   extra_field: 0

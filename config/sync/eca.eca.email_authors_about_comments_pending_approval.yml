@@ -1,0 +1,52 @@
+uuid: c97227c1-ee66-4964-aa60-38c6db347c14
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.blog_comments
+  module:
+    - eca_content
+id: email_authors_about_comments_pending_approval
+modeller: bpmn_io
+label: 'Email Blog Authors of New Comments Pending Approval'
+version: '1.0'
+weight: 0
+events:
+  create_new_blog_comment_entity:
+    plugin: 'content_entity:insert'
+    label: 'Create Blog comment'
+    configuration:
+      type: 'comment blog_comments'
+    successors:
+      -
+        id: comment_status_not_published
+        condition: ''
+conditions: {  }
+gateways:
+  comment_status_not_published:
+    type: 0
+    successors:
+      -
+        id: email_comment_node_author
+        condition: ''
+actions:
+  email_comment_node_author:
+    plugin: action_send_email_action
+    label: 'Email node author'
+    configuration:
+      recipient: '[comment:entity:author:mail]'
+      subject: 'New comment pending approval'
+      message: |-
+        You are receiving this message because somebody has posted a public comment on a Blog article as follows:
+
+        Article: [comment:entity:title] ([comment:entity:url:absolute])
+        Author: [comment:author:name]
+        Subject: [comment:title]
+
+        Comments:
+
+        [comment:body]
+
+        To review and either approve or delete this comment, login at [site:login-url], go to the article page at [comment:entity:url:absolute] and scroll down to the comments section.
+      replace_tokens: true
+    successors: {  }
