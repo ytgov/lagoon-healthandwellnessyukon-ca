@@ -1,5 +1,7 @@
 <?php
 
+// phpcs:ignoreFile
+
 /**
  * @file
  * Shared development (non-production) settings.
