@@ -9,6 +9,8 @@
  * Add your own local settings overrides to a file named `settings.local.yml`.
  */
 
+ $settings['container_yamls'][] = __DIR__ . '/development.services.yml';
+
 // Default local dev settings.
 $settings['skip_permissions_hardening'] = TRUE;
 $config['system.logging']['error_level'] = 'verbose';
