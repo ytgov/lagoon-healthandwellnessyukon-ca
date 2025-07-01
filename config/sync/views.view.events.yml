@@ -258,7 +258,7 @@ display:
           empty: true
           content:
             value: '<h4>There are no events at this time.</h4>'
-            format: kci_rich_text
+            format: rich_text
           tokenize: false
       sorts:
         field_event_date_value:
@@ -1728,7 +1728,7 @@ display:
           empty: true
           content:
             value: '<h4>There are no upcoming events at this time.</h4>'
-            format: kci_rich_text
+            format: rich_text
           tokenize: false
       sorts:
         field_event_date_value:
@@ -2325,7 +2325,7 @@ display:
           empty: true
           content:
             value: '<h4>There are no upcoming events at this time.</h4>'
-            format: kci_rich_text
+            format: rich_text
           tokenize: false
       sorts:
         field_event_date_value:
@@ -2957,7 +2957,7 @@ display:
           empty: true
           content:
             value: '<h4>There are no upcoming events at this time.</h4>'
-            format: kci_rich_text
+            format: rich_text
           tokenize: false
       sorts:
         field_event_date_value:
