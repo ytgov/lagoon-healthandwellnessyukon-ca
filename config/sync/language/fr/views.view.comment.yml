@@ -5,12 +5,43 @@ display:
     display_options:
       title: Commentaires
       fields:
+        subject:
+          separator: ', '
+        uid:
+          separator: ', '
+        name:
+          label: Auteur
+          separator: ', '
+        entity_id:
+          separator: ', '
+        changed:
+          separator: ', '
         operations:
           label: Actions
+        name_1:
+          separator: ', '
+      pager:
+        options:
+          tags:
+            next: "suivant\_›"
+            previous: "‹\_précédent"
+            first: "«\_premier"
+            last: "dernier\_»"
+          expose:
+            items_per_page_label: 'Éléments par page'
+            items_per_page_options_all_label: '- Tout -'
+            offset_label: Décalage
       exposed_form:
         options:
           submit_button: Filtrer
+          reset_button_label: Réinitialiser
+          exposed_sorts_label: 'Trier par'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
       filters:
+        combine:
+          expose:
+            label: "Nom de l'auteur"
         langcode:
           expose:
             label: Langue
@@ -21,8 +52,21 @@ display:
   page_unapproved:
     display_options:
       fields:
+        subject:
+          separator: ', '
+        uid:
+          separator: ', '
+        name:
+          label: Auteur
+          separator: ', '
+        entity_id:
+          separator: ', '
+        changed:
+          separator: ', '
         operations:
           label: Actions
+        name_1:
+          separator: ', '
       filters:
         langcode:
           expose:

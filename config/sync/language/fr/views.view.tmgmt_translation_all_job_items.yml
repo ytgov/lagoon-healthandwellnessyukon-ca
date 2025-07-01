@@ -1,10 +1,44 @@
 display:
   default:
+    display_title: Principal
     display_options:
+      exposed_form:
+        options:
+          submit_button: Appliquer
+          reset_button_label: Réinitialiser
+          exposed_sorts_label: 'Trier par'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Éléments par page'
+            items_per_page_options_all_label: '- Tout -'
+            offset_label: Décalage
       fields:
+        state:
+          label: État
         label:
           label: Libellé
         type:
           label: Type
+        source_language:
+          separator: ', '
+        target_language:
+          separator: ', '
+        word_count:
+          label: Mot
+          separator: ', '
+        tags_count:
+          separator: ', '
+        changed:
+          label: Modifié
+          separator: ', '
         operations:
           label: Actions
+      filters:
+        state:
+          group_info:
+            label: État
+  page_1:
+    display_title: Page

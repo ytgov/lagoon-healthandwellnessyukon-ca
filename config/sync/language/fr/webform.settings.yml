@@ -1,4 +1,5 @@
 settings:
+  default_reset_button_label: Réinitialiser
   default_delete_button_label: Supprimer
   default_wizard_start_label: Début
   default_preview_next_button_label: Aperçu

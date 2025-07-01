@@ -1,23 +1,106 @@
 display:
   default:
+    display_title: Principal
     display_options:
+      exposed_form:
+        options:
+          submit_button: Appliquer
+          reset_button_label: Réinitialiser
+          exposed_sorts_label: 'Trier par'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Éléments par page'
+            items_per_page_options_all_label: '- Tout -'
+            offset_label: Décalage
       fields:
+        sid:
+          separator: ', '
+        in_draft:
+          separator: ', '
+        created:
+          label: Créé
+          separator: ', '
+        remote_addr:
+          separator: ', '
         view_webform_submission:
           label: Actions
   embed_administer:
     display_options:
       fields:
+        sid:
+          separator: ', '
+        in_draft:
+          separator: ', '
+        sticky:
+          separator: ', '
+        locked:
+          label: Verrouillé
+          separator: ', '
+        created:
+          label: Créé
+          separator: ', '
+        completed:
+          separator: ', '
+        remote_addr:
+          separator: ', '
         operations:
           label: Actions
+      filters:
+        locked:
+          expose:
+            label: Verrouillé
   embed_manage:
     display_options:
       fields:
+        sid:
+          separator: ', '
+        in_draft:
+          separator: ', '
+        sticky:
+          separator: ', '
+        locked:
+          label: Verrouillé
+          separator: ', '
+        created:
+          label: Créé
+          separator: ', '
+        completed:
+          separator: ', '
+        remote_addr:
+          separator: ', '
         view_webform_submission:
           label: Actions
         edit_webform_submission:
           label: Actions
+      filters:
+        locked:
+          expose:
+            label: Verrouillé
   embed_review:
     display_options:
       fields:
+        sid:
+          separator: ', '
+        in_draft:
+          separator: ', '
+        sticky:
+          separator: ', '
+        locked:
+          label: Verrouillé
+          separator: ', '
+        created:
+          label: Créé
+          separator: ', '
+        completed:
+          separator: ', '
+        remote_addr:
+          separator: ', '
         view_webform_submission:
           label: Actions
+      filters:
+        locked:
+          expose:
+            label: Verrouillé
