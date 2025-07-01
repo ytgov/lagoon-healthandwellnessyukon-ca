@@ -10,6 +10,7 @@ dependencies:
     - node.type.page
     - workflows.workflow.editorial
   module:
+    - comment
     - content_moderation
     - contextual
     - file
@@ -54,6 +55,7 @@ permissions:
   - 'edit own homepage content'
   - 'edit own news content'
   - 'edit own page content'
+  - 'skip comment approval'
   - 'switch shortcut sets'
   - 'update media'
   - 'use editorial transition create_new_draft'

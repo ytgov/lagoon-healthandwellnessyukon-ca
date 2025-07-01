@@ -109,6 +109,7 @@ permissions:
   - 'revert homepage revisions'
   - 'revert news revisions'
   - 'revert page revisions'
+  - 'skip comment approval'
   - 'submit translation jobs'
   - 'switch shortcut sets'
   - 'translate any entity'
