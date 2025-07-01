@@ -2,6 +2,10 @@
   Drupal.behaviors.siteCalendar = {
     attach: function (context, settings) {
       var caleandarElement = document.querySelector('#caleandar');
+      if (!caleandarElement) {
+        // If the caleandar element is not found, we cannot proceed.
+        return;
+      }
       var eventsData = settings.caleandar_events_data || [];
       var events = [];
       var currentSlideIndex = 0;
