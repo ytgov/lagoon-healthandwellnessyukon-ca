@@ -27,6 +27,12 @@
   }
 }
 
+.modal {
+  .btn-close {
+    z-index: 10;
+  }
+}
+
 // image styles.
 .no-thumbnail {
   width: 100%;

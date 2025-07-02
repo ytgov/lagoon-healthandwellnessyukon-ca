@@ -6351,9 +6351,9 @@
   --bs-modal-bg: var(--bs-body-bg);
   --bs-modal-border-color: var(--bs-border-color-translucent);
   --bs-modal-border-width: var(--bs-border-width);
-  --bs-modal-border-radius: var(--bs-border-radius-lg);
+  --bs-modal-border-radius: 0;
   --bs-modal-box-shadow: var(--bs-box-shadow-sm);
-  --bs-modal-inner-border-radius: calc(var(--bs-border-radius-lg) - (var(--bs-border-width)));
+  --bs-modal-inner-border-radius: calc(0 - (var(--bs-border-width)));
   --bs-modal-header-padding-x: 1rem;
   --bs-modal-header-padding-y: 1rem;
   --bs-modal-header-padding: 1rem 1rem;
@@ -19024,6 +19024,9 @@
 }
 .ck-editor__main .ck-content .yes-no-trigger-wrapper .selected {
   color: #fff;
+}
+.ck-editor__main .ck-content .modal .btn-close {
+  z-index: 10;
 }
 .ck-editor__main .ck-content .no-thumbnail {
   width: 100%;
