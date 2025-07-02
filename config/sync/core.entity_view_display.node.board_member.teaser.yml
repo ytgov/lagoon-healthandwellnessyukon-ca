@@ -1,0 +1,28 @@
+uuid: 6fbbd1dd-026a-4e07-a289-5060aa7c9419
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.board_member.field_biography
+    - field.field.node.board_member.field_photo
+    - field.field.node.board_member.field_role
+    - node.type.board_member
+  module:
+    - user
+id: node.board_member.teaser
+targetEntityType: node
+bundle: board_member
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  addtoany: true
+  field_biography: true
+  field_photo: true
+  field_role: true
+  langcode: true

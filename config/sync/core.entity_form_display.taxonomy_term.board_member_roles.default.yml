@@ -1,0 +1,46 @@
+uuid: 0cc7ecc2-c849-47ef-a2bd-e4878b42d695
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.board_member_roles
+  module:
+    - text
+id: taxonomy_term.board_member_roles.default
+targetEntityType: taxonomy_term
+bundle: board_member_roles
+mode: default
+content:
+  description:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  path: true
+  simple_sitemap: true
+  simple_sitemap_index_now: true
+  status: true

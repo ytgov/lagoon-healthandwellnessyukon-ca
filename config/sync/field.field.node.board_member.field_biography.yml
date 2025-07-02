@@ -1,0 +1,32 @@
+uuid: 90f831de-868e-4a41-ab50-a854f4234272
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_biography
+    - filter.format.rich_text
+    - node.type.board_member
+  module:
+    - allowed_formats
+    - text
+    - tmgmt_content
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - rich_text
+  tmgmt_content:
+    excluded: false
+id: node.board_member.field_biography
+field_name: field_biography
+entity_type: node
+bundle: board_member
+label: Biography
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - rich_text
+field_type: text_long

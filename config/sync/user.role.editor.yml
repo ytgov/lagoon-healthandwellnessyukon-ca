@@ -5,9 +5,11 @@ dependencies:
   config:
     - filter.format.rich_text
     - node.type.blog
+    - node.type.board_member
     - node.type.homepage
     - node.type.news
     - node.type.page
+    - taxonomy.vocabulary.board_member_roles
     - workflows.workflow.editorial
   module:
     - comment
@@ -40,6 +42,7 @@ permissions:
   - 'access taxonomy overview'
   - 'access toolbar'
   - 'create blog content'
+  - 'create board_member content'
   - 'create homepage content'
   - 'create media'
   - 'create news content'
@@ -48,13 +51,16 @@ permissions:
   - 'delete media'
   - 'delete own files'
   - 'edit any blog content'
+  - 'edit any board_member content'
   - 'edit any homepage content'
   - 'edit any news content'
   - 'edit any page content'
   - 'edit own blog content'
+  - 'edit own board_member content'
   - 'edit own homepage content'
   - 'edit own news content'
   - 'edit own page content'
+  - 'edit terms in board_member_roles'
   - 'skip comment approval'
   - 'switch shortcut sets'
   - 'update media'
