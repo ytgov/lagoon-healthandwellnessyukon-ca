@@ -27,10 +27,13 @@ settings:
   force_default: false
   allowed_views:
     blog: blog
+    board_members: board_members
     events: events
     news: news
+    comment: '0'
     content: '0'
     block_content: '0'
+    eca_log: '0'
     event_categories: '0'
     files: '0'
     frontpage: '0'
@@ -42,6 +45,7 @@ settings:
     page_banner: '0'
     pdf_image_entity: '0'
     user_admin_people: '0'
+    comments_recent: '0'
     content_recent: '0'
     redirect: '0'
     redirect_404: '0'
