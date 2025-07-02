@@ -1,0 +1,26 @@
+uuid: 1724c3c4-390e-49f8-8786-439477c24f22
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_board_member
+    - node.type.board_member
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: node.board_member.field_board_member
+field_name: field_board_member
+entity_type: node
+bundle: board_member
+label: 'Board Member'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.board_member.field_biography
+    - field.field.node.board_member.field_board_member
     - field.field.node.board_member.field_photo
     - field.field.node.board_member.field_role
     - node.type.board_member
@@ -23,6 +24,7 @@ content:
 hidden:
   addtoany: true
   field_biography: true
+  field_board_member: true
   field_photo: true
   field_role: true
   langcode: true
