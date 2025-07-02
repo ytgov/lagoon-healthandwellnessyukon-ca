@@ -313,3 +313,11 @@ $side-nav-bg-active-color: rgba($accent-shade, 0.1);
     }
   }
 }
+
+.calendar-legend-block {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: $site-box-shadow;
+  background-color: $white;
+}

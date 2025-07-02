@@ -19004,6 +19004,14 @@
   outline: none;
   text-decoration: none;
 }
+.ck-editor__main .ck-content .calendar-legend-block {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 0.1rem 0.3rem 0;
+          box-shadow: rgba(0, 0, 0, 0.5) 0 0.1rem 0.3rem 0;
+  background-color: #fff;
+}
 .ck-editor__main .ck-content .form-item-was-this-page-helpful {
   position: relative;
   padding-left: 0;
