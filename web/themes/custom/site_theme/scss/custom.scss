@@ -27,6 +27,19 @@
   }
 }
 
+// image styles.
+.no-thumbnail {
+  width: 100%;
+  position: relative;
+  background: $gray-500;
+  color: $black;
+
+  &.image-style-board-member-thumbnail {
+    aspect-ratio: 1 / 1;
+  }
+}
+
+// Effects.
 .zoom-in {
   transition: $standard-transition;
 

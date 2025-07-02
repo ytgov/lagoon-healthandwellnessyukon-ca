@@ -144,7 +144,7 @@ display:
           element_wrapper_type: div
           element_wrapper_class: ''
           element_default_classes: true
-          empty: ''
+          empty: "<div class=\"board-grid-thumbnail rounded-circle overflow-hidden\">\r\n  <span class=\"no-thumbnail image-style-board-member-thumbnail d-flex flex-column justify-content-center text-center\">\r\n    <i class=\"fs-1 fa-solid fa-user-large\"></i>\r\n  </span>\r\n</div>\r\n"
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true

@@ -19025,6 +19025,15 @@
 .ck-editor__main .ck-content .yes-no-trigger-wrapper .selected {
   color: #fff;
 }
+.ck-editor__main .ck-content .no-thumbnail {
+  width: 100%;
+  position: relative;
+  background: #adb5bd;
+  color: #000;
+}
+.ck-editor__main .ck-content .no-thumbnail.image-style-board-member-thumbnail {
+  aspect-ratio: 1/1;
+}
 .ck-editor__main .ck-content .zoom-in {
   -webkit-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
