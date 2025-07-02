@@ -19025,3 +19025,13 @@
 .ck-editor__main .ck-content .yes-no-trigger-wrapper .selected {
   color: #fff;
 }
+.ck-editor__main .ck-content .zoom-in {
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.ck-editor__main .ck-content .zoom-in:hover {
+  -webkit-transform: scale(1.05);
+       -o-transform: scale(1.05);
+          transform: scale(1.05);
+}

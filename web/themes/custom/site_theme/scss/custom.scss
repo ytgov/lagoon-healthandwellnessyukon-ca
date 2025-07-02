@@ -26,3 +26,11 @@
     color: $form-feedback-selected-option-color;
   }
 }
+
+.zoom-in {
+  transition: $standard-transition;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
