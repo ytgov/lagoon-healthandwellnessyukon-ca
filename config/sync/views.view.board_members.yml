@@ -367,7 +367,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<a href=\"#{{ title_1 }}\" class=\"position-absolute top-0 start-0 w-100 h-100\" data-bs-toggle=\"modal\" data-bs-target=\"#{{ title_1  }}\"></a>\r\n<div class=\"text-center d-flex flex-column\">\r\n<div class=\"board-grid-thumbnail rounded-circle overflow-hidden\">\r\n  {{ field_photo }}\r\n</div>\r\n<h3>{{ title }}</h3>\r\n<div>{{ field_role }}</div>\r\n</div>"
+            text: "<a href=\"#{{ title_1 }}\" class=\"position-absolute top-0 start-0 w-100 h-100\" data-bs-toggle=\"modal\" data-bs-target=\"#{{ title_1  }}\"></a>\r\n<div class=\"d-flex\">\r\n  <div class=\"col-5 board-grid-thumbnail rounded-circle overflow-hidden\">\r\n    {{ field_photo }}\r\n  </div>\r\n  <div class=\"col align-self-center ms-3\">\r\n    <h3>{{ title }}</h3>\r\n    <div>{{ field_role }}</div>\r\n  </div>\r\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -615,8 +615,8 @@ display:
           grid_class: ''
           col_xs: col-12
           col_sm: col-sm-12
-          col_md: col-md-6
-          col_lg: col-lg-3
+          col_md: col-md-12
+          col_lg: col-lg-4
           col_xl: none
       row:
         type: fields
