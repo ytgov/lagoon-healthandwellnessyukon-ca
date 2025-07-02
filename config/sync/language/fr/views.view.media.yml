@@ -5,22 +5,13 @@ display:
     display_options:
       title: Média
       fields:
-        thumbnail__target_id:
-          separator: ', '
-        name:
-          separator: ', '
         bundle:
           label: Type
-          separator: ', '
         uid:
           label: Auteur
-          separator: ', '
         status:
           settings:
             format_custom_true: Publié
-          separator: ', '
-        changed:
-          separator: ', '
         operations:
           label: Actions
       pager:
@@ -34,8 +25,6 @@ display:
           submit_button: Filtrer
           reset_button_label: Réinitialiser
           exposed_sorts_label: 'Trier par'
-          sort_asc_label: Asc
-          sort_desc_label: Desc
       filters:
         bundle:
           expose:

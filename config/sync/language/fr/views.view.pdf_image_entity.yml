@@ -5,34 +5,8 @@ display:
       fields:
         id:
           label: 'Identifiant (ID)'
-          separator: ', '
-        referenced_entity_type:
-          separator: ', '
-        referenced_entity_bundle:
-          separator: ', '
-        referenced_entity_id:
-          separator: ', '
-        referenced_entity_revision_id:
-          separator: ', '
-        referenced_entity_lang:
-          separator: ', '
-        referenced_entity_field:
-          separator: ', '
-        pdf_file_id:
-          separator: ', '
-        pdf_file_uri:
-          separator: ', '
-        pdf_file_page:
-          separator: ', '
-        image_file_id:
-          separator: ', '
-        image_file_uri:
-          separator: ', '
-        image_format:
-          separator: ', '
         changed:
           label: Modifié
-          separator: ', '
       pager:
         options:
           expose:
@@ -44,11 +18,7 @@ display:
           submit_button: Appliquer
           reset_button_label: Réinitialiser
           exposed_sorts_label: 'Trier par'
-          sort_asc_label: Asc
-          sort_desc_label: Desc
       filters:
         changed_2:
           expose:
             label: Modifié
-  list:
-    display_title: Page

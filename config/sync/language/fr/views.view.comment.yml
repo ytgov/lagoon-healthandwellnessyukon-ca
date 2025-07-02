@@ -5,21 +5,10 @@ display:
     display_options:
       title: Commentaires
       fields:
-        subject:
-          separator: ', '
-        uid:
-          separator: ', '
         name:
           label: Auteur
-          separator: ', '
-        entity_id:
-          separator: ', '
-        changed:
-          separator: ', '
         operations:
           label: Actions
-        name_1:
-          separator: ', '
       pager:
         options:
           tags:
@@ -36,8 +25,6 @@ display:
           submit_button: Filtrer
           reset_button_label: Réinitialiser
           exposed_sorts_label: 'Trier par'
-          sort_asc_label: Asc
-          sort_desc_label: Desc
       filters:
         combine:
           expose:
@@ -52,21 +39,10 @@ display:
   page_unapproved:
     display_options:
       fields:
-        subject:
-          separator: ', '
-        uid:
-          separator: ', '
         name:
           label: Auteur
-          separator: ', '
-        entity_id:
-          separator: ', '
-        changed:
-          separator: ', '
         operations:
           label: Actions
-        name_1:
-          separator: ', '
       filters:
         langcode:
           expose:

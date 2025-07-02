@@ -5,7 +5,6 @@ display:
       fields:
         filename:
           label: Nom
-          separator: ', '
         count:
           label: 'Utilisé dans'
         operations:
@@ -21,8 +20,6 @@ display:
           submit_button: Filtrer
           reset_button_label: Réinitialiser
           exposed_sorts_label: 'Trier par'
-          sort_asc_label: Asc
-          sort_desc_label: Desc
   page_2:
     display_options:
       fields:

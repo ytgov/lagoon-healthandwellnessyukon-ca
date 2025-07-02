@@ -41,7 +41,8 @@
         "drupal/frontend_editing": "^2.0@alpha",
         "drupal/ckeditor_link_styles": "^1.1",
         "drupal/eca": "^2.1",
-        "drupal/bpmn_io": "^2.0"
+        "drupal/bpmn_io": "^2.0",
+        "drupal/draggableviews": "^2.1"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,

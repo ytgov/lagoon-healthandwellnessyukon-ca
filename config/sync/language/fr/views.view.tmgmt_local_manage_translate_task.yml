@@ -7,8 +7,6 @@ display:
           submit_button: Filtrer
           reset_button_label: Réinitialiser
           exposed_sorts_label: 'Trier par'
-          sort_asc_label: Asc
-          sort_desc_label: Desc
       pager:
         options:
           expose:
@@ -20,25 +18,13 @@ display:
           action_title: 'Pour la sélection'
         title:
           label: Titre
-          separator: ', '
   assigned:
     display_options:
       fields:
         tmgmt_local_task_bulk_form:
           action_title: 'Pour la sélection'
-        status:
-          separator: ', '
-        tuid:
-          separator: ', '
         title:
           label: Titre
-          separator: ', '
-        source_language:
-          separator: ', '
-        target_language:
-          separator: ', '
-        loop_count:
-          separator: ', '
         operations:
           label: Actions
       filters:
@@ -56,22 +42,10 @@ display:
       fields:
         tmgmt_local_task_bulk_form:
           action_title: 'Pour la sélection'
-        status:
-          separator: ', '
         created:
           label: Créé
-          separator: ', '
-        tuid:
-          separator: ', '
         title:
           label: Titre
-          separator: ', '
-        source_language:
-          separator: ', '
-        target_language:
-          separator: ', '
-        loop_count:
-          separator: ', '
         operations:
           label: Actions
       filters:
@@ -86,22 +60,10 @@ display:
       fields:
         tmgmt_local_task_bulk_form:
           action_title: 'Pour la sélection'
-        status:
-          separator: ', '
         created:
           label: Créé
-          separator: ', '
-        tuid:
-          separator: ', '
         title:
           label: Titre
-          separator: ', '
-        source_language:
-          separator: ', '
-        target_language:
-          separator: ', '
-        loop_count:
-          separator: ', '
         operations:
           label: Actions
       filters:
@@ -116,17 +78,8 @@ display:
       fields:
         tmgmt_local_task_bulk_form:
           action_title: 'Pour la sélection'
-        tuid:
-          separator: ', '
         title:
           label: Titre
-          separator: ', '
-        source_language:
-          separator: ', '
-        target_language:
-          separator: ', '
-        loop_count:
-          separator: ', '
         operations:
           label: Actions
       filters:
@@ -143,18 +96,8 @@ display:
           action_title: 'Pour la sélection'
         created:
           label: Créé
-          separator: ', '
-        tuid:
-          separator: ', '
         title:
           label: Titre
-          separator: ', '
-        source_language:
-          separator: ', '
-        target_language:
-          separator: ', '
-        loop_count:
-          separator: ', '
         operations:
           label: Actions
       filters:
@@ -171,12 +114,5 @@ display:
           action_title: 'Pour la sélection'
         title:
           label: Titre
-          separator: ', '
-        source_language:
-          separator: ', '
-        target_language:
-          separator: ', '
-        loop_count:
-          separator: ', '
         operations:
           label: Actions

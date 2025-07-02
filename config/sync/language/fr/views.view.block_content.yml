@@ -3,10 +3,6 @@ display:
     display_title: 'Par défaut'
     display_options:
       fields:
-        info:
-          separator: ', '
-        type:
-          separator: ', '
         operations:
           label: Actions
       pager:
@@ -20,7 +16,3 @@ display:
           submit_button: Appliquer
           reset_button_label: Réinitialiser
           exposed_sorts_label: 'Trier par'
-          sort_asc_label: Asc
-          sort_desc_label: Desc
-  page_1:
-    display_title: Page

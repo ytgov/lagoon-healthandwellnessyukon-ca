@@ -5,13 +5,8 @@ display:
       fields:
         state:
           label: État
-          separator: ', '
         label:
           label: Libellé
-        source_language_1:
-          separator: ', '
-        target_language:
-          separator: ', '
         translator:
           label: Fournisseur
         changed:
@@ -34,8 +29,6 @@ display:
           submit_button: Appliquer
           reset_button_label: Réinitialiser
           exposed_sorts_label: 'Trier par'
-          sort_asc_label: Asc
-          sort_desc_label: Desc
       filters:
         state:
           expose:
@@ -43,5 +36,3 @@ display:
         translator:
           expose:
             label: Fournisseur
-  page_1:
-    display_title: Page

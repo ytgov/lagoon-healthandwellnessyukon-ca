@@ -7,8 +7,6 @@ display:
           submit_button: Filtrer
           reset_button_label: Réinitialiser
           exposed_sorts_label: 'Trier par'
-          sort_asc_label: Asc
-          sort_desc_label: Desc
       pager:
         options:
           expose:
@@ -20,7 +18,6 @@ display:
           action_title: 'Pour la sélection'
         title:
           label: Libellé
-          separator: ', '
   closed:
     display_options:
       fields:
@@ -28,11 +25,6 @@ display:
           action_title: 'Pour la sélection'
         title:
           label: Libellé
-          separator: ', '
-        source_language:
-          separator: ', '
-        target_language:
-          separator: ', '
         operations:
           label: Actions
       filters:
@@ -48,11 +40,6 @@ display:
           action_title: 'Pour la sélection'
         title:
           label: Libellé
-          separator: ', '
-        source_language:
-          separator: ', '
-        target_language:
-          separator: ', '
         operations:
           label: Actions
       filters:
@@ -66,11 +53,6 @@ display:
           action_title: 'Pour la sélection'
         title:
           label: Libellé
-          separator: ', '
-        source_language:
-          separator: ', '
-        target_language:
-          separator: ', '
         operations:
           label: Actions
       filters:
@@ -84,11 +66,6 @@ display:
           action_title: 'Pour la sélection'
         title:
           label: Libellé
-          separator: ', '
-        source_language:
-          separator: ', '
-        target_language:
-          separator: ', '
         operations:
           label: Actions
       filters:
@@ -100,15 +77,8 @@ display:
       fields:
         tmgmt_local_task_bulk_form:
           action_title: 'Pour la sélection'
-        status:
-          separator: ', '
         title:
           label: Libellé
-          separator: ', '
-        source_language:
-          separator: ', '
-        target_language:
-          separator: ', '
         operations:
           label: Actions
       filters:
@@ -122,11 +92,6 @@ display:
           action_title: 'Pour la sélection'
         title:
           label: Libellé
-          separator: ', '
-        source_language:
-          separator: ', '
-        target_language:
-          separator: ', '
         operations:
           label: Actions
       filters:
@@ -140,10 +105,5 @@ display:
           action_title: 'Pour la sélection'
         title:
           label: Libellé
-          separator: ', '
-        source_language:
-          separator: ', '
-        target_language:
-          separator: ', '
         operations:
           label: Actions
