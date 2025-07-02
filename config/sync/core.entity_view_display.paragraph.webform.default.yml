@@ -3,10 +3,12 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.webform.field_description
     - field.field.paragraph.webform.field_heading
     - field.field.paragraph.webform.field_webform
     - paragraphs.paragraphs_type.webform
   module:
+    - text
     - webform
 _core:
   default_config_hash: PmPwcz7KhsXyuNRtVn-NufH6R2ZYB9BLO26wjZsVGMw
@@ -15,6 +17,19 @@ targetEntityType: paragraph
 bundle: webform
 mode: default
 content:
+  extra_field_frontend_editing:
+    type: extra_field_frontend_editing
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
   field_heading:
     type: string
     label: hidden
@@ -28,8 +43,9 @@ content:
     label: hidden
     settings:
       source_entity: true
+      lazy: false
     third_party_settings: {  }
-    weight: 1
+    weight: 3
     region: content
 hidden:
   field_animation_style: true

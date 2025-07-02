@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.webform.field_description
     - field.field.paragraph.webform.field_heading
     - field.field.paragraph.webform.field_webform
     - paragraphs.paragraphs_type.webform
@@ -43,4 +44,5 @@ content:
     region: content
 hidden:
   extra_field_frontend_editing: true
+  field_description: true
   search_api_excerpt: true
