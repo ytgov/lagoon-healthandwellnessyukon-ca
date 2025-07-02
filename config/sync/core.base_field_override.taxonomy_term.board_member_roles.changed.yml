@@ -1,0 +1,18 @@
+uuid: 8abbf4f7-0e82-49a6-8102-7cc58cb41022
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.board_member_roles
+id: taxonomy_term.board_member_roles.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: board_member_roles
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

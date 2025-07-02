@@ -1,20 +1,20 @@
-uuid: d1cd1be6-7721-4622-8a1d-9c528b3c9061
+uuid: 1cf25e17-4023-4de4-a2a8-66d3f4b9efa5
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.blog
-id: node.blog.promote
-field_name: promote
-entity_type: node
-bundle: blog
-label: 'Promoted to front page'
+    - paragraphs.paragraphs_type.large_image
+id: paragraph.large_image.status
+field_name: status
+entity_type: paragraph
+bundle: large_image
+label: Published
 description: ''
 required: false
 translatable: false
 default_value:
   -
-    value: 0
+    value: 1
 default_value_callback: ''
 settings:
   on_label: 'On'

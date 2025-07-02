@@ -1,18 +1,18 @@
-uuid: 46cca74f-8d75-4760-aa84-c2f0442f1cfb
+uuid: a852ba8d-c8fe-4b44-ada1-83f573578dc1
 langcode: en
 status: true
 dependencies:
   config:
     - node.type.board_member
-id: node.board_member.title
-field_name: title
+id: node.board_member.changed
+field_name: changed
 entity_type: node
 bundle: board_member
-label: Name
-description: ''
-required: true
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: string
+field_type: changed
