@@ -15,7 +15,11 @@ matchers:
     uuid: 556010a3-e317-48b3-b4ed-854c10f4b950
     settings:
       metadata: '[node:content-type:name] #[node:nid] | [node:created:medium] by [node:author]'
-      bundles: {  }
+      bundles:
+        blog: blog
+        events: events
+        news: news
+        page: page
       group_by_bundle: true
       substitution_type: canonical
       limit: 100
