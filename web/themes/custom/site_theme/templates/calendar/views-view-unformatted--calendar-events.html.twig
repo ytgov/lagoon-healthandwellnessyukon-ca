@@ -37,7 +37,7 @@
           {% set row_attributes = create_attribute() %}
           <div{{ row_attributes.addClass(row_classes).setAttribute('data-bs-index', loop.index0).setAttribute('data-event-date', event_date) }}>
             <div class="carousel-item-content h-100 w-100 event-items">
-              <h3 class="event-date mb-3 lh-base text-center">{{ event_date|date('F j, Y') }}</h3>
+              <h3 class="event-date mb-3 lh-base text-center">{{ event_date|date('U')|format_date('event_date') }}</h3>
               {% for row in rows %}
                 {% set item_attributes = create_attribute() %}
                 <div{{ item_attributes.addClass('event-item') }}>{{ row.content }}</div>
