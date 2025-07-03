@@ -42,11 +42,21 @@
         "drupal/ckeditor_link_styles": "^1.1",
         "drupal/eca": "^2.1",
         "drupal/bpmn_io": "^2.0",
-        "drupal/draggableviews": "^2.1"
+        "drupal/draggableviews": "^2.1",
+        "wikimedia/composer-merge-plugin": "^2.1",
+        "drupal/paragraphs_edit": "^3.0"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "extra": {
+        "merge-plugin": {
+            "include": [
+                "web/modules/contrib/webform/composer.libraries.json",
+                "web/modules/contrib/dropzonejs/composer.libraries.json",
+                "web/modules/contrib/image_widget_crop/composer.libraries.json",
+                "web/modules/contrib/moderation_dashboard/composer.libraries.json"
+            ]
+        },
         "installer-paths": {
             "web/core": ["type:drupal-core"],
             "web/libraries/{$name}": [
@@ -97,7 +107,8 @@
             "cweagans/composer-patches": true,
             "composer/installers": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
-            "oomphinc/composer-installers-extender": true
+            "oomphinc/composer-installers-extender": true,
+            "wikimedia/composer-merge-plugin": true
         }
     },
     "require-dev": {

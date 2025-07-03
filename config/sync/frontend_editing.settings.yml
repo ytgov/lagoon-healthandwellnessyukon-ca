@@ -34,3 +34,4 @@ ui_toggle_settings:
   offset_bottom: '50'
   offset_left: ''
   offset_right: '50'
+allow_detach: false

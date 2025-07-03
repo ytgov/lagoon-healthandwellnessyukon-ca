@@ -51,6 +51,7 @@ module:
   filter: 0
   fontawesome: 0
   frontend_editing: 0
+  frontend_editing_paragraphs: 0
   fullcalendar_view: 0
   help: 0
   image: 0
