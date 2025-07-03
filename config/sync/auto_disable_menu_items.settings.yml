@@ -1,0 +1,7 @@
+auto_disable_content_types:
+  blog: blog
+  events: events
+  news: news
+  board_member: 0
+  homepage: 0
+  page: 0

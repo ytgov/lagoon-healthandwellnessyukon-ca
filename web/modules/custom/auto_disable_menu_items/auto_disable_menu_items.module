@@ -1,0 +1,29 @@
+<?php
+
+/**
+ * @file
+ * Hooks for the Auto-Disable Menu Items module.
+ */
+
+declare(strict_types = 1);
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_ENTITY_TYPE_presave().
+ *
+ * Disable a menu item prior to saving if it's in the list
+ * of content types that should have their menu items disabled.
+ */
+function auto_disable_menu_items_menu_link_content_presave(EntityInterface $entity) {
+  $config = \Drupal::config('auto_disable_menu_items.settings');
+  $autoDisableContentTypes = $config->get('auto_disable_content_types');
+  $linkUri = $entity->link[0]->uri;
+  if (preg_match('/entity\:node\/([0-9]+)/i', $linkUri, $matches)) {
+    $node = \Drupal::entityTypeManager()->getStorage('node')->load($matches[1]);
+    if (in_array($node->getType(), $autoDisableContentTypes)) {
+      $entity->enabled = 0;
+    }
+  }
+}

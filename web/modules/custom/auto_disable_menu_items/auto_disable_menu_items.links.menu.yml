@@ -1,0 +1,5 @@
+auto_disable_menu_items.menu.config:
+  title: 'Auto-Disable Menu Item Settings'
+  parent: entity.menu.collection
+  route_name: auto_disable_menu_items.settings
+  weight: -10
