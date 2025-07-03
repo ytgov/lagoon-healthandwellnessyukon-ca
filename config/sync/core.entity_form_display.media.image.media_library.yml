@@ -1,18 +1,19 @@
-uuid: 3d930921-f856-41cc-b62d-ff2be7ff56dc
+uuid: a5cb2976-098a-484c-8839-e4b3d3ba3a15
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_form_mode.media.media_library
     - field.field.media.image.field_image_media_caption
     - field.field.media.image.field_media_image
     - image.style.thumbnail
     - media.type.image
   module:
     - image_widget_crop
-id: media.image.default
+id: media.image.media_library
 targetEntityType: media
 bundle: image
-mode: default
+mode: media_library
 content:
   field_image_media_caption:
     type: string_textfield
