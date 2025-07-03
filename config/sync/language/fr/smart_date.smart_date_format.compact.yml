@@ -1,5 +1,6 @@
-label: défaut
+label: Compact
 time_hour_format: 'g:ia'
+join: ', '
 ampm_reduce: '1'
 date_first: '1'
 site_time_toggle: '1'
