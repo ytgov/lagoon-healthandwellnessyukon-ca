@@ -52,7 +52,7 @@
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
-      <div id="paragraph-content-media-slideshow" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="7000">
+      <div id="paragraph-content-media-slideshow" class="carousel slide carousel-fade">
         <div class="carousel-inner">
           {{ content|without('field_slideshow_description', 'frontend_editing') }}
           {% if slideshow_description %}
