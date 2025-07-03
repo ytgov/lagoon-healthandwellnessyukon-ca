@@ -6,7 +6,6 @@ dependencies:
     - field.field.node.events.field_community
     - field.field.node.events.field_content
     - field.field.node.events.field_event_date
-    - field.field.node.events.field_event_image
     - field.field.node.events.field_event_type
     - field.field.node.events.field_page_banner
     - field.field.node.events.field_related_content
@@ -25,7 +24,7 @@ mode: default
 content:
   field_community:
     type: options_select
-    weight: 5
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -51,20 +50,13 @@ content:
     third_party_settings: {  }
   field_event_date:
     type: daterange_default
-    weight: 3
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_event_image:
-    type: media_library_widget
-    weight: 6
-    region: content
-    settings:
-      media_types: {  }
-    third_party_settings: {  }
   field_event_type:
     type: options_select
-    weight: 4
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -106,6 +98,13 @@ content:
         title: false
       widget_default_open: collapsed
     third_party_settings: {  }
+  field_sharing_thumbnail:
+    type: media_library_widget
+    weight: 3
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
   langcode:
     type: language_select
     weight: 0
@@ -141,7 +140,6 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
-  field_sharing_thumbnail: true
   promote: true
   simple_sitemap: true
   simple_sitemap_index_now: true

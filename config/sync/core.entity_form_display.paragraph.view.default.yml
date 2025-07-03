@@ -8,7 +8,7 @@ dependencies:
     - field.field.paragraph.view.field_heading
     - paragraphs.paragraphs_type.view
   module:
-    - link_attributes
+    - linkit_attributes
     - viewfield
 _core:
   default_config_hash: ecoFFh8K86VAxP-909UbaRSwvpUnIF7Ki1_hZCsob9M
@@ -18,21 +18,22 @@ bundle: view
 mode: default
 content:
   field_button_link:
-    type: link_attributes
+    type: linkit_attributes
     weight: 3
     region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
+      linkit_profile: default
+      linkit_auto_link_text: false
       enabled_attributes:
-        target: true
         id: false
         name: false
-        rel: false
-        class: false
+        target: true
+        rel: true
+        class: true
         accesskey: false
-        aria-label: false
-        title: false
+      widget_default_open: expandIfValuesSet
     third_party_settings: {  }
   field_embedded_view:
     type: viewfield_select
