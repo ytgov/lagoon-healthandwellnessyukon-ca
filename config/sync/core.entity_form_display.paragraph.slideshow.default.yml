@@ -9,6 +9,7 @@ dependencies:
     - paragraphs.paragraphs_type.slideshow
   module:
     - media_library
+    - media_library_edit
     - text
 _core:
   default_config_hash: WWw1eCDe6x_AdMfuu4eYvqtzLaPjOYlXbBR9lsjWu8w
@@ -37,7 +38,10 @@ content:
     region: content
     settings:
       media_types: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
+        edit_form_mode: media_library
   field_slideshow_title:
     type: string_textfield
     weight: 1
