@@ -12,8 +12,8 @@ _core:
   default_config_hash: rx9IrdDv7Ldc4kpalZAxdhIPZfYIeOMh1N-qKoQZwHo
 id: site_theme_main_menu
 theme: site_theme
-region: primary_menu
-weight: -8
+region: top_nav
+weight: -12
 provider: null
 plugin: 'system_menu_block:main'
 settings:

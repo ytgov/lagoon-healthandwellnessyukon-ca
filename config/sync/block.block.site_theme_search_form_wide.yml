@@ -1,6 +1,6 @@
 uuid: 4d9c22b9-8b6d-45fb-9994-a077d7688e78
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - search
@@ -10,8 +10,8 @@ _core:
   default_config_hash: imMyHD6LYci0gtXq56qr9ZKGHzbEG9uFydrN5EhKtSU
 id: site_theme_search_form_wide
 theme: site_theme
-region: secondary_menu
-weight: -11
+region: top_nav
+weight: -10
 provider: null
 plugin: search_form_block
 settings:

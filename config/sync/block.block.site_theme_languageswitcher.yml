@@ -8,8 +8,8 @@ dependencies:
     - site_theme
 id: site_theme_languageswitcher
 theme: site_theme
-region: secondary_menu
-weight: -10
+region: primary_menu
+weight: -8
 provider: null
 plugin: 'language_block:language_interface'
 settings:
