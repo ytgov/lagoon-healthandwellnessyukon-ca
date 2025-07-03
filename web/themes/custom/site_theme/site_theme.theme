@@ -65,13 +65,16 @@ function site_theme_preprocess_views_view_unformatted__calendar_events(&$variabl
     $month_end = new DrupalDateTime('last day of this month', new \DateTimeZone($timezone));
     $nearest_before_date = NULL;
     $nearest_on_or_after_date = NULL;
-
+    $current_language = \Drupal::languageManager()->getCurrentLanguage();
     $grouped_rows = [];
     foreach ($variables['rows'] as $row_data) {
       $row = $row_data['content']['#row'];
-      $event_title = $row->_entity->getTitle();
-      $start_date = $row->_entity->get('field_event_date')->value;
-      $end_date = $row->_entity->get('field_event_date')->end_value;
+      // Get the active translation of the event entity.
+      $event_translation = $row->_entity->getTranslation($current_language->getId());
+      // Set the event title and date.
+      $event_title = $event_translation->getTitle();
+      $start_date = $event_translation->get('field_event_date')->value;
+      $end_date = $event_translation->get('field_event_date')->end_value;
 
       // Convert the start and end dates to the current user's or site's
       // timezone.
