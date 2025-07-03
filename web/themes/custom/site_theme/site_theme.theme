@@ -160,3 +160,19 @@ function site_theme_preprocess_views_view_unformatted__calendar_events(&$variabl
     $variables['#attached']['drupalSettings']['caleandar_events_data'] = $events;
   }
 }
+
+/**
+ * Implements template_preprocess_links().
+ */
+function site_theme_preprocess_links(&$variables) {
+  if ($variables['theme_hook_original'] == 'links__language_block') {
+    $languages = \Drupal::languageManager()->getLanguages();
+    $current_lid = \Drupal::languageManager()->getCurrentLanguage()->getId();
+    foreach ($languages as $language) {
+      $lid = $language->getId();
+      if ($lid = $current_lid) {
+        $variables['links'][$lid]['link']['#options']['attributes']['class'][] = 'd-none';
+      }
+    }
+  }
+}
