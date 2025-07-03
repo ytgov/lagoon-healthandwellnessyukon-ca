@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @file
+ * Functions for the KCI Media Bulk Upload module.
+ */
+
+declare(strict_types=1);
+
+use Drupal\kci_media_bulk_upload\Form\MediaForm;
+
+/**
+ * Implements hook_entity_type_alter().
+ */
+function kci_media_bulk_upload_entity_type_alter(array &$entity_types) {
+  /** @var \Drupal\Core\Entity\EntityTypeInterface[] $entity_types */
+
+  // Override the media entity form class to use our custom form. This adds
+  // support for the bulk upload chain.
+  $entity_types['media']->setFormClass('default', MediaForm::class);
+  $entity_types['media']->setFormClass('edit', MediaForm::class);
+}

@@ -1,0 +1,8 @@
+name: KCI Media Bulk Upload
+type: module
+description: Replaces lightning media and lightning media bulk upload to provide a bulk upload form using dropzonejs.
+core_version_requirement: ^10.3 || ^11
+package: Kellett
+version: '1.0'
+dependencies:
+  - drupal:dropzonejs

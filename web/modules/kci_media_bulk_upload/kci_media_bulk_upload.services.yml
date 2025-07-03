@@ -1,0 +1,5 @@
+services:
+  kci.media_helper:
+    class: '\Drupal\kci_media_bulk_upload\MediaHelper'
+    arguments:
+      - '@entity_type.manager'

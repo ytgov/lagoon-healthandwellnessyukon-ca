@@ -1,0 +1,20 @@
+kci_media.bulk_upload:
+  path: '/admin/content/media/bulk-upload'
+  defaults:
+    _title: 'Bulk upload'
+    _form: '\Drupal\kci_media_bulk_upload\Form\BulkUploadForm'
+  requirements:
+    _permission: 'dropzone upload files,create media'
+
+kci_media.bulk_upload.by_type:
+  path: /media/add/{media_type}/bulk-upload
+  defaults:
+    _title_callback: '\Drupal\kci_media_bulk_upload\Form\BulkUploadForm::getTypeSpecificTitle'
+    _form: '\Drupal\kci_media_bulk_upload\Form\BulkUploadForm'
+  requirements:
+    _permission: 'dropzone upload files,create media'
+  options:
+    _admin_route: TRUE
+    parameters:
+      media_type:
+        type: entity:media_type
