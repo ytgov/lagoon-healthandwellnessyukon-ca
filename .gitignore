@@ -49,3 +49,4 @@ web/sites/default/development.services.local.yml
 drush/*
 .ddev/commands/web/dsync
 .ddev/commands/web/usync
+node_modules/

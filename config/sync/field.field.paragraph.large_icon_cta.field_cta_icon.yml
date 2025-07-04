@@ -7,6 +7,10 @@ dependencies:
     - paragraphs.paragraphs_type.large_icon_cta
   module:
     - options
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
 id: paragraph.large_icon_cta.field_cta_icon
 field_name: field_cta_icon
 entity_type: paragraph
