@@ -1,6 +1,13 @@
 @charset "UTF-8";
 @import "//use.fontawesome.com/releases/v5.13.0/css/all.css";
 @import "//fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Roboto+Slab:wght@400;700&display=swap";
+@font-face {
+  font-family: "custom-icons";
+  src: url("../fonts/custom-icons.ttf?m35rvs") format("truetype"), url("../fonts/custom-icons.woff?m35rvs") format("woff"), url("../fonts/custom-icons.svg?m35rvs#custom-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
 /* VARIABLES */
 .ck-editor__main .ck-content {
   background-color: #fff !important;
@@ -261,6 +268,38 @@
   -------------------------------------------------*/
   /* COLORS
   --------------------------------------------------*/
+}
+@font-face {
+  font-family: "custom-icons";
+  src: url("../fonts/custom-icons.ttf?m35rvs") format("truetype"), url("../fonts/custom-icons.woff?m35rvs") format("woff"), url("../fonts/custom-icons.svg?m35rvs#custom-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+.ck-editor__main .ck-content i.custom-icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "custom-icons" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.ck-editor__main .ck-content .custom-maps:before {
+  content: "\e900";
+}
+.ck-editor__main .ck-content .custom-registry-search:before {
+  content: "\e901";
+}
+.ck-editor__main .ck-content .custom-proposal-doc:before {
+  content: "\e902";
+}
+.ck-editor__main .ck-content .custom-process:before {
+  content: "\e903";
 }
 .ck-editor__main .ck-content :root,
 .ck-editor__main .ck-content [data-bs-theme=light] {

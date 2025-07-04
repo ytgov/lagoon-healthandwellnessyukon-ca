@@ -4,3 +4,22 @@ $font-family-roboto-slab: 'Roboto Slab', serif;
 
 $font-family-base: $font-family-open-sans;
 $font-family-headings: $font-family-roboto-slab;
+
+// Custom icon font variables.
+$custom-icon-font-family: "custom-icons";
+$custom-icon-font-path: "../fonts";
+
+$custom-maps: unquote('"\\e900"');
+$custom-registry-search: unquote('"\\e901"');
+$custom-proposal-doc: unquote('"\\e902"');
+$custom-process: unquote('"\\e903"');
+
+@font-face {
+  font-family: '#{$custom-icon-font-family}';
+  src: url('#{$custom-icon-font-path}/#{$custom-icon-font-family}.ttf?m35rvs') format('truetype'),
+  url('#{$custom-icon-font-path}/#{$custom-icon-font-family}.woff?m35rvs') format('woff'),
+  url('#{$custom-icon-font-path}/#{$custom-icon-font-family}.svg?m35rvs##{$custom-icon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}

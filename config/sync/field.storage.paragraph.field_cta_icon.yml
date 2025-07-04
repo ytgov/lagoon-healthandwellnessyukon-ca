@@ -12,17 +12,17 @@ type: list_string
 settings:
   allowed_values:
     -
-      value: npc-process
-      label: '<i class="npc-icon npc-process" aria-hidden="true" ></i>'
+      value: custom-process
+      label: '<i class="custom-icon custom-process" aria-hidden="true" ></i>'
     -
-      value: npc-proposal-doc
-      label: '<i class="npc-icon npc-proposal-doc" aria-hidden="true" ></i>'
+      value: custom-proposal-doc
+      label: '<i class="custom-icon custom-proposal-doc" aria-hidden="true" ></i>'
     -
-      value: npc-registry-search
-      label: '<i class="npc-icon npc-registry-search" aria-hidden="true" ></i>'
+      value: custom-registry-search
+      label: '<i class="custom-icon custom-registry-search" aria-hidden="true" ></i>'
     -
-      value: npc-maps
-      label: '<i class="npc-icon npc-maps" aria-hidden="true" ></i>'
+      value: custom-maps
+      label: '<i class="custom-icon custom-maps" aria-hidden="true" ></i>'
     -
       value: briefcase
       label: '<i class="fa-solid fa-fw fa-briefcase" aria-hidden="true" ></i>'

@@ -1,0 +1,35 @@
+i.custom-icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$custom-icon-font-family}' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.custom-maps {
+  &:before {
+    content: $custom-maps;
+  }
+}
+.custom-registry-search {
+  &:before {
+    content: $custom-registry-search;
+  }
+}
+.custom-proposal-doc {
+  &:before {
+    content: $custom-proposal-doc;
+  }
+}
+.custom-process {
+  &:before {
+    content: $custom-process;
+  }
+}

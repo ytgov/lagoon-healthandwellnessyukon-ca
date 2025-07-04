@@ -10,6 +10,9 @@ Sub-theme for this site.
 @import "variables";
 @import "../../kci_base/scss/variables";
 
+// Custom icon font
+@import "custom-icons";
+
 // Base theme styles
 @import "../../kci_base/scss/style";
 

@@ -1,26 +1,26 @@
-// NPC Custom icon font variables.
-$npc-icon-font-family: "custom-icons";
-$npc-icon-font-path: "../../site_theme/fonts";
+// Custom icon font variables.
+$custom-icon-font-family: "custom-icons";
+$custom-icon-font-path: "../../site_theme/fonts";
 
-$npc-maps: unquote('"\\e900"');
-$npc-registry-search: unquote('"\\e901"');
-$npc-proposal-doc: unquote('"\\e902"');
-$npc-process: unquote('"\\e903"');
+$custom-maps: unquote('"\\e900"');
+$custom-registry-search: unquote('"\\e901"');
+$custom-proposal-doc: unquote('"\\e902"');
+$custom-process: unquote('"\\e903"');
 
 @font-face {
-  font-family: '#{$npc-icon-font-family}';
+  font-family: '#{$custom-icon-font-family}';
   src:
-    url('#{$npc-icon-font-path}/#{$npc-icon-font-family}.ttf?m35rvs') format('truetype'),
-    url('#{$npc-icon-font-path}/#{$npc-icon-font-family}.woff?m35rvs') format('woff'),
-    url('#{$npc-icon-font-path}/#{$npc-icon-font-family}.svg?m35rvs##{$npc-icon-font-family}') format('svg');
+    url('#{$custom-icon-font-path}/#{$custom-icon-font-family}.ttf?m35rvs') format('truetype'),
+    url('#{$custom-icon-font-path}/#{$custom-icon-font-family}.woff?m35rvs') format('woff'),
+    url('#{$custom-icon-font-path}/#{$custom-icon-font-family}.svg?m35rvs##{$custom-icon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-i.npc-icon {
+i.custom-icon {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: '#{$npc-icon-font-family}' !important;
+  font-family: '#{$custom-icon-font-family}' !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -33,23 +33,23 @@ i.npc-icon {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.npc-maps {
+.custom-maps {
   &:before {
-    content: $npc-maps;
+    content: $custom-maps;
   }
 }
-.npc-registry-search {
+.custom-registry-search {
   &:before {
-    content: $npc-registry-search;
+    content: $custom-registry-search;
   }
 }
-.npc-proposal-doc {
+.custom-proposal-doc {
   &:before {
-    content: $npc-proposal-doc;
+    content: $custom-proposal-doc;
   }
 }
-.npc-process {
+.custom-process {
   &:before {
-    content: $npc-process;
+    content: $custom-process;
   }
 }
