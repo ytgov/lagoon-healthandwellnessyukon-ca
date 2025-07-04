@@ -1,0 +1,55 @@
+// NPC Custom icon font variables.
+$npc-icon-font-family: "custom-icons";
+$npc-icon-font-path: "../../site_theme/fonts";
+
+$npc-maps: unquote('"\\e900"');
+$npc-registry-search: unquote('"\\e901"');
+$npc-proposal-doc: unquote('"\\e902"');
+$npc-process: unquote('"\\e903"');
+
+@font-face {
+  font-family: '#{$npc-icon-font-family}';
+  src:
+    url('#{$npc-icon-font-path}/#{$npc-icon-font-family}.ttf?m35rvs') format('truetype'),
+    url('#{$npc-icon-font-path}/#{$npc-icon-font-family}.woff?m35rvs') format('woff'),
+    url('#{$npc-icon-font-path}/#{$npc-icon-font-family}.svg?m35rvs##{$npc-icon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+i.npc-icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$npc-icon-font-family}' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.npc-maps {
+  &:before {
+    content: $npc-maps;
+  }
+}
+.npc-registry-search {
+  &:before {
+    content: $npc-registry-search;
+  }
+}
+.npc-proposal-doc {
+  &:before {
+    content: $npc-proposal-doc;
+  }
+}
+.npc-process {
+  &:before {
+    content: $npc-process;
+  }
+}

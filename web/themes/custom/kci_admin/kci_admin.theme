@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the KCI Admin theme.
+ */
+
+declare(strict_types=1);
+
+/**
+ * Implements template_preprocess_menu_local_action().
+ */
+function kci_admin_preprocess_menu_local_action(&$variables) {
+  $variables['link']['#options']['attributes']['class'][] = 'text-nowrap';
+}

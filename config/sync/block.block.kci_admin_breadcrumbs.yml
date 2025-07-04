@@ -1,0 +1,29 @@
+uuid: 579cb2f8-0989-417b-82b2-fe6575327681
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_visibility_conditions_node
+    - system
+  theme:
+    - kci_admin
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: kci_admin_breadcrumbs
+theme: kci_admin
+region: breadcrumb
+weight: -12
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility:
+  not_node_type:
+    id: not_node_type
+    negate: null
+    bundles:
+      homepage: homepage
+      landing_page: landing_page
