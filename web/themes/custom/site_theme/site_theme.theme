@@ -51,6 +51,37 @@ function site_theme_preprocess_field(array &$variables): void {
       $item['content']['#url']->setOptions($link_options);
     }
   }
+
+  if ($variables['field_name'] == 'field_icon_cta_link' &&
+      $variables['element']['#entity_type'] == 'paragraph' &&
+      $variables['element']['#bundle'] == 'large_icon_cta'
+  ) {
+    if ($variables['element']['#view_mode'] == 'default') {
+      foreach ($variables['items'] as &$item) {
+        if (isset($item['content']['#attributes']['class'])) {
+          $item['content']['#attributes']['class'] = array_diff($item['content']['#attributes']['class'], ['py-2']);
+          $item['content']['#attributes']['class'][] = 'py-4';
+          $item['content']['#attributes']['class'][] = 'rounded-4';
+        }
+      }
+    }
+    elseif ($variables['element']['#view_mode'] == 'cta_sidebar') {
+      foreach ($variables['items'] as &$item) {
+        $item['content']['#attributes']['class'] = [];
+        $item['content']['#attributes']['class'][] = 'large-icon-cta-link';
+        $item['content']['#attributes']['class'][] = 'd-flex';
+        $item['content']['#attributes']['class'][] = 'flex-row';
+        $item['content']['#attributes']['class'][] = 'flex-fill';
+        $item['content']['#attributes']['class'][] = 'align-items-center';
+        $item['content']['#attributes']['class'][] = 'text-start';
+        $item['content']['#attributes']['class'][] = 'px-3';
+        $item['content']['#attributes']['class'][] = 'py-2';
+        $item['content']['#attributes']['class'][] = 'hide-new-window-indicator';
+        $item['content']['#attributes']['data-bs-delay'] = 450;
+        $item['content']['#attributes']['data-bs-placement'] = 'left';
+      }
+    }
+  }
 }
 
 /**
