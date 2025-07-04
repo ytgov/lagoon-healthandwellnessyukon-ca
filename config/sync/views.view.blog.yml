@@ -6,7 +6,7 @@ dependencies:
     - field.storage.node.field_content
     - field.storage.node.field_date
     - field.storage.node.field_news_image
-    - image.style.crop_news_homepage
+    - image.style.news_events_grid_thumbnail
     - image.style.news_events_thumbnail
     - node.type.blog
   module:
@@ -15,6 +15,7 @@ dependencies:
     - media
     - node
     - user
+    - views_bootstrap
 _core:
   default_config_hash: cYbmuJ7zVw5SPByCu4lyvjtISnCsJ3ySIkIh7ZrUBZ0
 id: blog
@@ -1119,7 +1120,7 @@ display:
           type: media_thumbnail
           settings:
             image_link: ''
-            image_style: crop_news_homepage
+            image_style: news_events_grid_thumbnail
             image_loading:
               attribute: lazy
           group_column: target_id
@@ -1260,7 +1261,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<a href=\"{{ view_node }}\" class=\"grid-block-link d-block position-relative text-start\">\r\n  <span class=\"d-block news-events-image grid-block-image\">{{ field_news_image }}</span>\r\n  <span class=\"news-teaser w-100 position-absolute bottom-0 p-3 d-flex flex-column justify-content-end\">\r\n    <span class=\"news-title my-3\">{{ title }}</span>\r\n    <span class=\"d-md-flex justify-content-between\">\r\n        <span class=\"d-block news-events-link my-2 fw-bold\">{{ 'Read more' | t }}</span>\r\n        <span class=\"d-block news-events-date my-2\">{{ field_date }}</span>\r\n    </span>\r\n  </span>\r\n</a>"
+            text: "{# The title is piped through the title function, to convert to title case, since it's entered in the back-end in many cases in all caps. #}\r\n<a href=\"{{ view_node }}\" class=\"grid-block-link d-block d-relative h-100\" title=\"{{ title_1|title }}\">\r\n  <span class=\"d-flex flex-column h-100\">\r\n    <span class=\"d-block news-events-image grid-block-image p-3\">{{ field_news_image }}</span>\r\n    <span class=\"d-block display-5 news-events-title px-3 my-3\">{{ title|title }}</span>\r\n    <span class=\"d-block news-events-teaser px-3 pb-3 lh-normal\">{{ field_content }}</span>\r\n    <span class=\"d-block news-events-date px-3 mt-auto mb-2\">{{ field_date }}</span>\r\n  </span>\r\n</a>"
             make_link: false
             path: ''
             absolute: false
@@ -1414,11 +1415,17 @@ display:
           offset: 0
           items_per_page: 5
       style:
-        type: default
+        type: views_bootstrap_grid
         options:
           grouping: {  }
           row_class: mb-4
           default_row_class: true
+          grid_class: gx-6
+          col_xs: none
+          col_sm: none
+          col_md: none
+          col_lg: col-lg-4
+          col_xl: none
       row:
         type: fields
         options:
