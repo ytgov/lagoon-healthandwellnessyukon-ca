@@ -1,12 +1,16 @@
 @use "sass:color";
 
 /* VARIABLES */
+$yghss-red: #A72B2A;
+$yghss-beige: #F1E6B2;
+$yghss-orange: #EFBE7D;
+$yghss-purple: #5F2167;
 
 // colors
-$primary-shade: #0057a4;
+$primary-shade: $yghss-red;
 $primary-light: color.adjust($primary-shade, $lightness: 37%);
 $primary-dark: color.adjust($primary-shade, $lightness: -12%);
-$accent-shade: #e89f00;
+$accent-shade: $yghss-orange;
 $accent-light: color.adjust($accent-shade, $lightness: 37%);
 $accent-dark: color.adjust($accent-shade, $lightness: -12%);
 // Reassign color vars to semantic color scheme

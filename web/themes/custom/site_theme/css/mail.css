@@ -213,7 +213,7 @@ You can then define variables for your Google font families below, per examples.
 }
 #mimemail-body #message-body .message-content a,
 #mimemail-body #message-body .message-content p a {
-  color: #0057a4;
+  color: #A72B2A;
   font-weight: normal;
   text-decoration: underline;
 }
@@ -244,7 +244,7 @@ You can then define variables for your Google font families below, per examples.
 }
 #mimemail-body #message-footer .message-footer-content a:hover,
 #mimemail-body #message-footer .message-footer-content p a:hover {
-  color: rgb(97.7, 181.1457317073, 255);
+  color: rgb(232.4325358852, 165.804784689, 165.2674641148);
 }
 @media only screen and (max-width: 30rem) {
   #mimemail-body body,
