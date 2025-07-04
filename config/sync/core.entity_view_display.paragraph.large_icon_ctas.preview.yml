@@ -4,12 +4,10 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.paragraph.preview
-    - field.field.paragraph.large_icon_ctas.field_animation_style
     - field.field.paragraph.large_icon_ctas.field_large_icon_ctas
     - paragraphs.paragraphs_type.large_icon_ctas
   module:
     - entity_reference_revisions
-    - layout_builder
     - options
 third_party_settings:
   layout_builder:
@@ -20,13 +18,6 @@ targetEntityType: paragraph
 bundle: large_icon_ctas
 mode: preview
 content:
-  field_animation_style:
-    type: list_default
-    label: inline
-    settings: {  }
-    third_party_settings: {  }
-    weight: 0
-    region: content
   field_large_icon_ctas:
     type: entity_reference_revisions_entity_view
     label: hidden

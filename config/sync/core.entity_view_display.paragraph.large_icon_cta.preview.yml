@@ -10,13 +10,8 @@ dependencies:
     - paragraphs.paragraphs_type.large_icon_cta
   module:
     - field_group
-    - layout_builder
     - link
     - options
-third_party_settings:
-  layout_builder:
-    enabled: false
-    allow_custom: false
   field_group:
     group_row:
       children:

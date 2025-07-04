@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.large_icon_ctas.field_animation_style
     - field.field.paragraph.large_icon_ctas.field_large_icon_ctas
     - paragraphs.paragraphs_type.large_icon_ctas
   module:
@@ -45,5 +44,4 @@ content:
     weight: 0
     region: content
 hidden:
-  field_animation_style: true
   search_api_excerpt: true

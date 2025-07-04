@@ -10,13 +10,8 @@ dependencies:
     - paragraphs.paragraphs_type.large_icon_cta
   module:
     - fences
-    - layout_builder
     - link
     - options
-third_party_settings:
-  layout_builder:
-    enabled: false
-    allow_custom: false
 id: paragraph.large_icon_cta.cta_sidebar
 targetEntityType: paragraph
 bundle: large_icon_cta

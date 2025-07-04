@@ -4,18 +4,12 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.paragraph.cta_sidebar
-    - field.field.paragraph.large_icon_ctas.field_animation_style
     - field.field.paragraph.large_icon_ctas.field_large_icon_ctas
     - paragraphs.paragraphs_type.large_icon_ctas
   module:
     - entity_reference_revisions
     - fences
     - frontend_editing
-    - layout_builder
-third_party_settings:
-  layout_builder:
-    enabled: false
-    allow_custom: false
 id: paragraph.large_icon_ctas.cta_sidebar
 targetEntityType: paragraph
 bundle: large_icon_ctas
@@ -45,5 +39,4 @@ content:
     region: content
 hidden:
   extra_field_frontend_editing: true
-  field_animation_style: true
   search_api_excerpt: true
