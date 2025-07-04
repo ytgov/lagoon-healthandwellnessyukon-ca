@@ -1,0 +1,49 @@
+uuid: 92f8a285-9219-4f54-bb18-3ecf52bdbd22
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.large_icon_cta.field_cta_icon
+    - field.field.paragraph.large_icon_cta.field_icon_cta_link
+    - field.field.paragraph.large_icon_cta.field_plain_description
+    - paragraphs.paragraphs_type.large_icon_cta
+  module:
+    - link_attributes
+id: paragraph.large_icon_cta.default
+targetEntityType: paragraph
+bundle: large_icon_cta
+mode: default
+content:
+  field_cta_icon:
+    type: options_buttons
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_icon_cta_link:
+    type: link_attributes
+    weight: 1
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      enabled_attributes:
+        target: true
+        id: false
+        name: false
+        rel: false
+        class: false
+        accesskey: false
+        aria-label: false
+        title: false
+      widget_default_open: expandIfValuesSet
+    third_party_settings: {  }
+  translation:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_plain_description: true
+  status: true

@@ -1,0 +1,74 @@
+uuid: 0f66fa5b-df14-4192-abc6-ea5b18495d0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.large_icon_cta.field_cta_icon
+    - field.field.paragraph.large_icon_cta.field_icon_cta_link
+    - field.field.paragraph.large_icon_cta.field_plain_description
+    - paragraphs.paragraphs_type.large_icon_cta
+  module:
+    - field_group
+    - layout_builder
+    - link
+    - options
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+  field_group:
+    group_row:
+      children:
+        - field_cta_icon
+        - field_icon_cta_link
+        - field_plain_description
+      label: Row
+      parent_name: ''
+      region: content
+      weight: 0
+      format_type: html_element
+      format_settings:
+        classes: 'd-flex gap-2'
+        show_empty_fields: false
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+id: paragraph.large_icon_cta.preview
+targetEntityType: paragraph
+bundle: large_icon_cta
+mode: preview
+content:
+  field_cta_icon:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_icon_cta_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_plain_description:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  search_api_excerpt: true

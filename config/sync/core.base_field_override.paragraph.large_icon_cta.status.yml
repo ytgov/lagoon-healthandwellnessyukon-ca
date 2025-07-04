@@ -1,0 +1,22 @@
+uuid: a39dfe8c-269f-4ed8-a2b4-0e2f8a72822e
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.large_icon_cta
+id: paragraph.large_icon_cta.status
+field_name: status
+entity_type: paragraph
+bundle: large_icon_cta
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

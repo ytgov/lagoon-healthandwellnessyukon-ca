@@ -1,0 +1,49 @@
+uuid: 95b577c4-a363-4651-85c1-61ef9549368a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.cta_sidebar
+    - field.field.paragraph.large_icon_ctas.field_animation_style
+    - field.field.paragraph.large_icon_ctas.field_large_icon_ctas
+    - paragraphs.paragraphs_type.large_icon_ctas
+  module:
+    - entity_reference_revisions
+    - fences
+    - frontend_editing
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: paragraph.large_icon_ctas.cta_sidebar
+targetEntityType: paragraph
+bundle: large_icon_ctas
+mode: cta_sidebar
+content:
+  field_large_icon_ctas:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: cta_sidebar
+      link: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+      frontend_editing:
+        ajax_content_update: 0
+        move_up_down: 0
+        add_items: 0
+    weight: 0
+    region: content
+hidden:
+  extra_field_frontend_editing: true
+  field_animation_style: true
+  search_api_excerpt: true
