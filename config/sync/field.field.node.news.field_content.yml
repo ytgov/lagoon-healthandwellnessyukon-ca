@@ -5,17 +5,21 @@ dependencies:
   config:
     - field.storage.node.field_content
     - node.type.news
-    - paragraphs.paragraphs_type.accordion
-    - paragraphs.paragraphs_type.cta_background_image
-    - paragraphs.paragraphs_type.file_attachments
-    - paragraphs.paragraphs_type.google_map
-    - paragraphs.paragraphs_type.image_gallery
-    - paragraphs.paragraphs_type.large_image
-    - paragraphs.paragraphs_type.text_content
-    - paragraphs.paragraphs_type.text_content_full_width
-    - paragraphs.paragraphs_type.two_column_text_content
+    - paragraphs.paragraphs_type.accordion_content
+    - paragraphs.paragraphs_type.image_with_link
+    - paragraphs.paragraphs_type.large_icon_cta
+    - paragraphs.paragraphs_type.page_banner
+    - paragraphs.paragraphs_type.slideshow
+    - paragraphs.paragraphs_type.slideshow_item
+    - paragraphs.paragraphs_type.slideshow_with_caption
+    - paragraphs.paragraphs_type.view
+    - paragraphs.paragraphs_type.webform
   module:
     - entity_reference_revisions
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
 _core:
   default_config_hash: MEDM_vI-VpH2gMGWo74_No4oj-j_ye2ACzHktQXP1YY
 id: node.news.field_content
@@ -32,83 +36,84 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
-      text_content_full_width: text_content_full_width
-      text_content: text_content
-      two_column_text_content: two_column_text_content
-      accordion: accordion
-      cta_background_image: cta_background_image
-      embedded_audio: embedded_audio
-      embedded_video: embedded_video
-      file_attachments: file_attachments
-      google_map: google_map
-      image_gallery: image_gallery
-      large_image: large_image
-    negate: 0
+      accordion_content: accordion_content
+      image_with_link: image_with_link
+      page_banner: page_banner
+      slideshow: slideshow
+      slideshow_item: slideshow_item
+      slideshow_with_caption: slideshow_with_caption
+      view: view
+      webform: webform
+      large_icon_cta: large_icon_cta
+    negate: 1
     target_bundles_drag_drop:
       accordion:
-        weight: -52
-        enabled: true
+        weight: -44
+        enabled: false
       accordion_content:
-        weight: -51
-        enabled: false
-      button_with_icon:
-        weight: -49
-        enabled: false
-      buttons_with_icon:
-        weight: -50
+        weight: -33
+        enabled: true
+      card:
+        weight: -43
         enabled: false
       cta_background_image:
-        weight: -48
-        enabled: true
+        weight: -41
+        enabled: false
       featured_content:
-        weight: -45
+        weight: -38
         enabled: false
       file_attachments:
-        weight: -44
-        enabled: true
+        weight: -39
+        enabled: false
       google_map:
-        weight: -43
-        enabled: true
+        weight: -37
+        enabled: false
       image_gallery:
-        weight: -41
-        enabled: true
+        weight: -36
+        enabled: false
       image_with_link:
+        weight: -32
+        enabled: true
+      images_with_links:
         weight: -40
         enabled: false
-      images_with_links:
+      large_icon_cta:
+        weight: -25
+        enabled: true
+      large_icon_ctas:
         weight: -42
         enabled: false
       large_image:
-        weight: -37
-        enabled: true
-      map_with_contact_info:
-        weight: -36
-        enabled: false
-      page_banner:
         weight: -35
         enabled: false
-      slideshow:
+      map_with_contact_info:
         weight: -34
         enabled: false
-      slideshow_item:
-        weight: -33
-        enabled: false
-      slideshow_with_caption:
-        weight: -32
-        enabled: false
-      text_content:
-        weight: -54
+      page_banner:
+        weight: -31
         enabled: true
-      text_content_full_width:
-        weight: -55
-        enabled: true
-      two_column_text_content:
-        weight: -53
-        enabled: true
-      view:
+      slideshow:
         weight: -30
-        enabled: false
-      webform:
+        enabled: true
+      slideshow_item:
         weight: -29
+        enabled: true
+      slideshow_with_caption:
+        weight: -28
+        enabled: true
+      text_content:
+        weight: -46
         enabled: false
+      text_content_full_width:
+        weight: -47
+        enabled: false
+      two_column_text_content:
+        weight: -45
+        enabled: false
+      view:
+        weight: -27
+        enabled: true
+      webform:
+        weight: -26
+        enabled: true
 field_type: entity_reference_revisions

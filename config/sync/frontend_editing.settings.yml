@@ -9,9 +9,10 @@ entity_types:
     - featured_content
     - file_attachments
     - google_map
+    - images_with_links
     - image_gallery
     - image_with_link
-    - images_with_links
+    - large_icon_ctas
     - large_image
     - map_with_contact_info
     - page_banner
@@ -28,10 +29,10 @@ full_width: 70
 hover_highlight: false
 automatic_preview: false
 primary_color: '#002aff'
+allow_detach: false
 ui_toggle: true
 ui_toggle_settings:
   offset_top: ''
   offset_bottom: '50'
   offset_left: ''
   offset_right: '50'
-allow_detach: false
