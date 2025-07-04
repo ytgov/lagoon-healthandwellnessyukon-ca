@@ -1,0 +1,18 @@
+uuid: a812317a-63bb-41d2-8b6d-a3aca1f0d5ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.large_icon_ctas
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '1'
+id: paragraph.large_icon_ctas
+target_entity_type_id: paragraph
+target_bundle: large_icon_ctas
+default_langcode: site_default
+language_alterable: false

@@ -6,45 +6,7 @@ dependencies:
     - field.field.paragraph.large_icon_ctas.field_large_icon_ctas
     - paragraphs.paragraphs_type.large_icon_ctas
   module:
-    - field_group
     - paragraphs
-third_party_settings:
-  field_group:
-    group_settings:
-      children:
-        - group_settings_flex_row
-      label: Settings
-      region: content
-      parent_name: ''
-      weight: 2
-      format_type: fieldset
-      format_settings:
-        classes: ''
-        show_empty_fields: false
-        id: ''
-        description: ''
-        required_fields: true
-    group_settings_flex_row:
-      children:
-        - field_cta_colour_option
-        - field_colour_application
-      label: 'Settings Flex Row'
-      region: content
-      parent_name: group_settings
-      weight: 6
-      format_type: html_element
-      format_settings:
-        classes: 'd-flex gap-2'
-        show_empty_fields: true
-        id: ''
-        element: div
-        show_label: false
-        label_element: h3
-        label_element_classes: ''
-        attributes: ''
-        effect: none
-        speed: fast
-        required_fields: true
 id: paragraph.large_icon_ctas.default
 targetEntityType: paragraph
 bundle: large_icon_ctas
@@ -61,12 +23,13 @@ content:
       closed_mode: preview
       autocollapse: all
       closed_mode_threshold: 0
-      add_mode: dropdown
+      add_mode: button
       form_display_mode: default
       default_paragraph_type: large_icon_cta
       features:
         add_above: add_above
         collapse_edit_all: collapse_edit_all
+        convert: convert
         duplicate: duplicate
     third_party_settings: {  }
 hidden:
