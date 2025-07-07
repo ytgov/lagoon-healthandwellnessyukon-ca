@@ -52,3 +52,12 @@
     transform: scale(1.05);
   }
 }
+
+.sidebar-item-wrapper {
+  background-color: $side-nav-bg-active-color;
+
+  &:hover {
+    background-color: $side-nav-bg-color;
+    box-shadow: 0 0 0 2px $gray-800;
+  }
+}
