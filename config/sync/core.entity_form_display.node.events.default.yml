@@ -15,6 +15,7 @@ dependencies:
     - datetime_range
     - link_attributes
     - media_library
+    - media_library_edit
     - paragraphs
     - path
 id: node.events.default
@@ -104,7 +105,10 @@ content:
     region: content
     settings:
       media_types: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
+        edit_form_mode: default
   langcode:
     type: language_select
     weight: 0

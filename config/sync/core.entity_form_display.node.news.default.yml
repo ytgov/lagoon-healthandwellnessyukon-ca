@@ -11,6 +11,7 @@ dependencies:
   module:
     - datetime
     - media_library
+    - media_library_edit
     - paragraphs
     - path
 id: node.news.default
@@ -50,7 +51,10 @@ content:
     region: content
     settings:
       media_types: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
+        edit_form_mode: default
   field_page_banner:
     type: paragraphs
     weight: 0
