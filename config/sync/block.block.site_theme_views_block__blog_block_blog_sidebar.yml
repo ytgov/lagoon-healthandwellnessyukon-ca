@@ -1,0 +1,34 @@
+uuid: a59b374c-8d69-455e-83a2-279be518a7df
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.blog
+  module:
+    - block_classes
+    - node
+    - views
+  theme:
+    - site_theme
+id: site_theme_views_block__blog_block_blog_sidebar
+theme: site_theme
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_block:blog-block_blog_sidebar'
+settings:
+  id: 'views_block:blog-block_blog_sidebar'
+  label: ''
+  label_display: '0'
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      blog: blog
