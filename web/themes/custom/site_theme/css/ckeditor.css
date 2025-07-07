@@ -19015,33 +19015,11 @@
 .ck-editor__main .ck-content .events-calendar-widget .carousel .carousel-item .carousel-item-content .event-item h4, .ck-editor__main .ck-content .events-calendar-widget .carousel .carousel-item .carousel-item-content .event-item .h4 {
   font-size: 1rem;
 }
-.ck-editor__main .ck-content .events-calendar-widget .carousel .carousel-item .carousel-item-content .event-item h4 .event-item-wrapper, .ck-editor__main .ck-content .events-calendar-widget .carousel .carousel-item .carousel-item-content .event-item .h4 .event-item-wrapper {
-  background-color: rgba(239, 190, 125, 0.1);
-}
-.ck-editor__main .ck-content .events-calendar-widget .carousel .carousel-item .carousel-item-content .event-item h4 .event-item-wrapper a.event-link:link, .ck-editor__main .ck-content .events-calendar-widget .carousel .carousel-item .carousel-item-content .event-item .h4 .event-item-wrapper a.event-link:link, .ck-editor__main .ck-content .events-calendar-widget .carousel .carousel-item .carousel-item-content .event-item h4 .event-item-wrapper a.event-link:active, .ck-editor__main .ck-content .events-calendar-widget .carousel .carousel-item .carousel-item-content .event-item .h4 .event-item-wrapper a.event-link:active, .ck-editor__main .ck-content .events-calendar-widget .carousel .carousel-item .carousel-item-content .event-item h4 .event-item-wrapper a.event-link:visited, .ck-editor__main .ck-content .events-calendar-widget .carousel .carousel-item .carousel-item-content .event-item .h4 .event-item-wrapper a.event-link:visited {
-  color: #000;
-  text-decoration: none;
-}
-.ck-editor__main .ck-content .events-calendar-widget .carousel .carousel-item .carousel-item-content .event-item h4 .event-item-wrapper a.event-link:focus, .ck-editor__main .ck-content .events-calendar-widget .carousel .carousel-item .carousel-item-content .event-item .h4 .event-item-wrapper a.event-link:focus, .ck-editor__main .ck-content .events-calendar-widget .carousel .carousel-item .carousel-item-content .event-item h4 .event-item-wrapper a.event-link:focus-visible, .ck-editor__main .ck-content .events-calendar-widget .carousel .carousel-item .carousel-item-content .event-item .h4 .event-item-wrapper a.event-link:focus-visible, .ck-editor__main .ck-content .events-calendar-widget .carousel .carousel-item .carousel-item-content .event-item h4 .event-item-wrapper a.event-link:hover, .ck-editor__main .ck-content .events-calendar-widget .carousel .carousel-item .carousel-item-content .event-item .h4 .event-item-wrapper a.event-link:hover {
-  color: #000;
-  outline: none;
-  text-decoration: none;
-}
 .ck-editor__main .ck-content .events-calendar-widget .carousel .carousel-item .carousel-item-content .event-item h4 .event-item-wrapper .event-content .container .paragraph:first-child, .ck-editor__main .ck-content .events-calendar-widget .carousel .carousel-item .carousel-item-content .event-item .h4 .event-item-wrapper .event-content .container .paragraph:first-child {
   margin: 0 !important;
 }
 .ck-editor__main .ck-content .events-calendar-widget .carousel .carousel-item .carousel-item-content .event-item h4 .event-item-wrapper .event-content .container .paragraph:last-child, .ck-editor__main .ck-content .events-calendar-widget .carousel .carousel-item .carousel-item-content .event-item .h4 .event-item-wrapper .event-content .container .paragraph:last-child {
   margin-bottom: 0 !important;
-}
-.ck-editor__main .ck-content .events-calendar-widget .carousel .carousel-item .carousel-item-content .event-item h4 .event-item-wrapper:hover, .ck-editor__main .ck-content .events-calendar-widget .carousel .carousel-item .carousel-item-content .event-item .h4 .event-item-wrapper:hover {
-  background-color: rgba(239, 190, 125, 0.2);
-  -webkit-box-shadow: 0 0 0 2px #343a40;
-          box-shadow: 0 0 0 2px #343a40;
-}
-.ck-editor__main .ck-content .events-calendar-widget .carousel .carousel-item .carousel-item-content .event-item h4 .event-item-wrapper:hover a.event-link:focus, .ck-editor__main .ck-content .events-calendar-widget .carousel .carousel-item .carousel-item-content .event-item .h4 .event-item-wrapper:hover a.event-link:focus, .ck-editor__main .ck-content .events-calendar-widget .carousel .carousel-item .carousel-item-content .event-item h4 .event-item-wrapper:hover a.event-link:focus-visible, .ck-editor__main .ck-content .events-calendar-widget .carousel .carousel-item .carousel-item-content .event-item .h4 .event-item-wrapper:hover a.event-link:focus-visible, .ck-editor__main .ck-content .events-calendar-widget .carousel .carousel-item .carousel-item-content .event-item h4 .event-item-wrapper:hover a.event-link:hover, .ck-editor__main .ck-content .events-calendar-widget .carousel .carousel-item .carousel-item-content .event-item .h4 .event-item-wrapper:hover a.event-link:hover {
-  color: #000;
-  outline: none;
-  text-decoration: none;
 }
 .ck-editor__main .ck-content .calendar-legend-block {
   margin-bottom: 1rem;
@@ -19092,4 +19070,12 @@
   -webkit-transform: scale(1.05);
        -o-transform: scale(1.05);
           transform: scale(1.05);
+}
+.ck-editor__main .ck-content .sidebar-item-wrapper, .ck-editor__main .ck-content .events-calendar-widget .carousel .carousel-item .carousel-item-content .event-item h4 .event-item-wrapper, .ck-editor__main .ck-content .events-calendar-widget .carousel .carousel-item .carousel-item-content .event-item .h4 .event-item-wrapper {
+  background-color: rgba(239, 190, 125, 0.1);
+}
+.ck-editor__main .ck-content .sidebar-item-wrapper:hover, .ck-editor__main .ck-content .events-calendar-widget .carousel .carousel-item .carousel-item-content .event-item h4 .event-item-wrapper:hover, .ck-editor__main .ck-content .events-calendar-widget .carousel .carousel-item .carousel-item-content .event-item .h4 .event-item-wrapper:hover {
+  background-color: rgba(239, 190, 125, 0.2);
+  -webkit-box-shadow: 0 0 0 2px #343a40;
+          box-shadow: 0 0 0 2px #343a40;
 }
