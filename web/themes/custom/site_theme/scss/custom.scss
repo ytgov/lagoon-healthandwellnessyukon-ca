@@ -61,3 +61,12 @@
     box-shadow: 0 0 0 2px $gray-800;
   }
 }
+
+.views-field-field-related-content {
+  a {
+    @extend .sidebar-item-wrapper;
+    border-radius: $border-radius-lg;
+    padding: 1rem;
+    display: block;
+  }
+}
