@@ -11,7 +11,7 @@ third_party_settings:
     parent: 'main:'
 _core:
   default_config_hash: g6yQ-t66bnvfkYVjPIbeCEICOfEtK71PFkepq2WUHt8
-name: Event
+name: 'Engagement (Event)'
 type: events
 description: null
 help: null
