@@ -1122,7 +1122,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"sidebar-item-wrapper d-flex flex-column gap-3 p-3 rounded-4 position-relative\">\r\n  <a href=\"{{ view_node }}\" class=\"position-absolute w-100 h-100\"></a>\r\n  <span class=\"sidebar-link d-flex align-items-start gap-3\">\r\n    {% if field_news_image %}\r\n      <span class=\"event-thumbnail\">\r\n        {{ field_news_image }}\r\n      </span>\r\n    {% endif %}\r\n    <span class=\"event-details text-center flex-grow-1\">\r\n      <span class=\"d-block mb-2 event-title fw-bold\">{{ title }}</span>\r\n      <span class=\"d-block event-date small\">{{ field_date }}</span>\r\n    </span>\r\n  </span>\r\n  <div class=\"event-content rounded-4 bg-white p-2\">\r\n    {{ field_content }}\r\n  </div>\r\n</div>"
+            text: "<div class=\"sidebar-item-wrapper d-flex flex-column gap-3 p-3 rounded-4 position-relative\">\r\n  <a href=\"{{ view_node }}\" class=\"position-absolute w-100 h-100\"></a>\r\n  <span class=\"d-block  small\">{{ field_date }}</span>\r\n  <span class=\"d-block  fw-bold\">{{ title }}</span>\r\n</div>"
             make_link: false
             path: ''
             absolute: false

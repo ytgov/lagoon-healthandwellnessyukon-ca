@@ -1411,8 +1411,8 @@ display:
           label: ''
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: "<div class=\"sidebar-item-wrapper d-flex flex-column gap-3 p-3 rounded-4 position-relative\">\r\n  <a href=\"{{ field_related_content__uri }}\" class=\"position-absolute w-100 h-100\"></a>\r\n  <span class=\"d-block  fw-bold\">{{ field_related_content__title }}</span>\r\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -1459,7 +1459,7 @@ display:
             target: '0'
           group_column: ''
           group_columns: {  }
-          group_rows: true
+          group_rows: false
           delta_limit: 0
           delta_offset: 0
           delta_reversed: false
@@ -1578,7 +1578,7 @@ display:
         type: default
         options:
           grouping: {  }
-          row_class: ''
+          row_class: mb-4
           default_row_class: true
       row:
         type: fields
