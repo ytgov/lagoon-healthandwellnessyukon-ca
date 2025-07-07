@@ -7,7 +7,15 @@ dependencies:
     - filter.format.rich_text
     - paragraphs.paragraphs_type.text_content_full_width
   module:
+    - allowed_formats
     - text
+    - tmgmt_content
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - rich_text
+  tmgmt_content:
+    excluded: false
 _core:
   default_config_hash: rxazKlr95HQ59_sN9uHJ8dTX7CotSnHhP9q9XN0M_Mg
 id: paragraph.text_content_full_width.field_text_content
