@@ -1,0 +1,18 @@
+uuid: cb33f15c-20f9-4850-8be9-db7866dfe391
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.logos
+id: block_content.logos.changed
+field_name: changed
+entity_type: block_content
+bundle: logos
+label: Changed
+description: 'The time that the content block was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

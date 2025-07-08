@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - block_content.type.logos
     - filter.format.rich_text
     - node.type.blog
     - node.type.board_member
@@ -105,6 +106,7 @@ permissions:
   - 'edit any blog content'
   - 'edit any board_member content'
   - 'edit any homepage content'
+  - 'edit any logos block content'
   - 'edit any news content'
   - 'edit any page content'
   - 'edit any webform submission'
@@ -117,6 +119,7 @@ permissions:
   - 'provide translation services'
   - 'revert all revisions'
   - 'revert all taxonomy revisions'
+  - 'revert any logos block content revisions'
   - 'revert blog revisions'
   - 'revert board_member revisions'
   - 'revert homepage revisions'
@@ -147,6 +150,7 @@ permissions:
   - 'view all media revisions'
   - 'view all revisions'
   - 'view all taxonomy revisions'
+  - 'view any logos block content history'
   - 'view any unpublished content'
   - 'view any webform submission'
   - 'view blog revisions'
