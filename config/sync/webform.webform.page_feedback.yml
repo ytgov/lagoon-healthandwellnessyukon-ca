@@ -39,7 +39,7 @@ elements: |-
         - yes-no-trigger-wrapper
         - d-flex
         - align-items-center
-        - justify-content-center
+        - justify-content-end
     '#attributes':
       class:
         - yes-no-trigger
