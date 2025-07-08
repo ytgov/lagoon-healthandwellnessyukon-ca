@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - block_content.type.logos
+    - block_content.type.social_media
     - filter.format.rich_text
     - node.type.blog
     - node.type.board_member
@@ -109,6 +110,7 @@ permissions:
   - 'edit any logos block content'
   - 'edit any news content'
   - 'edit any page content'
+  - 'edit any social_media block content'
   - 'edit any webform submission'
   - 'edit own blog content'
   - 'edit own board_member content'
@@ -120,6 +122,7 @@ permissions:
   - 'revert all revisions'
   - 'revert all taxonomy revisions'
   - 'revert any logos block content revisions'
+  - 'revert any social_media block content revisions'
   - 'revert blog revisions'
   - 'revert board_member revisions'
   - 'revert homepage revisions'
@@ -151,6 +154,7 @@ permissions:
   - 'view all revisions'
   - 'view all taxonomy revisions'
   - 'view any logos block content history'
+  - 'view any social_media block content history'
   - 'view any unpublished content'
   - 'view any webform submission'
   - 'view blog revisions'
