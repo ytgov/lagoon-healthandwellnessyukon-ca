@@ -28,7 +28,7 @@ content:
     settings:
       title: Logo
       title_plural: Logos
-      edit_mode: open
+      edit_mode: closed
       closed_mode: preview
       autocollapse: none
       closed_mode_threshold: 0

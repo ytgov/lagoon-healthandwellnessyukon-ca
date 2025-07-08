@@ -13,6 +13,12 @@ targetEntityType: paragraph
 bundle: accordion
 mode: default
 content:
+  extra_field_frontend_editing:
+    type: extra_field_frontend_editing
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
   field_accordion_content:
     type: entity_reference_revisions_entity_view
     label: hidden

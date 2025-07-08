@@ -9,31 +9,7 @@ dependencies:
     - field.field.paragraph.large_icon_cta.field_plain_description
     - paragraphs.paragraphs_type.large_icon_cta
   module:
-    - field_group
-    - link
     - options
-  field_group:
-    group_row:
-      children:
-        - field_cta_icon
-        - field_icon_cta_link
-        - field_plain_description
-      label: Row
-      parent_name: ''
-      region: content
-      weight: 0
-      format_type: html_element
-      format_settings:
-        classes: 'd-flex gap-2'
-        show_empty_fields: false
-        id: ''
-        element: div
-        show_label: false
-        label_element: h3
-        label_element_classes: ''
-        attributes: ''
-        effect: none
-        speed: fast
 id: paragraph.large_icon_cta.preview
 targetEntityType: paragraph
 bundle: large_icon_cta
@@ -44,26 +20,9 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 1
-    region: content
-  field_icon_cta_link:
-    type: link
-    label: hidden
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    weight: 2
-    region: content
-  field_plain_description:
-    type: basic_string
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 3
+    weight: 0
     region: content
 hidden:
+  field_icon_cta_link: true
+  field_plain_description: true
   search_api_excerpt: true

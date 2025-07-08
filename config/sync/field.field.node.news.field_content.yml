@@ -12,6 +12,7 @@ dependencies:
     - paragraphs.paragraphs_type.slideshow
     - paragraphs.paragraphs_type.slideshow_item
     - paragraphs.paragraphs_type.slideshow_with_caption
+    - paragraphs.paragraphs_type.social_media_icon_link
     - paragraphs.paragraphs_type.view
     - paragraphs.paragraphs_type.webform
   module:
@@ -45,75 +46,82 @@ settings:
       view: view
       webform: webform
       large_icon_cta: large_icon_cta
+      social_media_icon_link: social_media_icon_link
     negate: 1
     target_bundles_drag_drop:
       accordion:
-        weight: -44
-        enabled: false
-      accordion_content:
-        weight: -33
-        enabled: true
-      card:
-        weight: -43
-        enabled: false
-      cta_background_image:
-        weight: -41
-        enabled: false
-      featured_content:
-        weight: -38
-        enabled: false
-      file_attachments:
-        weight: -39
-        enabled: false
-      google_map:
-        weight: -37
-        enabled: false
-      image_gallery:
-        weight: -36
-        enabled: false
-      image_with_link:
-        weight: -32
-        enabled: true
-      images_with_links:
-        weight: -40
-        enabled: false
-      large_icon_cta:
-        weight: -25
-        enabled: true
-      large_icon_ctas:
-        weight: -42
-        enabled: false
-      large_image:
-        weight: -35
-        enabled: false
-      map_with_contact_info:
-        weight: -34
-        enabled: false
-      page_banner:
-        weight: -31
-        enabled: true
-      slideshow:
-        weight: -30
-        enabled: true
-      slideshow_item:
-        weight: -29
-        enabled: true
-      slideshow_with_caption:
-        weight: -28
-        enabled: true
-      text_content:
-        weight: -46
-        enabled: false
-      text_content_full_width:
         weight: -47
         enabled: false
-      two_column_text_content:
+      accordion_content:
+        weight: -36
+        enabled: true
+      card:
+        weight: -46
+        enabled: false
+      cta_background_image:
+        weight: -44
+        enabled: false
+      featured_content:
+        weight: -41
+        enabled: false
+      file_attachments:
+        weight: -42
+        enabled: false
+      google_map:
+        weight: -40
+        enabled: false
+      highlighted_panel:
+        weight: -48
+        enabled: false
+      image_gallery:
+        weight: -39
+        enabled: false
+      image_with_link:
+        weight: -35
+        enabled: true
+      images_with_links:
+        weight: -43
+        enabled: false
+      large_icon_cta:
+        weight: -28
+        enabled: true
+      large_icon_ctas:
         weight: -45
         enabled: false
-      view:
+      large_image:
+        weight: -38
+        enabled: false
+      map_with_contact_info:
+        weight: -37
+        enabled: false
+      page_banner:
+        weight: -34
+        enabled: true
+      slideshow:
+        weight: -33
+        enabled: true
+      slideshow_item:
+        weight: -32
+        enabled: true
+      slideshow_with_caption:
+        weight: -31
+        enabled: true
+      social_media_icon_link:
         weight: -27
         enabled: true
+      text_content:
+        weight: -50
+        enabled: false
+      text_content_full_width:
+        weight: -51
+        enabled: false
+      two_column_text_content:
+        weight: -49
+        enabled: false
+      view:
+        weight: -30
+        enabled: true
       webform:
-        weight: -26
+        weight: -29
         enabled: true
 field_type: entity_reference_revisions

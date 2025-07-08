@@ -9,11 +9,31 @@ dependencies:
     - field.field.node.homepage.field_sharing_thumbnail
     - node.type.homepage
   module:
+    - field_group
     - media_library
     - media_library_edit
     - metatag
     - paragraphs
     - path
+third_party_settings:
+  field_group:
+    group_sharing_thumbnail:
+      children:
+        - field_sharing_thumbnail
+      label: 'Sharing Thumbnail'
+      region: content
+      parent_name: ''
+      weight: 3
+      format_type: details_sidebar
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: false
+        description: ''
+        required_fields: true
+        weight: 0
 id: node.homepage.default
 targetEntityType: node
 bundle: homepage
@@ -26,7 +46,7 @@ content:
     settings:
       title: Paragraph
       title_plural: Paragraphs
-      edit_mode: open
+      edit_mode: closed
       closed_mode: preview
       autocollapse: none
       closed_mode_threshold: 0
@@ -41,7 +61,7 @@ content:
     third_party_settings: {  }
   field_hp_content:
     type: paragraphs
-    weight: 3
+    weight: 2
     region: content
     settings:
       title: Paragraph
