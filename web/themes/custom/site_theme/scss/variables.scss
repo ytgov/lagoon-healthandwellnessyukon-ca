@@ -123,7 +123,7 @@ $social-media-icon-hover-color: $white;
 // classes in the view.
 $grid-block-border-color: $gray-400;
 $grid-block-border-width: 1px;
-$grid-block-border-radius: 20px;
+$grid-block-border-radius: 4px;
 $grid-block-box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.15);
 $grid-block-background-color: $gray-200;
 $grid-block-text-color: $gray-800;
@@ -131,13 +131,19 @@ $grid-block-text-color: $gray-800;
 $grid-block-hover-text-color: $primary-dark;
 $grid-block-hover-background-color: $gray-100;
 $grid-block-hover-border-color: $gray-400;
-$grid-block-hover-box-shadow:2px 2px 15px rgba(0, 0, 0, 0.15);
+$grid-block-hover-box-shadow:0 0 14px 0 rgba(0, 0, 0, .35);
 $grid-block-link-no-thumbnail-bg: $gray-400;
 // These apply to any links inside grid-block only:
 $grid-block-inner-link-text-color: $primary-shade;
 $grid-block-inner-link-text-decoration: none;
 $grid-block-inner-link-hover-text-color: $primary-dark;
 $grid-block-inner-link-hover-text-decoration: none;
+
+// Large icon CTA styles.
+$large-icon-cta-color: $body-color;
+$large-icon-cta-bg: $body-bg;
+$large-icon-cta-hover-color: $grid-block-hover-text-color;
+$large-icon-cta-hover-bg: $body-bg;
 
 // Banner CTA menu styles.
 $banner-cta-menu-overlay-banner: true;

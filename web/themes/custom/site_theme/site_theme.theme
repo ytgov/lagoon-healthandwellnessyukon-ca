@@ -61,7 +61,7 @@ function site_theme_preprocess_field(array &$variables): void {
         if (isset($item['content']['#attributes']['class'])) {
           $item['content']['#attributes']['class'] = array_diff($item['content']['#attributes']['class'], ['py-2']);
           $item['content']['#attributes']['class'][] = 'py-4';
-          $item['content']['#attributes']['class'][] = 'rounded-4';
+          $item['content']['#attributes']['class'][] = 'rounded-1';
         }
       }
     }

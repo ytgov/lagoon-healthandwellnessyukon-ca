@@ -70,3 +70,49 @@
     display: block;
   }
 }
+
+.paragraph--type--large-icon-ctas {
+  .paragraph--type--large-icon-cta {
+    .large-icon-cta-link {
+      @include font-size($large-icon-cta-font-size);
+      transition: all 0.2s ease-in-out;
+
+      &:link,
+      &:focus,
+      &:active,
+      &:visited,
+      &:hover {
+        text-decoration: none;
+      }
+
+      .icon {
+        line-height: normal;
+        @include font-size($large-icon-cta-icon-size);
+      }
+
+      .description {
+        @include font-size($large-icon-cta-description-size);
+      }
+    }
+  }
+
+  .paragraph--type--large-icon-cta {
+    .large-icon-cta-link {
+      box-shadow: $grid-block-box-shadow;
+
+      &:link,
+      &:focus,
+      &:active,
+      &:visited {
+        color: $large-icon-cta-color;
+        background-color: $large-icon-cta-bg;
+      }
+
+      &:hover {
+        color: $large-icon-cta-hover-color;
+        background-color: $large-icon-cta-hover-bg;
+        box-shadow: $grid-block-hover-box-shadow;
+      }
+    }
+  }
+}
