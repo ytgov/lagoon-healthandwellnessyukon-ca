@@ -8,13 +8,8 @@ dependencies:
     - field.field.paragraph.social_media_icon_link.field_social_media_link
     - paragraphs.paragraphs_type.social_media_icon_link
   module:
-    - layout_builder
     - link
     - options
-third_party_settings:
-  layout_builder:
-    enabled: false
-    allow_custom: false
 id: paragraph.social_media_icon_link.preview
 targetEntityType: paragraph
 bundle: social_media_icon_link
