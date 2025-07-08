@@ -5,7 +5,6 @@ dependencies:
   config:
     - views.view.blog
   module:
-    - block_classes
     - node
     - views
   theme:
