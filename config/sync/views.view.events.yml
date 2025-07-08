@@ -1411,9 +1411,9 @@ display:
           label: ''
           exclude: false
           alter:
-            alter_text: true
-            text: "<div class=\"sidebar-item-wrapper d-flex flex-column gap-3 p-3 rounded-4 position-relative\">\r\n  <a href=\"{{ field_related_content__uri }}\" class=\"position-absolute w-100 h-100\"></a>\r\n  <span class=\"d-block  fw-bold\">{{ field_related_content__title }}</span>\r\n</div>"
-            make_link: false
+            alter_text: false
+            text: ''
+            make_link: true
             path: ''
             absolute: false
             external: false
@@ -1437,12 +1437,12 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: ''
+          element_type: '0'
           element_class: ''
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
-          element_wrapper_type: ''
+          element_wrapper_type: div
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
@@ -1467,6 +1467,7 @@ display:
           multi_type: ul
           separator: ', '
           field_api_classes: false
+      sorts: {  }
       arguments:
         nid:
           id: nid
@@ -1588,6 +1589,7 @@ display:
         style: false
         row: false
         fields: false
+        sorts: false
         arguments: false
         filters: false
         filter_groups: false
@@ -2022,7 +2024,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"event-item-wrapper d-flex flex-column gap-3 p-3 rounded-4 position-relative\">\r\n  <a href=\"{{ view_node }}\" class=\"position-absolute w-100 h-100\"></a>\r\n  <span class=\"event-link d-flex align-items-start gap-3\">\r\n    {% if field_sharing_thumbnail %}\r\n      <span class=\"event-thumbnail\">\r\n        {{ field_sharing_thumbnail }}\r\n      </span>\r\n    {% endif %}\r\n    <span class=\"event-details text-center flex-grow-1\">\r\n      <span class=\"d-block mb-2 event-title fw-bold\">{{ title }}</span>\r\n      <span class=\"d-block event-date small\">{{ field_event_date }}</span>\r\n    </span>\r\n  </span>\r\n  <div class=\"event-content rounded-4 bg-white p-2\">\r\n    {{ field_content }}\r\n  </div>\r\n</div>"
+            text: "<div class=\"event-item-wrapper d-flex flex-column gap-3 p-3 rounded-4 position-relative\">\r\n  <a href=\"{{ view_node }}\" class=\"position-absolute w-100 h-100 top-0 start-0\"></a>\r\n  <span class=\"event-link d-flex align-items-start gap-3\">\r\n    {% if field_sharing_thumbnail %}\r\n      <span class=\"event-thumbnail\">\r\n        {{ field_sharing_thumbnail }}\r\n      </span>\r\n    {% endif %}\r\n    <span class=\"event-details text-center flex-grow-1\">\r\n      <span class=\"d-block mb-2 event-title fw-bold\">{{ title }}</span>\r\n      <span class=\"d-block event-date small\">{{ field_event_date }}</span>\r\n    </span>\r\n  </span>\r\n  <div class=\"event-content rounded-4 bg-white p-2\">\r\n    {{ field_content }}\r\n  </div>\r\n</div>"
             make_link: false
             path: ''
             absolute: false

@@ -733,6 +733,7 @@ display:
     display_plugin: block
     position: 4
     display_options:
+      title: 'Recent posts'
       fields:
         field_date:
           id: field_date
@@ -1122,7 +1123,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"sidebar-item-wrapper d-flex flex-column gap-3 p-3 rounded-4 position-relative\">\r\n  <a href=\"{{ view_node }}\" class=\"position-absolute w-100 h-100\"></a>\r\n  <span class=\"d-block  small\">{{ field_date }}</span>\r\n  <span class=\"d-block  fw-bold\">{{ title }}</span>\r\n</div>"
+            text: "<div class=\"sidebar-item-wrapper d-flex flex-column gap-3 p-3 rounded-4 position-relative\">\r\n  <a href=\"{{ view_node }}\" class=\"position-absolute w-100 h-100 top-0 start-0\"></a>\r\n  <span class=\"d-block  small\">{{ field_date }}</span>\r\n  <span class=\"d-block  fw-bold\">{{ title }}</span>\r\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -1275,6 +1276,7 @@ display:
           hide_empty: false
       defaults:
         empty: false
+        title: false
         style: false
         row: false
         fields: false
