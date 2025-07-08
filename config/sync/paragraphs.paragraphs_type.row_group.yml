@@ -1,0 +1,10 @@
+uuid: 0bb1f969-4d05-4f86-8bc0-77c929597180
+langcode: en
+status: true
+dependencies: {  }
+id: row_group
+label: 'Row Group'
+icon_uuid: null
+icon_default: null
+description: 'This is used to add a group of paragraphs in a grid.'
+behavior_plugins: {  }
