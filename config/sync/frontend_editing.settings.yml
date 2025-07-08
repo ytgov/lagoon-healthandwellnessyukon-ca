@@ -9,6 +9,7 @@ entity_types:
     - featured_content
     - file_attachments
     - google_map
+    - highlighted_panel
     - images_with_links
     - image_gallery
     - image_with_link

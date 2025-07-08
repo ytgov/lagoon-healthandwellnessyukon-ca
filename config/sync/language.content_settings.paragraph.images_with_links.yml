@@ -17,4 +17,4 @@ id: paragraph.images_with_links
 target_entity_type_id: paragraph
 target_bundle: images_with_links
 default_langcode: site_default
-language_alterable: false
+language_alterable: true

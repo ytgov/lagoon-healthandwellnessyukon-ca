@@ -1,0 +1,22 @@
+uuid: 3e7ac480-77c3-43b6-9b5d-7df7c3e7f1ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.highlighted_panel
+id: paragraph.highlighted_panel.status
+field_name: status
+entity_type: paragraph
+bundle: highlighted_panel
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

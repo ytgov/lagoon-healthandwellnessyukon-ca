@@ -1,0 +1,49 @@
+uuid: dacb74df-96c5-4faf-b669-53f5d6d9b0d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.social_media_icon_link.field_social_media_icon
+    - field.field.paragraph.social_media_icon_link.field_social_media_link
+    - paragraphs.paragraphs_type.social_media_icon_link
+  module:
+    - link
+id: paragraph.social_media_icon_link.default
+targetEntityType: paragraph
+bundle: social_media_icon_link
+mode: default
+content:
+  field_cta_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_icon:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_social_media_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_social_media_icon: true
+  search_api_excerpt: true

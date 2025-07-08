@@ -1,0 +1,100 @@
+uuid: cb1efb42-0922-4ffa-b62b-d9565cc79506
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.highlighted_panel.field_heading
+    - field.field.paragraph.highlighted_panel.field_sub_heading
+    - field.field.paragraph.highlighted_panel.field_text_content
+    - paragraphs.paragraphs_type.highlighted_panel
+  module:
+    - fences
+    - field_group
+    - text
+third_party_settings:
+  field_group:
+    group_row:
+      children:
+        - group_highlighted
+        - field_text_content
+      label: Row
+      parent_name: ''
+      region: content
+      weight: 1
+      format_type: html_element
+      format_settings:
+        classes: row
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+    group_highlighted:
+      children:
+        - field_heading
+        - field_sub_heading
+      label: Highlighted
+      parent_name: group_row
+      region: content
+      weight: 1
+      format_type: html_element
+      format_settings:
+        classes: col-lg-4
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+id: paragraph.highlighted_panel.default
+targetEntityType: paragraph
+bundle: highlighted_panel
+mode: default
+content:
+  extra_field_frontend_editing:
+    type: extra_field_frontend_editing
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_heading:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_sub_heading:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_text_content:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: col-lg-8
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 2
+    region: content
+hidden: {  }

@@ -1,0 +1,61 @@
+uuid: 8dc7f6e4-0da3-4b36-a985-fd05a319736e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.social_media
+    - field.storage.block_content.field_social_media_link_icons
+    - paragraphs.paragraphs_type.social_media_icon_link
+  module:
+    - entity_reference_revisions
+id: block_content.social_media.field_social_media_link_icons
+field_name: field_social_media_link_icons
+entity_type: block_content
+bundle: social_media
+label: 'Social Media Icon Links'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      social_media_icon_link: social_media_icon_link
+    negate: 0
+    target_bundles_drag_drop:
+      button_with_icon:
+        weight: 12
+        enabled: false
+      embedded_video:
+        weight: 13
+        enabled: false
+      featured_content:
+        weight: 14
+        enabled: false
+      file_attachments:
+        weight: 15
+        enabled: false
+      large_image:
+        weight: 16
+        enabled: false
+      page_banner:
+        weight: 17
+        enabled: false
+      private_file_attachments:
+        weight: 18
+        enabled: false
+      slideshow_item:
+        weight: 19
+        enabled: false
+      social_media_icon_link:
+        weight: 20
+        enabled: true
+      text_content:
+        weight: 21
+        enabled: false
+      view:
+        weight: 22
+        enabled: false
+field_type: entity_reference_revisions

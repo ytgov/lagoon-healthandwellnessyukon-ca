@@ -1,0 +1,27 @@
+uuid: 56973164-9823-4849-9301-a33bf0ccab78
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.highlighted_panel.field_heading
+    - field.field.paragraph.highlighted_panel.field_sub_heading
+    - field.field.paragraph.highlighted_panel.field_text_content
+    - paragraphs.paragraphs_type.highlighted_panel
+id: paragraph.highlighted_panel.preview
+targetEntityType: paragraph
+bundle: highlighted_panel
+mode: preview
+content:
+  field_heading:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  extra_field_frontend_editing: true
+  field_sub_heading: true
+  field_text_content: true

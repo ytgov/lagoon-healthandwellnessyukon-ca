@@ -1,0 +1,10 @@
+uuid: 31f80ca0-8666-41df-93f8-88126f16ec2a
+langcode: en
+status: true
+dependencies: {  }
+id: highlighted_panel
+label: 'Highlighted panel'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }
