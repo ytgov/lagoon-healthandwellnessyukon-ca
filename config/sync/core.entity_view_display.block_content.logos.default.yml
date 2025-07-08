@@ -8,6 +8,8 @@ dependencies:
     - field.field.block_content.logos.field_logos_with_links
   module:
     - entity_reference_revisions
+    - fences
+    - frontend_editing
 id: block_content.logos.default
 targetEntityType: block_content
 bundle: logos
@@ -18,7 +20,16 @@ content:
     label: hidden
     settings:
       link_to_entity: false
-    third_party_settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
     weight: 0
     region: content
   field_logos_with_links:
@@ -27,7 +38,20 @@ content:
     settings:
       view_mode: default
       link: ''
-    third_party_settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: div
+        fences_field_items_wrapper_classes: 'row row-cols-lg-3'
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+      frontend_editing:
+        ajax_content_update: 0
+        move_up_down: 0
+        add_items: 0
     weight: 1
     region: content
 hidden:
