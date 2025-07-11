@@ -71,6 +71,7 @@
   }
 }
 
+// Paragraphs styles.
 .paragraph--type--large-icon-ctas {
   .paragraph--type--large-icon-cta {
     .large-icon-cta-link {
@@ -114,5 +115,12 @@
         box-shadow: $grid-block-hover-box-shadow;
       }
     }
+  }
+}
+
+.highlighted-panel--heading {
+
+  @include media-breakpoint-up(lg) {
+    aspect-ratio: 3 / 2;
   }
 }

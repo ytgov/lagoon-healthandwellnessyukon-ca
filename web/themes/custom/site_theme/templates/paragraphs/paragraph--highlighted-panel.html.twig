@@ -54,11 +54,11 @@
     {% endif %}
     {% block content %}
       {% if landing_page_paragraph %}
-        <div class='container'>
+        <div class='container py-5'>
         {% endif %}
           <div class="row">
             <div class="col-lg-4">
-              <div class="highlighted-panel--heading bg-primary text-white p-3">
+              <div class="highlighted-panel--heading bg-primary text-white p-3 d-flex flex-column justify-content-end">
                 {{ content.field_heading }}
                 {{ content.field_sub_heading }}
               </div>

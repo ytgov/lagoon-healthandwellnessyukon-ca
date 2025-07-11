@@ -19124,3 +19124,8 @@
   -webkit-box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.35);
           box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.35);
 }
+@media (min-width: 62rem) {
+  .ck-editor__main .ck-content .highlighted-panel--heading {
+    aspect-ratio: 3/2;
+  }
+}
