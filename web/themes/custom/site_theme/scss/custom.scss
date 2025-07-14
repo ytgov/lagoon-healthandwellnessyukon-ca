@@ -124,3 +124,44 @@
     aspect-ratio: 3 / 2;
   }
 }
+
+//Footer styles
+.site-footer {
+  padding: 0;
+
+  .region-footer-first {
+    .field--name-field-headline {
+      color: $primary-shade;
+    }
+  }
+
+  .footer-second-wrapper {
+    background-image: $footer-bg-image-mobile;
+    background-size: contain;
+    background-position: center;
+    padding: $footer-bg-padding;
+
+    @include media-breakpoint-up(md) {
+      background-image: $footer-bg-image;
+    }
+
+    .block-block-groupfooter-second-group {
+      >.content {
+        @include media-breakpoint-up(md) {
+          display: flex;
+          align-items: center;
+
+          #block-site-theme-copyright {
+            margin-left: 1.5rem;
+          }
+        }
+        #block-site-theme-copyright {
+          p {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+    }
+  }
+}

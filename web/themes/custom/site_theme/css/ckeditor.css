@@ -16479,7 +16479,7 @@
 .ck-editor__main .ck-content .site-footer {
   padding: 1rem 0;
   margin-top: 2rem;
-  background-color: #343a40 !important;
+  background-color: #fff !important;
   color: #e9ecef;
 }
 .ck-editor__main .ck-content body.node--type-homepage .site-footer, .ck-editor__main .ck-content body.node--type-landing-page .site-footer {
@@ -16489,7 +16489,7 @@
   padding: 0 1rem;
 }
 .ck-editor__main .ck-content .site-footer a {
-  color: #e9ecef;
+  color: #fff;
   text-decoration: underline;
 }
 .ck-editor__main .ck-content .site-footer a:hover {
@@ -18645,7 +18645,7 @@
   display: none;
 }
 .ck-editor__main .ck-content .site-footer a.social-media-icon {
-  color: #e9ecef !important;
+  color: #fff !important;
 }
 .ck-editor__main .ck-content .site-footer a.social-media-icon:hover {
   color: rgba(248, 249, 250, 0.3) !important;
@@ -19128,4 +19128,40 @@
   .ck-editor__main .ck-content .highlighted-panel--heading {
     aspect-ratio: 3/2;
   }
+}
+.ck-editor__main .ck-content .site-footer {
+  padding: 0;
+}
+.ck-editor__main .ck-content .site-footer .region-footer-first .field--name-field-headline {
+  color: #A72B2A;
+}
+.ck-editor__main .ck-content .site-footer .footer-second-wrapper {
+  background-image: url(../images/YHTS-footer-banner-mobile.png);
+  -webkit-background-size: contain;
+          background-size: contain;
+  background-position: center;
+  padding: 10rem 5rem 1rem;
+}
+@media (min-width: 48rem) {
+  .ck-editor__main .ck-content .site-footer .footer-second-wrapper {
+    background-image: url(../images/YHTS-footer-banner.png);
+  }
+}
+@media (min-width: 48rem) {
+  .ck-editor__main .ck-content .site-footer .footer-second-wrapper .block-block-groupfooter-second-group > .content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .ck-editor__main .ck-content .site-footer .footer-second-wrapper .block-block-groupfooter-second-group > .content #block-site-theme-copyright {
+    margin-left: 1.5rem;
+  }
+}
+.ck-editor__main .ck-content .site-footer .footer-second-wrapper .block-block-groupfooter-second-group > .content #block-site-theme-copyright p {
+  margin-bottom: 0;
 }

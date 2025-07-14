@@ -102,13 +102,16 @@ $breadcrumb-divider:                quote("/");
 $breadcrumb-border-radius:          null;
 
 // Footer variables.
-$footer-bg: $gray-800;
+$footer-bg: $white;
 $footer-color: $gray-200;
 $footer-spacing: 2rem;
-$footer-link-color: $gray-200;
+$footer-link-color: $white;
 $footer-link-decoration: underline;
 $footer-link-hover-color: rgba($gray-100, 0.3);
 $footer-link-hover-decoration: none;
+$footer-bg-image: url(../images/YHTS-footer-banner.png);
+$footer-bg-image-mobile: url(../images/YHTS-footer-banner-mobile.png);
+$footer-bg-padding: 10rem 5rem 1rem;
 
 // Social media icon colors. If in the footer, these will
 // be overridden by the footer link colors.
