@@ -2,15 +2,15 @@
 
 /* VARIABLES */
 $yghss-red: #A72B2A;
-$yghss-beige: #F1E6B2;
-$yghss-orange: #EFBE7D;
-$yghss-purple: #5F2167;
+$yghss-dark-red: #49151a;
+$yghss-beige: #f7f1d4;
+$yghss-dark-beige: #EFBE7D;
 
 // colors
 $primary-shade: $yghss-red;
 $primary-light: color.adjust($primary-shade, $lightness: 37%);
 $primary-dark: color.adjust($primary-shade, $lightness: -12%);
-$accent-shade: $yghss-orange;
+$accent-shade: $yghss-dark-beige;
 $accent-light: color.adjust($accent-shade, $lightness: 37%);
 $accent-dark: color.adjust($accent-shade, $lightness: -12%);
 // Reassign color vars to semantic color scheme
@@ -128,11 +128,11 @@ $grid-block-border-color: $gray-400;
 $grid-block-border-width: 1px;
 $grid-block-border-radius: 4px;
 $grid-block-box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.15);
-$grid-block-background-color: $gray-200;
-$grid-block-text-color: $gray-800;
+$grid-block-background-color: $yghss-beige;
+$grid-block-text-color: $black;
 // These apply to grid-block-link only:
-$grid-block-hover-text-color: $primary-dark;
-$grid-block-hover-background-color: $gray-100;
+$grid-block-hover-text-color: $black;
+$grid-block-hover-background-color: $yghss-dark-beige;
 $grid-block-hover-border-color: $gray-400;
 $grid-block-hover-box-shadow:0 0 14px 0 rgba(0, 0, 0, .35);
 $grid-block-link-no-thumbnail-bg: $gray-400;
