@@ -19084,6 +19084,13 @@
   padding: 1rem;
   display: block;
 }
+.ck-editor__main .ck-content .paragraph--type--slideshow-with-caption #media-slideshow-with-captions .slideshow-caption {
+  top: unset;
+  bottom: 0;
+}
+.ck-editor__main .ck-content .paragraph--type--slideshow-with-caption #media-slideshow-with-captions button.carousel-control {
+  width: unset;
+}
 .ck-editor__main .ck-content .paragraph--type--large-icon-ctas .paragraph--type--large-icon-cta .large-icon-cta-link {
   font-size: calc(1.255rem + 0.06vw);
   -webkit-transition: all 0.2s ease-in-out;
