@@ -19331,6 +19331,14 @@
 .ck-editor__main .ck-content .site-footer .region-footer-first .field--name-field-headline {
   color: #A72B2A;
 }
+.ck-editor__main .ck-content .site-footer .region-footer-first #block-site-theme-footerlogos .field--name-field-headline {
+  font-size: calc(1.2734375rem + 0.28125vw);
+}
+@media (min-width: 75rem) {
+  .ck-editor__main .ck-content .site-footer .region-footer-first #block-site-theme-footerlogos .field--name-field-headline {
+    font-size: 1.484375rem;
+  }
+}
 .ck-editor__main .ck-content .site-footer .footer-second-wrapper {
   background-image: url(../images/YHTS-footer-banner-mobile.png);
   -webkit-background-size: contain;

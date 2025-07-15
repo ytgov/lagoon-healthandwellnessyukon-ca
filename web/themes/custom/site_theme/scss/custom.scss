@@ -205,6 +205,11 @@
     .field--name-field-headline {
       color: $primary-shade;
     }
+    #block-site-theme-footerlogos {
+      .field--name-field-headline {
+        @include font-size($h5-font-size);
+      }
+    }
   }
 
   .footer-second-wrapper {
