@@ -19312,6 +19312,14 @@
 .ck-editor__main .ck-content .paragraph--type--file-attachments .file-link-container {
   border-radius: 0 !important;
 }
+.ck-editor__main .ck-content .paragraph--type--image-gallery .photoswipe-gallery a.photoswipe {
+  height: 100%;
+}
+.ck-editor__main .ck-content .paragraph--type--image-gallery .photoswipe-gallery a.photoswipe img.image-style-large {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 @media (min-width: 62rem) {
   .ck-editor__main .ck-content .highlighted-panel--heading {
     aspect-ratio: 3/2;

@@ -171,8 +171,22 @@
   .field--name-field-file-attachments {
     padding: 0;
   }
+
   .file-link-container {
     border-radius: 0 !important;
+  }
+}
+
+.paragraph--type--image-gallery {
+  .photoswipe-gallery {
+    a.photoswipe {
+      height: 100%;
+
+      img.image-style-large {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
   }
 }
 
