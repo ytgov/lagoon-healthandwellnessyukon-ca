@@ -7,6 +7,15 @@ $custom-registry-search: unquote('"\\e901"');
 $custom-proposal-doc: unquote('"\\e902"');
 $custom-process: unquote('"\\e903"');
 
+$icomoon-font-family: "icomoon";
+$icomoon-font-path: "../fonts";
+
+$icon-YHTS-Shaw-Kwaa-icon-path1: unquote('"\\e900"');
+$icon-YHTS-Shaw-Kwaa-icon-path2: unquote('"\\e901"');
+$icon-YHTS-Shaw-Kwaa-icon-path3: unquote('"\\e902"');
+$icon-YHTS-transformation-icon: unquote('"\\e903"');
+$icon-YHTS-FAQ-icon: unquote('"\\e904"');
+
 @font-face {
   font-family: '#{$custom-icon-font-family}';
   src:
@@ -51,5 +60,53 @@ i.custom-icon {
 .custom-process {
   &:before {
     content: $custom-process;
+  }
+}
+
+i[class^="icon-YHTS"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-YHTS-Shaw-Kwaa-icon .path1 {
+  &:before {
+    content: $icon-YHTS-Shaw-Kwaa-icon-path1;
+    color: rgb(79, 80, 80);
+  }
+}
+.icon-YHTS-Shaw-Kwaa-icon .path2 {
+  &:before {
+    content: $icon-YHTS-Shaw-Kwaa-icon-path2;
+    margin-left: -2.1005859375em;
+    color: rgb(254, 254, 254);
+  }
+}
+.icon-YHTS-Shaw-Kwaa-icon .path3 {
+  &:before {
+    content: $icon-YHTS-Shaw-Kwaa-icon-path3;
+    margin-left: -2.1005859375em;
+    color: rgb(254, 254, 254);
+  }
+}
+.icon-YHTS-transformation-icon {
+  &:before {
+    content: $icon-YHTS-transformation-icon;
+    color: #4f5050;
+  }
+}
+.icon-YHTS-FAQ-icon {
+  &:before {
+    content: $icon-YHTS-FAQ-icon;
+    color: #4f5050;
   }
 }
