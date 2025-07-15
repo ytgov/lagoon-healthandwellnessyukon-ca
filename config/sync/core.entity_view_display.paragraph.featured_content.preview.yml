@@ -10,7 +10,6 @@ dependencies:
     - field.field.paragraph.featured_content.field_featured_image
     - field.field.paragraph.featured_content.field_featured_link
     - field.field.paragraph.featured_content.field_featured_title
-    - field.field.paragraph.featured_content.field_featured_variant
     - image.style.medium
     - paragraphs.paragraphs_type.featured_content
   module:
@@ -85,5 +84,4 @@ hidden:
   field_description_alignment: true
   field_featured_description: true
   field_featured_link: true
-  field_featured_variant: true
   search_api_excerpt: true
