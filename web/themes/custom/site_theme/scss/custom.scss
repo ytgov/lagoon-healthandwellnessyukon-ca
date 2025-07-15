@@ -91,6 +91,8 @@
     .large-icon-cta-link {
       @include font-size($large-icon-cta-font-size);
       transition: all 0.2s ease-in-out;
+      padding-left: 0.5rem !important;
+      padding-right: 0.5rem !important;
 
       &:link,
       &:focus,
