@@ -138,6 +138,35 @@
   }
 }
 
+.paragraph--type--featured-content {
+  .featured-content-box {
+    &.align-content-right {
+      @include media-breakpoint-up(lg) {
+        .content-inner {
+          .content {
+            padding-left: 2rem;
+          }
+        }
+      }
+    }
+
+    .content-wrapper {
+      .content-inner {
+        .content {
+          .field--name-field-featured-title {
+            @include font-size($h3-font-size);
+          }
+
+          .field--name-field-featured-description {
+            @include font-size($font-size-md);
+          }
+        }
+      }
+    }
+  }
+
+}
+
 .highlighted-panel--heading {
 
   @include media-breakpoint-up(lg) {

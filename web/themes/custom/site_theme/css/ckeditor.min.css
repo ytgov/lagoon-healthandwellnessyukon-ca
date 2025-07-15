@@ -19286,6 +19286,27 @@
           box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.35);
 }
 @media (min-width: 62rem) {
+  .ck-editor__main .ck-content .paragraph--type--featured-content .featured-content-box.align-content-right .content-inner .content {
+    padding-left: 2rem;
+  }
+}
+.ck-editor__main .ck-content .paragraph--type--featured-content .featured-content-box .content-wrapper .content-inner .content .field--name-field-featured-title {
+  font-size: calc(1.3328125rem + 0.99375vw);
+}
+@media (min-width: 75rem) {
+  .ck-editor__main .ck-content .paragraph--type--featured-content .featured-content-box .content-wrapper .content-inner .content .field--name-field-featured-title {
+    font-size: 2.078125rem;
+  }
+}
+.ck-editor__main .ck-content .paragraph--type--featured-content .featured-content-box .content-wrapper .content-inner .content .field--name-field-featured-description {
+  font-size: calc(1.2615625rem + 0.13875vw);
+}
+@media (min-width: 75rem) {
+  .ck-editor__main .ck-content .paragraph--type--featured-content .featured-content-box .content-wrapper .content-inner .content .field--name-field-featured-description {
+    font-size: 1.365625rem;
+  }
+}
+@media (min-width: 62rem) {
   .ck-editor__main .ck-content .highlighted-panel--heading {
     aspect-ratio: 3/2;
   }
