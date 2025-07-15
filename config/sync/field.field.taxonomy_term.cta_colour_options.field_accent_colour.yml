@@ -17,7 +17,7 @@ id: taxonomy_term.cta_colour_options.field_accent_colour
 field_name: field_accent_colour
 entity_type: taxonomy_term
 bundle: cta_colour_options
-label: 'Text Colour'
+label: 'Background Colour'
 description: ''
 required: true
 translatable: false

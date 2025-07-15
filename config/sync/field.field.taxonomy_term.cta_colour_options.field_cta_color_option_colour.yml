@@ -17,7 +17,7 @@ id: taxonomy_term.cta_colour_options.field_cta_color_option_colour
 field_name: field_cta_color_option_colour
 entity_type: taxonomy_term
 bundle: cta_colour_options
-label: 'Background Colour'
+label: 'Text Colour'
 description: ''
 required: true
 translatable: false
