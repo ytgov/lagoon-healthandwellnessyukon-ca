@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.image_gallery.field_heading
     - field.field.paragraph.image_gallery.field_image_gallery_images
     - image.style.gallery_carousel
     - paragraphs.paragraphs_type.image_gallery
@@ -16,6 +17,14 @@ targetEntityType: paragraph
 bundle: image_gallery
 mode: preview
 content:
+  field_heading:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
   field_image_gallery_images:
     type: media_thumbnail
     label: hidden

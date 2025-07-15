@@ -1,0 +1,24 @@
+uuid: 940a3887-ebd1-48d6-878a-c1cce9d3ecde
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading
+    - paragraphs.paragraphs_type.image_gallery
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.image_gallery.field_heading
+field_name: field_heading
+entity_type: paragraph
+bundle: image_gallery
+label: Heading/Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

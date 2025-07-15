@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.paragraph.carousel
+    - field.field.paragraph.image_gallery.field_heading
     - field.field.paragraph.image_gallery.field_image_gallery_images
     - paragraphs.paragraphs_type.image_gallery
 _core:
@@ -30,5 +31,6 @@ content:
     region: content
 hidden:
   field_animation_style: true
+  field_heading: true
   search_api_excerpt: true
   view_mode_selection: true

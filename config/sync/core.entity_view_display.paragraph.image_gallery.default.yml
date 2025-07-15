@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.image_gallery.field_heading
     - field.field.paragraph.image_gallery.field_image_gallery_images
     - paragraphs.paragraphs_type.image_gallery
 _core:
@@ -12,6 +13,19 @@ targetEntityType: paragraph
 bundle: image_gallery
 mode: default
 content:
+  extra_field_frontend_editing:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_heading:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
   field_image_gallery_images:
     type: entity_reference_entity_view
     label: hidden
