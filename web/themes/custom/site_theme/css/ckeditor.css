@@ -8,6 +8,14 @@
   font-style: normal;
   font-display: block;
 }
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.eot?4e5qab");
+  src: url("../fonts/icomoon.eot?4e5qab#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?4e5qab") format("truetype"), url("../fonts/icomoon.woff?4e5qab") format("woff"), url("../fonts/icomoon.svg?4e5qab#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
 /* VARIABLES */
 .ck-editor__main .ck-content {
   background-color: #fff !important;
@@ -276,6 +284,14 @@
   font-style: normal;
   font-display: block;
 }
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.eot?4e5qab");
+  src: url("../fonts/icomoon.eot?4e5qab#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?4e5qab") format("truetype"), url("../fonts/icomoon.woff?4e5qab") format("woff"), url("../fonts/icomoon.svg?4e5qab#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
 .ck-editor__main .ck-content i.custom-icon {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: "custom-icons" !important;
@@ -300,6 +316,41 @@
 }
 .ck-editor__main .ck-content .custom-process:before {
   content: "\e903";
+}
+.ck-editor__main .ck-content i[class^=icon-YHTS] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.ck-editor__main .ck-content .icon-YHTS-Shaw-Kwaa-icon .path1:before {
+  content: "\e900";
+  color: rgb(79, 80, 80);
+}
+.ck-editor__main .ck-content .icon-YHTS-Shaw-Kwaa-icon .path2:before {
+  content: "\e901";
+  margin-left: -2.1005859375em;
+  color: rgb(254, 254, 254);
+}
+.ck-editor__main .ck-content .icon-YHTS-Shaw-Kwaa-icon .path3:before {
+  content: "\e902";
+  margin-left: -2.1005859375em;
+  color: rgb(254, 254, 254);
+}
+.ck-editor__main .ck-content .icon-YHTS-transformation-icon:before {
+  content: "\e903";
+  color: #4f5050;
+}
+.ck-editor__main .ck-content .icon-YHTS-FAQ-icon:before {
+  content: "\e904";
+  color: #4f5050;
 }
 .ck-editor__main .ck-content :root,
 .ck-editor__main .ck-content [data-bs-theme=light] {

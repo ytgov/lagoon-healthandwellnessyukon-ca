@@ -5,6 +5,14 @@
   font-style: normal;
   font-display: block;
 }
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.eot?4e5qab");
+  src: url("../fonts/icomoon.eot?4e5qab#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?4e5qab") format("truetype"), url("../fonts/icomoon.woff?4e5qab") format("woff"), url("../fonts/icomoon.svg?4e5qab#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
 /* TYPOGRAPHY */
 /* Google Fonts
 
