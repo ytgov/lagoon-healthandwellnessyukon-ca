@@ -15,7 +15,7 @@ third_party_settings:
 id: site_theme_footersocialmedialinks
 theme: site_theme
 region: footer_second
-weight: 0
+weight: -13
 provider: null
 plugin: 'block_content:a8e86ba4-760a-4f19-808a-543b7db2e1cb'
 settings:

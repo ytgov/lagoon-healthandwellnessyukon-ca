@@ -1,0 +1,22 @@
+uuid: 345b21fa-5cb3-4c61-9851-a97fcb6a4059
+langcode: en
+status: true
+dependencies:
+  config:
+    - blockgroup.block_group_content.footer_second_group
+  module:
+    - blockgroup
+  theme:
+    - site_theme
+id: site_theme_footersecond
+theme: site_theme
+region: footer_second
+weight: -14
+provider: null
+plugin: 'block_group:footer_second_group'
+settings:
+  id: 'block_group:footer_second_group'
+  label: 'Footer Second'
+  label_display: '0'
+  provider: blockgroup
+visibility: {  }

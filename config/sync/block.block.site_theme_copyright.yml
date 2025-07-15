@@ -10,8 +10,8 @@ dependencies:
     - site_theme
 id: site_theme_copyright
 theme: site_theme
-region: footer_second
-weight: 0
+region: footer_second_group
+weight: -12
 provider: null
 plugin: 'block_content:46acff7e-d100-4645-8a13-cc7e4e086028'
 settings:
