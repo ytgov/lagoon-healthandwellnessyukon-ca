@@ -17871,7 +17871,7 @@
 .ck-editor__main .ck-content .grid-block-link:hover {
   text-decoration: none;
   color: #000;
-  background: #EFBE7D;
+  background: #f7f1d4;
   border-color: #ced4da;
   -webkit-box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.35);
           box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.35);
@@ -19167,6 +19167,9 @@
 }
 .ck-editor__main .ck-content .paragraph--type--large-icon-ctas .paragraph--type--large-icon-cta .large-icon-cta-link .description {
   font-size: 0.9rem;
+}
+.ck-editor__main .ck-content .paragraph--type--large-icon-ctas .paragraph--type--large-icon-cta .large-icon-cta-link span.action-text {
+  text-decoration: underline;
 }
 .ck-editor__main .ck-content .paragraph--type--large-icon-ctas .paragraph--type--large-icon-cta .large-icon-cta-link {
   -webkit-box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.15);

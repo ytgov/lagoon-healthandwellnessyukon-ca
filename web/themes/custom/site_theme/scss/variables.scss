@@ -132,7 +132,7 @@ $grid-block-background-color: $yghss-beige;
 $grid-block-text-color: $black;
 // These apply to grid-block-link only:
 $grid-block-hover-text-color: $black;
-$grid-block-hover-background-color: $yghss-dark-beige;
+$grid-block-hover-background-color: $grid-block-background-color;
 $grid-block-hover-border-color: $gray-400;
 $grid-block-hover-box-shadow:0 0 14px 0 rgba(0, 0, 0, .35);
 $grid-block-link-no-thumbnail-bg: $gray-400;

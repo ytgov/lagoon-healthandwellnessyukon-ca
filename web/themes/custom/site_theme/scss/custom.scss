@@ -79,6 +79,7 @@
       top: unset;
       bottom: 0;
     }
+
     button.carousel-control {
       width: unset;
     }
@@ -106,6 +107,10 @@
 
       .description {
         @include font-size($large-icon-cta-description-size);
+      }
+
+      span.action-text {
+        text-decoration: underline;
       }
     }
   }
