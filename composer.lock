@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3d074348ab64cdae516a714beabcc2d1",
+    "content-hash": "167a83ac8d5bb611643116d0ab77aafd",
     "packages": [
         {
             "name": "algolia/places",
@@ -89,6 +89,21 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/fengyuanchen/cropper/zipball/617d9bdb8688cc4edb3b03bc49a04b83c7facbe7",
                 "reference": "617d9bdb8688cc4edb3b03bc49a04b83c7facbe7"
+            },
+            "type": "bower-asset"
+        },
+        {
+            "name": "bower-asset/photoswipe",
+            "version": "v5.4.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dimsemenov/PhotoSwipe.git",
+                "reference": "fd85184b450f451bc4aa2697f6d0a79304d13473"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dimsemenov/PhotoSwipe/zipball/fd85184b450f451bc4aa2697f6d0a79304d13473",
+                "reference": "fd85184b450f451bc4aa2697f6d0a79304d13473"
             },
             "type": "bower-asset"
         },
@@ -5036,6 +5051,82 @@
             }
         },
         {
+            "name": "drupal/photoswipe",
+            "version": "5.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/photoswipe.git",
+                "reference": "5.0.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/photoswipe-5.0.5.zip",
+                "reference": "5.0.5",
+                "shasum": "927f90d3861388e28696a6df36739e888a5c14fd"
+            },
+            "require": {
+                "drupal/core": "^9.3 || ^10 || ^11"
+            },
+            "suggest": {
+                "npm-asset/photoswipe": "Required to make the 'photoswipe' module functional. Expected version: ^5",
+                "npm-asset/photoswipe-dynamic-caption-plugin": "Required to make the 'photoswipe_dynamic_caption' submodule functional. Expected version: ^1.2"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "5.0.5",
+                    "datestamp": "1746623728",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "anybody",
+                    "homepage": "https://www.drupal.org/user/291091"
+                },
+                {
+                    "name": "dinazaur",
+                    "homepage": "https://www.drupal.org/user/3637512"
+                },
+                {
+                    "name": "grevil",
+                    "homepage": "https://www.drupal.org/user/3668491"
+                },
+                {
+                    "name": "julou",
+                    "homepage": "https://www.drupal.org/user/273952"
+                },
+                {
+                    "name": "sun",
+                    "homepage": "https://www.drupal.org/user/54136"
+                },
+                {
+                    "name": "thomas.frobieter",
+                    "homepage": "https://www.drupal.org/user/409335"
+                }
+            ],
+            "description": "Javascript-based photo gallery display for your Drupal website (very sleek with mobile browsers).",
+            "homepage": "https://www.drupal.org/project/photoswipe",
+            "keywords": [
+                "Drupal",
+                "Gallery",
+                "Lightbox",
+                "Mobile",
+                "Photoswipe"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/photoswipe",
+                "issues": "https://www.drupal.org/project/issues/photoswipe"
+            }
+        },
+        {
             "name": "drupal/redirect",
             "version": "1.11.0",
             "source": {
@@ -7463,6 +7554,18 @@
                 "source": "https://github.com/nikic/PHP-Parser/tree/v5.5.0"
             },
             "time": "2025-05-31T08:24:38+00:00"
+        },
+        {
+            "name": "npm-asset/photoswipe-dynamic-caption-plugin",
+            "version": "1.2.7",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/photoswipe-dynamic-caption-plugin/-/photoswipe-dynamic-caption-plugin-1.2.7.tgz"
+            },
+            "type": "npm-asset",
+            "license": [
+                "MIT"
+            ]
         },
         {
             "name": "npm-asset/splidejs--splide",
