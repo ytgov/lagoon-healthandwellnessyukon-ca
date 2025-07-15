@@ -214,13 +214,13 @@ settings:
       label: '<i class="fa-solid fa-fw fa-brain" aria-hidden="true" ></i>'
     -
       value: question
-      label: '<i class="icon-YHTS-FAQ-icon"></i>'
+      label: '<i class="icon-YHTS-FAQ-icon" aria-hidden="true"></i>'
     -
       value: i_class_icon_yhts_shaw_kwaa_icon_span_class_path1_span_span_class_path2_span_span_class_path3_span_i
-      label: '<i class="icon-YHTS-Shaw-Kwaa-icon"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>'
+      label: '<i class="icon-YHTS-SK" aria-hidden="true"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>'
     -
       value: i_class_icon_yhts_transformation_icon_i
-      label: '<i class="icon-YHTS-transformation-icon"></i>'
+      label: '<i class="icon-YHTS-transformation-icon" aria-hidden="true"></i>'
   allowed_values_function: ''
 module: options
 locked: false

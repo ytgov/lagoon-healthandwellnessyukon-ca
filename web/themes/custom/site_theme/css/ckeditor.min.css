@@ -330,16 +330,16 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.ck-editor__main .ck-content .icon-YHTS-Shaw-Kwaa-icon .path1:before {
+.ck-editor__main .ck-content .icon-YHTS-SK .path1:before {
   content: "\e900";
   color: rgb(79, 80, 80);
 }
-.ck-editor__main .ck-content .icon-YHTS-Shaw-Kwaa-icon .path2:before {
+.ck-editor__main .ck-content .icon-YHTS-SK .path2:before {
   content: "\e901";
   margin-left: -2.1005859375em;
   color: rgb(254, 254, 254);
 }
-.ck-editor__main .ck-content .icon-YHTS-Shaw-Kwaa-icon .path3:before {
+.ck-editor__main .ck-content .icon-YHTS-SK .path3:before {
   content: "\e902";
   margin-left: -2.1005859375em;
   color: rgb(254, 254, 254);
