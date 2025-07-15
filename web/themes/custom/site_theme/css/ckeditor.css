@@ -15716,7 +15716,7 @@
 }
 .ck-editor__main .ck-content .file-link-container {
   width: 100%;
-  border: 1px solid #adb5bd;
+  border: 1px solid #A72B2A;
 }
 .ck-editor__main .ck-content .file-link-container .file-size {
   font-size: 1.06875rem;
@@ -17290,7 +17290,7 @@
           flex-direction: row-reverse;
 }
 .ck-editor__main .ck-content .paragraph--type--file-attachments .field--name-field-file-attachments {
-  background-color: #e9ecef;
+  background-color: unset;
   padding: 0.9375rem;
 }
 .ck-editor__main .ck-content .paragraph--type--file-attachments .field--name-field-file-attachments .field--name-field-media-document .file {
@@ -19305,6 +19305,12 @@
   .ck-editor__main .ck-content .paragraph--type--featured-content .featured-content-box .content-wrapper .content-inner .content .field--name-field-featured-description {
     font-size: 1.365625rem;
   }
+}
+.ck-editor__main .ck-content .paragraph--type--file-attachments .field--name-field-file-attachments {
+  padding: 0;
+}
+.ck-editor__main .ck-content .paragraph--type--file-attachments .file-link-container {
+  border-radius: 0 !important;
 }
 @media (min-width: 62rem) {
   .ck-editor__main .ck-content .highlighted-panel--heading {

@@ -257,3 +257,7 @@ $modal-content-border-radius: 0;
 $site-box-shadow: rgba(0, 0, 0, 0.5) 0 0.1rem 0.3rem 0;
 $side-nav-bg-color: rgba($accent-shade, 0.2);
 $side-nav-bg-active-color: rgba($accent-shade, 0.1);
+
+$file-attachments-background: unset;
+$file-link-border-color: $primary-shade;
+$file-attachments-border: 1px solid $file-link-border-color;

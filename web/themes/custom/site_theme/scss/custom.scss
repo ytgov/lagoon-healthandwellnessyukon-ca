@@ -167,6 +167,15 @@
 
 }
 
+.paragraph--type--file-attachments {
+  .field--name-field-file-attachments {
+    padding: 0;
+  }
+  .file-link-container {
+    border-radius: 0 !important;
+  }
+}
+
 .highlighted-panel--heading {
 
   @include media-breakpoint-up(lg) {
