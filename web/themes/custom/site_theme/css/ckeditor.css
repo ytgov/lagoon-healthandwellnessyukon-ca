@@ -19320,6 +19320,23 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
+.ck-editor__main .ck-content .paragraph--type--small-card.small-card-wrapper,
+.ck-editor__main .ck-content .paragraph--type--small-card .small-card-wrapper {
+  background-color: #A72B2A;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  font-size: calc(1.2615625rem + 0.13875vw);
+}
+@media (min-width: 75rem) {
+  .ck-editor__main .ck-content .paragraph--type--small-card.small-card-wrapper,
+  .ck-editor__main .ck-content .paragraph--type--small-card .small-card-wrapper {
+    font-size: 1.365625rem;
+  }
+}
+.ck-editor__main .ck-content .paragraph--type--small-card .small-card-wrapper:hover {
+  text-decoration: none;
+}
 @media (min-width: 62rem) {
   .ck-editor__main .ck-content .highlighted-panel--heading {
     aspect-ratio: 3/2;

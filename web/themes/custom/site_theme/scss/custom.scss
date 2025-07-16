@@ -190,6 +190,22 @@
   }
 }
 
+.paragraph--type--small-card {
+
+  &.small-card-wrapper,
+  .small-card-wrapper {
+    background-color: $primary-shade;
+    color: $white;
+    padding: 1rem;
+    text-align: center;
+    @include font-size($font-size-md);
+  }
+
+  .small-card-wrapper:hover {
+    text-decoration: none;
+  }
+}
+
 .highlighted-panel--heading {
 
   @include media-breakpoint-up(lg) {
@@ -205,6 +221,7 @@
     .field--name-field-headline {
       color: $primary-shade;
     }
+
     #block-site-theme-footerlogos {
       .field--name-field-headline {
         @include font-size($h5-font-size);

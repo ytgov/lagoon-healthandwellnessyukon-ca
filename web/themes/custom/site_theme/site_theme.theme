@@ -11,6 +11,24 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Datetime\DrupalDateTime;
 
 /**
+ * Implements hook_theme().
+ *
+ * Specify custom templates and theme hooks.
+ */
+function site_theme_theme($existing, $type, $theme, $path) {
+  $items = [];
+  $items['small_card_text'] = [
+    'preprocess functions' => ['template_preprocess_small_card_text'],
+    'variables' => [
+      'description' => NULL,
+      'paragraph' => NULL,
+      'view_mode' => NULL,
+    ],
+  ];
+  return $items;
+}
+
+/**
  * Implements hook_form_system_theme_settings_alter() for settings form.
  *
  * Replace Barrio setting options with subtheme ones.
@@ -80,6 +98,30 @@ function site_theme_preprocess_field(array &$variables): void {
         $item['content']['#attributes']['data-bs-delay'] = 450;
         $item['content']['#attributes']['data-bs-placement'] = 'left';
       }
+    }
+  }
+   if ($variables['field_name'] == 'field_small_card_link' && $variables['element']['#entity_type'] == 'paragraph' && $variables['element']['#bundle'] == 'small_card') {
+    /**
+     * @var \Drupal\paragraphs\ParagraphInterface $paragraph
+     */
+    $paragraph = $variables['element']['#object'];
+    $view_mode = $variables['element']['#view_mode'] ?? 'default';
+
+    foreach ($variables['items'] as $index => &$item) {
+      $description = $paragraph->get('field_small_card_text')->value;
+      $description = trim((string) $description);
+      $description = nl2br($description);
+      $original_title = $item['content']['#title'];
+      $item['content']['#title'] = [
+        '#theme' => 'small_card_text',
+        '#description' => (!empty($description) ? [
+          '#markup' => $description,
+        ] : NULL),
+        '#text' => $original_title,
+        '#paragraph' => $paragraph,
+        '#view_mode' => $view_mode,
+      ];
+      $item['content']['#attributes']['class'][] = 'small-card-wrapper d-block';
     }
   }
 }
@@ -207,3 +249,4 @@ function site_theme_preprocess_links(&$variables) {
     }
   }
 }
+
