@@ -223,25 +223,25 @@
 
   .footer-second-wrapper {
     background-image: $footer-bg-image-mobile;
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-repeat: repeat-x;
-    padding: 0;
+    padding: $footer-bg-padding;
     @include media-breakpoint-up(sm) {
-      padding: 7rem 0 0 0;
+      background-size: contain;
     }
     @include media-breakpoint-up(md) {
       background-image: $footer-bg-image;
     }
     @include media-breakpoint-up(lg) {
-      padding: 12rem 0 0 0;
+      padding:$footer-bg-padding-lg;
     }
     @include media-breakpoint-up(xl) {
-      padding: $footer-bg-padding;
+      padding: $footer-bg-padding-xl;
     }
     .block-block-groupfooter-second-group {
       >.content {
-        @include media-breakpoint-up(lg) {
+        @include media-breakpoint-up(xl) {
           display: flex;
           align-items: center;
 

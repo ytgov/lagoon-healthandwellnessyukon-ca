@@ -111,7 +111,9 @@ $footer-link-hover-color: rgba($gray-100, 0.3);
 $footer-link-hover-decoration: none;
 $footer-bg-image: url(../images/YHTS-footer-banner.png);
 $footer-bg-image-mobile: url(../images/YHTS-footer-banner-mobile.png);
-$footer-bg-padding: 20rem 5rem 1rem;
+$footer-bg-padding: 10rem 0 0;
+$footer-bg-padding-lg: 12rem 5rem 0;
+$footer-bg-padding-xl: 20rem 5rem 0;
 $footer-headline-font-size: $h4-font-size;
 
 // Social media icon colors. If in the footer, these will
