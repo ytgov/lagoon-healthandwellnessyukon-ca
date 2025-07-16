@@ -1,0 +1,116 @@
+uuid: 56a6dad3-1832-443a-8b87-f8820a633b1c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_small_card
+    - paragraphs.paragraphs_type.small_card
+    - paragraphs.paragraphs_type.small_card_group
+  module:
+    - entity_reference_revisions
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.small_card_group.field_small_card
+field_name: field_small_card
+entity_type: paragraph
+bundle: small_card_group
+label: 'Small Card'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      small_card: small_card
+    negate: 0
+    target_bundles_drag_drop:
+      accordion:
+        weight: 29
+        enabled: false
+      accordion_content:
+        weight: 30
+        enabled: false
+      card:
+        weight: 31
+        enabled: false
+      cta_background_image:
+        weight: 32
+        enabled: false
+      featured_content:
+        weight: 33
+        enabled: false
+      file_attachments:
+        weight: 34
+        enabled: false
+      google_map:
+        weight: 35
+        enabled: false
+      highlighted_panel:
+        weight: 36
+        enabled: false
+      image_gallery:
+        weight: 38
+        enabled: false
+      image_with_link:
+        weight: 39
+        enabled: false
+      images_with_links:
+        weight: 37
+        enabled: false
+      large_icon_cta:
+        weight: 40
+        enabled: false
+      large_icon_ctas:
+        weight: 41
+        enabled: false
+      large_image:
+        weight: 42
+        enabled: false
+      map_with_contact_info:
+        weight: 43
+        enabled: false
+      page_banner:
+        weight: 44
+        enabled: false
+      row_group:
+        weight: 45
+        enabled: false
+      slideshow:
+        weight: 46
+        enabled: false
+      slideshow_item:
+        weight: 47
+        enabled: false
+      slideshow_with_caption:
+        weight: 48
+        enabled: false
+      small_card:
+        weight: 49
+        enabled: true
+      small_card_group:
+        weight: 50
+        enabled: false
+      social_media_icon_link:
+        weight: 51
+        enabled: false
+      text_content:
+        weight: 52
+        enabled: false
+      text_content_full_width:
+        weight: 53
+        enabled: false
+      two_column_text_content:
+        weight: 54
+        enabled: false
+      view:
+        weight: 55
+        enabled: false
+      webform:
+        weight: 56
+        enabled: false
+field_type: entity_reference_revisions

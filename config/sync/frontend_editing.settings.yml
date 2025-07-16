@@ -20,6 +20,8 @@ entity_types:
     - slideshow
     - slideshow_item
     - slideshow_with_caption
+    - small_card
+    - small_card_group
     - text_content
     - text_content_full_width
     - two_column_text_content

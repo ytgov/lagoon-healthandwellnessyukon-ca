@@ -14,6 +14,12 @@ targetEntityType: paragraph
 bundle: small_card
 mode: default
 content:
+  extra_field_frontend_editing:
+    type: extra_field_frontend_editing
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
   field_small_card_link:
     type: link
     label: hidden
@@ -24,7 +30,7 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 2
+    weight: 1
     region: content
   field_small_card_text:
     type: basic_string
@@ -40,6 +46,6 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: none
         fences_label_classes: ''
-    weight: 1
+    weight: 0
     region: content
 hidden: {  }

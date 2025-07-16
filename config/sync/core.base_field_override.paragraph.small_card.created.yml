@@ -1,0 +1,18 @@
+uuid: f6fdc9b9-59cb-4252-abb6-886af9fc7293
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.small_card
+id: paragraph.small_card.created
+field_name: created
+entity_type: paragraph
+bundle: small_card
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

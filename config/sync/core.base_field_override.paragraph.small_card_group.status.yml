@@ -1,0 +1,22 @@
+uuid: 83b3f0b1-c3fe-49fc-a3ad-a6502f2c0e65
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.small_card_group
+id: paragraph.small_card_group.status
+field_name: status
+entity_type: paragraph
+bundle: small_card_group
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

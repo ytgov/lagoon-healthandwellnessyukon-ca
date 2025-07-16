@@ -13,5 +13,6 @@ bundle: small_card
 mode: cta_sidebar
 content: {  }
 hidden:
+  extra_field_frontend_editing: true
   field_small_card_link: true
   field_small_card_text: true
