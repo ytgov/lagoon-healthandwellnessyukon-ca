@@ -276,6 +276,7 @@
   -------------------------------------------------*/
   /* COLORS
   --------------------------------------------------*/
+  /* Media Slideshow */
 }
 @font-face {
   font-family: "custom-icons";
@@ -19177,6 +19178,169 @@
   -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 0.1rem 0.3rem 0;
           box-shadow: rgba(0, 0, 0, 0.5) 0 0.1rem 0.3rem 0;
   background-color: #fff;
+}
+.ck-editor__main .ck-content .paragraph-slideshow-field {
+  margin: 0;
+}
+.ck-editor__main .ck-content .paragraph-slideshow-field .carousel {
+  width: 100%;
+}
+.ck-editor__main .ck-content .paragraph-slideshow-field .carousel .carousel-item {
+  overflow: hidden;
+  height: 0;
+  padding-top: 100%;
+}
+@media (min-width: 48rem) {
+  .ck-editor__main .ck-content .paragraph-slideshow-field .carousel .carousel-item {
+    padding-top: 80%;
+  }
+}
+@media (min-width: 62rem) {
+  .ck-editor__main .ck-content .paragraph-slideshow-field .carousel .carousel-item {
+    padding-top: 31.71875%;
+  }
+  .ck-editor__main .ck-content .has-floating-header .paragraph-slideshow-field .carousel .carousel-item {
+    padding-top: 35.625%;
+  }
+}
+.ck-editor__main .ck-content .paragraph-slideshow-field .carousel .carousel-item .background-media {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+       -o-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  width: auto;
+  min-width: 100%;
+  height: 100%;
+}
+.ck-editor__main .ck-content .paragraph-slideshow-field .carousel .carousel-item .background-media div.responsive-media-content {
+  height: 100%;
+}
+@media (min-width: 62rem) {
+  .ck-editor__main .ck-content .paragraph-slideshow-field .carousel .carousel-item .background-media {
+    width: 100%;
+    height: auto;
+  }
+  .ck-editor__main .ck-content .paragraph-slideshow-field .carousel .carousel-item .background-media div.responsive-media-content {
+    height: auto;
+  }
+}
+.ck-editor__main .ck-content .paragraph-slideshow-field .carousel .carousel-item .background-media img,
+.ck-editor__main .ck-content .paragraph-slideshow-field .carousel .carousel-item .background-media video {
+  display: block;
+  width: auto;
+  height: 100%;
+  max-width: initial;
+  margin: 0;
+}
+@media (min-width: 62rem) {
+  .ck-editor__main .ck-content .paragraph-slideshow-field .carousel .carousel-item .background-media img,
+  .ck-editor__main .ck-content .paragraph-slideshow-field .carousel .carousel-item .background-media video {
+    width: 100%;
+    height: auto;
+  }
+}
+.ck-editor__main .ck-content .paragraph-slideshow-field .carousel .carousel-item .background-media iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: initial;
+  margin: 0;
+}
+.ck-editor__main .ck-content .paragraph-slideshow-field .carousel .carousel-item .background-media .field--type-entity-reference {
+  margin: 0;
+}
+.ck-editor__main .ck-content .paragraph-slideshow-field .background-cover {
+  background: transparent -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.6156862745)));
+  background: transparent -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6156862745) 100%);
+  background: transparent -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6156862745) 100%);
+  background: transparent linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6156862745) 100%);
+  position: absolute;
+  top: 0;
+  height: 100%;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+.ck-editor__main .ck-content .paragraph-slideshow-field .slideshow-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+       -o-transform: translateY(-50%);
+          transform: translateY(-50%);
+  text-align: center;
+  color: #fff;
+}
+@media (max-width: 47.99875rem) {
+  .ck-editor__main .ck-content .paragraph-slideshow-field .slideshow-caption .container {
+    max-width: 70% !important;
+  }
+}
+.ck-editor__main .ck-content .paragraph-slideshow-field .slideshow-caption h1, .ck-editor__main .ck-content .paragraph-slideshow-field .slideshow-caption .h1,
+.ck-editor__main .ck-content .paragraph-slideshow-field .slideshow-caption h2,
+.ck-editor__main .ck-content .paragraph-slideshow-field .slideshow-caption .h2,
+.ck-editor__main .ck-content .paragraph-slideshow-field .slideshow-caption h3,
+.ck-editor__main .ck-content .paragraph-slideshow-field .slideshow-caption .h3,
+.ck-editor__main .ck-content .paragraph-slideshow-field .slideshow-caption h4,
+.ck-editor__main .ck-content .paragraph-slideshow-field .slideshow-caption .h4,
+.ck-editor__main .ck-content .paragraph-slideshow-field .slideshow-caption h5,
+.ck-editor__main .ck-content .paragraph-slideshow-field .slideshow-caption .h5,
+.ck-editor__main .ck-content .paragraph-slideshow-field .slideshow-caption h6,
+.ck-editor__main .ck-content .paragraph-slideshow-field .slideshow-caption .h6 {
+  color: #fff;
+}
+@media (max-width: 35.99875rem) {
+  .ck-editor__main .ck-content .paragraph-slideshow-field .slideshow-caption h1, .ck-editor__main .ck-content .paragraph-slideshow-field .slideshow-caption .h1,
+  .ck-editor__main .ck-content .paragraph-slideshow-field .slideshow-caption h2,
+  .ck-editor__main .ck-content .paragraph-slideshow-field .slideshow-caption .h2,
+  .ck-editor__main .ck-content .paragraph-slideshow-field .slideshow-caption h3,
+  .ck-editor__main .ck-content .paragraph-slideshow-field .slideshow-caption .h3,
+  .ck-editor__main .ck-content .paragraph-slideshow-field .slideshow-caption h4,
+  .ck-editor__main .ck-content .paragraph-slideshow-field .slideshow-caption .h4,
+  .ck-editor__main .ck-content .paragraph-slideshow-field .slideshow-caption h5,
+  .ck-editor__main .ck-content .paragraph-slideshow-field .slideshow-caption .h5,
+  .ck-editor__main .ck-content .paragraph-slideshow-field .slideshow-caption h6,
+  .ck-editor__main .ck-content .paragraph-slideshow-field .slideshow-caption .h6 {
+    line-height: normal;
+  }
+}
+.ck-editor__main .ck-content .paragraph-slideshow-field .slideshow-caption h1, .ck-editor__main .ck-content .paragraph-slideshow-field .slideshow-caption .h1 {
+  font-weight: bold;
+}
+.ck-editor__main .ck-content .paragraph-slideshow-field .slideshow-caption p {
+  color: #fff;
+  margin: auto;
+  font-size: calc(1.2734375rem + 0.28125vw);
+}
+@media (min-width: 75rem) {
+  .ck-editor__main .ck-content .paragraph-slideshow-field .slideshow-caption p {
+    font-size: 1.484375rem;
+  }
+}
+@media (max-width: 35.99875rem) {
+  .ck-editor__main .ck-content .paragraph-slideshow-field .slideshow-caption p {
+    font-size: 1.1875rem;
+    line-height: normal;
+  }
+}
+@media (min-width: 36rem) {
+  .ck-editor__main .ck-content .paragraph-slideshow-field .slideshow-caption p {
+    max-width: 90%;
+  }
+}
+@media (min-width: 62rem) {
+  .ck-editor__main .ck-content .paragraph-slideshow-field .slideshow-caption p {
+    max-width: 900px;
+  }
+}
+@media (min-width: 62rem) {
+  .ck-editor__main .ck-content .paragraph-slideshow-field .slideshow-caption {
+    margin-top: -2.1875rem;
+  }
 }
 .ck-editor__main .ck-content .form-item-was-this-page-helpful {
   position: relative;

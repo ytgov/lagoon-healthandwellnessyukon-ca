@@ -264,3 +264,28 @@ $file-link-border-color: $primary-shade;
 $file-attachments-border: 1px solid $file-link-border-color;
 
 $small-card-font-size: $font-size-base * 1.68;
+
+$slideshow-width: 2560px;
+// NOTE: This must always be 100px less than the actual image style height.
+$slideshow-height: 737px;
+
+
+// Page banner styles.
+$banner-caption-height: 40%;
+$banner-caption-text-color: $white;
+$banner-overlay-bg-color: rgba($black, 0.5);
+$page-top-banner-image-style-width: 2560px;
+// NOTE: This must always be 100px less than the actual image style height.
+$page-top-banner-image-style-height: 500px;
+// Banner caption vertical positioning.
+// The vertical position can be "center", "bottom" or a number of pixels from
+// the top.
+// If "center" is specified, then it will automatically set it to a top of
+// 50% with a transform of translateY(-50%). If "bottom" is specified then
+// it will set no top position and a bottom of 0.
+// Note that horizontal positioning is handled in the template file responsible
+// for rendering the banner.
+$banner-caption-vertical-position: 'bottom';
+
+// Banner caption font size.
+$banner-caption-font-size: $font-size-lg;

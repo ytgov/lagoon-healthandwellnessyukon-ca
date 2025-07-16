@@ -1,0 +1,27 @@
+/* Media Slideshow */
+
+.paragraph--type--slideshow-with-caption {
+
+  button.carousel-control {
+    // Set the height to match the caption height.
+    // Position the caption at the bottom of the slideshow.
+    height: $banner-caption-height;
+    bottom: 0;
+    top: auto;
+  }
+
+  &.paragraph-slideshow-field {
+    .slideshow-caption {
+      // Set caption height and background color.
+      height: $banner-caption-height;
+      background: $banner-overlay-bg-color;
+
+      .caption-wrapper {
+        // Ensure the caption text does not overlap the controls.
+        padding-left: $carousel-control-icon-width;
+        padding-right: $carousel-control-icon-width;
+      }
+    }
+  }
+}
+

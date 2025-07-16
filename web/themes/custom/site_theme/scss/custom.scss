@@ -73,19 +73,6 @@
 
 // Paragraphs styles.
 
-.paragraph--type--slideshow-with-caption {
-  #media-slideshow-with-captions {
-    .slideshow-caption {
-      top: unset;
-      bottom: 0;
-    }
-
-    button.carousel-control {
-      width: unset;
-    }
-  }
-}
-
 .paragraph--type--large-icon-ctas {
   .paragraph--type--large-icon-cta {
     .large-icon-cta-link {
