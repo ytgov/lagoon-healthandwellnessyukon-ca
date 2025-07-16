@@ -68,6 +68,7 @@ module:
   locale: 0
   mailer_transport: 0
   matomo: 0
+  maxlength: 0
   media: 0
   media_entity_file_replace: 0
   media_file_delete: 0

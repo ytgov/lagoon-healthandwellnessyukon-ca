@@ -50,7 +50,8 @@
         "drupal/dropzonejs": "^2.11",
         "drupal/photoswipe": "^5.0",
         "bower-asset/photoswipe": "^5",
-        "npm-asset/photoswipe-dynamic-caption-plugin": "^1.2"
+        "npm-asset/photoswipe-dynamic-caption-plugin": "^1.2",
+        "drupal/maxlength": "^3.1"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,

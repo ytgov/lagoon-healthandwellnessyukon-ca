@@ -8,6 +8,7 @@ dependencies:
     - paragraphs.paragraphs_type.small_card
   module:
     - link
+    - maxlength
 id: paragraph.small_card.default
 targetEntityType: paragraph
 bundle: small_card
@@ -28,7 +29,11 @@ content:
     settings:
       rows: 5
       placeholder: ''
-    third_party_settings: {  }
+    third_party_settings:
+      maxlength:
+        maxlength_js: 255
+        maxlength_js_label: 'Description limited to @limit characters, remaining: <strong>@remaining</strong>'
+        maxlength_js_enforce: true
 hidden:
   created: true
   status: true
