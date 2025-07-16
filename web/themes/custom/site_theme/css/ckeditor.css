@@ -19326,7 +19326,7 @@
   color: #fff;
   padding: 1.5rem;
   text-align: center;
-  font-size: calc(1.3090625rem + 0.70875vw);
+  font-size: calc(1.3245rem + 0.894vw);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -19340,7 +19340,7 @@
 @media (min-width: 75rem) {
   .ck-editor__main .ck-content .paragraph--type--small-card.small-card-wrapper,
   .ck-editor__main .ck-content .paragraph--type--small-card .small-card-wrapper {
-    font-size: 1.840625rem;
+    font-size: 1.995rem;
   }
 }
 .ck-editor__main .ck-content .paragraph--type--small-card .small-card-wrapper:hover {
