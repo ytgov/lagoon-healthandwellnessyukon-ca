@@ -15,6 +15,12 @@ targetEntityType: paragraph
 bundle: row_group
 mode: default
 content:
+  extra_field_frontend_editing:
+    type: extra_field_frontend_editing
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
   field_content:
     type: entity_reference_revisions_entity_view
     label: hidden
@@ -26,15 +32,15 @@ content:
         fences_field_tag: none
         fences_field_classes: ''
         fences_field_items_wrapper_tag: div
-        fences_field_items_wrapper_classes: 'row row-cols-lg-4'
+        fences_field_items_wrapper_classes: 'row row-cols-lg-3'
         fences_field_item_tag: none
         fences_field_item_classes: ''
         fences_label_tag: none
         fences_label_classes: ''
       frontend_editing:
         ajax_content_update: '1'
-        move_up_down: 0
-        add_items: 0
+        move_up_down: '1'
+        add_items: '1'
     weight: 2
     region: content
   field_heading:

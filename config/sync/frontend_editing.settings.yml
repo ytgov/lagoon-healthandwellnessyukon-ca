@@ -17,6 +17,7 @@ entity_types:
     - large_image
     - map_with_contact_info
     - page_banner
+    - row_group
     - slideshow
     - slideshow_item
     - slideshow_with_caption
