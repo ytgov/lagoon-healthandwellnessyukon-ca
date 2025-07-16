@@ -41,18 +41,19 @@
 {% block paragraph %}
   {% block content %}
     {{ content|without('field_slideshow_caption', 'field_slideshow_button_link', 'contextual_links') }}
-    <div class="background-cover"></div>
     {% set caption_text = content.field_slideshow_caption|render %}
     {% set button_link = content.field_slideshow_button_link|render %}
     {% if caption_text or button_link %}
       <div class="slideshow-caption w-100">
-        <div class="caption container d-lg-flex justify-content-between">
-          {{ caption_text }}
-          {% if button_link %}
-            <div class="button-link{% if caption_text %} mt-auto{% endif %}">
-              {{ link(content.field_slideshow_button_link.0['#title'], content.field_slideshow_button_link.0['#url'], { 'class': ['btn', 'btn-primary'] }) }}
-            </div>
-          {% endif %}
+        <div class="caption container d-lg-flex justify-content-betwee h-100">
+          <div class="caption-wrapper w-100 h-100 py-3">
+            {{ caption_text }}
+            {% if button_link %}
+              <div class="button-link{% if caption_text %} mt-auto{% endif %}">
+                {{ link(content.field_slideshow_button_link.0['#title'], content.field_slideshow_button_link.0['#url'], { 'class': ['btn', 'btn-primary'] }) }}
+              </div>
+            {% endif %}
+          </div>
         </div>
       </div>
     {% endif %}
