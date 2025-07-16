@@ -19324,14 +19324,23 @@
 .ck-editor__main .ck-content .paragraph--type--small-card .small-card-wrapper {
   background-color: #A72B2A;
   color: #fff;
-  padding: 1rem;
+  padding: 1.5rem;
   text-align: center;
-  font-size: calc(1.2615625rem + 0.13875vw);
+  font-size: calc(1.3090625rem + 0.70875vw);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
 }
 @media (min-width: 75rem) {
   .ck-editor__main .ck-content .paragraph--type--small-card.small-card-wrapper,
   .ck-editor__main .ck-content .paragraph--type--small-card .small-card-wrapper {
-    font-size: 1.365625rem;
+    font-size: 1.840625rem;
   }
 }
 .ck-editor__main .ck-content .paragraph--type--small-card .small-card-wrapper:hover {

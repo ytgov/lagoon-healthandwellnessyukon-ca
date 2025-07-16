@@ -46,7 +46,8 @@
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
     not paragraph.isPublished() ? 'paragraph--unpublished',
     animation_classes,
-    link_empty ? 'small-card-wrapper'
+    link_empty ? 'small-card-wrapper',
+    'h-100'
   ]
 %}
 {% block paragraph %}

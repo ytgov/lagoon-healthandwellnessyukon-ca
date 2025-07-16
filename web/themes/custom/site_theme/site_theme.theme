@@ -121,7 +121,7 @@ function site_theme_preprocess_field(array &$variables): void {
         '#paragraph' => $paragraph,
         '#view_mode' => $view_mode,
       ];
-      $item['content']['#attributes']['class'][] = 'small-card-wrapper d-block';
+      $item['content']['#attributes']['class'][] = 'small-card-wrapper';
     }
   }
 }
