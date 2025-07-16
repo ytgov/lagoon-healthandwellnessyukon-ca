@@ -50,7 +50,7 @@
 
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
-    <div class="container px-0 py-4" {% if primary_color or accent_color %} style="{% if primary_color %}--primary-color: {{ primary_color }}; {% endif %}{% if accent_color %}--accent-color: {{ accent_color }};{% endif %}" {% endif %}>
+    <div class="container px-sm-0 py-4" {% if primary_color or accent_color %} style="{% if primary_color %}--primary-color: {{ primary_color }}; {% endif %}{% if accent_color %}--accent-color: {{ accent_color }};{% endif %}" {% endif %}>
       {% block content %}
         {{ content|without('contextual_links', 'field_cta_colour_option') }}
       {% endblock %}
