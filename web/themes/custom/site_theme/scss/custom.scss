@@ -1,3 +1,10 @@
+//pattern on top of page
+#top-pattern {
+  background-repeat: repeat-x;
+  background-image: $pattern-image;
+  background-size: contain;
+  height: $pattern-height;
+}
 // Site feedback form styles.
 .form-item-was-this-page-helpful {
   position: relative;

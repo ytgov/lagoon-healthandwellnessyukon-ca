@@ -71,6 +71,7 @@
 <h1 class="visually-hidden">{{ page['#title'] }}</h1>
 <div id="page-wrapper">
   <div id="page" class="d-flex flex-column">
+    <div id="top-pattern"></div>
     <header{{ page_header_attributes.addClass('header').removeAttribute('role') }}>
       {% block head %}
         {% if page.alerts %}
