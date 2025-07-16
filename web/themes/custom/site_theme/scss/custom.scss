@@ -227,7 +227,9 @@
 
     #block-site-theme-footerlogos {
       .field--name-field-headline {
-        @include font-size($h5-font-size);
+        margin-bottom: 2.5rem;
+        @include font-size($footer-headline-font-size);
+        font-style: italic;
       }
     }
   }

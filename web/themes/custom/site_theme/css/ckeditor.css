@@ -19358,11 +19358,13 @@
   color: #A72B2A;
 }
 .ck-editor__main .ck-content .site-footer .region-footer-first #block-site-theme-footerlogos .field--name-field-headline {
-  font-size: calc(1.2734375rem + 0.28125vw);
+  margin-bottom: 2.5rem;
+  font-size: calc(1.303125rem + 0.6375vw);
+  font-style: italic;
 }
 @media (min-width: 75rem) {
   .ck-editor__main .ck-content .site-footer .region-footer-first #block-site-theme-footerlogos .field--name-field-headline {
-    font-size: 1.484375rem;
+    font-size: 1.78125rem;
   }
 }
 .ck-editor__main .ck-content .site-footer .footer-second-wrapper {
