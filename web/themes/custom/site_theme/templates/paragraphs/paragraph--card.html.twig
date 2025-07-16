@@ -44,18 +44,36 @@
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
     not paragraph.isPublished() ? 'paragraph--unpublished',
-    animation_classes,
     'my-3',
   ]
 %}
-{%
- set spindle =  primary_color and primary_color == '#c8d7ef' ? 'spindle' : ''
-%}
+
+{% if content.field_button_link and content.field_button_link.0['#url'] is defined %}
+  {% set link_url = content.field_button_link.0['#url'] %}
+{% endif %}
+
+{% if content.field_card_header %}
+  {% set card_header = content.field_card_header|render|striptags|trim %}
+{% endif %}
+
+{% if content.field_card_title %}
+  {% set card_title = content.field_card_title|render|striptags|trim %}
+{% endif %}
+
+{% if content.field_card_text %}
+  {% set card_body = content.field_card_text|render %}
+{% endif %}
 
 {% block paragraph %}
   <div{{attributes.addClass(classes)}}>
     {% if content.frontend_editing %}
       {{ content.frontend_editing }}
+    {% endif %}
+
+    {% if content.field_slideshow_description %}
+      <div class="paragraph-content-slideshow-description">
+        {{ content.field_slideshow_description|render }}
+      </div>
     {% endif %}
     {% block content %}
       {% embed 'site_theme:card' with {
@@ -67,12 +85,11 @@
         }),
         card_img_top: file_url(content.field_card_image['#items'].entity.field_media_image.entity.fileuri|image_style('card_image')),
         card_img_alt: content.field_card_image['#items'].entity.field_media_image.alt|render|striptags|trim,
-        card_header: content.field_card_title|render|striptags|trim,
+        card_title: content.field_card_title|render|striptags|trim,
         card_body: content.field_card_text|render,
+        card_link: link_url,
+        card_link_title: content.field_button_link.0['#title']|render|striptags|trim,
       }%}
-        {% block card_footer_block %}
-          {{ content.field_button_link }}
-        {% endblock %}
       {% endembed %}
     {% endblock %}
   </div>

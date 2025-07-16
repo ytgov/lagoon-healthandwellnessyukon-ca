@@ -203,6 +203,10 @@
   }
 }
 
+.card-text {
+  @include font-size($small-card-font-size);
+}
+
 .highlighted-panel--heading {
 
   @include media-breakpoint-up(lg) {
