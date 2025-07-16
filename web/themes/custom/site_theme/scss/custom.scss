@@ -203,8 +203,15 @@
   }
 }
 
-.card-text {
-  @include font-size($small-card-font-size);
+.card {
+  .row & {
+    height: 100%;
+  }
+
+  .card-text {
+    @include font-size($small-card-font-size);
+    line-height: normal;
+  }
 }
 
 .highlighted-panel--heading {
