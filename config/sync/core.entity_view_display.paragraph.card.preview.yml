@@ -8,7 +8,6 @@ dependencies:
     - field.field.paragraph.card.field_card_image
     - field.field.paragraph.card.field_card_text
     - field.field.paragraph.card.field_card_title
-    - field.field.paragraph.card.field_cta_colour_option
     - image.style.square_library_thumbnail
     - paragraphs.paragraphs_type.card
   module:
@@ -60,5 +59,4 @@ hidden:
   extra_field_frontend_editing: true
   field_button_link: true
   field_card_text: true
-  field_cta_colour_option: true
   search_api_excerpt: true

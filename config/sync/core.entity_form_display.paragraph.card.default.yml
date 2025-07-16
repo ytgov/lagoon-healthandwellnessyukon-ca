@@ -7,13 +7,32 @@ dependencies:
     - field.field.paragraph.card.field_card_image
     - field.field.paragraph.card.field_card_text
     - field.field.paragraph.card.field_card_title
-    - field.field.paragraph.card.field_cta_colour_option
     - paragraphs.paragraphs_type.card
   module:
+    - field_group
     - link_attributes
     - media_library
     - media_library_edit
     - text
+third_party_settings:
+  field_group:
+    group_optional_settings:
+      children:
+        - field_card_image
+        - field_button_link
+      label: 'Optional settings'
+      region: content
+      parent_name: ''
+      weight: 3
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: false
+        description: ''
+        required_fields: true
 id: paragraph.card.default
 targetEntityType: paragraph
 bundle: card
@@ -21,7 +40,7 @@ mode: default
 content:
   field_button_link:
     type: link_attributes
-    weight: 4
+    weight: 5
     region: content
     settings:
       placeholder_url: ''
@@ -39,7 +58,7 @@ content:
     third_party_settings: {  }
   field_card_image:
     type: media_library_widget
-    weight: 2
+    weight: 4
     region: content
     settings:
       media_types: {  }
@@ -49,7 +68,7 @@ content:
         edit_form_mode: default
   field_card_text:
     type: text_textarea
-    weight: 3
+    weight: 1
     region: content
     settings:
       rows: 5
@@ -62,12 +81,6 @@ content:
     settings:
       size: 60
       placeholder: ''
-    third_party_settings: {  }
-  field_cta_colour_option:
-    type: options_select
-    weight: 1
-    region: content
-    settings: {  }
     third_party_settings: {  }
 hidden:
   created: true
