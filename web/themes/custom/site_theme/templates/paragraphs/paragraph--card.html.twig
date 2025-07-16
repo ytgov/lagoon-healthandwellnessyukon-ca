@@ -58,7 +58,12 @@
       {{ content.frontend_editing }}
     {% endif %}
     {% block content %}
-      {% embed 'bootstrap_barrio:card' with {
+      {% embed 'site_theme:card' with {
+        attributes: create_attribute({
+          'class': [
+            'text-bg-primary',
+          ],
+        }),
         card_img_top: file_url(content.field_card_image['#items'].entity.field_media_image.entity.fileuri|image_style('card_image')),
         card_img_alt: content.field_card_image['#items'].entity.field_media_image.alt|render|striptags|trim,
         card_header: content.field_card_title|render|striptags|trim,
