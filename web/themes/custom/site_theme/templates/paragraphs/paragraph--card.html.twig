@@ -48,7 +48,11 @@
   ]
 %}
 
-{% if content.field_button_link and content.field_button_link.0['#url'] is defined %}
+{% if content.field_card_image['#items'] is defined %}
+  {% set card_image = file_url(content.field_card_image['#items'].entity.field_media_image.entity.fileuri|image_style('card_image')) %}
+{% endif %}
+
+{% if content.field_button_link.0['#url'] is defined %}
   {% set link_url = content.field_button_link.0['#url'] %}
 {% endif %}
 
@@ -83,7 +87,7 @@
             'text-center',
           ],
         }),
-        card_img_top: file_url(content.field_card_image['#items'].entity.field_media_image.entity.fileuri|image_style('card_image')),
+        card_img_top: card_image,
         card_img_alt: content.field_card_image['#items'].entity.field_media_image.alt|render|striptags|trim,
         card_title: content.field_card_title|render|striptags|trim,
         card_body: content.field_card_text|render,
