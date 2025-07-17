@@ -5,10 +5,25 @@
   background-size: contain;
   height: $pattern-height;
 }
+
 // Site feedback form styles.
 .form-item-was-this-page-helpful {
   position: relative;
   padding-left: 0;
+}
+
+//searchbar
+#block-site-theme-dropdown-search {
+  form.search-block-form {
+    display: flex;
+    .form-type-search {
+      flex-grow: 1;
+      padding: 0;
+    }
+    .form-actions {
+      padding: 0;
+    }
+  }
 }
 
 .yes-no-trigger-wrapper {
@@ -245,18 +260,23 @@
     background-position: center;
     background-repeat: repeat-x;
     padding: $footer-bg-padding;
+
     @include media-breakpoint-up(sm) {
       background-size: contain;
     }
+
     @include media-breakpoint-up(md) {
       background-image: $footer-bg-image;
     }
+
     @include media-breakpoint-up(lg) {
-      padding:$footer-bg-padding-lg;
+      padding: $footer-bg-padding-lg;
     }
+
     @include media-breakpoint-up(xl) {
       padding: $footer-bg-padding-xl;
     }
+
     .block-block-groupfooter-second-group {
       >.content {
         @include media-breakpoint-up(xl) {
@@ -270,6 +290,7 @@
 
         #block-site-theme-copyright {
           text-align: center;
+
           p {
             margin-bottom: 0;
           }
