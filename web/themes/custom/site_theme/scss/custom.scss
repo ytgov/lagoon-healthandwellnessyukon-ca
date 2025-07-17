@@ -28,6 +28,19 @@
   }
 }
 
+.block-menu {
+  .dropdown-menu-wrapper {
+    @include media-breakpoint-down(lg) {
+      position: static !important;
+    }
+  }
+}
+#block-site-theme-languageswitcher {
+  .links.nav {
+    justify-content: end;
+  }
+}
+
 .yes-no-trigger-wrapper {
   input.form-radio {
     position: absolute;
@@ -302,6 +315,7 @@
           p {
             margin-bottom: 0;
           }
+
           a {
             text-decoration: none;
           }

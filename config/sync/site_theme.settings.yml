@@ -102,7 +102,7 @@ bootstrap_barrio_navbar_flyout: 0
 bootstrap_barrio_navbar_slide: 0
 bootstrap_barrio_tabs_style: ''
 bootstrap_barrio_hide_node_label: 0
-bootstrap_barrio_navbar_offcanvas: ''
+bootstrap_barrio_navbar_offcanvas: offcanvas-collapse
 kci_base_floating_header: 0
 kci_base_whole_header_affix: 1
 kci_base_semi_transparent_header_on_scroll: 1

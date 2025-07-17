@@ -115,16 +115,16 @@
             {% endif %}
             {% if page.primary_menu or page.header_form %}
               {% if navbar_offcanvas %}
-                <button class="navbar-toggler navbar-toggler-right collapsed text-nowrap" type="button" data-bs-toggle="offcanvas" data-bs-target="#offCanvasMegaMenu" aria-controls="offCanvasMegaMenu"><i class="fas fa-bars"></i>&nbsp;{{ 'Menu'|trans }}</button>
+                <button class="navbar-toggler navbar-toggler-right collapsed text-nowrap" type="button" data-bs-toggle="offcanvas" data-bs-target="#offCanvasMegaMenu" aria-controls="offCanvasMegaMenu"><i class="fas fa-bars"></i></button>
                 <div{{ primary_menu_container_attributes }}>
-                  <div class="offcanvas-body">
-                    <div class="d-flex justify-content-between mb-4">
+                  <div class="offcanvas-body d-lg-flex flex-lg-column flex-lg-grow-0 align-items-lg-end justify-content-lg-end">
+                    <div class="d-flex justify-content-end mb-4">
                       {% if page.header_form %}
                         <div class="form-inline navbar-form justify-content-end flex-grow-1 pe-2">
                           {{ page.header_form }}
                         </div>
                       {% endif %}
-                      <button type="button" class="btn btn-primary text-nowrap mega-menu-button menu-close" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fas fa-times"></i><span class="d-none d-md-inline-block">&nbsp;{{ 'Close'|trans }}</span></button>
+                      <button type="button" class="btn btn-primary text-nowrap mega-menu-button menu-close d-lg-none" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fas fa-times"></i></button>
                     </div>
                     {{ page.primary_menu }}
                   </div>
