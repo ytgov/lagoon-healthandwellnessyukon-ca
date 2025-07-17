@@ -24,9 +24,10 @@ third_party_settings:
       weight: 0
       format_type: html_element
       format_settings:
-        classes: 'd-lg-flex justify-content-between align-items-start'
+        classes: 'd-lg-flex justify-content-between align-items-start mb-3'
         show_empty_fields: false
         id: ''
+        label_as_html: false
         element: div
         show_label: false
         label_element: h3
@@ -41,6 +42,12 @@ targetEntityType: paragraph
 bundle: view
 mode: default
 content:
+  extra_field_frontend_editing:
+    type: extra_field_frontend_editing
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
   field_button_link:
     type: link
     label: hidden
