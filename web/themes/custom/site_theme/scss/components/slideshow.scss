@@ -60,16 +60,14 @@
 
       .caption-wrapper {
         // Ensure the caption text does not overlap the controls.
-        padding-left: $carousel-control-icon-width;
-        padding-right: $carousel-control-icon-width;
+        padding-left: $carousel-control-width;
+        padding-right: $carousel-control-width;
 
         @include media-breakpoint-up(md) {
           max-width: 90%;
         }
 
         @include media-breakpoint-up(lg) {
-          padding-left: $carousel-control-icon-width * 2;
-          padding-right: $carousel-control-icon-width * 2;
           max-width: 100%;
         }
       }
