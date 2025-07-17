@@ -10,6 +10,6 @@ effects:
     id: image_scale
     weight: 1
     data:
-      width: 275
-      height: 171
-      upscale: true
+      width: 325
+      height: 88
+      upscale: false
