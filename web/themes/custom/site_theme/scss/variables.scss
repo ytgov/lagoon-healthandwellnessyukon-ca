@@ -37,6 +37,21 @@ $brand-primary: $primary-dark;
 //$brand-danger: $red;
 $brand-inverse: $primary-shade;
 
+$btn-primary-bg-color: $white;
+$btn-primary-border-color: $primary-shade;
+$btn-primary-color: $primary-shade;
+$btn-primary-hover-bg-color: $accent-shade;
+$btn-primary-hover-border-color: $accent-shade;
+$btn-primary-hover-color: $btn-primary-color;
+
+$btn-secondary-bg-color: $yghss-red;
+$btn-secondary-border-color: $btn-secondary-bg-color;
+$btn-secondary-color: $white;
+$btn-secondary-hover-bg-color: $yghss-dark-red;
+$btn-secondary-hover-border-color: $btn-secondary-hover-bg-color;
+$btn-secondary-hover-color: $btn-secondary-color;
+
+$btn-font-weight: bold;
 // Body
 //
 // Settings for the `<body>` element.
