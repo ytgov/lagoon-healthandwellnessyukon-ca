@@ -11,7 +11,7 @@ dependencies:
     - site_theme
 third_party_settings:
   block_classes:
-    content_class: 'd-flex align-items-center gap-2'
+    content_class: 'd-lg-flex align-items-center gap-2'
 id: site_theme_navbar
 theme: site_theme
 region: primary_menu
