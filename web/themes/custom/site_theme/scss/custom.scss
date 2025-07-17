@@ -306,13 +306,8 @@ ul.nav {
   .footer-second-wrapper {
     background-image: $footer-bg-image-mobile;
     background-size: cover;
-    background-position: center;
     background-repeat: repeat-x;
     padding: $footer-bg-padding;
-
-    @include media-breakpoint-up(sm) {
-      background-size: contain;
-    }
 
     @include media-breakpoint-up(md) {
       background-image: $footer-bg-image;
