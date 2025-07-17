@@ -283,13 +283,16 @@ $file-attachments-border: 1px solid $file-link-border-color;
 
 $small-card-font-size: $font-size-base * 1.68;
 
-$slideshow-width: 2560px;
+$slideshow-width: 1920px;
 // NOTE: This must always be 100px less than the actual image style height.
-$slideshow-height: 737px;
+$slideshow-height: 500px;
 
 
 // Page banner styles.
 $banner-caption-height: 40%;
+// This is for overriding the responsive padding for the slideshow.
+// This keeps the height of the slideshow at 592px for all desktop sizes.
+$banner-slideshow-height: 592px;
 $banner-caption-text-color: $white;
 $banner-overlay-bg-color: rgba($black, 0.5);
 $page-top-banner-image-style-width: 2560px;
