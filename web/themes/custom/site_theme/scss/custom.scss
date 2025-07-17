@@ -4,6 +4,25 @@
   background-image: $pattern-image;
   background-size: contain;
   height: $pattern-height;
+  background-color: $yghss-red;
+
+  @include media-breakpoint-up(lg) {
+    background-color: transparent;
+  }
+}
+
+#header {
+  @include media-breakpoint-down(lg) {
+    background-color: $yghss-red;
+  }
+
+  .scrolled &.semi-transparent-on-scroll,
+  .scrolled &.affix.semi-transparent-on-scroll,
+  .scrolled &.floating.semi-transparent-on-scroll {
+    @include media-breakpoint-down(lg) {
+      background-color: transparentize($yghss-red, $header-background-transparency-amount);
+    }
+  }
 }
 
 // Site feedback form styles.
