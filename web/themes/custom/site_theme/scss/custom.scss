@@ -12,8 +12,25 @@
 }
 
 #header {
+  .navbar:first-child {
+    @include media-breakpoint-up(lg) {
+      &::before {
+        content: "";
+        height: 100%;
+        background-color: #A72B2A;
+        width: 30%;
+        position: absolute;
+      }
+    }
+  }
+
   @include media-breakpoint-down(lg) {
     background-color: $yghss-red;
+
+
+    #navbar-main {
+      background-color: $white;
+    }
   }
 
   .scrolled &.semi-transparent-on-scroll,

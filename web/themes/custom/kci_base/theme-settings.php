@@ -127,11 +127,6 @@ function kci_base_form_system_theme_settings_alter(&$form, FormStateInterface $f
     '#type' => 'checkbox',
     '#title' => t('Render main navigation full width below branding'),
     '#default_value' => theme_get_setting('kci_base_navbar_use_full_width'),
-    '#states' => [
-      'visible' => [
-        ':input[name="bootstrap_barrio_navbar_offcanvas"]' => ['value' => ''],
-      ],
-    ],
   ];
 
   $full_width_nav_position = theme_get_setting('kci_base_navbar_full_width_position');
@@ -150,7 +145,6 @@ function kci_base_form_system_theme_settings_alter(&$form, FormStateInterface $f
     '#states' => [
       'visible' => [
         ':input[name="kci_base_navbar_use_full_width"]' => ['checked' => TRUE],
-        ':input[name="bootstrap_barrio_navbar_offcanvas"]' => ['value' => ''],
       ],
     ],
   ];

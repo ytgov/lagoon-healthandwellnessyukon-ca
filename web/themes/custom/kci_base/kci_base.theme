@@ -110,8 +110,17 @@ function kci_base_preprocess_page(&$variables) {
   }
   $has_offcanvas_menu = (theme_get_setting('bootstrap_barrio_navbar_offcanvas') == 'offcanvas-collapse');
   $variables['primary_menu_container_attributes'] = [];
+  $variables['navbar_use_full_width'] = theme_get_setting('kci_base_navbar_use_full_width');
   if ($has_offcanvas_menu) {
     $variables['page_header_attributes']['class'][] = 'has-offcanvas-menu';
+    if ($variables['navbar_use_full_width']) {
+      $full_width_nav_position = theme_get_setting('kci_base_navbar_full_width_position');
+      if (empty($full_width_nav_position)) {
+        $full_width_nav_position = 'start';
+      }
+      $variables['navbar_attributes']['class'][] = 'full-width-navbar';
+      $variables['primary_menu_container_attributes']['class'][] = 'justify-content-lg-' . $full_width_nav_position;
+    }
     $is_doublewide_offcanvas = theme_get_setting('kci_base_navbar_offcanvas_doublewide');
     $variables['primary_menu_container_attributes'] = [
       'class' => [
