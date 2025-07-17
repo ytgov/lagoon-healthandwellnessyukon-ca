@@ -16,10 +16,12 @@
 #block-site-theme-dropdown-search {
   form.search-block-form {
     display: flex;
+
     .form-type-search {
       flex-grow: 1;
       padding: 0;
     }
+
     .form-actions {
       padding: 0;
     }
@@ -236,6 +238,12 @@
   }
 }
 
+.field--name-field-image-link-image {
+  .field__item a:hover:before {
+    opacity: 0.1;
+  }
+}
+
 //Footer styles
 .site-footer {
   padding: 0;
@@ -293,6 +301,9 @@
 
           p {
             margin-bottom: 0;
+          }
+          a {
+            text-decoration: none;
           }
         }
       }
