@@ -306,12 +306,15 @@ ul.nav {
     @include font-size($small-card-font-size);
     line-height: normal;
   }
+
   .card-body:has(.stretched-link:hover, .stretched-link:focus-visible) {
     box-shadow: $grid-block-box-shadow;
+
     .card-text {
       color: $gray-100;
     }
   }
+
   .card-body:has(.stretched-link:focus-visible) {
     outline: 2px solid black
   }
@@ -356,6 +359,7 @@ ul.nav {
 
     @include media-breakpoint-up(md) {
       background-image: $footer-bg-image;
+      background-size: contain;
     }
 
     @include media-breakpoint-up(lg) {
