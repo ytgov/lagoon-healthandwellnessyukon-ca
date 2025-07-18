@@ -1,0 +1,42 @@
+{#
+/**
+ * @file
+ * Bootstrap Barrio's theme implementation for a branding block.
+ *
+ * Each branding element variable (logo, name, slogan) is only available if
+ * enabled in the block configuration.
+ *
+ * Available variables:
+ * - site_logo: Logo for site as defined in Appearance or theme settings.
+ * - site_name: Name for site as defined in Site information settings.
+ * - site_slogan: Slogan for site as defined in Site information settings.
+ * - logo_alt_text: The same as site_name, but always populated even if site_name is not.
+ */
+#}
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+    'site-branding'
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+  {% if site_logo or site_name %}
+<a href="{{ path('<front>') }}" title="{{ 'Home - @site_name'|t({'@site_name': logo_alt_text}) }}" rel="home" class="navbar-brand d-inline-block d-md-flex align-items-center">
+      {% if site_logo %}
+        <img src="{{ site_logo }}" alt="{{ 'Home - @site_name'|t({'@site_name': logo_alt_text}) }}" class="site-logo img-fluid d-inline-block align-top{% if site_name %} me-3{% endif %}" />
+      {% endif %}
+      {% if site_name %}
+        <span class="d-block text-wrap">{{ site_name }}</span>
+      {% endif %}
+    </a>
+  {% endif %}
+  {% if site_slogan %}
+    <div class="ms-2 d-none d-md-inline-block align-top site-name-slogan">
+      {{ site_slogan }}
+    </div>
+  {% endif %}
+</div>
