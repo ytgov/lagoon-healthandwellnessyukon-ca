@@ -43,7 +43,7 @@ content:
         fences_field_tag: div
         fences_field_classes: ''
         fences_field_items_wrapper_tag: div
-        fences_field_items_wrapper_classes: 'row justify-content-center'
+        fences_field_items_wrapper_classes: 'row align-items-center justify-content-center'
         fences_field_item_tag: none
         fences_field_item_classes: ''
         fences_label_tag: none
