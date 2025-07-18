@@ -205,6 +205,10 @@ ul.nav {
   }
 }
 
+label[for="edit-was-this-page-helpful"] {
+  @include font-size($font-size-sm);
+}
+
 // Effects.
 .zoom-in {
   transition: $standard-transition;
@@ -458,6 +462,9 @@ ul.nav {
         }
       }
 
+    }
+    #block-site-theme-footersocialmedialinks {
+      padding: $nav-link-padding-y $nav-link-padding-x;
     }
   }
 }
