@@ -208,6 +208,12 @@ ul.nav {
 label[for="edit-was-this-page-helpful"] {
   @include font-size($font-size-sm);
 }
+#edit-was-this-page-helpful.form-radios {
+  margin-top: 0;
+  .js-form-item {
+    margin-bottom: 0;
+  }
+}
 
 // Effects.
 .zoom-in {
