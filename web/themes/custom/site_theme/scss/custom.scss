@@ -12,6 +12,12 @@
 }
 
 #header {
+
+  #block-site-theme-branding {
+    background-color: $yghss-red;
+    color: $white;
+  }
+
   .navbar:first-child {
     @include media-breakpoint-up(lg) {
       &::before {
@@ -38,9 +44,14 @@
   .scrolled &.floating.semi-transparent-on-scroll {
     @include media-breakpoint-down(lg) {
       background-color: transparentize($yghss-red, $header-background-transparency-amount);
+
+      #block-site-theme-branding {
+        background-color: transparent;
+      }
     }
   }
 }
+
 
 // Site feedback form styles.
 .form-item-was-this-page-helpful {

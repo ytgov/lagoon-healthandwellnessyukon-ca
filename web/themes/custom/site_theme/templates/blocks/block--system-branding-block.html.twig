@@ -21,13 +21,13 @@
     'site-branding'
   ]
 %}
-<div{{ attributes.addClass(classes) }}>
+<div{{attributes.addClass(classes)}}>
   {{ title_prefix }}
   {{ title_suffix }}
   {% if site_logo or site_name %}
-<a href="{{ path('<front>') }}" title="{{ 'Home - @site_name'|t({'@site_name': logo_alt_text}) }}" rel="home" class="navbar-brand d-inline-block d-md-flex align-items-center">
+    <a href="{{ path('<front>') }}" title="{{ 'Home - @site_name'|t({'@site_name': logo_alt_text}) }}" rel="home" class="navbar-brand d-inline-block d-md-flex align-items-center">
       {% if site_logo %}
-        <img src="{{ site_logo }}" alt="{{ 'Home - @site_name'|t({'@site_name': logo_alt_text}) }}" class="site-logo img-fluid d-inline-block align-top{% if site_name %} me-3{% endif %}" />
+        <img src="{{ site_logo }}" alt="{{ 'Home - @site_name'|t({'@site_name': logo_alt_text}) }}" class="site-logo img-fluid d-inline-block align-top{% if site_name %} me-3{% endif %}"/>
       {% endif %}
       {% if site_name %}
         <span class="d-block text-wrap">{{ site_name }}</span>
