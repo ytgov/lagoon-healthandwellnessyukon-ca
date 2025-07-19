@@ -1,3 +1,15 @@
+.view-events {
+  .views-exposed-form {
+    .row {
+      --bs-gutter-x: 1rem !important;
+
+      >div {
+        @include make-col(6);
+      }
+    }
+  }
+}
+
 .cld-main {
   width: 100%;
   color: $body-color;
