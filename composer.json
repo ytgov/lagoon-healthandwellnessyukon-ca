@@ -51,7 +51,8 @@
         "drupal/photoswipe": "^5.0",
         "bower-asset/photoswipe": "^5",
         "npm-asset/photoswipe-dynamic-caption-plugin": "^1.2",
-        "drupal/maxlength": "^3.1"
+        "drupal/maxlength": "^3.1",
+        "spatie/color": "^1.8"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
