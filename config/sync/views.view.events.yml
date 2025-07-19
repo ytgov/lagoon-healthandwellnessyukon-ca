@@ -8,6 +8,7 @@ dependencies:
     - field.storage.node.field_event_type
     - field.storage.node.field_related_content
     - field.storage.node.field_sharing_thumbnail
+    - field.storage.taxonomy_term.field_category_colour
     - image.style.news_events_thumbnail
     - node.type.events
     - taxonomy.vocabulary.communities
@@ -15,6 +16,7 @@ dependencies:
     - views.view.event_categories
   module:
     - better_exposed_filters
+    - color_field
     - datetime
     - datetime_range
     - entity_reference_revisions
@@ -769,7 +771,7 @@ display:
           click_sort_column: value
           type: string
           settings:
-            link_to_entity: true
+            link_to_entity: false
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -876,7 +878,7 @@ display:
             external: false
             replace_spaces: false
             path_case: none
-            trim_whitespace: false
+            trim_whitespace: true
             alt: ''
             rel: ''
             link_class: ''
@@ -1038,7 +1040,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<h3 class=\"mb-3\">{{ title }}</h3>\r\n<div class=\"d-flex align-items-start\">\r\n  {% if field_event_image %}\r\n  <div class=\"me-3\">\r\n    {{ field_event_image }}\r\n  </div>\r\n  {% endif %}\r\n  <div class=\"event-details flex-grow-1\">\r\n    <p class=\"fw-bold\">{{ field_event_date }}</p>\r\n    <p>{{ field_content }}</p>\r\n    <div class=\"text-end\"><a href=\"{{ view_node }}\" class=\"btn btn-primary rounded-pill\">Read more</a></div>\r\n  </div>\r\n</div>"
+            text: "<span class=\"d-block display-5 news-events-title my-3 text-decoration-underline\">{{ title }}</span>\r\n<div class=\"d-flex align-items-start\">\r\n  {% if field_event_image %}\r\n  <div class=\"me-3\">\r\n    {{ field_event_image }}\r\n  </div>\r\n  {% endif %}\r\n  <div class=\"event-details flex-grow-1\">\r\n    <p class=\"fw-bold\">{{ field_event_date }}</p>\r\n    <p>{{ field_content }}</p>\r\n    <div class=\"text-end\"><a href=\"{{ view_node }}\" class=\"btn btn-primary rounded-pill stretched-link\"  title=\"{{ title_1}}>Read more</a></div>\r\n  </div>\r\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -1347,7 +1349,7 @@ display:
         type: default
         options:
           grouping: {  }
-          row_class: 'px-4 py-3 rounded-4 bg-medium shadow-sm'
+          row_class: 'mb-4 grid-block-link p-3'
           default_row_class: true
       row:
         type: fields
@@ -1681,6 +1683,73 @@ display:
           settings:
             link: false
           group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_category_colour:
+          id: field_category_colour
+          table: taxonomy_term__field_category_colour
+          field: field_category_colour
+          relationship: field_event_type
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: '0'
+          element_class: ''
+          element_label_type: div
+          element_label_class: 'position-absolute d-lg-none w-100 text-center start-0'
+          element_label_colon: false
+          element_wrapper_type: div
+          element_wrapper_class: 'col-auto position-relative'
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: color
+          type: color_field_formatter_swatch
+          settings:
+            shape: circle
+            width: '50'
+            height: '50'
+            opacity: false
+            data_attribute: false
+          group_column: ''
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -2024,7 +2093,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"event-item-wrapper d-flex flex-column gap-3 p-3 rounded-4 position-relative\">\r\n  <a href=\"{{ view_node }}\" class=\"position-absolute w-100 h-100 top-0 start-0\"></a>\r\n  <span class=\"event-link d-flex align-items-start gap-3\">\r\n    {% if field_sharing_thumbnail %}\r\n      <span class=\"event-thumbnail\">\r\n        {{ field_sharing_thumbnail }}\r\n      </span>\r\n    {% endif %}\r\n    <span class=\"event-details text-center flex-grow-1\">\r\n      <span class=\"d-block mb-2 event-title fw-bold\">{{ title }}</span>\r\n      <span class=\"d-block event-date small\">{{ field_event_date }}</span>\r\n    </span>\r\n  </span>\r\n  <div class=\"event-content rounded-4 bg-white p-2\">\r\n    {{ field_content }}\r\n  </div>\r\n</div>"
+            text: "<div class=\"event-item-wrapper d-flex flex-column gap-3 p-3 rounded-4 position-relative\">\r\n  <a href=\"{{ view_node }}\" class=\"position-absolute w-100 h-100 top-0 start-0\"></a>\r\n  <span class=\"event-link d-flex align-items-start gap-3\">\r\n    {% if field_sharing_thumbnail %}\r\n      <span class=\"event-thumbnail\">\r\n        {{ field_sharing_thumbnail }}\r\n      </span>\r\n    {% endif %}\r\n    <span class=\"event-details text-center flex-grow-1\">\r\n       {{ field_category_colour  }}\r\n      <span class=\"d-block mb-2 event-title fw-bold\">{{ title }}</span>\r\n      <span class=\"d-block event-date small\">{{ field_event_date }}</span>\r\n    </span>\r\n  </span>\r\n  <div class=\"event-content rounded-4 bg-white p-2\">\r\n    {{ field_content }}\r\n  </div>\r\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -2049,12 +2118,12 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: h4
+          element_type: div
           element_class: 'event mb-3 py-0 px-1'
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
-          element_wrapper_type: '0'
+          element_wrapper_type: div
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
@@ -2507,6 +2576,7 @@ display:
         - 'config:field.storage.node.field_event_date'
         - 'config:field.storage.node.field_event_type'
         - 'config:field.storage.node.field_sharing_thumbnail'
+        - 'config:field.storage.taxonomy_term.field_category_colour'
   home_upcoming_events_slide:
     id: home_upcoming_events_slide
     display_title: 'Home Upcoming Events Slide'

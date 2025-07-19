@@ -225,6 +225,7 @@
 
       &.today .cld-number {
         background-color: $primary-shade;
+        color: white;
       }
     }
   }
@@ -250,7 +251,27 @@
         }
 
         .event-item {
-          h4 {
+          .views-field-nothing {
+            .color_field__swatch {
+              width: 2rem;
+              height: 2rem;
+              position: absolute;
+              right: 1rem;
+            }
+
+            @for $i from 1 through 4 {
+              &.contrast-#{$i}-high .color_field__swatch {
+                color: var(--category-color-#{$i}) !important;
+              }
+
+              &.contrast-#{$i}-low .color_field__swatch {
+                background-color: var(--category-color-#{$i}) !important;
+                color: $black;
+              }
+            }
+          }
+
+          .event {
             @include font-size($font-size-base);
 
             .event-item-wrapper {

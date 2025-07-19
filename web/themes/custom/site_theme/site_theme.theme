@@ -9,6 +9,9 @@ declare(strict_types=1);
 
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Datetime\DrupalDateTime;
+use Spatie\Color\Contrast;
+use Spatie\Color\Hex;
+use Spatie\Color\Rgb;
 
 /**
  * Implements hook_theme().
@@ -122,6 +125,48 @@ function site_theme_preprocess_field(array &$variables): void {
         '#view_mode' => $view_mode,
       ];
       $item['content']['#attributes']['class'][] = 'small-card-wrapper';
+    }
+  }
+}
+
+/**
+ * Implements template_preprocess_color_field_formatter_swatch().
+ */
+function site_theme_preprocess_color_field_formatter_swatch(&$variables) {
+  $variables['attributes']['class'][] = 'color-swatch';
+  $variables['attributes']['data-color'] = (string) Rgb::fromString($variables['color'])->toHex();
+}
+
+/**
+ * Implements template_preprocess_views_view_fields().
+ */
+function site_theme_preprocess_views_view_fields(&$variables) {
+  if ($variables['view']->id() == 'events' && $variables['view']->current_display == 'calendar_events') {
+    foreach ($variables['fields'] as $field_name => &$field) {
+      if (stristr($field_name, 'nothing')) {
+        $rendered = (string) $field->content;
+        preg_match_all('/data\-color\=\"(.*?)\"/', $rendered, $matches);
+        if (!empty($matches[1])) {
+          $colors = [];
+          foreach ($matches[1] as $index => $match) {
+            // Use the spatie color library to calculate the contrast
+            // between the color and white. Set a class for the color
+            // based on the contrast ratio to indicate whether it is
+            // low or high contrast. We can then use CSS to apply
+            // appropriate styling for accessibility.
+            $contrast = Contrast::ratio(Hex::fromString($match), Hex::fromString('#ffffff'));
+            $field->wrapper_attributes->addClass('contrast-number-' . ($index + 1) . '-' . $contrast);
+            if ($contrast < 4.5) {
+              $field->wrapper_attributes->addClass('contrast-' . ($index + 1) . '-low');
+            }
+            else {
+              $field->wrapper_attributes->addClass('contrast-' . ($index + 1) . '-high');
+            }
+            $colors[] = '--category-color-' . ($index + 1) . ': ' . $match . ';';
+          }
+          $field->wrapper_attributes->setAttribute('style', implode(' ', $colors));
+        }
+      }
     }
   }
 }

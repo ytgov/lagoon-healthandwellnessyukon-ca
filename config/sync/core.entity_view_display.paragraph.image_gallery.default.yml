@@ -5,7 +5,7 @@ dependencies:
   config:
     - field.field.paragraph.image_gallery.field_heading
     - field.field.paragraph.image_gallery.field_image_gallery_images
-    - image.style.cke_media_resize_xl
+    - image.style.content_fit
     - image.style.large
     - paragraphs.paragraphs_type.image_gallery
   module:
@@ -36,9 +36,9 @@ content:
     type: photoswipe_field_formatter
     label: hidden
     settings:
-      photoswipe_thumbnail_style_first: large
+      photoswipe_thumbnail_style_first: content_fit
       photoswipe_thumbnail_style: large
-      photoswipe_image_style: cke_media_resize_xl
+      photoswipe_image_style: content_fit
       photoswipe_reference_image_field: field_media_image
       photoswipe_view_mode: default
       image_loading:
