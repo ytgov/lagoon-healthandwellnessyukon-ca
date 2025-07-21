@@ -38,7 +38,7 @@
         "drupal/views_bootstrap": "^5.4",
         "drupal/ckeditor_media_resize": "^1.0",
         "drupal/media_pdf_thumbnail": "^7.0",
-        "drupal/frontend_editing": "^2.0@alpha",
+        "drupal/frontend_editing": "^1.8",
         "drupal/ckeditor_link_styles": "^1.1",
         "drupal/eca": "^2.1",
         "drupal/bpmn_io": "^2.0",
