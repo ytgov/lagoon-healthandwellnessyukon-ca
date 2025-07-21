@@ -208,8 +208,10 @@ ul.nav {
 label[for="edit-was-this-page-helpful"] {
   @include font-size($font-size-sm);
 }
+
 #edit-was-this-page-helpful.form-radios {
   margin-top: 0;
+
   .js-form-item {
     margin-bottom: 0;
   }
@@ -395,9 +397,11 @@ label[for="edit-was-this-page-helpful"] {
 }
 
 .highlighted-panel--heading {
+  min-height: 250px;
 
-  @include media-breakpoint-up(lg) {
-    aspect-ratio: 3 / 2;
+  @include media-breakpoint-up(md) {
+    min-height: unset;
+    aspect-ratio: 727 / 587;
   }
 }
 
@@ -469,6 +473,7 @@ label[for="edit-was-this-page-helpful"] {
       }
 
     }
+
     #block-site-theme-footersocialmedialinks {
       padding: $nav-link-padding-y $nav-link-padding-x;
     }
