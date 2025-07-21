@@ -346,7 +346,7 @@ display:
           click_sort_column: target_id
           type: entity_reference_revisions_entity_view
           settings:
-            view_mode: default
+            view_mode: teaser
           group_column: ''
           group_columns: {  }
           group_rows: true
@@ -1047,7 +1047,7 @@ display:
           click_sort_column: target_id
           type: entity_reference_revisions_entity_view
           settings:
-            view_mode: default
+            view_mode: teaser
           group_column: ''
           group_columns: {  }
           group_rows: true
@@ -1741,7 +1741,7 @@ display:
           click_sort_column: target_id
           type: entity_reference_revisions_entity_view
           settings:
-            view_mode: default
+            view_mode: teaser
           group_column: ''
           group_columns: {  }
           group_rows: true

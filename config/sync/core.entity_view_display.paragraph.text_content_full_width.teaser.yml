@@ -1,40 +1,27 @@
-uuid: 33267b1d-de36-4ba9-be73-791b767872ba
+uuid: 9812f22e-46e5-448a-b507-31ee298cacc9
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.paragraph.teaser
     - field.field.paragraph.text_content_full_width.field_heading
     - field.field.paragraph.text_content_full_width.field_text_content
     - paragraphs.paragraphs_type.text_content_full_width
   module:
     - fences
     - text
-id: paragraph.text_content_full_width.default
+id: paragraph.text_content_full_width.teaser
 targetEntityType: paragraph
 bundle: text_content_full_width
-mode: default
+mode: teaser
 content:
-  extra_field_frontend_editing:
-    type: extra_field_frontend_editing
-    settings: {  }
-    third_party_settings: {  }
-    weight: 2
-    region: content
-  field_heading:
-    type: string
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 0
-    region: content
   field_text_content:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings:
       fences:
-        fences_field_tag: div
+        fences_field_tag: none
         fences_field_classes: ''
         fences_field_items_wrapper_tag: none
         fences_field_items_wrapper_classes: ''
@@ -42,6 +29,8 @@ content:
         fences_field_item_classes: ''
         fences_label_tag: none
         fences_label_classes: ''
-    weight: 1
+    weight: 0
     region: content
-hidden: {  }
+hidden:
+  extra_field_frontend_editing: true
+  field_heading: true
