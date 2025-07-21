@@ -43,7 +43,7 @@
   .scrolled &.affix.semi-transparent-on-scroll,
   .scrolled &.floating.semi-transparent-on-scroll {
     @include media-breakpoint-down(lg) {
-      background-color: transparentize($yghss-red, $header-background-transparency-amount);
+      background-color: $yghss-red;
 
       #block-site-theme-branding {
         background-color: transparent;

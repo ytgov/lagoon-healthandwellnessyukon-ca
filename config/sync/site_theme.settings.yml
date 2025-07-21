@@ -33,8 +33,8 @@ features:
   comment_user_verification: 1
   favicon: 1
 logo:
-  use_default: 1
-  path: themes/custom/site_theme/logo.png
+  use_default: 0
+  path: themes/custom/site_theme/images/logo.png
 favicon:
   use_default: 0
   path: themes/custom/site_theme/favicon.ico
@@ -108,7 +108,7 @@ kci_base_whole_header_affix: 1
 kci_base_semi_transparent_header_on_scroll: 1
 bootstrap_barrio_region_clean_alerts: 1
 bootstrap_barrio_region_class_alerts: ''
-kci_base_footer_logo_path: themes/custom/site_theme/images/logo-rev.svg
+kci_base_footer_logo_path: themes/custom/site_theme/images/logo.png
 kci_base_navbar_use_full_width: 1
 kci_base_navbar_offcanvas_doublewide: 0
 kci_base_footer_navbar_is_horizontal: 1
