@@ -182,7 +182,15 @@ function createCalendar(calendar, element, adjuster) {
   function AddLabels() {
     var labels = document.createElement('ul');
     labels.classList.add('cld-labels');
-    var labelsList = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    var labelsList = [
+      Drupal.t("Sun"),
+      Drupal.t("Mon"),
+      Drupal.t("Tue"),
+      Drupal.t("Wed"),
+      Drupal.t("Thu"),
+      Drupal.t("Fri"),
+      Drupal.t("Sat"),
+    ];
     for (var i = 0; i < labelsList.length; i++) {
       var label = document.createElement('li');
       label.classList.add("cld-label");
