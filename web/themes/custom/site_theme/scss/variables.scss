@@ -92,6 +92,8 @@ $main-nav-link-hover-bg-color : $gray-200;
 $main-nav-link-active-color   : $black;
 $main-nav-link-active-bg-color: $gray-200;
 
+$nav-link-font-size           : 1.15rem;
+
 $navbar-nav-link-padding-x: 1rem;
 
 $full-width-menu-bg: transparent;
@@ -100,6 +102,7 @@ $dropdown-bg:                       $white;
 $dropdown-link-color:               $main-nav-link-color;
 $dropdown-link-hover-color:         $main-nav-link-hover-color;
 $dropdown-link-hover-bg:            $gray-300;
+$dropdown-font-size:                $nav-link-font-size;
 
 $dropdown-link-active-color:        $primary-shade;
 $dropdown-link-active-bg:           $gray-300;
