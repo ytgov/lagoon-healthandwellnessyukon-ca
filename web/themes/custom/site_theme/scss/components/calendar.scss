@@ -17,8 +17,8 @@
   color: $body-color;
   background-color: $white;
   padding: 1rem;
-  border-radius: 1rem;
-  box-shadow: $site-box-shadow;
+  border-radius: $grid-block-border-radius;
+  box-shadow: $grid-block-box-shadow;
 
   .cld-datetime {
     margin-bottom: 1rem;
@@ -140,7 +140,7 @@
           text-align: left;
           font-weight: normal;
           transition: $standard-transition;
-          box-shadow: $site-box-shadow;
+          box-shadow: $grid-block-box-shadow;
           @include font-size($font-size-base * 0.8);
           --arrow-left: 50%;
 
@@ -248,8 +248,8 @@
 .events-calendar-widget {
   .carousel {
     background-color: $white;
-    border-radius: 1rem;
-    box-shadow: $site-box-shadow;
+    border-radius: $grid-block-border-radius;
+    box-shadow: $grid-block-box-shadow;
 
     .carousel-navigation {
       left: 1rem;
@@ -313,7 +313,7 @@
 .calendar-legend-block {
   margin-bottom: 1rem;
   padding: 1rem;
-  border-radius: 1rem;
-  box-shadow: $site-box-shadow;
+  border-radius: $grid-block-border-radius;
+  box-shadow: $grid-block-box-shadow;
   background-color: $white;
 }
