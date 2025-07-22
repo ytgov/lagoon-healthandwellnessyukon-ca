@@ -50,6 +50,10 @@
       }
     }
   }
+
+  .navbar-toggler-right {
+    margin-left: auto;
+  }
 }
 
 
@@ -113,6 +117,12 @@ ul.nav {
 #block-site-theme-languageswitcher {
   .links.nav {
     justify-content: end;
+
+    a.nav-link {
+      @include media-breakpoint-down(lg) {
+        color: $white;
+      }
+    }
   }
 }
 

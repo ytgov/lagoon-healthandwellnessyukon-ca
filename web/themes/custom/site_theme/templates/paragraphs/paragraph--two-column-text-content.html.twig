@@ -49,26 +49,11 @@
 %}
 {% block paragraph %}
   <div{{attributes.addClass(classes)}}>
-    {% if content.frontend_editing %}
-      {{ content.frontend_editing }}
-    {% endif %}
     {% block content %}
       {% if landing_page_paragraph %}
-        <div class='container px-0'>
+        <div class='container'>
         {% endif %}
-          <div class="row gx-0 gx-lg-5 gy-5">
-            <div class="col-md-7 col-lg-4">
-              <div class="highlighted-panel--heading bg-primary text-white text-uppercase p-3 d-flex flex-column justify-content-end">
-                {{ content.field_heading }}
-                {{ content.field_sub_heading }}
-              </div>
-            </div>
-            <div class="col-lg-8">
-              <div class="highlighted-panel--content">
-                {{ content.field_text_content }}
-              </div>
-            </div>
-          </div>
+        {{ content|without('contextual_links') }}
         {% if landing_page_paragraph %}
         </div>
       {% endif %}

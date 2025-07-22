@@ -81,6 +81,7 @@ $page-top-alerts-link-hover-decoration: underline;
 $page-top-alerts-divider-color: color.adjust($yellow, $lightness: -20%);
 
 $site-logo-height: 50px;
+$site-logo-height-mobile: auto;
 $navbar-light-brand-color: $white;
 
 // Main nav styles.
@@ -90,6 +91,8 @@ $main-nav-link-hover-color    : rgba($black, 0.7);
 $main-nav-link-hover-bg-color : $gray-200;
 $main-nav-link-active-color   : $black;
 $main-nav-link-active-bg-color: $gray-200;
+
+$navbar-nav-link-padding-x: 1rem;
 
 $full-width-menu-bg: transparent;
 

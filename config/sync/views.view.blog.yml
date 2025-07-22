@@ -2387,7 +2387,7 @@ display:
         type: some
         options:
           offset: 0
-          items_per_page: 5
+          items_per_page: 3
       style:
         type: views_bootstrap_grid
         options:

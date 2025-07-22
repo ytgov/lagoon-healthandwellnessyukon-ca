@@ -9,7 +9,6 @@ dependencies:
   module:
     - entity_reference_revisions
     - fences
-    - frontend_editing
 id: paragraph.row_group.default
 targetEntityType: paragraph
 bundle: row_group
@@ -32,15 +31,11 @@ content:
         fences_field_tag: none
         fences_field_classes: ''
         fences_field_items_wrapper_tag: div
-        fences_field_items_wrapper_classes: 'row row-cols-lg-3'
+        fences_field_items_wrapper_classes: 'row row-cols-lg-3 g-4'
         fences_field_item_tag: none
         fences_field_item_classes: ''
         fences_label_tag: none
         fences_label_classes: ''
-      frontend_editing:
-        ajax_content_update: '1'
-        move_up_down: '1'
-        add_items: '1'
     weight: 2
     region: content
   field_heading:
