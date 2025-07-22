@@ -293,6 +293,24 @@ function site_theme_preprocess_links(&$variables) {
       }
     }
   }
+
+  if ($variables['theme_hook_original'] == 'links__comment') {
+    if (!empty($variables['links']['comment-forbidden'])) {
+      $variables['links']['comment-forbidden']['attributes']->addClass('mt-1')->removeClass('nav-link');
+    }
+    if (!empty($variables['links']['comment-delete'])) {
+      $variables['links']['comment-delete']['link']['#options']['attributes']['class'][] = 'btn btn-sm btn-danger';
+    }
+    if (!empty($variables['links']['comment-edit'])) {
+      $variables['links']['comment-edit']['link']['#options']['attributes']['class'][] = 'btn btn-sm btn-primary';
+    }
+    if (!empty($variables['links']['comment-reply'])) {
+      $variables['links']['comment-reply']['link']['#options']['attributes']['class'][] = 'btn btn-sm btn-secondary';
+    }
+    if (!empty($variables['links']['comment-approve'])) {
+      $variables['links']['comment-approve']['link']['#options']['attributes']['class'][] = 'btn btn-sm btn-success';
+    }
+  }
 }
 
 /**
@@ -315,4 +333,13 @@ function site_theme_preprocess_paragraph_cta_background_image(&$variables) {
       'btn-primary',
     ];
   }
+}
+
+/**
+ * Implements template_preprocess_comment.
+ */
+function site_theme_preprocess_comment(&$variables) {
+  $date_formatter = \Drupal::service('date.formatter');
+  $comment = $variables['elements']['#comment'];
+  $variables['created'] = $date_formatter->format($comment->getCreatedTime(), 'date_and_time_long');
 }

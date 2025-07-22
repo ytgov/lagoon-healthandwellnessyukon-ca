@@ -1,0 +1,15 @@
+uuid: 7e6b1211-1076-4149-84aa-5c69cff8ea8e
+langcode: en
+status: true
+dependencies: {  }
+id: full
+label: Full
+date_format: 'F j Y'
+time_format: 'g:ia'
+time_hour_format: 'g:ia'
+allday_label: 'All day'
+separator: ' - '
+join: ', '
+ampm_reduce: '1'
+date_first: '1'
+site_time_toggle: '1'

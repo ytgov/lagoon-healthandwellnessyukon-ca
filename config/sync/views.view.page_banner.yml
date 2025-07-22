@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_page_banner
+    - node.type.blog
     - node.type.events
     - node.type.news
     - node.type.page
@@ -151,6 +152,7 @@ display:
             fail: 'not found'
           validate_options:
             bundles:
+              blog: blog
               events: events
               news: news
               page: page
@@ -186,6 +188,7 @@ display:
           operator: in
           value:
             page: page
+            blog: blog
             events: events
             news: news
           group: 1

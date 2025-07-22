@@ -12,13 +12,13 @@ dependencies:
     - field.field.node.events.field_sharing_thumbnail
     - node.type.events
   module:
-    - datetime_range
     - field_group
     - linkit_attributes
     - media_library
     - media_library_edit
     - paragraphs
     - path
+    - smart_date
 third_party_settings:
   field_group:
     group_related_content:
@@ -91,10 +91,19 @@ content:
         duplicate: duplicate
     third_party_settings: {  }
   field_event_date:
-    type: daterange_default
+    type: smartdate_inline
     weight: 4
     region: content
-    settings: {  }
+    settings:
+      modal: false
+      default_duration: 60
+      default_duration_increments: "30\r\n60|1 hour\r\n90\r\n120|2 hours\r\ncustom"
+      show_extra: false
+      hide_date: true
+      allday: true
+      remove_seconds: false
+      duration_overlay: true
+      separator: to
     third_party_settings: {  }
   field_event_type:
     type: options_select

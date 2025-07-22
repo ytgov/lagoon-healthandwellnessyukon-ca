@@ -59,6 +59,9 @@ $body-bg: $white;
 $body-color: $gray-800;
 $inverse-bg: $primary-shade;
 $inverse-color: $white;
+
+$page-title-color: $body-color;
+
 // Links
 //
 // Style anchor elements.
@@ -329,3 +332,9 @@ $card-border-radius: 0;
 
 $pattern-image: url(../images/YHTS-repeat-pattern-top.png);
 $pattern-height: 35px;
+
+// Comments
+$comment-user-meta-width: 50px;
+$comment-reply-indent: $comment-user-meta-width;
+$card-border-radius: 0;
+$new_comment_indicator: '\f111';

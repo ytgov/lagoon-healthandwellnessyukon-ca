@@ -7,13 +7,17 @@ dependencies:
     - node.type.events
   module:
     - datetime_range
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
 _core:
   default_config_hash: pM-AZqBMNJVu6cBEEB8Ubp81s4ChkC7hEznsHnh9ZGo
 id: node.events.field_event_date
 field_name: field_event_date
 entity_type: node
 bundle: events
-label: 'Event Date'
+label: Date
 description: ''
 required: true
 translatable: false

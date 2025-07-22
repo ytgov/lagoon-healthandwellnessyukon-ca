@@ -16,7 +16,6 @@ dependencies:
     - entity_reference_revisions
     - fences
     - frontend_editing
-    - media
     - user
 id: node.blog.default
 targetEntityType: node
@@ -30,7 +29,7 @@ content:
       view_mode: default
       pager_id: 0
     third_party_settings: {  }
-    weight: 4
+    weight: 3
     region: content
   field_content:
     type: entity_reference_revisions_entity_view
@@ -52,7 +51,7 @@ content:
         ajax_content_update: '1'
         move_up_down: '1'
         add_items: '1'
-    weight: 2
+    weight: 1
     region: content
   field_date:
     type: datetime_default
@@ -72,32 +71,13 @@ content:
         fences_label_classes: ''
     weight: 0
     region: content
-  field_news_image:
-    type: media_thumbnail
-    label: hidden
-    settings:
-      image_link: ''
-      image_style: ''
-      image_loading:
-        attribute: lazy
-    third_party_settings:
-      fences:
-        fences_field_tag: div
-        fences_field_classes: ''
-        fences_field_items_wrapper_tag: none
-        fences_field_items_wrapper_classes: ''
-        fences_field_item_tag: div
-        fences_field_item_classes: ''
-        fences_label_tag: div
-        fences_label_classes: ''
-    weight: 1
-    region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 3
+    weight: 2
     region: content
 hidden:
   addtoany: true
+  field_news_image: true
   field_page_banner: true
   langcode: true

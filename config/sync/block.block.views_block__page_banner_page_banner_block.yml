@@ -5,6 +5,7 @@ dependencies:
   config:
     - views.view.page_banner
   module:
+    - block_classes
     - node
     - views
   theme:
@@ -33,6 +34,7 @@ visibility:
     context_mapping:
       node: '@node.node_route_context:node'
     bundles:
+      blog: blog
       events: events
       news: news
       page: page
