@@ -304,3 +304,15 @@ function site_theme_preprocess_input(&$variables) {
     $variables['safe_value_label'] = '<i class="fas fa-search"></i><span class="visually-hidden">' . t('Submit search') . '</span>';
   }
 }
+
+/**
+ * Preprocess function for the cta_background_image paragraph type.
+ */
+function site_theme_preprocess_paragraph_cta_background_image(&$variables) {
+  if (!empty($variables['content']['field_cta_with_bg_link'])) {
+    $variables['content']['field_cta_with_bg_link'][0]['#attributes']['class'] = [
+      'btn',
+      'btn-primary',
+    ];
+  }
+}

@@ -318,6 +318,21 @@ label[for="edit-was-this-page-helpful"] {
       &.no-colour {
         padding-right: 0;
         padding-left: 0;
+        .btn.btn-feature {
+          background-color: $btn-primary-bg-color;
+          border-color: $btn-primary-border-color;
+          color: $btn-primary-color;
+
+          &:hover {
+            background-color: $btn-primary-hover-bg-color;
+            border-color: $btn-primary-hover-border-color;
+            color: $btn-primary-hover-color;
+          }
+
+          &::before {
+            display: none;
+          }
+        }
       }
     }
 
