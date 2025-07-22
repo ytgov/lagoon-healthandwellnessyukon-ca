@@ -1,0 +1,56 @@
+uuid: 5cb4dd63-a734-41b3-a580-183a54bc2bbb
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.events.field_community
+    - field.field.node.events.field_content
+    - field.field.node.events.field_event_date
+    - field.field.node.events.field_event_type
+    - field.field.node.events.field_page_banner
+    - field.field.node.events.field_related_content
+    - field.field.node.events.field_sharing_thumbnail
+    - node.type.events
+  module:
+    - entity_reference_revisions
+    - fences
+    - frontend_editing
+    - user
+id: node.events.teaser
+targetEntityType: node
+bundle: events
+mode: teaser
+content:
+  field_content:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+      frontend_editing:
+        ajax_content_update: '1'
+        move_up_down: '1'
+        add_items: '1'
+    weight: 0
+    region: content
+hidden:
+  addtoany: true
+  field_community: true
+  field_event_date: true
+  field_event_type: true
+  field_page_banner: true
+  field_related_content: true
+  field_sharing_thumbnail: true
+  langcode: true
+  links: true

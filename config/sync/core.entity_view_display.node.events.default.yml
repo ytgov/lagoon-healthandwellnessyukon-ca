@@ -10,13 +10,11 @@ dependencies:
     - field.field.node.events.field_page_banner
     - field.field.node.events.field_related_content
     - field.field.node.events.field_sharing_thumbnail
-    - image.style.medium
     - node.type.events
   module:
     - entity_reference_revisions
     - fences
     - frontend_editing
-    - media
     - smart_date
     - user
 id: node.events.default
@@ -61,7 +59,7 @@ content:
         ajax_content_update: '1'
         move_up_down: '1'
         add_items: '1'
-    weight: 5
+    weight: 4
     region: content
   field_event_date:
     type: smartdate_default
@@ -112,26 +110,6 @@ content:
         fences_label_classes: ''
     weight: 2
     region: content
-  field_sharing_thumbnail:
-    type: media_thumbnail
-    label: hidden
-    settings:
-      image_link: ''
-      image_style: medium
-      image_loading:
-        attribute: lazy
-    third_party_settings:
-      fences:
-        fences_field_tag: div
-        fences_field_classes: ''
-        fences_field_items_wrapper_tag: none
-        fences_field_items_wrapper_classes: ''
-        fences_field_item_tag: div
-        fences_field_item_classes: ''
-        fences_label_tag: div
-        fences_label_classes: ''
-    weight: 4
-    region: content
   links:
     settings: {  }
     third_party_settings: {  }
@@ -141,4 +119,5 @@ hidden:
   addtoany: true
   field_page_banner: true
   field_related_content: true
+  field_sharing_thumbnail: true
   langcode: true

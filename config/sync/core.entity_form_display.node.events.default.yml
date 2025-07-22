@@ -13,11 +13,52 @@ dependencies:
     - node.type.events
   module:
     - datetime_range
+    - field_group
     - linkit_attributes
     - media_library
     - media_library_edit
     - paragraphs
     - path
+third_party_settings:
+  field_group:
+    group_related_content:
+      children:
+        - field_related_content
+      label: 'Related Content'
+      region: content
+      parent_name: ''
+      weight: 9
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: false
+        description: ''
+        required_fields: false
+    group_row:
+      children:
+        - field_event_type
+        - field_community
+      label: Row
+      region: content
+      parent_name: ''
+      weight: 7
+      format_type: html_element
+      format_settings:
+        classes: 'row row-cols-lg-2'
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        required_fields: true
 id: node.events.default
 targetEntityType: node
 bundle: events
@@ -31,7 +72,7 @@ content:
     third_party_settings: {  }
   field_content:
     type: paragraphs
-    weight: 7
+    weight: 8
     region: content
     settings:
       title: Paragraph
@@ -83,7 +124,7 @@ content:
     third_party_settings: {  }
   field_related_content:
     type: linkit_attributes
-    weight: 8
+    weight: 9
     region: content
     settings:
       placeholder_url: ''
@@ -99,7 +140,7 @@ content:
         accesskey: false
         aria-label: false
         title: false
-      widget_default_open: expandIfValuesSet
+      widget_default_open: collapsed
     third_party_settings: {  }
   field_sharing_thumbnail:
     type: media_library_widget
@@ -120,13 +161,13 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 11
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 10
+    weight: 11
     region: content
     settings:
       display_label: true
@@ -140,7 +181,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 9
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
