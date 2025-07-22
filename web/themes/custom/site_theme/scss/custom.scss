@@ -314,11 +314,37 @@ label[for="edit-was-this-page-helpful"] {
 
 .paragraph--type--featured-content {
   .featured-content-box {
+    .content-inner .content {
+      &.no-colour {
+        padding-right: 0;
+        padding-left: 0;
+      }
+    }
+
     &.align-content-right {
-      @include media-breakpoint-up(lg) {
-        .content-inner {
-          .content {
-            padding-left: 2rem;
+      .content-inner {
+        .content {
+
+          @include media-breakpoint-up(lg) {
+            padding-left: 2rem !important;
+
+            &.no-colour {
+              padding-right: 0;
+            }
+          }
+        }
+      }
+    }
+
+    &.align-content-left {
+      .content-inner {
+        .content {
+          @include media-breakpoint-up(lg) {
+            padding-right: 2rem !important;
+
+            &.no-colour {
+              padding-left: 0;
+            }
           }
         }
       }
@@ -327,6 +353,8 @@ label[for="edit-was-this-page-helpful"] {
     .content-wrapper {
       .content-inner {
         .content {
+          max-width: none;
+
           .field--name-field-featured-title {
             @include font-size($h3-font-size);
           }
