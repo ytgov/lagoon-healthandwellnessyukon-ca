@@ -2,6 +2,14 @@ uuid: 02761357-b3ee-4cc0-bdd4-a6fe5d6d9944
 langcode: en
 status: true
 dependencies:
+  config:
+    - node.type.blog
+    - node.type.board_member
+    - node.type.events
+    - node.type.homepage
+    - node.type.news
+    - node.type.page
+    - node.type.timeline_event
   module:
     - content_moderation
 id: editorial
@@ -68,5 +76,13 @@ type_settings:
         - draft
       to: ready_for_review
       weight: -1
-  entity_types: {  }
+  entity_types:
+    node:
+      - blog
+      - board_member
+      - events
+      - homepage
+      - news
+      - page
+      - timeline_event
   default_moderation_state: draft
