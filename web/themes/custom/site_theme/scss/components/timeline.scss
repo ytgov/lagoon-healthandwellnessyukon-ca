@@ -1,0 +1,46 @@
+ul.timeline-list {
+
+  li.timeline-item {
+
+    .timeline-item-wrapper {
+      span.timeline-marker {
+        background-image: url("../images/target.png");
+        background-color: transparent;
+        background-size: contain;
+        width: 25px;
+        height: 25px;
+        background-repeat: no-repeat;
+        border-radius: 0;
+        border: none;
+      }
+    }
+  }
+
+  &.alternate {
+    li.timeline-item.odd {
+      .timeline-item-wrapper .timeline-marker {
+        right: 0;
+        transform: translateX(50%);
+      }
+    }
+
+    li.timeline-item.even {
+      .timeline-item-wrapper .timeline-marker {
+        left: 0;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  &:after {
+    background-color: $yghss-red;
+  }
+}
+
+.milestone-label {
+  color: $yghss-purple;
+}
+
+.views-field-field-timeline-description {
+  line-height: normal;
+}

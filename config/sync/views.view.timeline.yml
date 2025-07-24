@@ -273,7 +273,7 @@ display:
           wrapper_class: wrapper-list
           class: item-list
           position_items: alternate
-          position_marker: marker-center
+          position_marker: marker-top
       row:
         type: fields
       query:
