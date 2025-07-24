@@ -318,8 +318,10 @@ function site_theme_preprocess_links(&$variables) {
  */
 function site_theme_preprocess_input(&$variables) {
   if (!empty($variables['element']['#id']) && substr($variables['element']['#id'], 0, 18) == 'edit-submit') {
-    $variables['attributes']->addClass('search-form-submit-button');
-    $variables['safe_value_label'] = '<i class="fas fa-search"></i><span class="visually-hidden">' . t('Submit search') . '</span>';
+    if (!empty($variables['element']['#value']) && $variables['element']['#value']->getUntranslatedString() == 'Search') {
+      $variables['attributes']->addClass('search-form-submit-button');
+      $variables['safe_value_label'] = '<i class="fas fa-search"></i><span class="visually-hidden">' . t('Submit search') . '</span>';
+    }
   }
 }
 
