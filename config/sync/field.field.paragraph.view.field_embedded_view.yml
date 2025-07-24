@@ -30,6 +30,7 @@ settings:
     board_members: board_members
     events: events
     news: news
+    timeline: timeline
     comment: '0'
     content: '0'
     block_content: '0'
@@ -37,6 +38,7 @@ settings:
     event_categories: '0'
     files: '0'
     frontpage: '0'
+    home_landing_page_banner: '0'
     tmgmt_job_overview: '0'
     tmgmt_local_manage_translate_task: '0'
     media: '0'
