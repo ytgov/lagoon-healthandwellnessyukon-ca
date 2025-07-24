@@ -11,6 +11,7 @@ dependencies:
     - node.type.homepage
     - node.type.news
     - node.type.page
+    - node.type.timeline_event
     - taxonomy.vocabulary.board_member_roles
     - workflows.workflow.editorial
   module:
@@ -74,6 +75,7 @@ permissions:
   - 'create news content'
   - 'create page content'
   - 'create terms in board_member_roles'
+  - 'create timeline_event content'
   - 'create translation jobs'
   - 'create url aliases'
   - 'customize shortcut links'
@@ -86,6 +88,7 @@ permissions:
   - 'delete any media'
   - 'delete any news content'
   - 'delete any page content'
+  - 'delete any timeline_event content'
   - 'delete any webform submission'
   - 'delete blog revisions'
   - 'delete board_member revisions'
@@ -100,9 +103,11 @@ permissions:
   - 'delete own homepage content'
   - 'delete own news content'
   - 'delete own page content'
+  - 'delete own timeline_event content'
   - 'delete page revisions'
   - 'delete term revisions in board_member_roles'
   - 'delete terms in board_member_roles'
+  - 'delete timeline_event revisions'
   - 'delete translation jobs'
   - 'edit any blog content'
   - 'edit any board_member content'
@@ -111,12 +116,14 @@ permissions:
   - 'edit any news content'
   - 'edit any page content'
   - 'edit any social_media block content'
+  - 'edit any timeline_event content'
   - 'edit any webform submission'
   - 'edit own blog content'
   - 'edit own board_member content'
   - 'edit own homepage content'
   - 'edit own news content'
   - 'edit own page content'
+  - 'edit own timeline_event content'
   - 'edit terms in board_member_roles'
   - 'provide translation services'
   - 'revert all revisions'
@@ -128,6 +135,7 @@ permissions:
   - 'revert homepage revisions'
   - 'revert news revisions'
   - 'revert page revisions'
+  - 'revert timeline_event revisions'
   - 'skip comment approval'
   - 'submit translation jobs'
   - 'switch shortcut sets'
@@ -165,6 +173,7 @@ permissions:
   - 'view page revisions'
   - 'view term revisions in board_member_roles'
   - 'view the administration theme'
+  - 'view timeline_event revisions'
   - 'view unpublished paragraphs'
   - 'view user email addresses'
   - 'view vocabulary labels'

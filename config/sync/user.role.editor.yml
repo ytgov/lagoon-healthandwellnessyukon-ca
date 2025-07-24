@@ -9,6 +9,7 @@ dependencies:
     - node.type.homepage
     - node.type.news
     - node.type.page
+    - node.type.timeline_event
     - taxonomy.vocabulary.board_member_roles
     - workflows.workflow.editorial
   module:
@@ -47,6 +48,7 @@ permissions:
   - 'create media'
   - 'create news content'
   - 'create page content'
+  - 'create timeline_event content'
   - 'create url aliases'
   - 'delete media'
   - 'delete own files'
@@ -55,11 +57,13 @@ permissions:
   - 'edit any homepage content'
   - 'edit any news content'
   - 'edit any page content'
+  - 'edit any timeline_event content'
   - 'edit own blog content'
   - 'edit own board_member content'
   - 'edit own homepage content'
   - 'edit own news content'
   - 'edit own page content'
+  - 'edit own timeline_event content'
   - 'edit terms in board_member_roles'
   - 'skip comment approval'
   - 'switch shortcut sets'
