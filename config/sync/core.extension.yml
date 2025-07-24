@@ -98,6 +98,7 @@ module:
   simple_sitemap: 0
   simple_sitemap_engines: 0
   simple_sitemap_views: 0
+  simple_timeline: 0
   smart_date: 0
   svg_image_field: 0
   symfony_mailer: 0
