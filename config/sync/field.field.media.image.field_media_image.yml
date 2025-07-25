@@ -7,6 +7,10 @@ dependencies:
     - media.type.image
   module:
     - image
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
 _core:
   default_config_hash: sNUZNqqiK8VlajVlqBY1U53LWJ9NkhD0-TBwmfRbLPE
 id: media.image.field_media_image
@@ -24,7 +28,7 @@ settings:
   handler_settings: {  }
   file_directory: images
   file_extensions: 'png gif jpg jpeg heic'
-  max_filesize: ''
+  max_filesize: '100 MB'
   max_resolution: ''
   min_resolution: ''
   alt_field: true
