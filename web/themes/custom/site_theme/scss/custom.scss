@@ -1,3 +1,11 @@
+.btn-primary {
+  @include button-variant($btn-primary-bg-color, $btn-primary-border-color, $btn-primary-color, $btn-primary-hover-bg-color, $btn-primary-hover-border-color, $btn-primary-hover-color);
+}
+
+.btn-secondary {
+  @include button-variant($btn-secondary-bg-color, $btn-secondary-border-color, $btn-secondary-color, $btn-secondary-hover-bg-color, $btn-secondary-hover-border-color, $btn-secondary-hover-color);
+}
+
 //pattern on top of page
 #top-pattern {
   background-repeat: repeat-x;
@@ -584,10 +592,3 @@ label[for="edit-was-this-page-helpful"] {
   }
 }
 
-.btn-primary {
-  @include button-variant($btn-primary-bg-color, $btn-primary-border-color, $btn-primary-color, $btn-primary-hover-bg-color, $btn-primary-hover-border-color, $btn-primary-hover-color);
-}
-
-.btn-secondary {
-  @include button-variant($btn-secondary-bg-color, $btn-secondary-border-color, $btn-secondary-color, $btn-secondary-hover-bg-color, $btn-secondary-hover-border-color, $btn-secondary-hover-color);
-}

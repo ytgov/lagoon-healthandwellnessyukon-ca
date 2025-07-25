@@ -1329,7 +1329,7 @@ display:
           admin_label: ''
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -1395,7 +1395,7 @@ display:
           entity_field: title
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -1438,7 +1438,7 @@ display:
           click_sort_column: value
           type: string
           settings:
-            link_to_entity: true
+            link_to_entity: false
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -1694,7 +1694,7 @@ display:
           empty_zero: false
           hide_alter_empty: true
           text: 'Read more'
-          output_url_as_text: false
+          output_url_as_text: true
           absolute: false
         nothing:
           id: nothing
@@ -1708,7 +1708,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"d-flex d-align-items-start d-justify-content-start\">\r\n  {{ field_news_image }}\r\n  <div class=\"lh-normal details{% if field_news_image %} ps-4{% endif %}\">\r\n    <p>{{ field_content }}</p>\r\n    <div class=\"read-more-link\">{{ view_node }}</div>\r\n  </div>\r\n</div>"
+            text: "<span class=\"d-block display-5 news-events-title my-3 text-decoration-underline\">{{ title }}</span>\r\n<div class=\"d-flex align-items-start\">\r\n  {% if field_news_image %}\r\n  <div class=\"me-3\">\r\n    {{ field_news_image }}\r\n  </div>\r\n  {% endif %}\r\n  <div class=\"event-details flex-grow-1\">\r\n    <p class=\"fw-bold\">{{ field_date }}</p>\r\n    <p>{{ field_content }}</p>\r\n    <div class=\"text-end\"><a href=\"{{ view_node }}\" class=\"btn btn-primary rounded-pill stretched-link\"  title=\"{{ title_1}}>Read more</a></div>\r\n  </div>\r\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -1800,7 +1800,7 @@ display:
         type: default
         options:
           grouping: {  }
-          row_class: 'pb-4 mb-4 border-bottom position-relative'
+          row_class: 'mb-4 grid-block-link p-3'
           default_row_class: true
       row:
         type: fields
@@ -2295,7 +2295,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "{# The title is piped through the title function, to convert to title case, since it's entered in the back-end in many cases in all caps. #}\r\n<a href=\"{{ view_node }}\" class=\"grid-block-link d-block d-relative h-100\" title=\"{{ title_1|title }}\">\r\n  <span class=\"d-flex flex-column h-100\">\r\n    <span class=\"d-block display-5 news-events-title px-3 my-3 text-decoration-underline\">{{ title|title }}</span>\r\n    <span class=\"d-block news-events-date px-3 mt-auto mb-2\">{{ field_date }}</span>\r\n    <span class=\"d-block news-events-teaser px-3 pb-3 lh-normal\">{{ field_content }}</span>\r\n  </span>\r\n</a>"
+            text: "{# The title is piped through the title function, to convert to title case, since it's entered in the back-end in many cases in all caps. #}\r\n<a href=\"{{ view_node }}\" class=\"grid-block-link d-block d-relative h-100\">\r\n  <span class=\"d-flex flex-column h-100\">\r\n    <span class=\"d-block display-5 news-events-title px-3 my-3 text-decoration-underline\">{{ title|title }}</span>\r\n    <span class=\"d-block news-events-date px-3 mt-auto mb-2\">{{ field_date }}</span>\r\n    <span class=\"d-block news-events-teaser px-3 pb-3 lh-normal\">{{ field_content }}</span>\r\n  </span>\r\n</a>"
             make_link: false
             path: ''
             absolute: false
