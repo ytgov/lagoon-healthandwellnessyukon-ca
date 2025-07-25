@@ -54,7 +54,8 @@
         "drupal/maxlength": "^3.1",
         "spatie/color": "^1.8",
         "drupal/back_to_top": "^3.0",
-        "drupal/simple_timeline": "^2.0"
+        "drupal/simple_timeline": "^2.0",
+        "drupal/menu_admin_per_menu": "^1.7"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,

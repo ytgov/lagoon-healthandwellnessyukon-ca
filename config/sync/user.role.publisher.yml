@@ -19,6 +19,7 @@ dependencies:
     - filter
     - frontend_editing
     - media
+    - menu_admin_per_menu
     - menu_link_content
     - node
     - paragraphs
@@ -41,6 +42,8 @@ permissions:
   - 'access site in maintenance mode'
   - 'access taxonomy overview'
   - 'access toolbar'
+  - 'administer footer menu items'
+  - 'administer main menu items'
   - 'create board_member content'
   - 'create content translations'
   - 'create homepage content'

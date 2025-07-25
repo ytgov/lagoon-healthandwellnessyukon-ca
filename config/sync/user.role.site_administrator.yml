@@ -25,6 +25,7 @@ dependencies:
     - frontend_editing
     - locale
     - media
+    - menu_admin_per_menu
     - menu_link_content
     - node
     - paragraphs
@@ -59,6 +60,8 @@ permissions:
   - 'access webform overview'
   - 'access webform submission user'
   - 'administer comments'
+  - 'administer footer menu items'
+  - 'administer main menu items'
   - 'administer menu'
   - 'administer redirects'
   - 'administer taxonomy'
