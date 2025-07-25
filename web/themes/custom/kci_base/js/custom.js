@@ -145,4 +145,19 @@
     };
   })(Drupal, once);
 
+  // This behavior is for the dropdown search functionality.
+  // It grants focus to the search input when the dropdown is opened.
+  Drupal.behaviors.dropdown_search = {
+    attach: function (context, settings) {
+      once('dropdown-search', '.search-block-form', context).forEach(function (element) {
+        element.addEventListener('shown.bs.dropdown', function () {
+          var searchInput = element.querySelector('input[type="search"]');
+          if (searchInput) {
+            searchInput.focus();
+          }
+        });
+      });
+    }
+  };
+
 })(jQuery, Drupal);
