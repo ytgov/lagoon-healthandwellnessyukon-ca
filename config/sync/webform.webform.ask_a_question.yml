@@ -20,7 +20,7 @@ categories: {  }
 elements: |-
   message:
     '#type': textarea
-    '#title': Question
+    '#title': 'Comment / Question'
     '#required': true
     '#test': 'Please ignore this email.'
   actions:
@@ -137,7 +137,7 @@ settings:
   confirmation_type: message
   confirmation_url: '<front>'
   confirmation_title: ''
-  confirmation_message: '<p>Your question has been sent. &nbsp;Thank you.</p>'
+  confirmation_message: '<p>Your message has been sent. &nbsp;Thank you.</p>'
   confirmation_attributes: {  }
   confirmation_back: true
   confirmation_back_label: ''
@@ -238,7 +238,7 @@ handlers:
       return_path: ''
       sender_mail: ''
       sender_name: ''
-      subject: 'A user has a question'
+      subject: 'A user has submitted input / question'
       body: '[webform_submission:values:message:value]'
       excluded_elements: {  }
       ignore_access: false
