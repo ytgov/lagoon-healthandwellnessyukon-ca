@@ -7,7 +7,6 @@ dependencies:
     - node.type.blog
     - node.type.board_member
     - node.type.homepage
-    - node.type.news
     - node.type.page
     - node.type.timeline_event
     - taxonomy.vocabulary.board_member_roles
@@ -46,7 +45,6 @@ permissions:
   - 'create board_member content'
   - 'create homepage content'
   - 'create media'
-  - 'create news content'
   - 'create page content'
   - 'create timeline_event content'
   - 'create url aliases'
@@ -55,13 +53,11 @@ permissions:
   - 'edit any blog content'
   - 'edit any board_member content'
   - 'edit any homepage content'
-  - 'edit any news content'
   - 'edit any page content'
   - 'edit any timeline_event content'
   - 'edit own blog content'
   - 'edit own board_member content'
   - 'edit own homepage content'
-  - 'edit own news content'
   - 'edit own page content'
   - 'edit own timeline_event content'
   - 'edit terms in board_member_roles'

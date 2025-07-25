@@ -9,7 +9,6 @@ dependencies:
     - node.type.blog
     - node.type.board_member
     - node.type.homepage
-    - node.type.news
     - node.type.page
     - node.type.timeline_event
     - taxonomy.vocabulary.board_member_roles
@@ -72,7 +71,6 @@ permissions:
   - 'create content translations'
   - 'create homepage content'
   - 'create media'
-  - 'create news content'
   - 'create page content'
   - 'create terms in board_member_roles'
   - 'create timeline_event content'
@@ -86,7 +84,6 @@ permissions:
   - 'delete any file'
   - 'delete any homepage content'
   - 'delete any media'
-  - 'delete any news content'
   - 'delete any page content'
   - 'delete any timeline_event content'
   - 'delete any webform submission'
@@ -95,13 +92,11 @@ permissions:
   - 'delete content translations'
   - 'delete homepage revisions'
   - 'delete media'
-  - 'delete news revisions'
   - 'delete orphan revisions'
   - 'delete own blog content'
   - 'delete own board_member content'
   - 'delete own files'
   - 'delete own homepage content'
-  - 'delete own news content'
   - 'delete own page content'
   - 'delete own timeline_event content'
   - 'delete page revisions'
@@ -113,7 +108,6 @@ permissions:
   - 'edit any board_member content'
   - 'edit any homepage content'
   - 'edit any logos block content'
-  - 'edit any news content'
   - 'edit any page content'
   - 'edit any social_media block content'
   - 'edit any timeline_event content'
@@ -121,7 +115,6 @@ permissions:
   - 'edit own blog content'
   - 'edit own board_member content'
   - 'edit own homepage content'
-  - 'edit own news content'
   - 'edit own page content'
   - 'edit own timeline_event content'
   - 'edit terms in board_member_roles'
@@ -133,7 +126,6 @@ permissions:
   - 'revert blog revisions'
   - 'revert board_member revisions'
   - 'revert homepage revisions'
-  - 'revert news revisions'
   - 'revert page revisions'
   - 'revert timeline_event revisions'
   - 'skip comment approval'
@@ -146,7 +138,6 @@ permissions:
   - 'translate homepage node'
   - 'translate interface'
   - 'translate menu_link_content'
-  - 'translate news node'
   - 'translate page node'
   - 'update any media'
   - 'update content translations'
@@ -169,7 +160,6 @@ permissions:
   - 'view board_member revisions'
   - 'view homepage revisions'
   - 'view latest version'
-  - 'view news revisions'
   - 'view page revisions'
   - 'view term revisions in board_member_roles'
   - 'view the administration theme'
