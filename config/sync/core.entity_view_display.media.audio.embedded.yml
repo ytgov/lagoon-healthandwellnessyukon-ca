@@ -1,0 +1,68 @@
+uuid: fd59e32f-13d9-4ceb-bc4f-2944a4493d36
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.embedded
+    - field.field.media.audio.field_media_audio_file
+    - field.field.media.audio.field_media_in_library
+    - media.type.audio
+  module:
+    - field_group
+    - file
+third_party_settings:
+  field_group:
+    group_audio_wrapper:
+      children:
+        - field_media_audio_file
+        - name
+      label: 'Audio Wrapper'
+      parent_name: ''
+      region: content
+      weight: 2
+      format_type: html_element
+      format_settings:
+        classes: 'audio-wrapper mb-3 mt-3'
+        show_empty_fields: false
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+_core:
+  default_config_hash: HNYynK3vzqvRBRYG4DKtxmKfq_veWdcgNCvPXM-_wyE
+id: media.audio.embedded
+targetEntityType: media
+bundle: audio
+mode: embedded
+content:
+  field_media_audio_file:
+    type: file_audio
+    label: hidden
+    settings:
+      controls: true
+      autoplay: false
+      loop: false
+      multiple_file_display_type: tags
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  name:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  addtoany: true
+  created: true
+  field_media_in_library: true
+  langcode: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

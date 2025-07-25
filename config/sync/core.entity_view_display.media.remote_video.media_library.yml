@@ -1,0 +1,50 @@
+uuid: 6d82a05d-79c7-4d6a-a1c9-d62ffaffdc5a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.media_library
+    - field.field.media.remote_video.field_media_in_library
+    - field.field.media.remote_video.field_media_oembed_video
+    - image.style.media_library
+    - media.type.remote_video
+  module:
+    - fences
+    - image
+_core:
+  default_config_hash: e65xhZZmLk4zYV8wys5_oOV0Cylm1apPypAPHAc_Kh4
+id: media.remote_video.media_library
+targetEntityType: media
+bundle: remote_video
+mode: media_library
+content:
+  thumbnail:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: media_library
+      image_loading:
+        attribute: lazy
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    weight: 0
+    region: content
+hidden:
+  addtoany: true
+  created: true
+  field_media_in_library: true
+  field_media_oembed_video: true
+  field_media_video_embed_field: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  uid: true
