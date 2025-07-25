@@ -1,0 +1,29 @@
+uuid: b6bc5065-b4c4-4617-bf9d-5f56ffe12d89
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_audio_file
+    - media.type.audio
+    - paragraphs.paragraphs_type.embedded_audio
+id: paragraph.embedded_audio.field_audio_file
+field_name: field_audio_file
+entity_type: paragraph
+bundle: embedded_audio
+label: 'Audio File'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      audio: audio
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -9,11 +9,6 @@ dependencies:
     - media.type.video
   module:
     - file
-    - layout_builder
-third_party_settings:
-  layout_builder:
-    enabled: false
-    allow_custom: false
 _core:
   default_config_hash: B0ANV2Lr6jbN_jG3d1fOunBaCEQ9rbL_EVGOUjKImP0
 id: media.video.page_banner

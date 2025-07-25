@@ -1,0 +1,28 @@
+uuid: 4e8940e9-ee79-456c-a43f-71ed43297c04
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.embedded_audio.field_audio_file
+    - field.field.paragraph.embedded_audio.field_heading
+    - paragraphs.paragraphs_type.embedded_audio
+  module:
+    - options
+id: paragraph.embedded_audio.preview
+targetEntityType: paragraph
+bundle: embedded_audio
+mode: preview
+content:
+  field_audio_file:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: embedded
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_heading: true
+  search_api_excerpt: true
