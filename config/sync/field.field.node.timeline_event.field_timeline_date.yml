@@ -7,12 +7,16 @@ dependencies:
     - node.type.timeline_event
   module:
     - datetime
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
 id: node.timeline_event.field_timeline_date
 field_name: field_timeline_date
 entity_type: node
 bundle: timeline_event
 label: Date
-description: ''
+description: 'The date is used to place the milestone on the timeline.  It is not otherwise displayed on the page. '
 required: true
 translatable: false
 default_value: {  }
