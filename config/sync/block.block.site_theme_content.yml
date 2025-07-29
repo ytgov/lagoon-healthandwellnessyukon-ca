@@ -11,7 +11,7 @@ _core:
 id: site_theme_content
 theme: site_theme
 region: content
-weight: -3
+weight: -7
 provider: null
 plugin: system_main_block
 settings:

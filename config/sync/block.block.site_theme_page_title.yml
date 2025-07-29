@@ -9,7 +9,7 @@ _core:
 id: site_theme_page_title
 theme: site_theme
 region: content
-weight: -8
+weight: -12
 provider: null
 plugin: page_title_block
 settings:

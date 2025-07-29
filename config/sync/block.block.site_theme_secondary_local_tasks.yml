@@ -8,8 +8,8 @@ _core:
   default_config_hash: ydSxdq7R66I8UMC460rOzlfzvlUL4VRbdwc6z9DWaUI
 id: site_theme_secondary_local_tasks
 theme: site_theme
-region: highlighted
-weight: -2
+region: content
+weight: -10
 provider: null
 plugin: local_tasks_block
 settings:
