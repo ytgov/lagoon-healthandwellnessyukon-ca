@@ -62,7 +62,6 @@ permissions:
   - 'administer comments'
   - 'administer footer menu items'
   - 'administer main menu items'
-  - 'administer menu'
   - 'administer redirects'
   - 'administer taxonomy'
   - 'administer translation tasks'
