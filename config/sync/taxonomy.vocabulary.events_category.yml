@@ -4,8 +4,8 @@ status: true
 dependencies: {  }
 _core:
   default_config_hash: rIwz5pJrW5hMmGGczNvlER4X_maXXMeciuw3qkHBWcw
-name: 'Event Categories'
+name: 'Engagement / Event Categories'
 vid: events_category
-description: 'Creates categories for events content type'
+description: 'Creates categories for the events content type'
 weight: 0
 new_revision: false
