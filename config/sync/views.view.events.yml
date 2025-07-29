@@ -2384,7 +2384,7 @@ display:
           exposed: true
           expose:
             operator_id: field_event_type_target_id_op
-            label: 'Event Type'
+            label: Category
             description: ''
             use_operator: false
             operator: field_event_type_target_id_op
