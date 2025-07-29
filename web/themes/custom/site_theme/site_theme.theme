@@ -9,6 +9,7 @@ declare(strict_types=1);
 
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Datetime\DrupalDateTime;
+use Drupal\Core\Render\Markup;
 use Spatie\Color\Contrast;
 use Spatie\Color\Hex;
 use Spatie\Color\Rgb;
@@ -314,14 +315,26 @@ function site_theme_preprocess_links(&$variables) {
 }
 
 /**
+ * Implements hook_form_alter().
+ */
+function site_theme_form_alter (&$form, FormStateInterface $form_state, $form_id) {
+  if ($form_id == 'search_form' || $form_id == 'search_block_form') {
+    if(!empty($form['actions'])) {
+      $form['actions']['submit']['#is_search_submit'] = TRUE;
+    }
+    if (!empty($form['basic'])) {
+      $form['basic']['submit']['#is_search_submit'] = TRUE;
+    }
+  }
+}
+
+/**
  * Implements template_preprocess_input().
  */
 function site_theme_preprocess_input(&$variables) {
-  if (!empty($variables['element']['#id']) && substr($variables['element']['#id'], 0, 18) == 'edit-submit') {
-    if (!empty($variables['element']['#value']) && $variables['element']['#value']->getUntranslatedString() == 'Search') {
-      $variables['attributes']->addClass('search-form-submit-button');
-      $variables['safe_value_label'] = '<i class="fas fa-search"></i><span class="visually-hidden">' . t('Submit search') . '</span>';
-    }
+  if (!empty($variables['element']['#is_search_submit'])) {
+    $variables['safe_value_label'] = '<i class="fas fa-search"></i><span class="visually-hidden">' . t('Submit search') . '</span>';
+    $variables['attributes']->addClass('search-form-submit-button');
   }
 }
 
