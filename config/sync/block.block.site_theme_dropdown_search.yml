@@ -3,9 +3,13 @@ langcode: en
 status: true
 dependencies:
   module:
+    - block_classes
     - search
   theme:
     - site_theme
+third_party_settings:
+  block_classes:
+    block_class: 'd-none d-lg-block'
 id: site_theme_dropdown_search
 theme: site_theme
 region: top_nav

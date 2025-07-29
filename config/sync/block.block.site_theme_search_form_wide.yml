@@ -1,11 +1,16 @@
 uuid: 4d9c22b9-8b6d-45fb-9994-a077d7688e78
 langcode: en
-status: false
+status: true
 dependencies:
   module:
+    - block_classes
     - search
   theme:
     - site_theme
+third_party_settings:
+  block_classes:
+    content_class: w-100
+    block_class: 'd-block d-lg-none'
 _core:
   default_config_hash: imMyHD6LYci0gtXq56qr9ZKGHzbEG9uFydrN5EhKtSU
 id: site_theme_search_form_wide
