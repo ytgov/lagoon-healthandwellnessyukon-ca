@@ -9,7 +9,6 @@ declare(strict_types=1);
 
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Datetime\DrupalDateTime;
-use Drupal\Core\Render\Markup;
 use Spatie\Color\Contrast;
 use Spatie\Color\Hex;
 use Spatie\Color\Rgb;
