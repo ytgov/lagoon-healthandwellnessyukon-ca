@@ -34,6 +34,7 @@ dependencies:
     - paragraphs
     - path
     - redirect
+    - role_delegation
     - shortcut
     - system
     - taxonomy
@@ -71,6 +72,9 @@ permissions:
   - 'administer url aliases'
   - 'administer users'
   - 'administer webform submission'
+  - 'assign editor role'
+  - 'assign publisher role'
+  - 'assign site_administrator role'
   - 'create blog content'
   - 'create board_member content'
   - 'create content translations'

@@ -5,6 +5,8 @@ display:
       fields:
         name:
           label: "Nom d'utilisateur"
+        roles_target_id:
+          label: Rôles
         operations:
           label: Actions
       pager:

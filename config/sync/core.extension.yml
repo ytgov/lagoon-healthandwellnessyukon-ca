@@ -92,6 +92,7 @@ module:
   redirect_404: 0
   redirect_domain: 0
   responsive_image: 0
+  role_delegation: 0
   search: 0
   shortcut: 0
   simple_gmap: 0
