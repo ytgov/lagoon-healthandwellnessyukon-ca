@@ -1708,7 +1708,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"d-flex align-items-start\">\r\n  {% if field_news_image %}\r\n  <div class=\"me-3\">\r\n    {{ field_news_image }}\r\n  </div>\r\n  {% endif %}\r\n  <div class=\"event-details flex-grow-1\">\r\n    <div class=\"display-5 news-events-title my-3 text-decoration-underline\">{{ title }}</div>\r\n    <p class=\"fw-bold\">{{ field_date }}</p>\r\n    <p>{{ field_content }}</p>\r\n    <div class=\"text-end\"><a href=\"{{ view_node }}\" class=\"btn btn-primary rounded-pill stretched-link\"  title=\"{{ title_1}}>Read more</a></div>\r\n  </div>\r\n</div>"
+            text: "<div class=\"d-flex align-items-start flex-wrap flex-lg-nowrap\">\r\n  {% if field_news_image %}\r\n  <div class=\"me-3\">\r\n    {{ field_news_image }}\r\n  </div>\r\n  {% endif %}\r\n  <div class=\"event-details flex-grow-1\">\r\n    <div class=\"display-5 news-events-title my-3 text-decoration-underline\">{{ title }}</div>\r\n    <p class=\"fw-bold\">{{ field_date }}</p>\r\n    <p>{{ field_content }}</p>\r\n    <div class=\"text-end\"><a href=\"{{ view_node }}\" class=\"btn btn-primary rounded-pill stretched-link\"  title=\"{{ title_1}}>Read more</a></div>\r\n  </div>\r\n</div>"
             make_link: false
             path: ''
             absolute: false
