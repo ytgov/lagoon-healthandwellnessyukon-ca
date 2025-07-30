@@ -350,6 +350,20 @@ function site_theme_preprocess_paragraph_cta_background_image(&$variables) {
 }
 
 /**
+ * Preprocess function for the card paragraph type.
+ */
+function site_theme_preprocess_paragraph_card(&$variables) {
+  $paragraph = $variables['paragraph'];
+  $parent = $paragraph->getParentEntity();
+
+  // Check if the parent is of type 'node'.
+  if ($parent->getEntityTypeId() === 'node') {
+    $variables['stand_alone'] = TRUE;
+  }
+
+}
+
+/**
  * Implements template_preprocess_comment.
  */
 function site_theme_preprocess_comment(&$variables) {
