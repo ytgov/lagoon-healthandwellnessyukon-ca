@@ -15,7 +15,9 @@
       // Check if the device is a touch device.
       // If it is a desktop, add hover functionality to the dropdowns.
       const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
-      if (!isTouchDevice) {
+      const isLargeScreen = window.matchMedia('(min-width: 992px)').matches;
+
+      if (!isTouchDevice && isLargeScreen) {
         // Add hover event listeners to dropdowns in the main navigation.
         const dropdowns = document.querySelectorAll('#navbar-main .dropdown');
         dropdowns.forEach(dropdown => {
