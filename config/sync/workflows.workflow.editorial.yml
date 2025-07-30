@@ -27,6 +27,11 @@ type_settings:
       weight: -2
       published: false
       default_revision: false
+    needs_translation:
+      label: 'Needs Translation'
+      weight: 2
+      published: true
+      default_revision: true
     published:
       label: Published
       weight: 0
@@ -51,6 +56,15 @@ type_settings:
         - published
       to: draft
       weight: -2
+    needs_translation:
+      label: 'Needs Translation'
+      from:
+        - draft
+        - needs_translation
+        - published
+        - ready_for_review
+      to: needs_translation
+      weight: 4
     publish:
       label: Publish
       from:

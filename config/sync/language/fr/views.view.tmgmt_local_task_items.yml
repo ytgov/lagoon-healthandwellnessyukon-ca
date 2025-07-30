@@ -14,6 +14,8 @@ display:
             items_per_page_options_all_label: '- Tout -'
             offset_label: Décalage
       fields:
+        status:
+          label: État
         label:
           label: Libellé
         item_type:

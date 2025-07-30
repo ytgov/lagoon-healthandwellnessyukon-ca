@@ -5,6 +5,8 @@ display:
       fields:
         filename:
           label: Nom
+        status:
+          label: État
         count:
           label: 'Utilisé dans'
         operations:
@@ -20,6 +22,10 @@ display:
           submit_button: Filtrer
           reset_button_label: Réinitialiser
           exposed_sorts_label: 'Trier par'
+      filters:
+        status:
+          expose:
+            label: État
   page_2:
     display_options:
       fields:

@@ -5,6 +5,8 @@ display:
     display_options:
       title: Commentaires
       fields:
+        subject:
+          label: Objet
         name:
           label: Auteur
         operations:
@@ -26,6 +28,9 @@ display:
           reset_button_label: Réinitialiser
           exposed_sorts_label: 'Trier par'
       filters:
+        subject:
+          expose:
+            label: Objet
         combine:
           expose:
             label: "Nom de l'auteur"
@@ -39,11 +44,16 @@ display:
   page_unapproved:
     display_options:
       fields:
+        subject:
+          label: Objet
         name:
           label: Auteur
         operations:
           label: Actions
       filters:
+        subject:
+          expose:
+            label: Objet
         langcode:
           expose:
             label: Langue

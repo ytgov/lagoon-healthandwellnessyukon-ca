@@ -10,6 +10,7 @@ display:
         uid:
           label: Auteur
         status:
+          label: État
           settings:
             format_custom_true: Publié
         operations:

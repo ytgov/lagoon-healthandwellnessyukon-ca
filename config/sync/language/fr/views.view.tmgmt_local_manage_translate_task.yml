@@ -23,6 +23,8 @@ display:
       fields:
         tmgmt_local_task_bulk_form:
           action_title: 'Pour la sélection'
+        status:
+          label: État
         title:
           label: Titre
         operations:
@@ -42,6 +44,8 @@ display:
       fields:
         tmgmt_local_task_bulk_form:
           action_title: 'Pour la sélection'
+        status:
+          label: État
         created:
           label: Créé
         title:
@@ -60,6 +64,8 @@ display:
       fields:
         tmgmt_local_task_bulk_form:
           action_title: 'Pour la sélection'
+        status:
+          label: État
         created:
           label: Créé
         title:
@@ -78,6 +84,8 @@ display:
       fields:
         tmgmt_local_task_bulk_form:
           action_title: 'Pour la sélection'
+        status:
+          label: État
         title:
           label: Titre
         operations:
@@ -94,6 +102,8 @@ display:
       fields:
         tmgmt_local_task_bulk_form:
           action_title: 'Pour la sélection'
+        status:
+          label: État
         created:
           label: Créé
         title:
@@ -112,6 +122,8 @@ display:
       fields:
         tmgmt_local_task_bulk_form:
           action_title: 'Pour la sélection'
+        status:
+          label: État
         title:
           label: Titre
         operations:

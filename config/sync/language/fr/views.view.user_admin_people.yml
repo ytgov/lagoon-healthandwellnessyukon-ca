@@ -5,6 +5,8 @@ display:
       fields:
         name:
           label: "Nom d'utilisateur"
+        status:
+          label: État
         roles_target_id:
           label: Rôles
         operations:
@@ -20,6 +22,10 @@ display:
           submit_button: Filtrer
           reset_button_label: Réinitialiser
           exposed_sorts_label: 'Trier par'
+      filters:
+        status:
+          group_info:
+            label: État
   page_1:
     display_options:
       menu:

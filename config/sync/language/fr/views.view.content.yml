@@ -12,6 +12,7 @@ display:
         name:
           label: Auteur
         status:
+          label: État
           settings:
             format_custom_true: Publié
         langcode:
@@ -31,6 +32,8 @@ display:
           expose:
             label: 'Type de contenu'
         status:
+          expose:
+            label: État
           group_info:
             group_items:
               1:

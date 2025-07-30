@@ -18,16 +18,25 @@ display:
           action_title: 'Pour la sélection'
         title:
           label: Libellé
+      filters:
+        status:
+          expose:
+            label: État
   closed:
     display_options:
       fields:
         tmgmt_local_task_bulk_form:
           action_title: 'Pour la sélection'
+        status:
+          label: État
         title:
           label: Libellé
         operations:
           label: Actions
       filters:
+        status:
+          expose:
+            label: État
         title:
           expose:
             label: Libellé
@@ -38,11 +47,16 @@ display:
       fields:
         tmgmt_local_task_bulk_form:
           action_title: 'Pour la sélection'
+        status:
+          label: État
         title:
           label: Libellé
         operations:
           label: Actions
       filters:
+        status:
+          expose:
+            label: État
         title:
           expose:
             label: Libellé
@@ -51,11 +65,16 @@ display:
       fields:
         tmgmt_local_task_bulk_form:
           action_title: 'Pour la sélection'
+        status:
+          label: État
         title:
           label: Libellé
         operations:
           label: Actions
       filters:
+        status:
+          expose:
+            label: État
         title:
           expose:
             label: Libellé
@@ -64,11 +83,16 @@ display:
       fields:
         tmgmt_local_task_bulk_form:
           action_title: 'Pour la sélection'
+        status:
+          label: État
         title:
           label: Libellé
         operations:
           label: Actions
       filters:
+        status:
+          expose:
+            label: État
         title:
           expose:
             label: Libellé
@@ -77,11 +101,16 @@ display:
       fields:
         tmgmt_local_task_bulk_form:
           action_title: 'Pour la sélection'
+        status:
+          label: État
         title:
           label: Libellé
         operations:
           label: Actions
       filters:
+        status:
+          expose:
+            label: État
         title:
           expose:
             label: Libellé
@@ -90,11 +119,16 @@ display:
       fields:
         tmgmt_local_task_bulk_form:
           action_title: 'Pour la sélection'
+        status:
+          label: État
         title:
           label: Libellé
         operations:
           label: Actions
       filters:
+        status:
+          expose:
+            label: État
         title:
           expose:
             label: Libellé
@@ -103,7 +137,13 @@ display:
       fields:
         tmgmt_local_task_bulk_form:
           action_title: 'Pour la sélection'
+        status:
+          label: État
         title:
           label: Libellé
         operations:
           label: Actions
+      filters:
+        status:
+          expose:
+            label: État
