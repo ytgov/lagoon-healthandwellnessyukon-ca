@@ -467,25 +467,6 @@ label[for="edit-was-this-page-helpful"] {
   }
 }
 
-.paragraph--type--small-card {
-
-  &.small-card-wrapper,
-  .small-card-wrapper {
-    background-color: $primary-shade;
-    color: $white;
-    padding: 1.5rem;
-    text-align: center;
-    @include font-size($small-card-font-size);
-    display: flex;
-    align-items: center;
-    height: 100%;
-  }
-
-  .small-card-wrapper:hover {
-    text-decoration: none;
-  }
-}
-
 .card {
   .row & {
     height: 100%;
@@ -506,6 +487,12 @@ label[for="edit-was-this-page-helpful"] {
 
   .card-body:has(.stretched-link:focus-visible) {
     outline: 2px solid black
+  }
+
+  a.card-link {
+    &:hover {
+      box-shadow: $grid-block-hover-box-shadow;
+    }
   }
 }
 
@@ -592,4 +579,3 @@ label[for="edit-was-this-page-helpful"] {
     }
   }
 }
-
