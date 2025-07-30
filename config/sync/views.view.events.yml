@@ -10,6 +10,7 @@ dependencies:
     - field.storage.node.field_sharing_thumbnail
     - field.storage.taxonomy_term.field_category_colour
     - image.style.news_events_thumbnail
+    - image.style.square_library_thumbnail
     - node.type.events
     - taxonomy.vocabulary.communities
     - taxonomy.vocabulary.events_category
@@ -1879,7 +1880,7 @@ display:
           type: media_thumbnail
           settings:
             image_link: ''
-            image_style: news_events_thumbnail
+            image_style: square_library_thumbnail
             image_loading:
               attribute: lazy
           group_column: target_id
@@ -2160,7 +2161,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"event-item-wrapper d-flex flex-column gap-3 p-3 rounded-4 position-relative\">\r\n  <a href=\"{{ view_node }}\" class=\"position-absolute w-100 h-100 top-0 start-0\"></a>\r\n  <span class=\"event-link d-flex align-items-start gap-3\">\r\n    {% if field_sharing_thumbnail %}\r\n      <span class=\"event-thumbnail\">\r\n        {{ field_sharing_thumbnail }}\r\n      </span>\r\n    {% endif %}\r\n    <span class=\"event-details text-center flex-grow-1\">\r\n       {{ field_category_colour  }}\r\n      <span class=\"d-block mb-2 event-title fw-bold\">{{ title }}</span>\r\n      <span class=\"d-block event-date small\">{{ field_event_date }}</span>\r\n    </span>\r\n  </span>\r\n  <div class=\"event-content rounded-4 bg-white p-2\">\r\n    {{ field_content }}\r\n  </div>\r\n</div>"
+            text: "<div class=\"event-item-wrapper d-flex flex-column gap-3 p-3 rounded-4 position-relative\">\r\n  <a href=\"{{ view_node }}\" class=\"position-absolute w-100 h-100 top-0 start-0\"></a>\r\n  <span class=\"event-link d-flex align-items-start gap-3\">\r\n    {% if field_sharing_thumbnail %}\r\n      <span class=\"event-thumbnail rounded-3 overflow-hidden\">\r\n        {{ field_sharing_thumbnail }}\r\n      </span>\r\n    {% endif %}\r\n    <span class=\"event-details text-center flex-grow-1\">\r\n       {{ field_category_colour  }}\r\n      <span class=\"d-block mb-2 event-title fw-bold\">{{ title }}</span>\r\n      <span class=\"d-block event-date small\">{{ field_event_date }}</span>\r\n    </span>\r\n  </span>\r\n  <div class=\"event-content rounded-4 bg-white p-2\">\r\n    {{ field_content }}\r\n  </div>\r\n</div>"
             make_link: false
             path: ''
             absolute: false
