@@ -12,23 +12,28 @@ dependencies:
     - node.type.page
     - node.type.timeline_event
     - taxonomy.vocabulary.board_member_roles
+    - taxonomy.vocabulary.communities
+    - taxonomy.vocabulary.cta_colour_options
+    - taxonomy.vocabulary.events_category
     - workflows.workflow.editorial
   module:
     - content_moderation
     - content_translation
     - contextual
+    - draggableviews
+    - dropzonejs
     - file
     - filter
     - frontend_editing
     - media
     - menu_admin_per_menu
-    - menu_link_content
     - node
     - paragraphs
     - path
     - shortcut
     - system
     - taxonomy
+    - tmgmt
     - toolbar
 id: publisher
 label: Publisher
@@ -38,14 +43,17 @@ permissions:
   - 'access administration pages'
   - 'access content overview'
   - 'access contextual links'
+  - 'access draggableviews'
   - 'access files overview'
   - 'access frontend editing'
   - 'access media overview'
   - 'access site in maintenance mode'
   - 'access taxonomy overview'
   - 'access toolbar'
+  - 'add paragraphs'
   - 'administer footer menu items'
   - 'administer main menu items'
+  - 'administer taxonomy'
   - 'create blog content'
   - 'create board_member content'
   - 'create content translations'
@@ -54,12 +62,17 @@ permissions:
   - 'create news content'
   - 'create page content'
   - 'create terms in board_member_roles'
+  - 'create terms in communities'
+  - 'create terms in cta_colour_options'
+  - 'create terms in events_category'
   - 'create timeline_event content'
+  - 'create translation jobs'
   - 'create url aliases'
   - 'delete any media'
   - 'delete content translations'
   - 'delete media'
   - 'delete own files'
+  - 'dropzone upload files'
   - 'edit any blog content'
   - 'edit any board_member content'
   - 'edit any events content'
@@ -75,22 +88,29 @@ permissions:
   - 'edit own page content'
   - 'edit own timeline_event content'
   - 'edit terms in board_member_roles'
+  - 'edit terms in communities'
+  - 'edit terms in cta_colour_options'
+  - 'edit terms in events_category'
+  - 'move paragraphs'
   - 'revert blog revisions'
   - 'revert board_member revisions'
   - 'revert events revisions'
   - 'revert news revisions'
   - 'revert page revisions'
   - 'revert term revisions in board_member_roles'
+  - 'revert term revisions in communities'
+  - 'revert term revisions in cta_colour_options'
+  - 'revert term revisions in events_category'
   - 'revert timeline_event revisions'
+  - 'submit translation jobs'
   - 'switch shortcut sets'
-  - 'translate any entity'
   - 'translate editable entities'
-  - 'translate menu_link_content'
   - 'update any media'
   - 'update content translations'
   - 'update media'
   - 'use editorial transition archive'
   - 'use editorial transition create_new_draft'
+  - 'use editorial transition needs_translation'
   - 'use editorial transition publish'
   - 'use editorial transition restore'
   - 'use editorial transition restore_to_draft'
@@ -107,6 +127,9 @@ permissions:
   - 'view news revisions'
   - 'view page revisions'
   - 'view term revisions in board_member_roles'
+  - 'view term revisions in communities'
+  - 'view term revisions in cta_colour_options'
+  - 'view term revisions in events_category'
   - 'view the administration theme'
   - 'view timeline_event revisions'
   - 'view unpublished paragraphs'

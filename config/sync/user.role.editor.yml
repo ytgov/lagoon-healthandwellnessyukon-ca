@@ -12,14 +12,18 @@ dependencies:
     - node.type.page
     - node.type.timeline_event
     - taxonomy.vocabulary.board_member_roles
+    - taxonomy.vocabulary.communities
+    - taxonomy.vocabulary.cta_colour_options
+    - taxonomy.vocabulary.events_category
     - workflows.workflow.editorial
   module:
     - comment
     - content_moderation
     - contextual
+    - draggableviews
+    - dropzonejs
     - file
     - filter
-    - frontend_editing
     - media
     - node
     - paragraphs
@@ -36,13 +40,14 @@ permissions:
   - 'access administration pages'
   - 'access content overview'
   - 'access contextual links'
+  - 'access draggableviews'
   - 'access files overview'
-  - 'access frontend editing'
   - 'access media overview'
   - 'access shortcuts'
   - 'access site in maintenance mode'
   - 'access taxonomy overview'
   - 'access toolbar'
+  - 'administer taxonomy'
   - 'create blog content'
   - 'create board_member content'
   - 'create events content'
@@ -53,6 +58,7 @@ permissions:
   - 'create url aliases'
   - 'delete media'
   - 'delete own files'
+  - 'dropzone upload files'
   - 'edit any blog content'
   - 'edit any board_member content'
   - 'edit any events content'
@@ -68,11 +74,15 @@ permissions:
   - 'edit own page content'
   - 'edit own timeline_event content'
   - 'edit terms in board_member_roles'
+  - 'edit terms in communities'
+  - 'edit terms in cta_colour_options'
+  - 'edit terms in events_category'
   - 'skip comment approval'
   - 'switch shortcut sets'
   - 'update media'
   - 'use editorial transition archive'
   - 'use editorial transition create_new_draft'
+  - 'use editorial transition needs_translation'
   - 'use editorial transition restore_to_draft'
   - 'use editorial transition review'
   - 'use text format rich_text'

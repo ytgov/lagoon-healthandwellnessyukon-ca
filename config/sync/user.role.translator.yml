@@ -12,11 +12,15 @@ dependencies:
     - node.type.page
     - node.type.timeline_event
     - taxonomy.vocabulary.board_member_roles
+    - taxonomy.vocabulary.communities
+    - taxonomy.vocabulary.events_category
     - workflows.workflow.editorial
   module:
+    - block_content
     - content_moderation
     - content_translation
     - contextual
+    - dropzonejs
     - file
     - filter
     - locale
@@ -36,6 +40,7 @@ label: Translator
 weight: -7
 is_admin: null
 permissions:
+  - 'accept translation jobs'
   - 'access administration pages'
   - 'access content overview'
   - 'access contextual links'
@@ -45,6 +50,7 @@ permissions:
   - 'access site in maintenance mode'
   - 'access taxonomy overview'
   - 'access toolbar'
+  - 'administer taxonomy'
   - 'create content translations'
   - 'create media'
   - 'create translation jobs'
@@ -53,24 +59,30 @@ permissions:
   - 'delete media'
   - 'delete own files'
   - 'delete translation jobs'
+  - 'dropzone upload files'
   - 'provide translation services'
   - 'submit translation jobs'
   - 'switch shortcut sets'
   - 'translate any entity'
+  - 'translate block_content'
   - 'translate blog node'
   - 'translate board_member node'
   - 'translate board_member_roles taxonomy_term'
+  - 'translate communities taxonomy_term'
   - 'translate editable entities'
   - 'translate events node'
+  - 'translate events_category taxonomy_term'
   - 'translate homepage node'
   - 'translate interface'
   - 'translate menu_link_content'
   - 'translate news node'
   - 'translate page node'
+  - 'translate paragraph'
   - 'translate timeline_event node'
   - 'update content translations'
   - 'update media'
   - 'use editorial transition create_new_draft'
+  - 'use editorial transition needs_translation'
   - 'use editorial transition publish'
   - 'use editorial transition review'
   - 'use text format rich_text'
