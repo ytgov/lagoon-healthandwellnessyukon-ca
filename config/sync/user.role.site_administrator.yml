@@ -69,6 +69,7 @@ permissions:
   - 'administer taxonomy'
   - 'administer translation tasks'
   - 'administer url aliases'
+  - 'administer users'
   - 'administer webform submission'
   - 'create blog content'
   - 'create board_member content'
