@@ -195,7 +195,6 @@ ul.nav {
   // Search bar on the search page.
   &#search-form--2 {
     .js-form-wrapper {
-      position: relative;
 
       .form-item-keys {
         width: 100%;
@@ -231,6 +230,9 @@ ul.nav {
       }
     }
   }
+}
+#block-site-theme-content #search-form--2 {
+  position: relative;
 }
 
 .yes-no-trigger-wrapper {
