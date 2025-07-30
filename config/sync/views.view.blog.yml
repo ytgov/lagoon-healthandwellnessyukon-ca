@@ -2394,7 +2394,7 @@ display:
           grouping: {  }
           row_class: mb-4
           default_row_class: true
-          grid_class: gx-6
+          grid_class: gx-md-6
           col_xs: none
           col_sm: none
           col_md: none

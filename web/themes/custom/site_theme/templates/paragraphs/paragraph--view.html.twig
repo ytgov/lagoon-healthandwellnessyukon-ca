@@ -51,7 +51,7 @@
   <div{{attributes.addClass(classes)}}>
     {% block content %}
       {% if landing_page_paragraph %}
-        <div class='container px-0'>
+        <div class='container px-md-0'>
         {% endif %}
         {{ content|without('contextual_links') }}
         {% if landing_page_paragraph %}
