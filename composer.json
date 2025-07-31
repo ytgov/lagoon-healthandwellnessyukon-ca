@@ -57,7 +57,8 @@
         "drupal/simple_timeline": "^2.0",
         "drupal/menu_admin_per_menu": "^1.7",
         "drupal/role_delegation": "^1.4",
-        "drupal/content_moderation_notifications": "^3.7"
+        "drupal/content_moderation_notifications": "^3.7",
+        "drupal/editor_advanced_link": "^2.3"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
