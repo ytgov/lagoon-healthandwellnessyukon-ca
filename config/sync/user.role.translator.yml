@@ -8,7 +8,6 @@ dependencies:
     - node.type.board_member
     - node.type.events
     - node.type.homepage
-    - node.type.news
     - node.type.page
     - node.type.timeline_event
     - taxonomy.vocabulary.board_member_roles
@@ -75,7 +74,6 @@ permissions:
   - 'translate homepage node'
   - 'translate interface'
   - 'translate menu_link_content'
-  - 'translate news node'
   - 'translate page node'
   - 'translate paragraph'
   - 'translate timeline_event node'

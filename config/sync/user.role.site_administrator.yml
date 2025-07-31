@@ -11,7 +11,6 @@ dependencies:
     - node.type.board_member
     - node.type.events
     - node.type.homepage
-    - node.type.news
     - node.type.page
     - node.type.timeline_event
     - taxonomy.vocabulary.board_member_roles
@@ -90,7 +89,6 @@ permissions:
   - 'create content translations'
   - 'create events content'
   - 'create media'
-  - 'create news content'
   - 'create page content'
   - 'create terms in board_member_roles'
   - 'create terms in communities'
@@ -107,7 +105,6 @@ permissions:
   - 'delete any events content'
   - 'delete any file'
   - 'delete any media'
-  - 'delete any news content'
   - 'delete any page content'
   - 'delete any timeline_event content'
   - 'delete any webform submission'
@@ -116,13 +113,11 @@ permissions:
   - 'delete content translations'
   - 'delete events revisions'
   - 'delete media'
-  - 'delete news revisions'
   - 'delete orphan revisions'
   - 'delete own blog content'
   - 'delete own board_member content'
   - 'delete own events content'
   - 'delete own files'
-  - 'delete own news content'
   - 'delete own page content'
   - 'delete own timeline_event content'
   - 'delete page revisions'
@@ -142,7 +137,6 @@ permissions:
   - 'edit any events content'
   - 'edit any homepage content'
   - 'edit any logos block content'
-  - 'edit any news content'
   - 'edit any page content'
   - 'edit any social_media block content'
   - 'edit any text block content'
@@ -152,7 +146,6 @@ permissions:
   - 'edit own board_member content'
   - 'edit own events content'
   - 'edit own homepage content'
-  - 'edit own news content'
   - 'edit own page content'
   - 'edit own timeline_event content'
   - 'edit terms in board_member_roles'
@@ -170,7 +163,6 @@ permissions:
   - 'revert board_member revisions'
   - 'revert events revisions'
   - 'revert homepage revisions'
-  - 'revert news revisions'
   - 'revert page revisions'
   - 'revert term revisions in board_member_roles'
   - 'revert term revisions in communities'
@@ -192,7 +184,6 @@ permissions:
   - 'translate homepage node'
   - 'translate interface'
   - 'translate menu_link_content'
-  - 'translate news node'
   - 'translate page node'
   - 'translate paragraph'
   - 'translate timeline_event node'
@@ -220,7 +211,6 @@ permissions:
   - 'view events revisions'
   - 'view homepage revisions'
   - 'view latest version'
-  - 'view news revisions'
   - 'view page revisions'
   - 'view term revisions in board_member_roles'
   - 'view term revisions in communities'

@@ -8,7 +8,6 @@ dependencies:
     - node.type.board_member
     - node.type.events
     - node.type.homepage
-    - node.type.news
     - node.type.page
     - node.type.timeline_event
     - taxonomy.vocabulary.board_member_roles
@@ -59,7 +58,6 @@ permissions:
   - 'create content translations'
   - 'create events content'
   - 'create media'
-  - 'create news content'
   - 'create page content'
   - 'create terms in board_member_roles'
   - 'create terms in communities'
@@ -77,14 +75,12 @@ permissions:
   - 'edit any board_member content'
   - 'edit any events content'
   - 'edit any homepage content'
-  - 'edit any news content'
   - 'edit any page content'
   - 'edit any timeline_event content'
   - 'edit own blog content'
   - 'edit own board_member content'
   - 'edit own events content'
   - 'edit own homepage content'
-  - 'edit own news content'
   - 'edit own page content'
   - 'edit own timeline_event content'
   - 'edit terms in board_member_roles'
@@ -95,7 +91,6 @@ permissions:
   - 'revert blog revisions'
   - 'revert board_member revisions'
   - 'revert events revisions'
-  - 'revert news revisions'
   - 'revert page revisions'
   - 'revert term revisions in board_member_roles'
   - 'revert term revisions in communities'
@@ -124,7 +119,6 @@ permissions:
   - 'view board_member revisions'
   - 'view events revisions'
   - 'view latest version'
-  - 'view news revisions'
   - 'view page revisions'
   - 'view term revisions in board_member_roles'
   - 'view term revisions in communities'
