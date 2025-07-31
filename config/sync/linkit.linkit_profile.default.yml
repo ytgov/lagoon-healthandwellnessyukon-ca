@@ -25,3 +25,14 @@ matchers:
       limit: 100
       include_unpublished: false
     weight: 0
+  748a7096-df75-49eb-80af-18eaf6ffe86d:
+    id: 'entity:media'
+    uuid: 748a7096-df75-49eb-80af-18eaf6ffe86d
+    settings:
+      metadata: ''
+      bundles:
+        document: document
+      group_by_bundle: true
+      substitution_type: media
+      limit: 100
+    weight: 0
