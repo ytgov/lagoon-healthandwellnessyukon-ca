@@ -438,7 +438,7 @@ label[for="edit-was-this-page-helpful"] {
     a.photoswipe {
       height: 100%;
 
-      img.image-style-large {
+      img.image-style-large, img.image-style-content-fit {
         height: 100%;
         object-fit: cover;
       }

@@ -36,7 +36,7 @@ content:
     type: photoswipe_field_formatter
     label: hidden
     settings:
-      photoswipe_thumbnail_style_first: content_fit
+      photoswipe_thumbnail_style_first: ''
       photoswipe_thumbnail_style: large
       photoswipe_image_style: content_fit
       photoswipe_reference_image_field: field_media_image
