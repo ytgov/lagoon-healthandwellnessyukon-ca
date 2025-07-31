@@ -342,6 +342,15 @@ label[for="edit-was-this-page-helpful"] {
 }
 
 .paragraph--type--featured-content {
+
+  .item-content {
+    .no-colour {
+      a:not(.btn) {
+        color: $link-color !important;
+      }
+    }
+  }
+
   .featured-content-box {
     .content-inner .content {
       &.no-colour {
