@@ -412,10 +412,6 @@ label[for="edit-was-this-page-helpful"] {
           .field--name-field-featured-title {
             @include font-size($h3-font-size);
           }
-
-          .field--name-field-featured-description {
-            @include font-size($font-size-md);
-          }
         }
       }
     }
