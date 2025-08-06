@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "del": "^3.0.0",
-    "gulp": "^4.0.0",
+    "gulp": "^5.0.1",
     "gulp-autoprefixer": "^4.1.0",
     "gulp-clean-css": "3.9.4",
     "gulp-concat": "^2.6.1",
