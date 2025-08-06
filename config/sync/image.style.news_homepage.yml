@@ -1,0 +1,17 @@
+uuid: 29a1534d-185e-4164-bfcc-abcf9aa0cfb4
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: C6pGZ7SiLeoygsfQOjWiJdThis9nsKjVQ9QSCzUk1ws
+name: news_homepage
+label: 'News Homepage'
+effects:
+  92e09ec7-2e8c-4369-9d58-7a4acd81388b:
+    uuid: 92e09ec7-2e8c-4369-9d58-7a4acd81388b
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 800
+      height: 1261
+      anchor: center-center

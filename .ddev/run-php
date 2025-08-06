@@ -1,0 +1,23 @@
+#!/bin/bash
+
+current_dir=$(pwd)
+
+# If the $current_dir ends with "/.ddev" then we need to remove the ".ddev".
+if [[ $current_dir == */.ddev ]]; then
+  current_dir=${current_dir%/.ddev}
+fi
+
+# Loop through all the arguments and replace any part of any argument that
+# matches current_dir with /var/www/html. This is necessary because the vscode
+# extension will pass in a full path to the file on the local system, rather
+# than the path to the file inside the ddev container.
+for i in "$@"
+do
+  if [[ $i =~ $current_dir ]]; then
+    new_arg=$(echo "$i" | sed "s#$current_dir#/var/www/html#")
+    # Replace the argument in the list of arguments
+    set -- "${@/$i/$new_arg}"
+  fi
+done
+
+ddev exec php "$@"

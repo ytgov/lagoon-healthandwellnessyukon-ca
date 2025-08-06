@@ -1,0 +1,76 @@
+uuid: 7a9d3ab9-6cca-46be-b38e-61bf7a9a3d28
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.timeline_event.field_timeline_date
+    - field.field.node.timeline_event.field_timeline_description
+    - field.field.node.timeline_event.field_timeline_image
+    - node.type.timeline_event
+    - workflows.workflow.editorial
+  module:
+    - content_moderation
+    - datetime
+    - text
+id: node.timeline_event.default
+targetEntityType: node
+bundle: timeline_event
+mode: default
+content:
+  field_timeline_date:
+    type: datetime_default
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_timeline_description:
+    type: text_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 4
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_timeline_image: true
+  path: true
+  promote: true
+  simple_sitemap: true
+  simple_sitemap_index_now: true
+  sticky: true
+  uid: true
+  url_redirects: true

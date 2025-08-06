@@ -1,0 +1,43 @@
+uuid: 3dfb4c74-f8c9-4fe0-931f-f9395f6f6599
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.file_attachments.field_file_attachments
+    - field.field.paragraph.file_attachments.field_heading
+    - paragraphs.paragraphs_type.file_attachments
+  module:
+    - media_library
+    - media_library_edit
+_core:
+  default_config_hash: BD67XAfy0FwvhgsVFlpYwD5ARTOWjlhpqHdPqxUuQqk
+id: paragraph.file_attachments.default
+targetEntityType: paragraph
+bundle: file_attachments
+mode: default
+content:
+  field_file_attachments:
+    type: media_library_widget
+    weight: 2
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
+  field_heading:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

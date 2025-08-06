@@ -1,0 +1,12 @@
+uuid: f15c2609-d61b-41a8-9b4b-ce542068f666
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: vBzilFDHejrXqc-plpc-5BUkG509ADH1_uHiYi3e7NA
+id: slideshow_item
+label: 'Slideshow Item'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

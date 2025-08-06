@@ -1,0 +1,51 @@
+uuid: 9c1b672d-2708-45eb-a4b7-76bab93aba63
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.slideshow
+    - field.field.media.video.field_media_in_library
+    - field.field.media.video.field_media_video_file
+    - media.type.video
+  module:
+    - fences
+    - file
+_core:
+  default_config_hash: B0ANV2Lr6jbN_jG3d1fOunBaCEQ9rbL_EVGOUjKImP0
+id: media.video.slideshow
+targetEntityType: media
+bundle: video
+mode: slideshow
+content:
+  field_media_video_file:
+    type: file_video
+    label: visually_hidden
+    settings:
+      controls: true
+      autoplay: true
+      loop: true
+      multiple_file_display_type: tags
+      muted: true
+      width: 1920
+      height: 1080
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 0
+    region: content
+hidden:
+  addtoany: true
+  created: true
+  field_media_in_library: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

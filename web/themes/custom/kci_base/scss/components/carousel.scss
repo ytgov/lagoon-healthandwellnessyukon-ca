@@ -1,0 +1,23 @@
+.image-gallery-slideshow {
+  .field--type-image img {
+    margin: 0;
+  }
+}
+
+.field--name-field-image-media-caption {
+  background: transparentize($color: $black, $amount: 0.3);
+  color: $white;
+}
+
+.chevron-indicator {
+  color: $chevron-indicator-color;
+  font-size: $chevron-indicator-font-size;
+}
+
+// Move arrows to beneath slide items on mobile
+button.splide__arrow {
+  position: relative;
+  @include media-breakpoint-up(sm) {
+    position: absolute;
+  }
+}

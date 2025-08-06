@@ -1,0 +1,21 @@
+uuid: f95104f5-0114-4c77-a876-156399a6cabf
+langcode: und
+status: true
+dependencies:
+  module:
+    - crop
+third_party_settings:
+  crop:
+    image_field: field_media_image
+_core:
+  default_config_hash: IdzxEgRn1f__q92-rC99Jtv1lIKMn5KJhqRZ-XzSXfk
+id: image
+label: Image
+description: 'Locally hosted images.'
+source: image
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_image
+field_map:
+  name: name

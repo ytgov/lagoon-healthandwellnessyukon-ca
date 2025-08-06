@@ -1,0 +1,21 @@
+uuid: fb08eb65-e254-413d-9f5e-6dac202317a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_map_location
+    - paragraphs.paragraphs_type.map_with_contact_info
+_core:
+  default_config_hash: hObcrbY2iHajpxAyIl-SVsIteCkUWSpRMVzAVHBdTk0
+id: paragraph.map_with_contact_info.field_map_location
+field_name: field_map_location
+entity_type: paragraph
+bundle: map_with_contact_info
+label: 'Google Map Location'
+description: 'Enter a location that is recognizable by Google Maps, e.g. "33 School St., Wayland MA" or "Union Station, Worcester MA".'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,21 @@
+uuid: d9065469-2f81-4812-ad8d-7ddecbe7efd8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading
+    - paragraphs.paragraphs_type.two_column_text_content
+_core:
+  default_config_hash: xPOb3LEyjMgVpGpv1ZU4FRmdzSpVgz8XpZMlCyEoRj4
+id: paragraph.two_column_text_content.field_heading
+field_name: field_heading
+entity_type: paragraph
+bundle: two_column_text_content
+label: Heading/Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

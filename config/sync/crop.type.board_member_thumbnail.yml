@@ -1,0 +1,12 @@
+uuid: b00e228a-d06c-4f82-81b3-b9c3ea1186f5
+langcode: en
+status: true
+dependencies: {  }
+label: 'Board member thumbnail'
+id: board_member_thumbnail
+description: ''
+aspect_ratio: '1:1'
+soft_limit_width: 600
+soft_limit_height: 600
+hard_limit_width: null
+hard_limit_height: null

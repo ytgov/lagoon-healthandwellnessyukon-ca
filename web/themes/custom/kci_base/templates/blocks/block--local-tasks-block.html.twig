@@ -1,0 +1,17 @@
+{# extends @bootstrap_barrio/layout/block.html.twig
+/**
+ * @file
+ * Theme override for tabs.
+ */
+#}
+{% block content %}
+  {% if content %}
+    <div{{ attributes.addClass('block--local-tasks-block') }}>
+      <div class="d-flex justify-content-center px-2">
+        <nav class="tabs p-1" role="navigation" aria-label="{{ 'Tabs'|t }}">
+          {{ content }}
+        </nav>
+      </div>
+    </div>
+  {% endif %}
+{% endblock %}

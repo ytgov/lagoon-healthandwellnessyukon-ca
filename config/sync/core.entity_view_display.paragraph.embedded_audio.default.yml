@@ -1,0 +1,32 @@
+uuid: b97cb9f6-7a42-4283-b8b8-e350ac8d321c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.embedded_audio.field_audio_file
+    - field.field.paragraph.embedded_audio.field_heading
+    - paragraphs.paragraphs_type.embedded_audio
+id: paragraph.embedded_audio.default
+targetEntityType: paragraph
+bundle: embedded_audio
+mode: default
+content:
+  field_audio_file:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: embedded
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_heading:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

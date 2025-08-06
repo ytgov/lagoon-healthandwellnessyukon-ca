@@ -1,0 +1,26 @@
+uuid: 1c068eb4-9964-4b03-b2aa-0f6f43d1b2ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_card_text
+    - filter.format.rich_text
+    - paragraphs.paragraphs_type.card
+  module:
+    - text
+_core:
+  default_config_hash: 9c0ZoMm0korNm9rkadLblrzuIOPAll9YVFiZvj-hknU
+id: paragraph.card.field_card_text
+field_name: field_card_text
+entity_type: paragraph
+bundle: card
+label: 'Card Text'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - rich_text
+field_type: text_long

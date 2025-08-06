@@ -1,0 +1,11 @@
+uuid: fc4c655e-2c38-4e72-8227-705db8efe962
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.cta_sidebar
+label: 'CTA Sidebar'
+description: ''
+targetEntityType: paragraph
+cache: true

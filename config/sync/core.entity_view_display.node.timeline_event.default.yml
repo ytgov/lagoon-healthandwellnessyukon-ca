@@ -1,0 +1,39 @@
+uuid: 37185484-1b89-4a94-b934-7dc5171ff799
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.timeline_event.field_timeline_date
+    - field.field.node.timeline_event.field_timeline_description
+    - field.field.node.timeline_event.field_timeline_image
+    - node.type.timeline_event
+  module:
+    - text
+    - user
+id: node.timeline_event.default
+targetEntityType: node
+bundle: timeline_event
+mode: default
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_timeline_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  addtoany: true
+  field_timeline_date: true
+  field_timeline_image: true
+  langcode: true

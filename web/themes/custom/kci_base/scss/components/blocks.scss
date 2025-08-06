@@ -1,0 +1,176 @@
+/**
+ * Banner CTA Buttons
+ */
+@if $banner-cta-menu-overlay-banner {
+  .region-featured-top {
+    position: relative;
+  }
+}
+
+.block-page-title-block  {
+  .node--type-homepage &, .node--type-landing-page & {
+    display: none;
+  }
+}
+
+.block.block-homepage-banner-cta-buttons {
+  background-color: $banner-cta-menu-bg;
+  @if $banner-cta-menu-overlay-banner {
+    @include media-breakpoint-up(lg) {
+      .has-banner & {
+        // If we want to have the banner overlay, ONLY apply the overlay
+        // styling if there is a .has-banner class on the body.
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        z-index: 50;
+        background-color: transparentize($banner-cta-menu-bg, $banner-cta-menu-overlay-transparency-amount);
+        backdrop-filter: blur($banner-cta-menu-overlay-transparency-blur-amount);
+      }
+    }
+  }
+  .cta-buttons {
+    a.cta-button {
+      text-align: center;
+      background-color: transparent;
+      transition: $standard-transition;
+      color: $banner-cta-menu-btn-text;
+      padding: 1rem;
+      text-decoration: none;
+      i {
+        @include font-size($font-size-base * 1.5);
+        padding-right: 1rem;
+        vertical-align: bottom;
+      }
+      .cta-text {
+        font-weight: $font-weight-bold;
+      }
+      &:hover {
+        background-color: $banner-cta-menu-btn-hover-bg;
+        @if $banner-cta-menu-overlay-banner {
+          @include media-breakpoint-up(lg) {
+            .has-banner & {
+              background-color: transparentize($banner-cta-menu-btn-hover-bg, $banner-cta-menu-overlay-transparency-amount);
+            }
+          }
+        }
+        color: $banner-cta-menu-btn-hover-text;
+        .cta-text {
+          text-decoration: $banner-cta-menu-btn-hover-text-decoration;
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Banner for internal pages.
+ */
+ .block-views-blockpage-banner-page-banner-block {
+  @include responsive_media_banner($page-top-banner-image-style-width, $page-top-banner-image-style-height);
+  // Caption
+  .paragraph--type--page-banner {
+    margin: 0;
+  }
+  .banner-content-overlay {
+    @include banner-color-overlay($banner-overlay-bg-color);
+    .banner-content-wrapper {
+      @include banner_caption_overlay($banner-caption-text-color);
+      @if $banner-cta-menu-overlay-banner {
+        @include media-breakpoint-up(lg) {
+          margin-top: -35px;
+        }
+      }
+      .has-alerts.has-floating-header & {
+        padding-top: 65px;
+      }
+    }
+  }
+}
+
+.block-views-blockhome-landing-page-banner-hero-banner-block {
+  @include responsive_media_banner($slideshow-width, $slideshow-height);
+  // Caption
+  .banner-content-overlay {
+    @include banner-color-overlay($banner-overlay-bg-color);
+    .banner-content-wrapper {
+      @include banner_caption_overlay($banner-caption-text-color);
+      @if $banner-cta-menu-overlay-banner {
+        @include media-breakpoint-up(lg) {
+          margin-top: -35px;
+        }
+      }
+      .has-alerts.has-floating-header & {
+        padding-top: 65px;
+      }
+    }
+  }
+}
+
+/**
+ * CTA Button Block
+ */
+ .block.block-cta-icon-buttons {
+  .cta-buttons {
+    margin-bottom: 5rem;
+    .cta-button {
+      width: 100%;
+      @include media-breakpoint-up(lg) {
+        width: auto;
+      }
+      .cta-button-bg {
+        background-color: $accent-shade;
+        &:hover {
+          background-color: $orange;
+        }
+      }
+      a.cta-button {
+        color: $banner-cta-menu-btn-text;
+        padding: 1rem;
+        text-decoration: none;
+        text-align: center;
+        @include media-breakpoint-up(lg) {
+          text-align: left;
+        }
+        i {
+          @include font-size($font-size-base * 2.5);
+          padding-right: 1rem;
+          vertical-align: bottom;
+        }
+        .cta-text {
+          font-weight: $font-weight-bold;
+          @include font-size($font-size-base * 1.1);
+          line-height: 1.4;
+        }
+      }
+    }
+  }
+}
+
+.block--local-tasks-block {
+  .tabs {
+    width: 100%;
+    margin: 1rem 0;
+    background-color: rgba($body-bg, 0.8);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 4px rgba($black, 0.3);
+    border: 1px solid rgba($black, 0.2);
+    border-radius: 1.3em;
+    @include media-breakpoint-up(sm) {
+      width: auto;
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .block--local-tasks-block.floating-local-tasks {
+    position: fixed;
+    z-index: 990;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    .tabs {
+      margin: 0 0 5px;
+    }
+  }
+}

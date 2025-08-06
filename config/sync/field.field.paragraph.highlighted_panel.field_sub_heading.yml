@@ -1,0 +1,32 @@
+uuid: 09dd42be-f21d-4e09-a6f9-d02002b57f2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sub_heading
+    - filter.format.rich_text
+    - paragraphs.paragraphs_type.highlighted_panel
+  module:
+    - allowed_formats
+    - text
+    - tmgmt_content
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - rich_text
+  tmgmt_content:
+    excluded: false
+id: paragraph.highlighted_panel.field_sub_heading
+field_name: field_sub_heading
+entity_type: paragraph
+bundle: highlighted_panel
+label: Sub-heading
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - rich_text
+field_type: text_long

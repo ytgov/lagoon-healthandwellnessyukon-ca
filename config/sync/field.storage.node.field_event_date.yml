@@ -1,0 +1,22 @@
+uuid: d9ab396b-1be8-4f8a-b2d8-0a6f9cc0f7b0
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime_range
+    - node
+_core:
+  default_config_hash: tA0_RSnBSM-axF2rtP_9mehKHOhJEE3gc8kSUC2jk8M
+id: node.field_event_date
+field_name: field_event_date
+entity_type: node
+type: daterange
+settings:
+  datetime_type: datetime
+module: datetime_range
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,38 @@
+/**
+ * @file
+ * Default style for file module.
+ */
+
+.file {
+    /* LTR */
+    display: inline-block;
+    min-height: $font-size-base;
+    background-repeat: no-repeat;
+    background-position: left center;
+    /* LTR */
+}
+
+[dir="rtl"] .file {
+    padding-left: inherit;
+    padding-right: ($spacer * 1.5);
+    background-position: right center;
+}
+
+.file-link-container {
+  width: 100%;
+  border: 1px solid $file-link-border-color;
+  .file-size {
+    @include font-size($font-size-base * 0.9);
+    font-style: italic;
+    color: $file-link-size-text-color;
+  }
+  .field--name-field-text-content &,
+  .field--name-field-left-column-text &,
+  .field--name-field-right-column-text & {
+    margin-bottom: 1rem;
+  }
+  .file {
+    padding-left: 0 !important;
+    background: none !important;
+  }
+}

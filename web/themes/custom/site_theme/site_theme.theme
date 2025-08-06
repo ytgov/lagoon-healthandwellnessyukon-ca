@@ -1,0 +1,373 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the SASS Starterkit subtheme.
+ */
+
+declare(strict_types=1);
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Datetime\DrupalDateTime;
+use Spatie\Color\Contrast;
+use Spatie\Color\Hex;
+use Spatie\Color\Rgb;
+
+/**
+ * Implements hook_theme().
+ *
+ * Specify custom templates and theme hooks.
+ */
+function site_theme_theme($existing, $type, $theme, $path) {
+  $items = [];
+  $items['small_card_text'] = [
+    'preprocess functions' => ['template_preprocess_small_card_text'],
+    'variables' => [
+      'description' => NULL,
+      'paragraph' => NULL,
+      'view_mode' => NULL,
+    ],
+  ];
+  return $items;
+}
+
+/**
+ * Implements hook_form_system_theme_settings_alter() for settings form.
+ *
+ * Replace Barrio setting options with subtheme ones.
+ */
+function site_theme_form_system_theme_settings_alter(&$form, FormStateInterface $form_state) {
+  $form['components']['navbar']['bootstrap_barrio_navbar_top_background']['#options'] = [
+    'bg-primary' => t('Primary'),
+    'bg-secondary' => t('Secondary'),
+    'bg-light' => t('Light'),
+    'bg-dark' => t('Dark'),
+    'bg-white' => t('White'),
+    'bg-transparent' => t('Transparent'),
+  ];
+  $form['components']['navbar']['bootstrap_barrio_navbar_background']['#options'] = [
+    'bg-primary' => t('Primary'),
+    'bg-secondary' => t('Secondary'),
+    'bg-light' => t('Light'),
+    'bg-dark' => t('Dark'),
+    'bg-white' => t('White'),
+    'bg-transparent' => t('Transparent'),
+  ];
+}
+
+/**
+ * Implements hook_preprocess_field().
+ */
+function site_theme_preprocess_field(array &$variables): void {
+  if ($variables['field_name'] == 'field_button_link' && $variables['element']['#entity_type'] == 'paragraph') {
+    $link_classes = [
+      'btn',
+      'btn-feature',
+      'btn-secondary',
+      'hide-new-window-indicator',
+    ];
+    foreach ($variables['items'] as $item) {
+      $link_options = $item['content']['#url']->getOptions();
+      $link_options['attributes']['class'] = $link_classes;
+      $item['content']['#url']->setOptions($link_options);
+    }
+  }
+
+  if ($variables['field_name'] == 'field_icon_cta_link' &&
+      $variables['element']['#entity_type'] == 'paragraph' &&
+      $variables['element']['#bundle'] == 'large_icon_cta'
+  ) {
+    if ($variables['element']['#view_mode'] == 'default') {
+      foreach ($variables['items'] as &$item) {
+        if (isset($item['content']['#attributes']['class'])) {
+          $item['content']['#attributes']['class'] = array_diff($item['content']['#attributes']['class'], ['py-2']);
+          $item['content']['#attributes']['class'][] = 'py-4';
+          $item['content']['#attributes']['class'][] = 'rounded-1';
+        }
+      }
+    }
+    elseif ($variables['element']['#view_mode'] == 'cta_sidebar') {
+      foreach ($variables['items'] as &$item) {
+        $item['content']['#attributes']['class'] = [];
+        $item['content']['#attributes']['class'][] = 'large-icon-cta-link';
+        $item['content']['#attributes']['class'][] = 'd-flex';
+        $item['content']['#attributes']['class'][] = 'flex-row';
+        $item['content']['#attributes']['class'][] = 'flex-fill';
+        $item['content']['#attributes']['class'][] = 'align-items-center';
+        $item['content']['#attributes']['class'][] = 'text-start';
+        $item['content']['#attributes']['class'][] = 'px-3';
+        $item['content']['#attributes']['class'][] = 'py-2';
+        $item['content']['#attributes']['class'][] = 'hide-new-window-indicator';
+        $item['content']['#attributes']['data-bs-delay'] = 450;
+        $item['content']['#attributes']['data-bs-placement'] = 'left';
+      }
+    }
+  }
+   if ($variables['field_name'] == 'field_small_card_link' && $variables['element']['#entity_type'] == 'paragraph' && $variables['element']['#bundle'] == 'small_card') {
+    /**
+     * @var \Drupal\paragraphs\ParagraphInterface $paragraph
+     */
+    $paragraph = $variables['element']['#object'];
+    $view_mode = $variables['element']['#view_mode'] ?? 'default';
+
+    foreach ($variables['items'] as $index => &$item) {
+      $description = $paragraph->get('field_small_card_text')->value;
+      $description = trim((string) $description);
+      $description = nl2br($description);
+      $original_title = $item['content']['#title'];
+      $item['content']['#title'] = [
+        '#theme' => 'small_card_text',
+        '#description' => (!empty($description) ? [
+          '#markup' => $description,
+        ] : NULL),
+        '#text' => $original_title,
+        '#paragraph' => $paragraph,
+        '#view_mode' => $view_mode,
+      ];
+      $item['content']['#attributes']['class'][] = 'small-card-wrapper';
+    }
+  }
+}
+
+/**
+ * Implements template_preprocess_color_field_formatter_swatch().
+ */
+function site_theme_preprocess_color_field_formatter_swatch(&$variables) {
+  $variables['attributes']['class'][] = 'color-swatch';
+  $variables['attributes']['data-color'] = (string) Rgb::fromString($variables['color'])->toHex();
+}
+
+/**
+ * Implements template_preprocess_views_view_fields().
+ */
+function site_theme_preprocess_views_view_fields(&$variables) {
+  if ($variables['view']->id() == 'events' && $variables['view']->current_display == 'calendar_events') {
+    foreach ($variables['fields'] as $field_name => &$field) {
+      if (stristr($field_name, 'nothing')) {
+        $rendered = (string) $field->content;
+        preg_match_all('/data\-color\=\"(.*?)\"/', $rendered, $matches);
+        if (!empty($matches[1])) {
+          $colors = [];
+          foreach ($matches[1] as $index => $match) {
+            // Use the spatie color library to calculate the contrast
+            // between the color and white. Set a class for the color
+            // based on the contrast ratio to indicate whether it is
+            // low or high contrast. We can then use CSS to apply
+            // appropriate styling for accessibility.
+            $contrast = Contrast::ratio(Hex::fromString($match), Hex::fromString('#ffffff'));
+            $field->wrapper_attributes->addClass('contrast-number-' . ($index + 1) . '-' . $contrast);
+            if ($contrast < 4.5) {
+              $field->wrapper_attributes->addClass('contrast-' . ($index + 1) . '-low');
+            }
+            else {
+              $field->wrapper_attributes->addClass('contrast-' . ($index + 1) . '-high');
+            }
+            $colors[] = '--category-color-' . ($index + 1) . ': ' . $match . ';';
+          }
+          $field->wrapper_attributes->setAttribute('style', implode(' ', $colors));
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Implements template_preprocess_views_view_unformatted().
+ */
+function site_theme_preprocess_views_view_unformatted__calendar_events(&$variables) {
+  if ($variables['view']->id() == 'events' && $variables['view']->current_display == 'calendar_events') {
+    $events = [];
+    $current_user = \Drupal::currentUser();
+    $timezone = $current_user->getTimeZone() ?: \Drupal::config('system.date')->get('timezone.default');
+    $today = new DrupalDateTime('now', new \DateTimeZone($timezone));
+    $month_end = new DrupalDateTime('last day of this month', new \DateTimeZone($timezone));
+    $nearest_before_date = NULL;
+    $nearest_on_or_after_date = NULL;
+    $current_language = \Drupal::languageManager()->getCurrentLanguage();
+    $grouped_rows = [];
+    foreach ($variables['rows'] as $row_data) {
+      $row = $row_data['content']['#row'];
+      // Get the active translation of the event entity.
+      $event_translation = $row->_entity->getTranslation($current_language->getId());
+      // Set the event title and date.
+      $event_title = $event_translation->getTitle();
+      $start_date = $event_translation->get('field_event_date')->value;
+      $end_date = $event_translation->get('field_event_date')->end_value;
+
+      // Convert the start and end dates to the current user's or site's
+      // timezone.
+      $start_date = new DrupalDateTime($start_date, new \DateTimeZone('UTC'));
+      $start_date->setTimezone(new \DateTimeZone($timezone));
+      $end_date = $end_date ? new DrupalDateTime($end_date, new \DateTimeZone('UTC')) : (clone $start_date);
+      $end_date->setTimezone(new \DateTimeZone($timezone));
+
+      if ($end_date->getTimestamp() < $today->getTimestamp()) {
+        $nearest_before_date = clone $end_date;
+      }
+      else {
+        if (empty($nearest_before_date) || $start_date->getTimeStamp() <= $month_end->getTimeStamp()) {
+          $nearest_on_or_after_date = clone $start_date;
+        }
+      }
+
+      // Calculate the number of days between the start and end dates.
+      $days_between = $start_date->diff($end_date)->days;
+
+      $current_date = (clone $start_date);
+      for ($i = 0; $i <= $days_between; $i++) {
+        $formatted_date = $current_date->format('Y-m-d');
+
+        // Add the current row_data to the grouped_rows array.
+        if (!isset($grouped_rows[$formatted_date])) {
+          $grouped_rows[$formatted_date] = [];
+        }
+        $grouped_rows[$formatted_date][] = $row_data;
+
+        // Create the event object for the caleandar.
+        // By default each event will have a left and right caret icon.
+        $prefix = '<span class="event-icon"><i class="fa-solid fa-caret-left" aria-hidden="true"></i></span>';
+        $suffix = '<span class="event-icon text-end"><i class="fa-solid fa-caret-right" aria-hidden="true"></i></span>';
+        if ($i === 0) {
+          // First item in the loop. This should have no prefix and the start
+          // time as a suffix.
+          $prefix = '';
+          $suffix = '<span class="flex-shrink-0">' . $current_date->format('g:ia');
+          if ($days_between > 0) {
+            // If it has additional days, add a right caret icon.
+            $suffix .= ' <i class="fa-solid fa-caret-right" aria-hidden="true"></i>';
+          }
+          $suffix .= '</span>';
+        }
+        if ($days_between > 0 && $i === $days_between) {
+          // Last item in the loop of a multi-day event. This should have the
+          // end time as a suffix and no right caret icon.
+          $suffix = '<span class="flex-shrink-0">' . t('ends @time', ['@time' => $end_date->format('g:ia')]) . '</span>';
+        }
+        $display_title = $prefix . '<span class="flex-grow-1">' . $event_title . '</span>' . $suffix;
+        $event = [
+          'title' => '<span class="d-flex align-items-start gap-2 lh-normal">' . $display_title . '</span>',
+          'date' => $formatted_date,
+        ];
+        // Add the event type colour if available.
+        if (!empty($row->_relationship_entities['field_event_type']) && !empty($row->_relationship_entities['field_event_type']->field_category_colour)) {
+          $event_type_colour = $row->_relationship_entities['field_event_type']->field_category_colour->color;
+          $event['colour'] = $event_type_colour;
+        }
+        $events[] = $event;
+        $current_date->modify("+1 day");
+      }
+
+    }
+    if ($nearest_on_or_after_date) {
+      $active_date = $nearest_on_or_after_date;
+    }
+    elseif ($nearest_before_date) {
+      $active_date = $nearest_before_date;
+    }
+    else {
+      $active_date = $today;
+    }
+    $active_date_formatted = $active_date->format('Y-m-d');
+    $active_index = 0;
+    if (array_key_exists($active_date_formatted, $grouped_rows)) {
+      $active_index = array_search($active_date_formatted, array_keys($grouped_rows));
+    }
+    $variables['active_index'] = $active_index;
+    $variables['rows_by_date'] = $grouped_rows;
+    $variables['#attached']['library'][] = 'site_theme/caleandar-site';
+    $variables['#attached']['drupalSettings']['caleandar_events_data'] = $events;
+  }
+}
+
+/**
+ * Implements template_preprocess_links().
+ */
+function site_theme_preprocess_links(&$variables) {
+  if ($variables['theme_hook_original'] == 'links__language_block') {
+    $languages = \Drupal::languageManager()->getLanguages();
+    $current_lid = \Drupal::languageManager()->getCurrentLanguage()->getId();
+    foreach ($languages as $language) {
+      $lid = $language->getId();
+      if ($lid = $current_lid) {
+        $variables['links'][$lid]['link']['#options']['attributes']['class'][] = 'd-none';
+      }
+    }
+  }
+
+  if ($variables['theme_hook_original'] == 'links__comment') {
+    if (!empty($variables['links']['comment-forbidden'])) {
+      $variables['links']['comment-forbidden']['attributes']->addClass('mt-1')->removeClass('nav-link');
+    }
+    if (!empty($variables['links']['comment-delete'])) {
+      $variables['links']['comment-delete']['link']['#options']['attributes']['class'][] = 'btn btn-sm btn-danger';
+    }
+    if (!empty($variables['links']['comment-edit'])) {
+      $variables['links']['comment-edit']['link']['#options']['attributes']['class'][] = 'btn btn-sm btn-primary';
+    }
+    if (!empty($variables['links']['comment-reply'])) {
+      $variables['links']['comment-reply']['link']['#options']['attributes']['class'][] = 'btn btn-sm btn-secondary';
+    }
+    if (!empty($variables['links']['comment-approve'])) {
+      $variables['links']['comment-approve']['link']['#options']['attributes']['class'][] = 'btn btn-sm btn-success';
+    }
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function site_theme_form_alter (&$form, FormStateInterface $form_state, $form_id) {
+  if ($form_id == 'search_form' || $form_id == 'search_block_form') {
+    if(!empty($form['actions'])) {
+      $form['actions']['submit']['#is_search_submit'] = TRUE;
+    }
+    if (!empty($form['basic'])) {
+      $form['basic']['submit']['#is_search_submit'] = TRUE;
+    }
+  }
+}
+
+/**
+ * Implements template_preprocess_input().
+ */
+function site_theme_preprocess_input(&$variables) {
+  if (!empty($variables['element']['#is_search_submit'])) {
+    $variables['safe_value_label'] = '<i class="fas fa-search"></i><span class="visually-hidden">' . t('Submit search') . '</span>';
+    $variables['attributes']->addClass('search-form-submit-button');
+  }
+}
+
+/**
+ * Preprocess function for the cta_background_image paragraph type.
+ */
+function site_theme_preprocess_paragraph_cta_background_image(&$variables) {
+  if (!empty($variables['content']['field_cta_with_bg_link'])) {
+    $variables['content']['field_cta_with_bg_link'][0]['#attributes']['class'] = [
+      'btn',
+      'btn-primary',
+    ];
+  }
+}
+
+/**
+ * Preprocess function for the card paragraph type.
+ */
+function site_theme_preprocess_paragraph_card(&$variables) {
+  $paragraph = $variables['paragraph'];
+  $parent = $paragraph->getParentEntity();
+
+  // Check if the parent is of type 'node'.
+  if ($parent->getEntityTypeId() === 'node') {
+    $variables['stand_alone'] = TRUE;
+  }
+
+}
+
+/**
+ * Implements template_preprocess_comment.
+ */
+function site_theme_preprocess_comment(&$variables) {
+  $date_formatter = \Drupal::service('date.formatter');
+  $comment = $variables['elements']['#comment'];
+  $variables['created'] = $date_formatter->format($comment->getCreatedTime(), 'date_and_time_long');
+}

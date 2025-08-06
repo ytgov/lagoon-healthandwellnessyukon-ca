@@ -1,0 +1,26 @@
+uuid: 7da3e37d-c932-4005-9a30-658688a02314
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_slideshow_description
+    - filter.format.rich_text
+    - paragraphs.paragraphs_type.slideshow
+  module:
+    - text
+_core:
+  default_config_hash: lowhjcny4WWsHB4nY0lWX5XkCfi5hdnwhwsYV9ZL6Y0
+id: paragraph.slideshow.field_slideshow_description
+field_name: field_slideshow_description
+entity_type: paragraph
+bundle: slideshow
+label: 'Slideshow description'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - rich_text
+field_type: text_long

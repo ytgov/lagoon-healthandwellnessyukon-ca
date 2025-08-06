@@ -1,0 +1,11 @@
+fontawesome:
+  version: VERSION
+  css:
+    component:
+      //use.fontawesome.com/releases/v6.7.0/css/all.css: { type: external }
+
+kci-styling:
+  version: VERSION
+  css:
+    component:
+      css/style.css: {}

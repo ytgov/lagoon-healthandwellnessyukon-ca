@@ -1,0 +1,25 @@
+uuid: daca0927-c7c5-4ac2-87e2-cfd221a2e223
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_link_link
+    - paragraphs.paragraphs_type.image_with_link
+  module:
+    - link
+_core:
+  default_config_hash: c7W6MGx_LxeUsSX4S3A9u4ldplhNXi4Q8pKuCVkVwCA
+id: paragraph.image_with_link.field_image_link_link
+field_name: field_image_link_link
+entity_type: paragraph
+bundle: image_with_link
+label: Link
+description: 'Optional Link URL to apply to the image so that clicking the image will navigate to the page.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 17
+field_type: link

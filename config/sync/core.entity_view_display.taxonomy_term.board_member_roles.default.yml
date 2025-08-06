@@ -1,0 +1,22 @@
+uuid: acb2c9ee-fd3e-4d7f-b328-46b9a8a72cd9
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.board_member_roles
+  module:
+    - text
+id: taxonomy_term.board_member_roles.default
+targetEntityType: taxonomy_term
+bundle: board_member_roles
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true

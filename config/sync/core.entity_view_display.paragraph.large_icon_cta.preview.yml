@@ -1,0 +1,28 @@
+uuid: 0f66fa5b-df14-4192-abc6-ea5b18495d0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.large_icon_cta.field_cta_icon
+    - field.field.paragraph.large_icon_cta.field_icon_cta_link
+    - field.field.paragraph.large_icon_cta.field_plain_description
+    - paragraphs.paragraphs_type.large_icon_cta
+  module:
+    - options
+id: paragraph.large_icon_cta.preview
+targetEntityType: paragraph
+bundle: large_icon_cta
+mode: preview
+content:
+  field_cta_icon:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_icon_cta_link: true
+  field_plain_description: true
+  search_api_excerpt: true

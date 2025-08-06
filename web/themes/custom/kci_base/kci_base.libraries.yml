@@ -1,0 +1,28 @@
+global-styling:
+  version: VERSION
+  js:
+    js/popper.min.js: { minified: true }
+    js/bootstrap.min.js: {}
+    js/barrio.js: {}
+    js/custom.js: {}
+  dependencies:
+    - core/jquery
+    - core/once
+    - core/drupal
+scroll-animations:
+  version: VERSION
+  js:
+    js/scroll-animations.js: {}
+
+fontawesome_6:
+  version: VERSION
+  css:
+    component:
+      //use.fontawesome.com/releases/v6.7.0/css/all.css: { type: external }
+
+splide:
+  css:
+    theme:
+      /libraries/splidejs--splide/dist/css/themes/splide-sea-green.min.css: { minified: true }
+  js:
+    /libraries/splidejs--splide/dist/js/splide.min.js: { minified: true }

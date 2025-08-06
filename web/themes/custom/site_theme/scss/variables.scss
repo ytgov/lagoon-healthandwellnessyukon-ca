@@ -1,0 +1,342 @@
+@use "sass:color";
+
+/* VARIABLES */
+$yghss-red: #A72B2A;
+$yghss-dark-red: #49151a;
+$yghss-beige: #f7f1d4;
+$yghss-dark-beige: #EFBE7D;
+$yghss-purple: #5F2167;
+
+// colors
+$primary-shade: $yghss-red;
+$primary-light: color.adjust($primary-shade, $lightness: 37%);
+$primary-dark: color.adjust($primary-shade, $lightness: -12%);
+$accent-shade: $yghss-dark-beige;
+$accent-light: color.adjust($accent-shade, $lightness: 37%);
+$accent-dark: color.adjust($accent-shade, $lightness: -12%);
+// Reassign color vars to semantic color scheme
+$red: #dc3545;
+$yellow: #ffc107;
+$green: #28a745;
+$cyan: #17a2b8;
+$white: #fff;
+$black: #000;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$theme-colors: ( primary: $primary-shade, secondary: $accent-shade, success: $green, info: $cyan, warning: $yellow, danger: $red, light: $gray-100, dark: $gray-800);
+$brand-primary: $primary-dark;
+//$brand-success: $green;
+//$brand-info: $teal;
+//$brand-warning: $orange;
+//$brand-danger: $red;
+$brand-inverse: $primary-shade;
+
+$btn-primary-bg-color: $white;
+$btn-primary-border-color: $primary-shade;
+$btn-primary-color: $primary-shade;
+$btn-primary-hover-bg-color: $accent-shade;
+$btn-primary-hover-border-color: $accent-shade;
+$btn-primary-hover-color: $btn-primary-color;
+
+$btn-secondary-bg-color: $yghss-red;
+$btn-secondary-border-color: $btn-secondary-bg-color;
+$btn-secondary-color: $white;
+$btn-secondary-hover-bg-color: $yghss-dark-red;
+$btn-secondary-hover-border-color: $btn-secondary-hover-bg-color;
+$btn-secondary-hover-color: $btn-secondary-color;
+
+$btn-font-weight: bold;
+// Body
+//
+// Settings for the `<body>` element.
+$body-bg: $white;
+$body-color: $gray-800;
+$inverse-bg: $primary-shade;
+$inverse-color: $white;
+
+$page-title-color: $body-color;
+
+// Links
+//
+// Style anchor elements.
+$link-color: $primary-shade;
+$link-decoration: none;
+$link-hover-color: $primary-dark;
+$link-hover-decoration: underline;
+
+// Field label styles.
+$field-label-weight: bold;
+$field-label-style: normal;
+
+// Alert styles.
+$page-top-alerts-bg-color: $yellow;
+$page-top-alerts-text-color: $black;
+$page-top-alerts-link-color: $black;
+$page-top-alerts-link-decoration: underline;
+$page-top-alerts-link-hover-color: rgba($black, 0.3);
+$page-top-alerts-link-hover-decoration: underline;
+$page-top-alerts-divider-color: color.adjust($yellow, $lightness: -20%);
+
+$site-logo-height: 100px;
+$site-logo-height-mobile: auto;
+$navbar-light-brand-color: $primary-shade;
+
+// Main nav styles.
+$main-nav-link-color          : $black;
+$main-nav-link-bg-color       : transparent;
+$main-nav-link-hover-color    : rgba($black, 0.7);
+$main-nav-link-hover-bg-color : $gray-200;
+$main-nav-link-active-color   : $black;
+$main-nav-link-active-bg-color: $gray-200;
+
+$nav-link-font-size           : 1.15rem;
+
+$navbar-nav-link-padding-x: 1rem;
+
+$full-width-menu-bg: transparent;
+
+$dropdown-bg:                       $white;
+$dropdown-link-color:               $main-nav-link-color;
+$dropdown-link-hover-color:         $main-nav-link-hover-color;
+$dropdown-link-hover-bg:            $gray-300;
+$dropdown-font-size:                $nav-link-font-size;
+
+$dropdown-link-active-color:        $primary-shade;
+$dropdown-link-active-bg:           $gray-300;
+
+$dropdown-link-disabled-color:      $gray-500;
+
+$dropdown-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+
+// Breadcrumb styles.
+$breadcrumb-font-size:              0.9rem;
+$breadcrumb-padding-y:              1rem;
+$breadcrumb-padding-x:              0;
+$breadcrumb-item-padding-x:         .5rem;
+$breadcrumb-margin-bottom:          1rem;
+$breadcrumb-bg:                     null;
+$breadcrumb-divider-color:          $gray-600;
+$breadcrumb-active-color:           $gray-600;
+$breadcrumb-divider:                quote("/");
+$breadcrumb-border-radius:          null;
+
+// Footer variables.
+$footer-bg: $white;
+$footer-color: $gray-200;
+$footer-spacing: 2rem;
+$footer-link-color: $white;
+$footer-link-decoration: underline;
+$footer-link-hover-color: $yghss-beige;
+$footer-link-hover-decoration: none;
+$footer-bg-image: url(../images/YHTS-footer-banner.png);
+$footer-bg-image-mobile: url(../images/YHTS-footer-banner-mobile.png);
+$footer-bg-padding: 10rem 0 0;
+$footer-bg-padding-lg: 12rem 5rem 0;
+$footer-bg-padding-xl: 20rem 5rem 0;
+$footer-headline-font-size: $h4-font-size;
+
+// Social media icon colors. If in the footer, these will
+// be overridden by the footer link colors.
+$social-media-icon-color: $black;
+$social-media-icon-hover-color: $white;
+
+// Grid block style variables. Grid blocks apply to views that
+// have a grid box format, such as the "Home News Box Grid"
+// display of the news view.
+// Note, there is no variable for padding. If
+// padding is desired, apply Bootsrap spacing
+// classes in the view.
+$grid-block-border-color: $gray-400;
+$grid-block-border-width: 1px;
+$grid-block-border-radius: 4px;
+$grid-block-box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.15);
+$grid-block-background-color: $yghss-beige;
+$grid-block-text-color: $black;
+// These apply to grid-block-link only:
+$grid-block-hover-text-color: $black;
+$grid-block-hover-background-color: $grid-block-background-color;
+$grid-block-hover-border-color: $gray-400;
+$grid-block-hover-box-shadow:0 0 14px 0 rgba(0, 0, 0, .35);
+$grid-block-link-no-thumbnail-bg: $gray-400;
+// These apply to any links inside grid-block only:
+$grid-block-inner-link-text-color: $primary-shade;
+$grid-block-inner-link-text-decoration: none;
+$grid-block-inner-link-hover-text-color: $primary-dark;
+$grid-block-inner-link-hover-text-decoration: none;
+
+// Large icon CTA styles.
+$large-icon-cta-color: $body-color;
+$large-icon-cta-bg: $body-bg;
+$large-icon-cta-hover-color: $grid-block-hover-text-color;
+$large-icon-cta-hover-bg: $body-bg;
+
+// Banner CTA menu styles.
+$banner-cta-menu-overlay-banner: true;
+$banner-cta-menu-overlay-transparency-amount: 0.15;
+$banner-cta-menu-overlay-transparency-blur-amount: 20px;
+$banner-cta-menu-bg: $primary-dark;
+$banner-cta-menu-btn-text: $white;
+$banner-cta-menu-btn-hover-text: $primary-dark;
+$banner-cta-menu-btn-hover-bg: $gray-100;
+$banner-cta-menu-btn-hover-text-decoration: none;
+
+// CTA buttons with icon styles.
+$cta-buttons-with-icon-bg: $primary-dark;
+$cta-buttons-with-icon-btn-text: $white;
+$cta-buttons-with-icon-btn-hover-text: $accent-shade;
+$cta-buttons-with-icon-btn-hover-bg: $gray-100;
+$cta-buttons-with-icon-btn-hover-text-decoration: none;
+
+// CTA with background image styles.
+$cta-background-image-overlay-color: $black;
+$cta-background-image-overlay-transparency: 0.6;
+$cta-background-button-bg-color: $gray-600;
+$cta-background-button-color: $white;
+
+// Webform paragraph styles.
+$webform-paragraph-landing-page-border-radius: 15px;
+$webform-paragraph-landing-page-box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
+$webform-paragraph-landing-page-bg-color: $white;
+
+// Email styles
+
+$body-table-bg: #fafafa;
+$email-header-text-color: #808080;
+
+$header-background: $white;
+$header-background-transparency-amount: 0.15;
+$header-background-transparency-blur-amount: 20px;
+$header-affix-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+
+$hamburger-button-color: $black;
+$hamburger-button-bg-color: transparent;
+$hamburger-button-hover-color: $white;
+$hamburger-button-hover-bg-color: $black;
+$hamburger-button-border-color: transparent;
+
+//Bootstrap Accordion Styles.
+
+// Accordion Content
+$accordion-color:                         $body-color;
+$accordion-bg:                            $body-bg;
+
+// Accordion Heading
+$accordion-button-color:                  $primary-shade;
+$accordion-button-bg:                     $gray-400;
+$accordion-button-hover-color:            $white;
+$accordion-button-hover-bg:               $primary-shade;
+$accordion-button-active-color:           $white;
+$accordion-button-active-bg:              $brand-primary;
+
+// Accordion Icon
+$accordion-icon-width:                    1.25rem;
+$accordion-icon-padding:                  1rem;
+$accordion-icon-bg-radius:                50%;
+$accordion-icon-color:                    $primary-shade;
+$accordion-icon-bg:                       $white;
+$accordion-icon-active-bg:                $white;
+$accordion-icon-active-color:             $brand-primary;
+
+//Accordion Borders
+$accordion-border-width:                  0;
+$accordion-border-color:                  $brand-primary;
+$accordion-border-radius:                 0;
+$accordion-inner-border-radius:           0;
+$accordion-button-focus-border-color:     none;
+$accordion-button-focus-box-shadow:       none;
+
+//Accordion Padding and Margins.
+$accordion-padding-y:                     0.5rem;
+$accordion-padding-x:                     1rem;
+$accordion-item-vertical-gutter:          0.5rem;
+$accordion-body-padding-y:                $accordion-padding-y;
+$accordion-body-padding-x:                $accordion-padding-x;
+$accordion-button-padding-y:              $accordion-padding-y;
+$accordion-button-padding-x:              $accordion-padding-x;
+
+// Mega menu
+$mega-menu-enabled: false;
+
+// Pagination colours:
+$pagination-active-color: $white;
+$pagination-active-bg: $primary-shade;
+$pagination-active-border-color: $primary-shade;
+
+// Input focus.
+$input-focus-box-shadow: 0 0 1px 3px $accent-shade;
+$input-border-color: $gray-600;
+$form-select-focus-box-shadow: $input-focus-box-shadow;
+$form-check-input-focus-box-shadow: $input-focus-box-shadow;
+$form-range-thumb-focus-box-shadow: $input-focus-box-shadow;
+
+$text-selection-color: rgb($primary-shade, 0.35);
+
+// Form Styles.
+$form-feedback-selected-option-color: $white;
+
+$modal-content-border-radius: 0;
+
+// Caleandar styles.
+$site-box-shadow: rgba(0, 0, 0, 0.5) 0 0.1rem 0.3rem 0;
+$side-nav-bg-color: rgba($accent-shade, 0.2);
+$side-nav-bg-active-color: rgba($accent-shade, 0.1);
+
+$file-attachments-background: unset;
+$file-link-border-color: $primary-shade;
+$file-attachments-border: 1px solid $file-link-border-color;
+
+$small-card-font-size: $font-size-base * 1.68;
+
+$slideshow-width: 1920px;
+// NOTE: This must always be 100px less than the actual image style height.
+$slideshow-height: 500px;
+
+
+// Page banner styles.
+$banner-caption-height: 40%;
+// This is for overriding the responsive padding for the slideshow.
+// This keeps the height of the slideshow at 592px for all desktop sizes.
+$banner-slideshow-height: 592px;
+$banner-caption-text-color: $white;
+$banner-overlay-bg-color: rgba($black, 0.5);
+$page-top-banner-image-style-width: 2560px;
+// NOTE: This must always be 100px less than the actual image style height.
+$page-top-banner-image-style-height: 500px;
+// Banner caption vertical positioning.
+// The vertical position can be "center", "bottom" or a number of pixels from
+// the top.
+// If "center" is specified, then it will automatically set it to a top of
+// 50% with a transform of translateY(-50%). If "bottom" is specified then
+// it will set no top position and a bottom of 0.
+// Note that horizontal positioning is handled in the template file responsible
+// for rendering the banner.
+$banner-caption-vertical-position: 'bottom';
+
+// Banner caption font size.
+$banner-caption-font-size: $font-size-lg;
+
+// Bootstrap Carousel Styles.
+$carousel-control-color: $white;
+$carousel-control-prev-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512' fill='#{$carousel-control-color}'><path d='M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z'/></svg>");
+$carousel-control-next-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512' fill='#{$carousel-control-color}'><path d='M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z'/></svg>");
+
+// Cards
+$card-border-width : 0;
+$card-border-radius: 0;
+$card-bg           : $primary-shade;
+
+$pattern-image: url(../images/YHTS-repeat-pattern-top.png);
+$pattern-height: 35px;
+
+// Comments
+$comment-user-meta-width: 50px;
+$comment-reply-indent: $comment-user-meta-width;
+$card-border-radius: 0;
+$new_comment_indicator: '\f111';

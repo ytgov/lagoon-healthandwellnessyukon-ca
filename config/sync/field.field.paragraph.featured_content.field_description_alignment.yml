@@ -1,0 +1,25 @@
+uuid: 38daeaec-1fef-42bf-9e05-8977ddef0f97
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description_alignment
+    - paragraphs.paragraphs_type.featured_content
+  module:
+    - options
+_core:
+  default_config_hash: uoFMNvG8QLPxc3Df6ehR7ArQWti4J7CeyhjufFpy7PQ
+id: paragraph.featured_content.field_description_alignment
+field_name: field_description_alignment
+entity_type: paragraph
+bundle: featured_content
+label: 'Description Alignment'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: left
+default_value_callback: ''
+settings: {  }
+field_type: list_string

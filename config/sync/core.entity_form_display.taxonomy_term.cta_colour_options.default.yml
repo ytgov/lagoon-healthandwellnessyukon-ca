@@ -1,0 +1,50 @@
+uuid: 89e587c9-fdfe-4bb4-b53c-ba3750aeca7d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.cta_colour_options.field_accent_colour
+    - field.field.taxonomy_term.cta_colour_options.field_cta_color_option_colour
+    - taxonomy.vocabulary.cta_colour_options
+  module:
+    - color_field
+id: taxonomy_term.cta_colour_options.default
+targetEntityType: taxonomy_term
+bundle: cta_colour_options
+mode: default
+content:
+  field_accent_colour:
+    type: color_field_widget_html5
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_cta_color_option_colour:
+    type: color_field_widget_html5
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  simple_sitemap:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  simple_sitemap_index_now:
+    weight: 130
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  description: true
+  langcode: true
+  path: true
+  status: true

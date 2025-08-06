@@ -1,0 +1,20 @@
+uuid: 4a0d32e9-8694-4d58-9565-8c32fd960eb5
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.event_image
+  module:
+    - crop
+_core:
+  default_config_hash: FFc3TOv_u_qcAJOSW-2ALpGImAWOtzjOGK2MXii3xnc
+name: crop_event_image
+label: 'Cropped: Event Image'
+effects:
+  ec8cf434-b6bb-4ae4-aecd-7b880c08b2bd:
+    uuid: ec8cf434-b6bb-4ae4-aecd-7b880c08b2bd
+    id: crop_crop
+    weight: null
+    data:
+      crop_type: event_image
+      automatic_crop_provider: null

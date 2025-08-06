@@ -1,0 +1,30 @@
+
+{% set unique_id = random() %}
+
+<div class="splide-wrapper" data-unique-id="{{ unique_id }}">
+  <div id="main-carousel-{{ unique_id }}" class="main-carousel">
+    <div class="splide__track">
+      <ul class="splide__list">
+        {% for thumbnail in thumbnails %}
+          <li class="splide__slide">
+            <div class="splide__slide__container">
+              {{ thumbnail }}
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+  <div id="thumbnail-carousel-{{ unique_id }}" class="thumbnail-carousel position-relative mt-5">
+    <div class="splide__track">
+      <ul class="splide__list">
+        {% for thumbnail in thumbnails %}
+          <li class="splide__slide">
+            {{ thumbnail }}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>

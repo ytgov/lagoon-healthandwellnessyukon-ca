@@ -1,0 +1,15 @@
+uuid: 4ea277ee-d52d-4642-bd40-06b85e46b85b
+langcode: en
+status: true
+dependencies: {  }
+name: footer_logo
+label: 'Footer Logo'
+effects:
+  cbb063aa-2a87-4e77-903b-29a108643b8d:
+    uuid: cbb063aa-2a87-4e77-903b-29a108643b8d
+    id: image_scale
+    weight: 1
+    data:
+      width: 325
+      height: 88
+      upscale: false

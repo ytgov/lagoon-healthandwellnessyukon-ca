@@ -1,0 +1,13 @@
+uuid: 1e9db778-95fb-496d-bf28-78b1e1e6ae88
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: jqYm5kQ2WwxrMpNhBOfM4BnY9FjXJZrBzdZpgdd0yIA
+id: paragraph.carousel
+label: Carousel
+description: ''
+targetEntityType: paragraph
+cache: true

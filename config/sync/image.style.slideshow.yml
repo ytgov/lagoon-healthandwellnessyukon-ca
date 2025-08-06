@@ -1,0 +1,28 @@
+uuid: a467829e-b94d-4846-85e2-c55d02eb28d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.hero_banner_slideshow
+  module:
+    - crop
+_core:
+  default_config_hash: UlZTv8FMfFaYm6Lgv5S-_AW0ZPmERNgerurVYrOKffo
+name: slideshow
+label: Slideshow
+effects:
+  9ab54840-6f44-4f36-a9d2-f9e6c7fc7a2f:
+    uuid: 9ab54840-6f44-4f36-a9d2-f9e6c7fc7a2f
+    id: image_scale_and_crop
+    weight: -9
+    data:
+      width: 1920
+      height: 600
+      anchor: center-center
+  ca6c6f2a-62f5-4bb7-b214-cf5bfd8d5023:
+    uuid: ca6c6f2a-62f5-4bb7-b214-cf5bfd8d5023
+    id: crop_crop
+    weight: -10
+    data:
+      crop_type: hero_banner_slideshow
+      automatic_crop_provider: null

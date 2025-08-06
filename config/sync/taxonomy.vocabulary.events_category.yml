@@ -1,0 +1,11 @@
+uuid: 5d12064e-7a97-4422-91e8-b8ca2e02878f
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: rIwz5pJrW5hMmGGczNvlER4X_maXXMeciuw3qkHBWcw
+name: 'Engagement / Event Categories'
+vid: events_category
+description: 'Creates categories for the events content type'
+weight: 0
+new_revision: false

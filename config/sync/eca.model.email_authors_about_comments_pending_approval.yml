@@ -1,0 +1,99 @@
+uuid: 481c40d2-82bf-40b9-9498-70d06b35c4e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - eca.eca.email_authors_about_comments_pending_approval
+id: email_authors_about_comments_pending_approval
+label: 'Email Blog Authors of New Comments Pending Approval'
+tags:
+  - ''
+documentation: ''
+filename: ''
+modeldata: |
+  <?xml version="1.0" encoding="UTF-8"?>
+  <bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:qa="http://some-company/schema/bpmn/qa" id="sample-diagram" targetNamespace="http://bpmn.io/schema/bpmn" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd">
+    <bpmn2:process id="email_authors_about_comments_pending_approval" name="Email Blog Authors of New Comments Pending Approval" isExecutable="true" camunda:versionTag="1.0">
+      <bpmn2:extensionElements />
+      <bpmn2:startEvent id="create_new_blog_comment_entity" name="Create Blog comment" camunda:modelerTemplate="org.drupal.event.content_entity:insert">
+        <bpmn2:extensionElements>
+          <camunda:properties>
+            <camunda:property name="pluginid" value="content_entity:insert" />
+          </camunda:properties>
+          <camunda:field name="type">
+            <camunda:string>comment blog_comments</camunda:string>
+          </camunda:field>
+        </bpmn2:extensionElements>
+        <bpmn2:outgoing>Flow_12cedyf</bpmn2:outgoing>
+      </bpmn2:startEvent>
+      <bpmn2:exclusiveGateway id="comment_status_not_published" name="Status is not published">
+        <bpmn2:extensionElements>
+          <camunda:properties>
+            <camunda:property name="status" value="0" />
+          </camunda:properties>
+        </bpmn2:extensionElements>
+        <bpmn2:incoming>Flow_12cedyf</bpmn2:incoming>
+        <bpmn2:outgoing>Flow_0sl4s9d</bpmn2:outgoing>
+      </bpmn2:exclusiveGateway>
+      <bpmn2:sequenceFlow id="Flow_12cedyf" sourceRef="create_new_blog_comment_entity" targetRef="comment_status_not_published" />
+      <bpmn2:task id="email_comment_node_author" name="Email node author" camunda:modelerTemplate="org.drupal.action.action_send_email_action">
+        <bpmn2:extensionElements>
+          <camunda:properties>
+            <camunda:property name="pluginid" value="action_send_email_action" />
+          </camunda:properties>
+          <camunda:field name="recipient">
+            <camunda:string>[comment:entity:author:mail]</camunda:string>
+          </camunda:field>
+          <camunda:field name="subject">
+            <camunda:string>New comment pending approval</camunda:string>
+          </camunda:field>
+          <camunda:field name="message">
+            <camunda:string>You are receiving this message because somebody has posted a public comment on a Blog article as follows:
+
+  Article: [comment:entity:title] ([comment:entity:url:absolute])
+  Author: [comment:author:name]
+  Subject: [comment:title]
+
+  Comments:
+
+  [comment:body]
+
+  To review and either approve or delete this comment, login at [site:login-url], go to the article page at [comment:entity:url:absolute] and scroll down to the comments section.</camunda:string>
+          </camunda:field>
+          <camunda:field name="replace_tokens">
+            <camunda:string>yes</camunda:string>
+          </camunda:field>
+        </bpmn2:extensionElements>
+        <bpmn2:incoming>Flow_0sl4s9d</bpmn2:incoming>
+      </bpmn2:task>
+      <bpmn2:sequenceFlow id="Flow_0sl4s9d" sourceRef="comment_status_not_published" targetRef="email_comment_node_author" />
+    </bpmn2:process>
+    <bpmndi:BPMNDiagram id="sid-b238f6c2-e85e-4c58-8e5e-2cd603a50095">
+      <bpmndi:BPMNPlane id="sid-9a8dd436-450d-43d1-b02b-ed0a479d4914" bpmnElement="email_authors_about_comments_pending_approval">
+        <bpmndi:BPMNShape id="Event_1ewis0k_di" bpmnElement="create_new_blog_comment_entity">
+          <dc:Bounds x="592" y="82" width="36" height="36" />
+          <bpmndi:BPMNLabel>
+            <dc:Bounds x="522.5" y="86" width="59" height="27" />
+          </bpmndi:BPMNLabel>
+        </bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="Gateway_10xnj98_di" bpmnElement="comment_status_not_published" isMarkerVisible="true">
+          <dc:Bounds x="685" y="75" width="50" height="50" />
+          <bpmndi:BPMNLabel>
+            <dc:Bounds x="680" y="132" width="61" height="27" />
+          </bpmndi:BPMNLabel>
+        </bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="Activity_0e9tfyb_di" bpmnElement="email_comment_node_author">
+          <dc:Bounds x="800" y="60" width="100" height="80" />
+          <bpmndi:BPMNLabel />
+        </bpmndi:BPMNShape>
+        <bpmndi:BPMNEdge id="Flow_12cedyf_di" bpmnElement="Flow_12cedyf">
+          <di:waypoint x="628" y="100" />
+          <di:waypoint x="685" y="100" />
+        </bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="Flow_0sl4s9d_di" bpmnElement="Flow_0sl4s9d">
+          <di:waypoint x="735" y="100" />
+          <di:waypoint x="800" y="100" />
+        </bpmndi:BPMNEdge>
+      </bpmndi:BPMNPlane>
+    </bpmndi:BPMNDiagram>
+  </bpmn2:definitions>

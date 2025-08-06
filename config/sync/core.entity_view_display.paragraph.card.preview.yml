@@ -1,0 +1,62 @@
+uuid: cb2eb8fc-d6ee-4719-b568-c37e10dc40b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.card.field_button_link
+    - field.field.paragraph.card.field_card_image
+    - field.field.paragraph.card.field_card_text
+    - field.field.paragraph.card.field_card_title
+    - image.style.square_library_thumbnail
+    - paragraphs.paragraphs_type.card
+  module:
+    - fences
+    - media
+_core:
+  default_config_hash: Gubv3EyN7w2fJ1qi5LOlSBfKK_hR-_6igGGizSW3LN8
+id: paragraph.card.preview
+targetEntityType: paragraph
+bundle: card
+mode: preview
+content:
+  field_animation_style:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_card_image:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: square_library_thumbnail
+      image_loading:
+        attribute: lazy
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    weight: 1
+    region: content
+  field_card_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  extra_field_frontend_editing: true
+  field_button_link: true
+  field_card_text: true
+  search_api_excerpt: true

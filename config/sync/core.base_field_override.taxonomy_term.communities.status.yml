@@ -1,0 +1,22 @@
+uuid: 326ee6ab-71f4-45b4-ba25-8be0ecaee082
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.communities
+id: taxonomy_term.communities.status
+field_name: status
+entity_type: taxonomy_term
+bundle: communities
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

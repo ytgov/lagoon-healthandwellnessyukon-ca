@@ -1,0 +1,14 @@
+uuid: e19f2a29-09c0-419c-8ee8-6b56ff07882a
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: T3dFzDfwpjzHxuli01G2G_ddlRFlBlXlShA-DdAn7EM
+id: page_banner
+label: 'Multimedia Hero Banner'
+description: 'Crops to the specific aspect ratio of page banner images.'
+aspect_ratio: '256:67'
+soft_limit_width: 2560
+soft_limit_height: 670
+hard_limit_width: null
+hard_limit_height: null

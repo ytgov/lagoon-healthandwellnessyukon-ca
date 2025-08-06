@@ -1,0 +1,384 @@
+@use "sass:color";
+
+/* VARIABLES */
+
+// colors
+$primary-shade: #00a1ed !default;
+$primary-light: color.adjust($primary-shade, $lightness: 37%) !default;
+$primary-dark: color.adjust($primary-shade, $lightness: -12%) !default;
+$accent-shade: #8cbc29 !default;
+$accent-light: color.adjust($accent-shade, $lightness: 37%) !default;
+$accent-dark: color.adjust($accent-shade, $lightness: -12%) !default;
+// Reassign color vars to semantic color scheme
+$red: #dc3545 !default;
+$yellow: #ffc107 !default;
+$green: #28a745 !default;
+$cyan: #17a2b8 !default;
+$white: #fff !default;
+$black: #000 !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$theme-colors: ( primary: $primary-shade, secondary: $accent-shade, success: $green, info: $cyan, warning: $yellow, danger: $red, light: $gray-100, medium: $gray-400, dark: $gray-800) !default;
+$brand-primary: $primary-dark !default;
+//$brand-success: $green !default;
+//$brand-info: $teal !default;
+//$brand-warning: $orange !default;
+//$brand-danger: $red !default;
+$brand-inverse: $accent-shade !default;
+
+// Footer variables.
+$footer-bg: $gray-800 !default;
+$footer-color: $gray-200 !default;
+$footer-spacing: 2rem !default;
+$footer-link-color: $gray-200 !default;
+$footer-link-decoration: underline !default;
+$footer-link-hover-color: rgba($gray-100, 0.3) !default;
+$footer-link-hover-decoration: none !default;
+
+// Spacer variables.
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 2,
+  6: $spacer * 3
+) !default;
+
+$slideshow-width: 2560px !default;
+// NOTE: This must always be 100px less than the actual image style height.
+$slideshow-height: 737px !default;
+
+// Banner caption vertical positioning.
+// The vertical position can be "center", "bottom" or a number of pixels from
+// the top.
+// If "center" is specified, then it will automatically set it to a top of
+// 50% with a transform of translateY(-50%). If "bottom" is specified then
+// it will set no top position and a bottom of 0.
+// Note that horizontal positioning is handled in the template file responsible
+// for rendering the banner.
+$banner-caption-vertical-position: 'center' !default;
+
+// Banner caption font size.
+$banner-caption-font-size: $font-size-lg !default;
+
+// Body
+//
+// Settings for the `<body>` element.
+$body-bg: $white !default;
+$body-color: $gray-800 !default;
+$inverse-bg: $primary-shade !default;
+$inverse-color: $white !default;
+
+// Page Title colour.
+$page-title-color: $primary-shade !default;
+
+// Sidebars
+$sidebar-border-width: 0 !default;
+$sidebar-border-color: transparent !default;
+
+// Links
+//
+// Style anchor elements.
+$link-color: $primary-shade !default;
+$link-decoration: none !default;
+$link-hover-color: $primary-dark !default;
+$link-hover-decoration: underline !default;
+
+// Field label styles.
+$field-label-weight: bold !default;
+$field-label-style: normal !default;
+
+// Page top alert styles.
+$page-top-alerts-bg-color: $yellow !default;
+$page-top-alerts-text-color: $black !default;
+$page-top-alerts-link-color: $black !default;
+$page-top-alerts-link-decoration: underline !default;
+$page-top-alerts-link-hover-color: rgba($black, 0.3) !default;
+$page-top-alerts-link-hover-decoration: underline !default;
+$page-top-alerts-divider-color: color.adjust($yellow, $lightness: -20%) !default;
+
+// Default site logo height.
+$site-logo-height: 50px !default;
+$site-logo-height-mobile: $site-logo-height !default;
+
+// Top navigation styles.
+$top-navbar-bg-color         : transparent !default;
+$top-nav-link-color          : $black !default;
+$top-nav-link-bg-color       : transparent !default;
+$top-nav-link-hover-color    : rgba($black, 0.3) !default;
+$top-nav-link-hover-bg-color : $gray-400 !default;
+$top-nav-link-active-color   : $black !default;
+$top-nav-link-active-bg-color: $gray-400 !default;
+
+// Main navigation styles.
+$main-nav-link-color          : $black !default;
+$main-nav-link-bg-color       : transparent !default;
+$main-nav-link-hover-color    : rgba($black, 0.3) !default;
+$main-nav-link-hover-bg-color : $gray-400 !default;
+$main-nav-link-active-color   : $black !default;
+$main-nav-link-active-bg-color: $gray-400 !default;
+
+$nav-tabs-border-color: $primary-dark !default;
+$nav-tabs-link-active-bg: $primary-dark !default;
+$nav-tabs-link-active-color: $primary-dark !default;
+$nav-tabs-link-hover-border-color: $primary-dark !default;
+
+$nav-pills-border-radius: 50em !default;
+$nav-pills-link-color: $body-color !default;
+$nav-pills-link-active-bg: $primary-dark !default;
+$nav-pills-link-active-color: $primary-light !default;
+$nav-pills-link-hover-bg: $primary-dark !default;
+$nav-pills-link-hover-color: $primary-light !default;
+
+$nav-link-focus-box-shadow: 0 0 0 3px $accent-shade !default;
+
+$full-width-menu-bg: transparent !default;
+
+$navbar-padding-y: 0 !default;
+$navbar-brand-padding-y: 0.5rem !default;
+
+// Dropdown menu styles.
+$dropdown-min-width:                20rem !default;
+$dropdown-padding-x:                0 !default;
+$dropdown-padding-y:                0 !default;
+$dropdown-spacer:                   0 !default;
+$dropdown-font-size:                $font-size-base !default;
+$dropdown-color:                    $body-color !default;
+$dropdown-bg:                       $primary-shade !default;
+$dropdown-border-color:             rgba($black, .15) !default;
+$dropdown-border-radius:            0 !default;
+$dropdown-border-width:             0 !default;
+$dropdown-inner-border-radius:      0 !default;
+$dropdown-divider-bg:               $dropdown-border-color !default;
+$dropdown-divider-margin-y:         $spacer * .5 !default;
+$dropdown-box-shadow:               0 3px 10px rgba(0, 0, 0, 0.3) !default;
+// The dropdown shadow offsets will be used to apply padding to the sides
+// and bottom of the dropdown menu wrapper as well as to adjust the left
+// position of the dropdown itself so it aligns with the parent menu item.
+$dropdown-shadow-offset-x:          10px !default;
+$dropdown-shadow-offset-y:          15px !default;
+
+$dropdown-link-color:               $gray-900 !default;
+$dropdown-link-hover-color:         shade-color($gray-900, 10%) !default;
+$dropdown-link-hover-bg:            $accent-shade !default;
+
+$dropdown-link-active-color:        $primary-dark !default;
+$dropdown-link-active-bg:           $gray-300 !default;
+
+$dropdown-link-disabled-color:      $gray-500 !default;
+
+$dropdown-item-padding-y:           $spacer * .25 !default;
+$dropdown-item-padding-x:           $spacer !default;
+
+// Comments
+$comment-spacer-x: 1.25em !default;
+$comment-spacer-y: 1.25em !default;
+// Responsive font sizes
+$enable-responsive-font-sizes: true !default;
+
+// Enable shadows and gradients by default.
+$enable-shadows: true !default;
+$enable-gradients: false !default;
+
+$standard-transition: all 0.2s ease-in-out !default;
+
+// Grid block style variables. Grid blocks apply to views that
+// have a grid box format, such as the "Home News Box Grid"
+// display of the news view.
+// Note, there is no variable for padding. If
+// padding is desired, apply Bootsrap spacing
+// classes in the view.
+$grid-block-border-color: $gray-300 !default;
+$grid-block-border-width: 1px !default;
+$grid-block-border-radius: 20px !default;
+$grid-block-box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.15) !default;
+$grid-block-background-color: $gray-200 !default;
+$grid-block-text-color: $gray-800 !default;
+// These apply to grid-block-link only:
+$grid-block-hover-text-color: $primary-dark !default;
+$grid-block-hover-background-color: $gray-100 !default;
+$grid-block-hover-border-color: $gray-300 !default;
+$grid-block-hover-box-shadow:2px 2px 15px rgba(0, 0, 0, 0.15) !default;
+$grid-block-link-no-thumbnail-bg: $gray-400 !default;
+// These apply to any links inside grid-block only:
+$grid-block-inner-link-text-color: $primary-shade !default;
+$grid-block-inner-link-text-decoration: none !default;
+$grid-block-inner-link-hover-text-color: $primary-dark !default;
+$grid-block-inner-link-hover-text-decoration: none !default;
+
+//Global Paragraph Styles.
+$lp-paragraph-max-height: 80vh;
+$lp-paragraph-min-height: 400px;
+
+// Banner CTA menu styles.
+$banner-cta-menu-overlay-banner: false !default;
+$banner-cta-menu-overlay-transparency-amount: 0.15 !default;
+$banner-cta-menu-overlay-transparency-blur-amount: 20px !default;
+$banner-cta-menu-bg: $primary-dark !default;
+$banner-cta-menu-btn-text: $white !default;
+$banner-cta-menu-btn-hover-text: $primary-dark !default;
+$banner-cta-menu-btn-hover-bg: $gray-100 !default;
+$banner-cta-menu-btn-hover-text-decoration: none !default;
+
+// CTA buttons with icon styles.
+$cta-buttons-with-icon-bg: $primary-dark !default;
+$cta-buttons-with-icon-padding: 1rem !default;
+$cta-buttons-with-icon-margin: 0 !default;
+$cta-buttons-with-icon-btn-text: $white !default;
+$cta-buttons-with-icon-btn-bg: $primary-dark !default;
+$cta-buttons-with-icon-btn-hover-text: $primary-dark !default;
+$cta-buttons-with-icon-btn-hover-bg: $gray-100 !default;
+$cta-buttons-with-icon-btn-hover-text-decoration: none !default;
+
+// CTA with background image styles.
+$cta-background-image-overlay-color: $black !default;
+$cta-background-image-overlay-transparency: 0.6 !default;
+$cta-background-button-bg-color: $gray-600 !default;
+$cta-background-button-color: $white !default;
+
+// Large icon CTA font sizes.
+$large-icon-cta-font-size: $font-size-base * 1.2 !default;
+$large-icon-cta-icon-size: $font-size-base * 4 !default;
+$large-icon-cta-description-size: $font-size-base * 0.8 !default;
+
+// Webform paragraph styles.
+$webform-paragraph-landing-page-border-radius: 15px !default;
+$webform-paragraph-landing-page-box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3) !default;
+$webform-paragraph-landing-page-bg-color: $white !default;
+
+// Page banner styles.
+$banner-caption-text-color: $white !default;
+$banner-overlay-bg-color: transparent linear-gradient(180deg, #00000000 0%, #0000009D 100%) !default;
+$page-top-banner-image-style-width: 2560px !default;
+// NOTE: This must always be 100px less than the actual image style height.
+$page-top-banner-image-style-height: 500px !default;
+
+
+// Enable negative margins by default:
+$enable-negative-margins: true;
+
+// Paragraph Styles
+$content-box-bg-color: $gray-400 !default;
+
+// Social media icon colors. If in the footer, these will
+// be overridden by the footer link colors.
+$social-media-icon-color: $black !default;
+$social-media-icon-hover-color: $white !default;
+
+// Email default styles.
+$body-table-bg: #fafafa !default;
+$email-header-text-color: $gray-800 !default;
+
+// Header styles. Which ones apply depends on Drupal theme settings.
+$header-background: $white !default;
+$header-background-transparency-amount: 0.15 !default;
+$header-background-transparency-blur-amount: 20px !default;
+$header-affix-shadow: 0 1px 10px rgba(0, 0, 0, 0.5) !default;
+$header-has-banner-background: transparent !default;
+
+// Hamburger menu button styles.
+$hamburger-button-color: $black !default;
+$hamburger-button-bg-color: transparent !default;
+$hamburger-button-hover-color: $white !default;
+$hamburger-button-hover-bg-color: $black !default;
+$hamburger-button-border-color: transparent !default;
+$hamburger-button-hover-border-color: transparent !default;
+
+// Chevron Control Styles.
+$chevron-indicator-font-size: 1.75rem;
+$chevron-indicator-color: $primary-shade;
+
+//Bootstrap Accordion Styles.
+
+// Accordion Content
+$accordion-color:                         $body-color !default;
+$accordion-bg:                            $body-bg !default;
+
+// Accordion Heading
+$accordion-button-color:                  $white !default;
+$accordion-button-bg:                     $brand-primary !default;
+$accordion-button-hover-color:            $white !default;
+$accordion-button-hover-bg:               $primary-shade !default;
+$accordion-button-active-color:           $primary-shade !default;
+$accordion-button-active-bg:              $gray-400 !default;
+$accordion-button-font-weight:            600 !default;
+
+// Accordion Icon
+$accordion-icon-width:                    1.25rem !default;
+$accordion-icon-padding:                  1rem !default;
+$accordion-icon-bg-radius:                50%;
+$accordion-icon-color:                    $brand-primary !default;
+$accordion-icon-bg:                       $white !default;
+$accordion-icon-active-bg:                $primary-shade !default;
+$accordion-icon-active-color:             $white !default;
+
+//Accordion Borders
+$accordion-border-width:                  0 !default;
+$accordion-border-color:                  $brand-primary !default;
+$accordion-border-radius:                 .25rem !default;
+$accordion-inner-border-radius:           .25rem !default;
+$accordion-button-focus-border-color:     none !default;
+$accordion-button-focus-box-shadow:       none !default;
+
+//Accordion Padding and Margins.
+$accordion-padding-y:                     1rem !default;
+$accordion-padding-x:                     1.25rem !default;
+$accordion-item-vertical-gutter:          1rem !default;
+$accordion-body-padding-y:                $accordion-padding-y !default;
+$accordion-body-padding-x:                $accordion-padding-x !default;
+$accordion-button-padding-y:              $accordion-padding-y !default;
+$accordion-button-padding-x:              $accordion-padding-x !default;
+
+// Mega menu
+$mega-menu-enabled: false !default;
+
+// File links
+$file-link-border-color: $gray-500 !default;
+$file-link-size-text-color: $gray-600 !default;
+
+// The colour of the site-wide search submit button.
+$search-keywords-field-border-color: $gray-600 !default;
+$search-submit-button-color: $black !default;
+
+$file-attachments-background: $gray-200 !default;
+
+$text-selection-color: rgb($primary-shade, 0.35) !default;
+
+$anchor-target-clearance: 180px !default;
+
+$barrio_path_images: "../images/" !default;
+
+// Blockqoute styles.
+$blockquote-bg          : $gray-100 !default;
+$blockquote-border-color: $gray-300 !default;
+$blockquote-border-width: 8px !default;
+$blockquote-margin      : 1rem 0 !default;
+$blockquote-color       : $body-color !default;
+$blockquote-font-style  : italic !default;
+$blockqoute-lg-width    : 60% !default;
+
+// UI widget variables.
+
+$ui-widget-overlay-bg: rgba($black, 0.5) !default;
+$ui-widget-overlay-backdrop-filter: blur(5px) !default;
+$ui-dialog-titlebar-bg: $gray-800 !default;
+$ui-dialog-titlebar-color: $gray-200 !default;
+$ui-dialog-titlebar-padding-y: 0.5rem !default;
+$ui-dialog-titlebar-padding-x: 1rem !default;
+$ui-dialog-border-radius: 8px !default;
+$ui-dialog-border-color: rgba($gray-800, 0.75) !default;
+$ui-dialog-close-bg: $red !default;
+$ui-dialog-close-color: $white !default;
+$ui-dialog-close-hover-bg: color.adjust($red, $lightness: -10%) !default;
+$ui-dialog-close-hover-color: $white !default;
+$ui-dialog-close-focus-shadow: rgba($white, 0.5) !default;

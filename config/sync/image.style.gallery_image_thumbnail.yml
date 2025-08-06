@@ -1,0 +1,17 @@
+uuid: 876a6a9d-719e-461b-b71d-27c344fa56e5
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: b_2GnPsNHYFt3gT5TGfPGMjThO0uS9EJOmsRP4puknU
+name: gallery_image_thumbnail
+label: 'Gallery Image Thumbnail'
+effects:
+  d0f41e30-d649-43c1-9110-ae826a8e3fac:
+    uuid: d0f41e30-d649-43c1-9110-ae826a8e3fac
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 300
+      height: 188
+      anchor: center-center

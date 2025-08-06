@@ -1,0 +1,17 @@
+uuid: 3bba9a53-29f5-4536-994a-12820d88843e
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 76XHlxjPpajGA9VXoQ0_zgajQgUAY7jOihBn_dFzbwA
+name: colorbox_top_thumbnail
+label: 'Colorbox Top Thumbnail'
+effects:
+  8945fd41-082e-4807-acc9-bfbbda208c06:
+    uuid: 8945fd41-082e-4807-acc9-bfbbda208c06
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 800
+      height: 450
+      anchor: center-center

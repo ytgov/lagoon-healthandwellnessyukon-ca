@@ -1,0 +1,53 @@
+// Put typography overrides here.
+$font-family-lato: 'Lato', sans-serif;
+
+$font-family-base: $font-family-lato;
+$font-family-headings: $font-family-lato;
+
+$font-size-base: 1.1875rem;
+$font-size-md: $font-size-base * 1.15;
+
+$font-weight-headings: bold;
+
+// Custom icon font variables.
+$custom-icon-font-family: "custom-icons";
+$custom-icon-font-path: "../fonts";
+
+$custom-maps: unquote('"\\e900"');
+$custom-registry-search: unquote('"\\e901"');
+$custom-proposal-doc: unquote('"\\e902"');
+$custom-process: unquote('"\\e903"');
+
+// $navbar-brand-font-size: 1rem;
+// $nav-link-font-size: 1.05rem;
+
+$icomoon-font-family: "icomoon";
+$icomoon-font-path: "../fonts";
+
+$icon-YHTS-Shaw-Kwaa-icon-path1: unquote('"\\e900"');
+$icon-YHTS-Shaw-Kwaa-icon-path2: unquote('"\\e901"');
+$icon-YHTS-Shaw-Kwaa-icon-path3: unquote('"\\e902"');
+$icon-YHTS-transformation-icon: unquote('"\\e903"');
+$icon-YHTS-FAQ-icon: unquote('"\\e904"');
+
+@font-face {
+  font-family: '#{$custom-icon-font-family}';
+  src: url('#{$custom-icon-font-path}/#{$custom-icon-font-family}.ttf?m35rvs') format('truetype'),
+  url('#{$custom-icon-font-path}/#{$custom-icon-font-family}.woff?m35rvs') format('woff'),
+  url('#{$custom-icon-font-path}/#{$custom-icon-font-family}.svg?m35rvs##{$custom-icon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?4e5qab');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?4e5qab#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?4e5qab') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?4e5qab') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?4e5qab##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}

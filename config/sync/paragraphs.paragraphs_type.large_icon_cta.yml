@@ -1,0 +1,10 @@
+uuid: fd4966a2-18ae-465e-bfcb-1afcf912420f
+langcode: en
+status: true
+dependencies: {  }
+id: large_icon_cta
+label: 'Large Icon CTA'
+icon_uuid: null
+icon_default: null
+description: 'Creates a CTA with a large icon, heading and teaser text'
+behavior_plugins: {  }

@@ -1,0 +1,22 @@
+uuid: 55577495-cd61-4943-9d91-93730fbd3146
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.social_media
+id: block_content.social_media.status
+field_name: status
+entity_type: block_content
+bundle: social_media
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

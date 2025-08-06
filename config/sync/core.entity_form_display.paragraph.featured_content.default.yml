@@ -1,0 +1,161 @@
+uuid: 9ef269e8-dd94-4621-a05f-8721e8f44ae0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.featured_content.field_cta_colour_option
+    - field.field.paragraph.featured_content.field_description_alignment
+    - field.field.paragraph.featured_content.field_featured_description
+    - field.field.paragraph.featured_content.field_featured_image
+    - field.field.paragraph.featured_content.field_featured_link
+    - field.field.paragraph.featured_content.field_featured_title
+    - paragraphs.paragraphs_type.featured_content
+  module:
+    - field_group
+    - link_attributes
+    - media_library
+    - media_library_edit
+    - text
+third_party_settings:
+  field_group:
+    group_settings:
+      children:
+        - group_settings_flex_row
+      label: Settings
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: true
+        id: ''
+        description: ''
+        required_fields: true
+    group_featured_text:
+      children:
+        - field_featured_title
+        - field_featured_description
+        - field_featured_link
+      label: 'Featured Text'
+      region: content
+      parent_name: ''
+      weight: 2
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: true
+        id: ''
+        description: ''
+        required_fields: true
+    group_settings_flex_row:
+      children:
+        - field_cta_colour_option
+        - field_featured_variant
+        - field_description_alignment
+      label: 'Settings Flex Row'
+      region: content
+      parent_name: group_settings
+      weight: 1
+      format_type: html_element
+      format_settings:
+        classes: 'd-flex flex-wrap gap-3'
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        required_fields: false
+    group_row:
+      children: {  }
+      label: Row
+      region: content
+      parent_name: ''
+      weight: 4
+      format_type: html_element
+      format_settings:
+        classes: 'd-flex flex-wrap gap-3'
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        required_fields: true
+_core:
+  default_config_hash: 48MR-QAKeK4lZh0NKi_o5h71LYXxkPJp1p9Cs8GIuaQ
+id: paragraph.featured_content.default
+targetEntityType: paragraph
+bundle: featured_content
+mode: default
+content:
+  field_cta_colour_option:
+    type: options_select
+    weight: 24
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_description_alignment:
+    type: options_select
+    weight: 27
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_featured_description:
+    type: text_textarea_with_summary
+    weight: 29
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  field_featured_image:
+    type: media_library_widget
+    weight: 1
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
+  field_featured_link:
+    type: link_attributes
+    weight: 30
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      enabled_attributes:
+        target: true
+        id: false
+        name: false
+        rel: false
+        class: false
+        accesskey: false
+        aria-label: false
+        title: false
+      widget_default_open: expandIfValuesSet
+    third_party_settings: {  }
+  field_featured_title:
+    type: string_textfield
+    weight: 28
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  translation: true

@@ -1,0 +1,24 @@
+uuid: 4c06d9d0-14ea-49fb-a84e-de36b874bd33
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_category_colour
+    - taxonomy.vocabulary.events_category
+  module:
+    - color_field
+_core:
+  default_config_hash: tcrbK7wrliVJ2WJn6oSyghkrr6UTxmkUf65BFukkSE8
+id: taxonomy_term.events_category.field_category_colour
+field_name: field_category_colour
+entity_type: taxonomy_term
+bundle: events_category
+label: 'Category Colour'
+description: 'Select the colour to apply to a calendar item tagged with this category.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type

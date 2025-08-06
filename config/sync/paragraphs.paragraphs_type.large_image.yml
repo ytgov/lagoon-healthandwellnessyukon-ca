@@ -1,0 +1,12 @@
+uuid: 5900ab58-b2b5-435d-89c0-fe6be2050eb2
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: eLUdjWb8pluU1AYm4UvNPSVmIpvYmQH0Xr6-ArXNWas
+id: large_image
+label: 'Large Image'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,32 @@
+uuid: 2da992e9-fd3e-432e-beb1-f41a258c70d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_content
+    - filter.format.rich_text
+    - paragraphs.paragraphs_type.highlighted_panel
+  module:
+    - allowed_formats
+    - text
+    - tmgmt_content
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - rich_text
+  tmgmt_content:
+    excluded: false
+id: paragraph.highlighted_panel.field_text_content
+field_name: field_text_content
+entity_type: paragraph
+bundle: highlighted_panel
+label: 'Body Text'
+description: 'Enter contact information in any desired way and format.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - rich_text
+field_type: text_long

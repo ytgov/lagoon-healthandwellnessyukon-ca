@@ -1,0 +1,13 @@
+uuid: 95f0f3b6-2c41-449b-8ef0-7dd3f95e085e
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.hero_banner_slideshow
+_core:
+  default_config_hash: QaLU_ylrCExHY4P7HbG4oeWGP1xy1pYVJ-nFqGQpxp0
+id: crop.hero_banner_slideshow
+target_entity_type_id: crop
+target_bundle: hero_banner_slideshow
+default_langcode: site_default
+language_alterable: false

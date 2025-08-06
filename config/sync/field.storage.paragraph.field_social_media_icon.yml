@@ -1,0 +1,60 @@
+uuid: 2d9c7947-fdec-445e-ac03-95e7571e94dc
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_social_media_icon
+field_name: field_social_media_icon
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: facebook
+      label: '<i class="fa-brands fa-facebook"></i> Facebook'
+    -
+      value: facebook-square
+      label: '<i class="fa-brands fa-facebook-square"></i> Facebook Square'
+    -
+      value: facebook-f
+      label: '<i class="fa-brands fa-facebook-f"></i> Facebook F'
+    -
+      value: x-twitter
+      label: '<i class="fa-brands fa-x-twitter"></i> X (Twitter)'
+    -
+      value: x-twitter-square
+      label: '<i class="fa-brands fa-square-x-twitter"></i> X (Twitter) Square'
+    -
+      value: twitter
+      label: '<i class="fa-brands fa-twitter"></i> Twitter'
+    -
+      value: twitter-square
+      label: '<i class="fa-brands fa-twitter-square"></i> Twitter Square'
+    -
+      value: instagram
+      label: '<i class="fa-brands fa-instagram"></i> Instagram'
+    -
+      value: instagram-square
+      label: '<i class="fa-brands fa-instagram-square"></i> Instagram Square'
+    -
+      value: linkedin
+      label: '<i class="fa-brands fa-linkedin"></i> LinkedIn'
+    -
+      value: linkedin-in
+      label: '<i class="fa-brands fa-linkedin-in"></i> LinkedIn In'
+    -
+      value: youtube
+      label: '<i class="fa-brands fa-youtube"></i> YouTube'
+    -
+      value: vimeo
+      label: '<i class="fa-brands fa-vimeo"></i> Vimeo'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

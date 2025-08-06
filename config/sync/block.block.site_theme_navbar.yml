@@ -1,0 +1,26 @@
+uuid: 6a632dbf-3901-4e6f-a1ed-5294d785746c
+langcode: en
+status: true
+dependencies:
+  config:
+    - blockgroup.block_group_content.top_nav
+  module:
+    - block_classes
+    - blockgroup
+  theme:
+    - site_theme
+third_party_settings:
+  block_classes:
+    content_class: 'd-lg-flex align-items-center gap-2'
+id: site_theme_navbar
+theme: site_theme
+region: primary_menu
+weight: -14
+provider: null
+plugin: 'block_group:top_nav'
+settings:
+  id: 'block_group:top_nav'
+  label: Navbar
+  label_display: '0'
+  provider: blockgroup
+visibility: {  }

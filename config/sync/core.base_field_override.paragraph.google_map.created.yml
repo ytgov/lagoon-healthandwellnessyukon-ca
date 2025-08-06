@@ -1,0 +1,18 @@
+uuid: 5de5b05a-59ec-4391-89c1-3287d176a34d
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.google_map
+id: paragraph.google_map.created
+field_name: created
+entity_type: paragraph
+bundle: google_map
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

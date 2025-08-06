@@ -1,0 +1,26 @@
+/**
+ * @file
+ * Theme styling for tabs.
+ */
+
+nav.tabs {
+  margin-bottom: $spacer;
+}
+
+.nav-pills {
+  --#{$prefix}nav-pills-link-color: #{$nav-pills-link-color};
+  --#{$prefix}nav-pills-link-hover-color: #{$nav-pills-link-hover-color};
+  --#{$prefix}nav-pills-link-hover-bg: #{$nav-pills-link-hover-bg};
+
+  .nav-link {
+    &:not(.active):not(:hover) {
+      &:link, &:active, &:focus, &:visited {
+        color: var(--#{$prefix}nav-pills-link-color);
+      }
+    }
+    &:hover {
+      color: var(--#{$prefix}nav-pills-link-hover-color);
+      background-color: var(--#{$prefix}nav-pills-link-hover-bg);
+    }
+  }
+}

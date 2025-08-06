@@ -1,0 +1,39 @@
+uuid: c3e1866b-184c-4648-8efa-33c158bb0683
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.google_map.field_map_location
+    - paragraphs.paragraphs_type.google_map
+  module:
+    - simple_gmap
+_core:
+  default_config_hash: fjYjdZnNEPLXFI74urnvYQiiCdl7wgy0RXad6Mcy1S4
+id: paragraph.google_map.default
+targetEntityType: paragraph
+bundle: google_map
+mode: default
+content:
+  field_map_location:
+    type: simple_gmap
+    label: hidden
+    settings:
+      include_map: true
+      include_static_map: false
+      include_link: false
+      include_text: false
+      iframe_height: '400'
+      iframe_width: 100%
+      iframe_title: 'Map Location'
+      static_scale: 1
+      zoom_level: 14
+      link_text: 'View larger map'
+      map_type: m
+      langcode: en
+      apikey: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_animation_style: true
+  search_api_excerpt: true

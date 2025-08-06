@@ -1,0 +1,32 @@
+uuid: 220714ed-ea02-4b54-a9db-7ac3070b6052
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.blog_comments
+    - field.storage.comment.comment_body
+    - filter.format.comment_formatting
+  module:
+    - allowed_formats
+    - text
+    - tmgmt_content
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - comment_formatting
+  tmgmt_content:
+    excluded: false
+id: comment.blog_comments.comment_body
+field_name: comment_body
+entity_type: comment
+bundle: blog_comments
+label: Comment
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - comment_formatting
+field_type: text_long

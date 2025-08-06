@@ -1,0 +1,31 @@
+uuid: 79c3e2f4-d7f0-4673-957f-69b6e930607b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_slideshow_item
+    - media.type.image
+    - paragraphs.paragraphs_type.slideshow_item
+_core:
+  default_config_hash: YLqjXfK0GZlmtRhixrhfj1EytMpDyl_yYnm2mpWr8Vk
+id: paragraph.slideshow_item.field_slideshow_item
+field_name: field_slideshow_item
+entity_type: paragraph
+bundle: slideshow_item
+label: 'Media Item'
+description: 'You can add either an image or a video file. Video will play silently in the background.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: name
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: image
+field_type: entity_reference

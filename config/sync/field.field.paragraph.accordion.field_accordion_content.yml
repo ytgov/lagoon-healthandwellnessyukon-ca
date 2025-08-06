@@ -1,0 +1,78 @@
+uuid: 12952651-3e3a-4e0e-bfe9-5d62739bd861
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_accordion_content
+    - paragraphs.paragraphs_type.accordion
+    - paragraphs.paragraphs_type.accordion_content
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: 9IzFWNPyf_5dikmGVT4wqzH1-Ycp5QcKKtysb5aPUS4
+id: paragraph.accordion.field_accordion_content
+field_name: field_accordion_content
+entity_type: paragraph
+bundle: accordion
+label: 'Accordion content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      accordion_content: accordion_content
+    negate: 0
+    target_bundles_drag_drop:
+      accordion:
+        weight: 17
+        enabled: false
+      accordion_content:
+        weight: 18
+        enabled: true
+      button_with_icon:
+        weight: 19
+        enabled: false
+      cta_background_image:
+        weight: 20
+        enabled: false
+      embedded_audio:
+        weight: 21
+        enabled: false
+      embedded_video:
+        weight: 22
+        enabled: false
+      featured_content:
+        weight: 23
+        enabled: false
+      file_attachments:
+        weight: 24
+        enabled: false
+      large_image:
+        weight: 25
+        enabled: false
+      page_banner:
+        weight: 26
+        enabled: false
+      private_file_attachments:
+        weight: 27
+        enabled: false
+      slideshow_item:
+        weight: 28
+        enabled: false
+      social_media_icon_link:
+        weight: 29
+        enabled: false
+      text_content:
+        weight: 30
+        enabled: false
+      view:
+        weight: 31
+        enabled: false
+      webform:
+        weight: 32
+        enabled: false
+field_type: entity_reference_revisions

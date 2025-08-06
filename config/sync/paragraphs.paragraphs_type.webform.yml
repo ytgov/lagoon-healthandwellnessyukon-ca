@@ -1,0 +1,12 @@
+uuid: 394bd80a-aa5f-41ae-afa9-89739ea24fb6
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: eAcF9ep9IsW6HN31fUaI_VHydyptnxM8BSOqNrl_xTY
+id: webform
+label: Webform
+icon_uuid: null
+icon_default: null
+description: 'Enables a basic page to add webform as paragraph.'
+behavior_plugins: {  }

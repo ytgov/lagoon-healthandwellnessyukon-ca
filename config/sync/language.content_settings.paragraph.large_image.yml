@@ -1,0 +1,20 @@
+uuid: e43122f8-e9aa-4670-b2ba-eb21b1ef5b44
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.large_image
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '1'
+_core:
+  default_config_hash: Cbqw8hHWmqR5jRPV4XZN0cYaQ5U4nM_KxpxyVZTtNL4
+id: paragraph.large_image
+target_entity_type_id: paragraph
+target_bundle: large_image
+default_langcode: site_default
+language_alterable: false

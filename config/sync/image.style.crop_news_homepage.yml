@@ -1,0 +1,55 @@
+uuid: 4a5b21ae-7d6f-4c49-aafc-172d2149e47e
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.news_homepage
+  module:
+    - crop
+    - image_effects
+_core:
+  default_config_hash: 9Z4dGM7E_1lk64ZMpk3L4Wr7AiLiVfrlSQDkfocb780
+name: crop_news_homepage
+label: 'Cropped: News Homepage'
+effects:
+  3b30d3c0-5f51-48c4-ba2a-92b75cdb3397:
+    uuid: 3b30d3c0-5f51-48c4-ba2a-92b75cdb3397
+    id: crop_crop
+    weight: -10
+    data:
+      crop_type: news_homepage
+      automatic_crop_provider: null
+  75a9f18e-7e72-4144-8603-b89d265debd1:
+    uuid: 75a9f18e-7e72-4144-8603-b89d265debd1
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 800
+      height: 1261
+      anchor: center-center
+  6b4bb9ac-4569-4997-8b27-f815e566f71b:
+    uuid: 6b4bb9ac-4569-4997-8b27-f815e566f71b
+    id: image_scale
+    weight: 3
+    data:
+      width: 800
+      height: 1261
+      upscale: true
+  4158d5e5-cea2-47df-8e3f-078447780efc:
+    uuid: 4158d5e5-cea2-47df-8e3f-078447780efc
+    id: image_effects_set_canvas
+    weight: 4
+    data:
+      canvas_size: exact
+      canvas_color: '#FFFFFFFF'
+      exact:
+        width: '800'
+        height: '1261'
+        placement: center-center
+        x_offset: 0
+        y_offset: 0
+      relative:
+        left: 0
+        right: 0
+        top: 0
+        bottom: 0

@@ -1,0 +1,124 @@
+// Custom icon font variables.
+$custom-icon-font-family: "custom-icons";
+$custom-icon-font-path: "../../site_theme/fonts";
+
+$custom-maps: unquote('"\\e900"');
+$custom-registry-search: unquote('"\\e901"');
+$custom-proposal-doc: unquote('"\\e902"');
+$custom-process: unquote('"\\e903"');
+
+$icomoon-font-family: "icomoon";
+$icomoon-font-path: "../../site_theme/fonts";
+
+$icon-YHTS-Shaw-Kwaa-icon-path1: unquote('"\\e900"');
+$icon-YHTS-Shaw-Kwaa-icon-path2: unquote('"\\e901"');
+$icon-YHTS-Shaw-Kwaa-icon-path3: unquote('"\\e902"');
+$icon-YHTS-transformation-icon: unquote('"\\e903"');
+$icon-YHTS-FAQ-icon: unquote('"\\e904"');
+
+@font-face {
+  font-family: '#{$custom-icon-font-family}';
+  src:
+    url('#{$custom-icon-font-path}/#{$custom-icon-font-family}.ttf?m35rvs') format('truetype'),
+    url('#{$custom-icon-font-path}/#{$custom-icon-font-family}.woff?m35rvs') format('woff'),
+    url('#{$custom-icon-font-path}/#{$custom-icon-font-family}.svg?m35rvs##{$custom-icon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+i.custom-icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$custom-icon-font-family}' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.custom-maps {
+  &:before {
+    content: $custom-maps;
+  }
+}
+.custom-registry-search {
+  &:before {
+    content: $custom-registry-search;
+  }
+}
+.custom-proposal-doc {
+  &:before {
+    content: $custom-proposal-doc;
+  }
+}
+.custom-process {
+  &:before {
+    content: $custom-process;
+  }
+}
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?4e5qab');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?4e5qab#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?4e5qab') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?4e5qab') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?4e5qab##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+i[class^="icon-YHTS"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-YHTS-SK .path1 {
+  &:before {
+    content: $icon-YHTS-Shaw-Kwaa-icon-path1;
+    color: rgb(79, 80, 80);
+  }
+}
+.icon-YHTS-SK .path2 {
+  &:before {
+    content: $icon-YHTS-Shaw-Kwaa-icon-path2;
+    margin-left: -2.1005859375em;
+    color: rgb(254, 254, 254);
+  }
+}
+.icon-YHTS-SK.path3 {
+  &:before {
+    content: $icon-YHTS-Shaw-Kwaa-icon-path3;
+    margin-left: -2.1005859375em;
+    color: rgb(254, 254, 254);
+  }
+}
+.icon-YHTS-transformation-icon {
+  &:before {
+    content: $icon-YHTS-transformation-icon;
+    color: #4f5050;
+  }
+}
+.icon-YHTS-FAQ-icon {
+  &:before {
+    content: $icon-YHTS-FAQ-icon;
+    color: #4f5050;
+  }
+}

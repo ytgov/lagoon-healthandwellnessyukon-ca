@@ -1,0 +1,19 @@
+uuid: b743cee5-c1d7-4058-b8e8-462b60441b97
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading
+    - paragraphs.paragraphs_type.embedded_audio
+id: paragraph.embedded_audio.field_heading
+field_name: field_heading
+entity_type: paragraph
+bundle: embedded_audio
+label: Heading/Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

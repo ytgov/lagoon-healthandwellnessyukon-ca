@@ -1,0 +1,34 @@
+uuid: b674537a-7d34-4895-9d70-6048825c1547
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_content
+    - filter.format.rich_text
+    - paragraphs.paragraphs_type.text_content_full_width
+  module:
+    - allowed_formats
+    - text
+    - tmgmt_content
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - rich_text
+  tmgmt_content:
+    excluded: false
+_core:
+  default_config_hash: rxazKlr95HQ59_sN9uHJ8dTX7CotSnHhP9q9XN0M_Mg
+id: paragraph.text_content_full_width.field_text_content
+field_name: field_text_content
+entity_type: paragraph
+bundle: text_content_full_width
+label: Content
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - rich_text
+field_type: text_long

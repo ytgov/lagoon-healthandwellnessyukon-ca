@@ -1,0 +1,58 @@
+uuid: 80e0d4ad-9384-4788-9264-b4ad550563c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.logos
+    - field.field.block_content.logos.field_headline
+    - field.field.block_content.logos.field_logos_with_links
+  module:
+    - entity_reference_revisions
+    - fences
+    - frontend_editing
+id: block_content.logos.default
+targetEntityType: block_content
+bundle: logos
+mode: default
+content:
+  field_headline:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 0
+    region: content
+  field_logos_with_links:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: footer_logos
+      link: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: div
+        fences_field_items_wrapper_classes: 'row align-items-end justify-content-center'
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+      frontend_editing:
+        ajax_content_update: 0
+        move_up_down: 0
+        add_items: 0
+    weight: 1
+    region: content
+hidden:
+  langcode: true

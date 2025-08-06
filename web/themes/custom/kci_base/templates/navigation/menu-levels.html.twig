@@ -1,0 +1,86 @@
+{#
+/**
+ * @file
+ * Default theme implementation to each level of menu.
+ */
+#}
+
+{% import _self as menus %}
+
+{{ menus.menu_links(items, attributes, 0, has_offcanvas_menu, double_wide_offcanvas) }}
+
+{% macro menu_links(items, attributes, menu_level, has_offcanvas_menu, double_wide_offcanvas, has_content) %}
+  {% import _self as menus %}
+  {% if items %}
+    {% if menu_level == 0 %}
+      {%
+      set menu_classes = [
+        'nav',
+        has_offcanvas_menu and double_wide_offcanvas ? 'row row-cols-md-2',
+        (not has_offcanvas_menu) or (not double_wide_offcanvas) ? 'navbar-nav'
+      ]
+      %}
+      <ul{{ attributes.addClass(menu_classes)|without('id').setAttribute('role', 'menubar') }}>
+    {% else %}
+      {% if has_content %}
+        <ul class="megamenu-nav-items nav navbar-nav" role="menu">
+      {% else %}
+        <ul class="dropdown-menu{{ has_offcanvas_menu ? ' no-shadow'}}" role="menu">
+      {% endif %}
+    {% endif %}
+    {% for item in items %}
+      {% set has_content = item.content.field_content.0 %}
+      {%
+        set classes = [
+          'menu-level--' ~ menu_level,
+          menu_level ? 'dropdown-item' : 'nav-item',
+          item.is_expanded ? 'menu-item--expanded',
+          item.is_collapsed ? 'menu-item--collapsed',
+          item.in_active_trail ? 'active',
+          (item.below) and (not has_content) ? 'dropdown',
+          has_content ? 'mega_menu',
+          (not menu_level) and (not has_offcanvas_menu) ? 'd-lg-flex',
+          (not menu_level) and (not has_offcanvas_menu) ? 'align-items-stretch'
+        ]
+      %}
+      <li{{ item.attributes.addClass(classes).setAttribute('role', 'menuitem') }}>
+        {% set item_url_string = item.url.toString() %}
+        {%
+          set link_classes = [
+            'text-start',
+            'd-lg-flex',
+            'align-items-center',
+            not menu_level ? 'nav-link',
+            item.in_active_trail ? 'active',
+            (item.below or has_content) ? 'dropdown-toggle',
+            (item.below or has_content) ? 'w-100',
+            item.url.getOption('attributes').class ? item.url.getOption('attributes').class | join(' '),
+            'nav-link-' ~ (item_url_string ? item_url_string : 'nolink') | clean_class
+          ]
+        %}
+        {% set link_text %}
+          <span class="menu-item-text">{{ item.title }}</span>
+        {% endset %}
+        {% if item.below or has_content %}
+          {{ link(link_text, item.url, {'class': link_classes, 'data-bs-toggle': 'dropdown', 'aria-expanded': 'false', 'aria-haspopup': 'true' }) }}
+          {% if has_content %}
+            {% set rendered_content = item.content|without('')|render %}
+            <div class="dropdown-mega-menu dropdown-menu{{ has_offcanvas_menu ? ' no-shadow'}}">
+              <div class="megamenu-inner container">
+              {# rendered content includes menu links #}
+              {{ rendered_content }}
+          {% else %}
+            {{ menus.menu_links(item.below, attributes, menu_level + 1, has_offcanvas_menu, double_wide_offcanvas, has_content) }}
+          {% endif %}
+          {% if has_content %}
+              </div>
+            </div>
+          {% endif %}
+        {% else %}
+          {{ link(link_text, item.url, {'class': link_classes}) }}
+        {% endif %}
+      </li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endmacro %}

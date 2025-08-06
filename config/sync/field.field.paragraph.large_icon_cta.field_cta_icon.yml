@@ -1,0 +1,25 @@
+uuid: 14e64215-b809-44b9-af80-7b9568742427
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cta_icon
+    - paragraphs.paragraphs_type.large_icon_cta
+  module:
+    - options
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.large_icon_cta.field_cta_icon
+field_name: field_cta_icon
+entity_type: paragraph
+bundle: large_icon_cta
+label: 'CTA Icon'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,20 @@
+uuid: e6712f31-5ccd-423f-8d3c-00b752035160
+langcode: en
+status: true
+dependencies:
+  theme:
+    - kci_base
+_core:
+  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+id: kci_base_page_title
+theme: kci_base
+region: alerts
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

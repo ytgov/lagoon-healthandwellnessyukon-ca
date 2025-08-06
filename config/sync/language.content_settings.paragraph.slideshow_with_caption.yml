@@ -1,0 +1,20 @@
+uuid: 136f2acd-9ccc-4406-88fa-108d1883c7f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.slideshow_with_caption
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+_core:
+  default_config_hash: snu1DR7CbwQiP_vqBZ2nMbG7IANR99K5-pc3GO-K-8g
+id: paragraph.slideshow_with_caption
+target_entity_type_id: paragraph
+target_bundle: slideshow_with_caption
+default_langcode: site_default
+language_alterable: false

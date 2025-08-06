@@ -1,0 +1,36 @@
+uuid: a608f588-276e-402f-a38f-a25b45035403
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cta_colour_option
+    - paragraphs.paragraphs_type.featured_content
+    - taxonomy.vocabulary.cta_colour_options
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+_core:
+  default_config_hash: l1fjQNDL_-BGaZJA9JGnJRPdhDdcTNG7NlP62h1qkr4
+id: paragraph.featured_content.field_cta_colour_option
+field_name: field_cta_colour_option
+entity_type: paragraph
+bundle: featured_content
+label: Colour
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      cta_colour_options: cta_colour_options
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

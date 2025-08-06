@@ -1,0 +1,21 @@
+uuid: 2d062f77-4d89-49ee-a686-438d21974873
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_image_media_caption
+    - media.type.image
+_core:
+  default_config_hash: yYvyvqQTA1YMp2QL3JAPJm_vz4yQx6GvSxWese697D4
+id: media.image.field_image_media_caption
+field_name: field_image_media_caption
+entity_type: media
+bundle: image
+label: "Image Gallery Caption\t"
+description: 'This will be used as caption text on the image gallery'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

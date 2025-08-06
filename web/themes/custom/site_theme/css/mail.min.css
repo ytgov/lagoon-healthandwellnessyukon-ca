@@ -1,0 +1,280 @@
+@font-face {
+  font-family: "custom-icons";
+  src: url("../fonts/custom-icons.ttf?m35rvs") format("truetype"), url("../fonts/custom-icons.woff?m35rvs") format("woff"), url("../fonts/custom-icons.svg?m35rvs#custom-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.eot?4e5qab");
+  src: url("../fonts/icomoon.eot?4e5qab#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?4e5qab") format("truetype"), url("../fonts/icomoon.woff?4e5qab") format("woff"), url("../fonts/icomoon.svg?4e5qab#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+/* TYPOGRAPHY */
+/* Google Fonts
+
+NOTE: Do NOT use @import statements to include Google fonts here. Newer
+Google font URLs contain semi-colons, which causes CSS compression and
+aggregation to have issues and result in a broken compressed CSS file.
+As such, add your Google fonts to the theme libraries file like this:
+
+css:
+  component:
+    //fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap: { type: external }
+    css/style.css: {}
+
+You can then define variables for your Google font families below, per examples.
+*/
+/* VARIABLES */
+/* VARIABLES */
+#mimemail-body p {
+  margin: 0.625rem 0;
+  padding: 0;
+}
+#mimemail-body table {
+  border-collapse: collapse;
+}
+#mimemail-body h1,
+#mimemail-body h2,
+#mimemail-body h3,
+#mimemail-body h4,
+#mimemail-body h5,
+#mimemail-body h6 {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+#mimemail-body img,
+#mimemail-body a img {
+  border: 0;
+  height: auto;
+  outline: none;
+  text-decoration: none;
+}
+@media only screen and (max-width: 30rem) {
+  #mimemail-body body {
+    width: 100% !important;
+    min-width: 100% !important;
+  }
+}
+#mimemail-body body,
+#mimemail-body #bodyTable,
+#mimemail-body #bodyCell {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: "Lato", sans-serif;
+}
+#mimemail-body .mcnPreviewText {
+  display: none !important;
+}
+#mimemail-body #outlook a {
+  padding: 0;
+}
+#mimemail-body img {
+  -ms-interpolation-mode: bicubic;
+}
+#mimemail-body table {
+  mso-table-lspace: 0;
+  mso-table-rspace: 0;
+}
+#mimemail-body .ReadMsgBody {
+  width: 100%;
+}
+#mimemail-body p,
+#mimemail-body a,
+#mimemail-body li,
+#mimemail-body td,
+#mimemail-body blockquote {
+  mso-line-height-rule: exactly;
+}
+#mimemail-body a[href^=tel],
+#mimemail-body a[href^=sms] {
+  color: inherit;
+  cursor: default;
+  text-decoration: none;
+}
+#mimemail-body p,
+#mimemail-body a,
+#mimemail-body li,
+#mimemail-body td,
+#mimemail-body body,
+#mimemail-body table,
+#mimemail-body blockquote {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+#mimemail-body .ExternalClass {
+  width: 100%;
+}
+#mimemail-body .ExternalClass, #mimemail-body .ExternalClass p, #mimemail-body .ExternalClass td, #mimemail-body .ExternalClass div, #mimemail-body .ExternalClass span, #mimemail-body .ExternalClass font {
+  line-height: 100%;
+}
+#mimemail-body a[x-apple-data-detectors] {
+  color: inherit !important;
+  text-decoration: none !important;
+  font-size: inherit !important;
+  font-family: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+}
+#mimemail-body .message-container {
+  border: 0;
+  max-width: 900px !important;
+}
+#mimemail-body .message-content {
+  word-break: break-word;
+}
+#mimemail-body .message-content .align-center, #mimemail-body .message-content .align-center p {
+  text-align: center;
+}
+#mimemail-body .message-content .align-left {
+  float: left;
+  margin-right: 1.25rem;
+}
+#mimemail-body .message-content .align-right {
+  float: right;
+  margin-left: 1.25rem;
+}
+#mimemail-body .message-content img {
+  height: auto !important;
+  max-width: 100%;
+}
+#mimemail-body body,
+#mimemail-body #bodyTable {
+  background-color: #fafafa;
+}
+#mimemail-body #bodyCell {
+  padding: 0.625rem;
+  border-top: 0;
+}
+@media only screen and (max-width: 30rem) {
+  #mimemail-body #bodyCell {
+    padding-top: 0.625rem !important;
+  }
+}
+#mimemail-body #message-header {
+  background-color: #fff;
+  border-top: 0;
+  border-bottom: 0;
+  padding-top: 0.5625rem;
+  padding-bottom: 0;
+  color: #808080;
+}
+#mimemail-body #message-header .message-branding {
+  text-align: center;
+}
+@media screen and (min-width: 53.25rem) {
+  #mimemail-body #message-header .message-branding {
+    text-align: left;
+  }
+}
+#mimemail-body #message-header .message-branding .site-name {
+  padding-left: 1rem;
+  display: inline-block;
+  text-align: center;
+}
+@media screen and (min-width: 53.25rem) {
+  #mimemail-body #message-header .message-branding .site-name {
+    margin-top: 0;
+  }
+}
+#mimemail-body #message-header .message-branding .site-name .title, #mimemail-body #message-header .message-branding .site-name .subtitle {
+  text-align: center;
+  display: block;
+}
+#mimemail-body #message-header .message-branding .site-name .title {
+  font-size: 1.5rem;
+}
+#mimemail-body #message-header .message-branding .site-name .subtitle {
+  font-size: 1rem;
+}
+#mimemail-body #message-body {
+  background-color: #fff;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+          background-size: cover;
+  border-top: 0;
+  padding-top: 0;
+  padding-bottom: 0.5625rem;
+}
+#mimemail-body #message-body .message-content,
+#mimemail-body #message-body .message-content p {
+  color: #343a40;
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  line-height: 150%;
+  text-align: left;
+}
+@media only screen and (max-width: 30rem) {
+  #mimemail-body #message-body .message-content,
+  #mimemail-body #message-body .message-content p {
+    font-size: 1rem !important;
+    line-height: 150% !important;
+  }
+}
+#mimemail-body #message-body .message-content a,
+#mimemail-body #message-body .message-content p a {
+  color: #A72B2A;
+  font-weight: normal;
+  text-decoration: underline;
+}
+#mimemail-body #message-footer {
+  background-color: #fff;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+          background-size: cover;
+  border-top: 0;
+  border-bottom: 2px solid #eaeaea;
+  padding-top: 0.5625rem;
+  padding-bottom: 0.5625rem;
+  text-align: center;
+}
+#mimemail-body #message-footer .message-footer-content {
+  font-size: 0.8rem;
+}
+#mimemail-body #message-footer .message-footer-content,
+#mimemail-body #message-footer .message-footer-content p, #mimemail-body #message-footer .message-footer-content a {
+  color: #343a40;
+}
+#mimemail-body #message-footer .message-footer-content a,
+#mimemail-body #message-footer .message-footer-content p a {
+  font-weight: normal;
+  text-decoration: underline;
+}
+#mimemail-body #message-footer .message-footer-content a:hover,
+#mimemail-body #message-footer .message-footer-content p a:hover {
+  color: rgb(232.4325358852, 165.804784689, 165.2674641148);
+}
+@media only screen and (max-width: 30rem) {
+  #mimemail-body body,
+  #mimemail-body table,
+  #mimemail-body td,
+  #mimemail-body p,
+  #mimemail-body a,
+  #mimemail-body li,
+  #mimemail-body blockquote {
+    -webkit-text-size-adjust: none !important;
+  }
+}
+@media only screen and (max-width: 30rem) {
+  #mimemail-body .text-content-container {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+}
+@media only screen and (max-width: 30rem) {
+  #mimemail-body .message-content,
+  #mimemail-body .message-content-container {
+    padding-right: 1.125rem !important;
+    padding-left: 1.125rem !important;
+  }
+}

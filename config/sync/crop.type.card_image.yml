@@ -1,0 +1,14 @@
+uuid: 13503bc8-8b83-4dda-afd3-8639fd9652af
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 9GqE5S5mFnFaNIPmy_X5EsdRjJ7niqCSxO0hKaAQ4AY
+label: 'Card Image'
+id: card_image
+description: ''
+aspect_ratio: '5:3'
+soft_limit_width: 600
+soft_limit_height: 360
+hard_limit_width: null
+hard_limit_height: null

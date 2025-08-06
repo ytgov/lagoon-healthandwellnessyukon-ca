@@ -1,0 +1,21 @@
+uuid: 8f57508b-3d66-4747-abee-b7e29de134d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_headline
+    - paragraphs.paragraphs_type.page_banner
+_core:
+  default_config_hash: _sXSANsgt2YIU94pnborvL4BMqeysJPggwi22Jk68fo
+id: paragraph.page_banner.field_headline
+field_name: field_headline
+entity_type: paragraph
+bundle: page_banner
+label: Headline
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,11 @@
+uuid: 2beaf0d3-e02c-4780-af52-1ad219ddf3cc
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.footer_logos
+label: 'Footer Logos'
+description: ''
+targetEntityType: paragraph
+cache: true

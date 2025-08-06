@@ -1,0 +1,14 @@
+uuid: b3450d89-0d1a-42c3-bc9d-b35e0f8ddc43
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: YLbMOt8Hvc6oshtgI8wpvkJnCnzgDHMT1mUm4noQL3Y
+id: news_homepage
+label: 'News Homepage'
+description: ''
+aspect_ratio: '800:1261'
+soft_limit_width: 800
+soft_limit_height: 1261
+hard_limit_width: null
+hard_limit_height: null

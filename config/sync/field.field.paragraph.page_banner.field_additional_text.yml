@@ -1,0 +1,26 @@
+uuid: 74eac8dc-5b8d-4f70-8d96-a5cc551d6ffd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_additional_text
+    - filter.format.rich_text
+    - paragraphs.paragraphs_type.page_banner
+  module:
+    - text
+_core:
+  default_config_hash: CczepTtFRlmb8tAVP9EtYRIp0zIeCfAj0cYaDG2m9xc
+id: paragraph.page_banner.field_additional_text
+field_name: field_additional_text
+entity_type: paragraph
+bundle: page_banner
+label: 'Additional Text'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - rich_text
+field_type: text_long

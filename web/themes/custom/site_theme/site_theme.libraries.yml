@@ -1,0 +1,28 @@
+global-styling:
+  version: VERSION
+  css:
+    component:
+      //fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap: { type: external }
+      css/style.css: {}
+  js:
+    js/custom.js: {}
+scroll-animations:
+  version: VERSION
+  css:
+    component:
+      css/scroll-animations.css: {}
+email:
+  css:
+    theme:
+      css/mail.css: {}
+caleandar:
+  version: VERSION
+  js:
+    js/caleandar.js: {}
+caleandar-site:
+  version: VERSION
+  js:
+    js/caleandar-site.js: {}
+  dependencies:
+    - site_theme/caleandar
+    - core/drupalSettings

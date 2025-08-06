@@ -1,0 +1,20 @@
+uuid: 376804a4-127e-4f2f-83c6-d6496b1814ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.cta_colour_options
+  module:
+    - metatag
+id: taxonomy_term.cta_colour_options.metatag
+field_name: metatag
+entity_type: taxonomy_term
+bundle: cta_colour_options
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The computed meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag_computed

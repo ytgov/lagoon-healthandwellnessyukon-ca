@@ -1,0 +1,22 @@
+uuid: 56e4dda1-a882-4143-9921-31982984feea
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.images_with_links
+id: paragraph.images_with_links.status
+field_name: status
+entity_type: paragraph
+bundle: images_with_links
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,36 @@
+uuid: 19054191-80fa-4bf4-87cf-bdf632a2100a
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.comment_formatting
+  module:
+    - ckeditor5
+format: comment_formatting
+editor: ckeditor5
+settings:
+  toolbar:
+    items:
+      - bold
+      - italic
+      - '|'
+      - bulletedList
+      - numberedList
+      - indent
+      - outdent
+      - '|'
+      - link
+      - '|'
+      - removeFormat
+  plugins:
+    ckeditor5_list:
+      properties:
+        reversed: false
+        startIndex: false
+      multiBlock: false
+    ckeditor_link_styles_linkStyles:
+      styles: {  }
+    linkit_extension:
+      linkit_enabled: false
+image_upload:
+  status: false

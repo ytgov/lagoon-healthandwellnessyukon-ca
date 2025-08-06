@@ -1,0 +1,21 @@
+uuid: 0122ac78-b031-40db-9997-8e161a4d44ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.user.user.tmgmt_translation_skills
+  module:
+    - user
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  member_for:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+hidden:
+  langcode: true
+  tmgmt_translation_skills: true

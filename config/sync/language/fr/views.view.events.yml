@@ -1,0 +1,8 @@
+display:
+  default:
+    display_title: 'Par défaut'
+  upcoming_events_list:
+    display_options:
+      fields:
+        edit_node:
+          text: Modifier

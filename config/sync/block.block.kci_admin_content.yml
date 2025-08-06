@@ -1,0 +1,22 @@
+uuid: 8c2b1ab7-0ce3-4b5c-b7bf-8b0756c14943
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - kci_admin
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: kci_admin_content
+theme: kci_admin
+region: content
+weight: -3
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

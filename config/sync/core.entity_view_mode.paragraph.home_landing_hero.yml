@@ -1,0 +1,13 @@
+uuid: 32918528-ab6f-4dbb-86c9-d895f91bcb04
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: Ox9Tz1XYpUMf6d1oVf2e4a-cE4vi3BI7M57dDrd67HM
+id: paragraph.home_landing_hero
+label: 'Home/Landing Hero'
+description: ''
+targetEntityType: paragraph
+cache: true

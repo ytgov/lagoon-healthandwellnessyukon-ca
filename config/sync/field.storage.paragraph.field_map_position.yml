@@ -1,0 +1,29 @@
+uuid: 044f5e9c-d649-4a8d-9bea-0363e1ee1e85
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+_core:
+  default_config_hash: j4F_X-BjMARRoJ8WGrlJ3zd4bFqhAY8L-Lf2Cxzrz6c
+id: paragraph.field_map_position
+field_name: field_map_position
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: left
+      label: Left
+    -
+      value: right
+      label: Right
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,28 @@
+uuid: a7a02821-d752-4365-b55f-ab5b0c2a6f23
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.page_banner
+  module:
+    - crop
+_core:
+  default_config_hash: 9sl0xL-imHcHuK-6CQvqQ1UreJfbBDaGfQdf-OGkj0c
+name: page_banner
+label: 'Multimedia Hero Banner'
+effects:
+  5c1b348b-0aa6-4ac1-838f-5d278428416d:
+    uuid: 5c1b348b-0aa6-4ac1-838f-5d278428416d
+    id: image_scale_and_crop
+    weight: -9
+    data:
+      width: 2560
+      height: 670
+      anchor: center-center
+  21c3dbe2-4ee6-4fa8-b039-d6f3441ff394:
+    uuid: 21c3dbe2-4ee6-4fa8-b039-d6f3441ff394
+    id: crop_crop
+    weight: -10
+    data:
+      crop_type: page_banner
+      automatic_crop_provider: null

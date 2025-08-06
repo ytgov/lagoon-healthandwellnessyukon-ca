@@ -1,0 +1,26 @@
+uuid: 4f1426a6-ca4f-4340-a014-25574c88048a
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.board_member_thumbnail
+  module:
+    - crop
+name: board_member_thumbnail
+label: 'Board member thumbnail'
+effects:
+  e763628a-3041-477b-90eb-4c144bdf7d03:
+    uuid: e763628a-3041-477b-90eb-4c144bdf7d03
+    id: image_scale_and_crop
+    weight: -9
+    data:
+      width: 600
+      height: 600
+      anchor: center-center
+  adc97b04-94dc-4b4f-a011-54cd1e2bc5c6:
+    uuid: adc97b04-94dc-4b4f-a011-54cd1e2bc5c6
+    id: crop_crop
+    weight: -10
+    data:
+      crop_type: board_member_thumbnail
+      automatic_crop_provider: null

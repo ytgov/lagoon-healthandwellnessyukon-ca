@@ -1,0 +1,20 @@
+uuid: ce507697-3d17-49b6-a3f7-cf19b5057961
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.timeline_event
+id: node.timeline_event.uid
+field_name: uid
+entity_type: node
+bundle: timeline_event
+label: 'Authored by'
+description: 'The username of the content author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getDefaultEntityOwner'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

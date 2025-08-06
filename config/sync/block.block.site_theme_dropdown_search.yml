@@ -1,0 +1,25 @@
+uuid: 261165ae-d286-4ab2-994c-1444ec9d685a
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_classes
+    - search
+  theme:
+    - site_theme
+third_party_settings:
+  block_classes:
+    block_class: 'd-none d-lg-block'
+id: site_theme_dropdown_search
+theme: site_theme
+region: top_nav
+weight: -11
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Dropdown Search'
+  label_display: '0'
+  provider: search
+  page_id: ''
+visibility: {  }

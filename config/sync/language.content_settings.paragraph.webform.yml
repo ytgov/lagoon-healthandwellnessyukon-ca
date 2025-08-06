@@ -1,0 +1,20 @@
+uuid: 6ad847c7-bbd9-4799-a989-6a573ab35a72
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.webform
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '1'
+_core:
+  default_config_hash: mYAjZMNq1_1Awm7SJ2P_3tCB94jU7QPApGQXIhy_WKk
+id: paragraph.webform
+target_entity_type_id: paragraph
+target_bundle: webform
+default_langcode: site_default
+language_alterable: false

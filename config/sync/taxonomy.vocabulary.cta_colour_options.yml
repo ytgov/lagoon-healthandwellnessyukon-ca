@@ -1,0 +1,11 @@
+uuid: d90225a7-2ee6-49c2-b90e-ba45f806f3bc
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: F2pEHG6jYCjQXCppxiFYdSBBE9VtRnCKpeJJ38d4G8I
+name: 'Paragraph Colour Options'
+vid: cta_colour_options
+description: 'Colours that can be used to affect the style of certain paragraph types.'
+weight: 0
+new_revision: false

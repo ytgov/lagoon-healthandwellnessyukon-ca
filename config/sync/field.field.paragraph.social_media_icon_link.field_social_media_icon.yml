@@ -1,0 +1,21 @@
+uuid: f2243881-267d-4d0e-a020-1d8b3a0b6dc1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_social_media_icon
+    - paragraphs.paragraphs_type.social_media_icon_link
+  module:
+    - options
+id: paragraph.social_media_icon_link.field_social_media_icon
+field_name: field_social_media_icon
+entity_type: paragraph
+bundle: social_media_icon_link
+label: Icon
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

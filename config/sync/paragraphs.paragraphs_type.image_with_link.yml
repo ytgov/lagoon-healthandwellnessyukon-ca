@@ -1,0 +1,12 @@
+uuid: 90fcd9f3-b9d0-465c-a244-3c0f620d0e5a
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: n4fHb1ZKtk8rGqkmWvMKbKdzil1Z-ubvH9yjF-iEgXw
+id: image_with_link
+label: 'Image / Logo with Link'
+icon_uuid: null
+icon_default: null
+description: 'Add an image with an optional link to an internal or external page.'
+behavior_plugins: {  }

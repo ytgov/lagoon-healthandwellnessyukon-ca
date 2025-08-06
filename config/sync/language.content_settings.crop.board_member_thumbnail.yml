@@ -1,0 +1,11 @@
+uuid: f07e5bf3-e2da-450b-b892-31de17da6e3f
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.board_member_thumbnail
+id: crop.board_member_thumbnail
+target_entity_type_id: crop
+target_bundle: board_member_thumbnail
+default_langcode: site_default
+language_alterable: false

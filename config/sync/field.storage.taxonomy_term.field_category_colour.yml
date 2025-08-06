@@ -1,0 +1,22 @@
+uuid: 9fe56b6b-07d4-4521-9bbb-104b1b834a4a
+langcode: en
+status: true
+dependencies:
+  module:
+    - color_field
+    - taxonomy
+_core:
+  default_config_hash: ZobvnU8V-Z8CA0KRht6HUu4kovzxflgoppv5fD387ak
+id: taxonomy_term.field_category_colour
+field_name: field_category_colour
+entity_type: taxonomy_term
+type: color_field_type
+settings:
+  format: '#HEXHEX'
+module: color_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

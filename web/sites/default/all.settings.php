@@ -1,5 +1,7 @@
 <?php
 
+// phpcs:ignoreFile
+
 /**
  * @file
  * Shared settings for all environments.

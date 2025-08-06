@@ -1,0 +1,17 @@
+uuid: 1d6951e3-48d9-44c5-886b-9c4b3cf3cef4
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Timeline Milestone'
+type: timeline_event
+description: null
+help: null
+new_revision: true
+preview_mode: 0
+display_submitted: false

@@ -1,0 +1,30 @@
+/* ------------------ Sidebar ----------------- */
+
+.sidebar {
+    .block {
+        border-style: solid;
+        border-width: $sidebar-border-width;
+        border-color: $sidebar-border-color;
+        margin: 0 0 $spacer;
+        .content {
+            @include font-size($font-size-base);
+            line-height: $line-height-sm;
+        }
+    }
+    h2 {
+        margin: 0 0 ($spacer * .5);
+        border-bottom: $sidebar-border-width solid $sidebar-border-color;
+        padding-bottom: 5px;
+        text-shadow: 0 $sidebar-border-width 0 $white;
+        @include font-size($font-size-lg);
+        line-height: $headings-line-height;
+    }
+    tbody {
+        border: none;
+    }
+    tr.even,
+    tr.odd {
+        background: none;
+        border-bottom: $sidebar-border-width solid $sidebar-border-color;
+    }
+}

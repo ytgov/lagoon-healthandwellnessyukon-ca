@@ -1,0 +1,37 @@
+uuid: b8f9a0ac-7e32-4d91-8b32-2b765e25bea7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.large_icon_ctas.field_large_icon_ctas
+    - paragraphs.paragraphs_type.large_icon_ctas
+  module:
+    - paragraphs
+id: paragraph.large_icon_ctas.default
+targetEntityType: paragraph
+bundle: large_icon_ctas
+mode: default
+content:
+  field_large_icon_ctas:
+    type: paragraphs
+    weight: 1
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: preview
+      autocollapse: all
+      closed_mode_threshold: 0
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: large_icon_cta
+      features:
+        add_above: add_above
+        collapse_edit_all: collapse_edit_all
+        convert: convert
+        duplicate: duplicate
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

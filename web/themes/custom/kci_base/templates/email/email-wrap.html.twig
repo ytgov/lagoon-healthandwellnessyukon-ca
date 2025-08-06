@@ -1,0 +1,136 @@
+{#
+/**
+ * @file
+ * Default theme implementation for Symfony Email wrapper.
+ *
+ * Variables:
+ * - body: Email body content.
+ * - is_html: True if generating HTML output, false for plain text.
+ * - subject: Email subject.
+ * - type: Email type.
+ * - sub_type: Email sub-type.
+ * - attributes: HTML attributes for the top-level email element.
+ * - header_alignment: Alignment of the header (left, center, right).
+ * - logo_position: Position of the logo (above, inline).
+ * - mail_title: Title of the email.
+ * - mail_subtitle: Subtitle of the email.
+ * - logo_url: Logo image url for the email.
+ * - site_link: Link to the site.
+ * - footer_text: Text to be displayed in the footer (a render array of processed text).
+ *
+ * @see template_preprocess_email_wrap()
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set classes = [
+    'email-type-' ~ type|clean_class,
+    'email-sub-type-' ~ sub_type|clean_class,
+  ]
+%}
+
+{% if is_html %}
+<html>
+  <body id="mimemail-body">
+    <div{{ attributes.addClass(classes) }}>
+      <center>
+        <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" id="bodyTable" style="height:100%;">
+          <tr>
+            <td align="center" valign="top" id="bodyCell">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" class="message-container"> <tr>
+                  <td valign="top" id="message-header">
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%" class="image-block" style="min-width:100%;">
+                      <tbody class="branding-block">
+                        <tr>
+                          <td valign="top" style="padding:9px;" class="branding-block-inner">
+                            <table align="left" width="100%" border="0" cellpadding="0" cellspacing="0" class="branding-block-container" style="min-width:100%;">
+                              <tbody>
+                                <tr>
+                                  <td class="message-branding" valign="middle" style="padding-right:9px;padding-left:9px;padding-top:0;padding-bottom:0; text-align: {{ header_alignment }}; vertical-align: middle;">
+                                    {% if logo_position == 'above' %}
+                                      <div class="logo-container">
+                                    {% endif %}
+                                    <img alt="" src="{{ logo_url }}" alt="Logo Image" width="100" border="0" style="max-width: 100px; padding-bottom: 0; display: inline !important; vertical-align: middle;" class="image">
+                                    {% if logo_position == 'above' %}
+                                      </div>
+                                      <div class="site-name">
+                                    {% else %}
+                                      <span class="site-name">
+                                    {% endif %}
+                                      <span class="title">
+                                        {{ mail_title }}
+                                      </span>
+                                      {% if mail_subtitle %}
+                                        <span class="subtitle" stlyle="display: block;">{{ mail_subtitle }}</span>
+                                      {% endif %}
+                                    {% if logo_position == 'above' %}
+                                      </div>
+                                    {% else %}
+                                      </span>
+                                    {% endif %}
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td valign="top" id="message-body">
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%" class="message-content-block" style="min-width:100%;">
+                      <tbody class="message-content-outer">
+                        <tr>
+                          <td valign="top" class="message-content-inner" style="padding-top:9px;">
+                              <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%;min-width:100%;" width="100%" class="text-content-container"> <tbody>
+                                <tr>
+                                  <td valign="top" class="message-content" style="padding-top:0;padding-right:18px;padding-bottom:9px;padding-left:18px;">
+                                    {{ body|raw }}
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td valign="top" id="message-footer">
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%" class="image-block" style="min-width:100%;">
+                      <tbody class="branding-block">
+                        <tr>
+                          <td valign="top" style="padding:9px;" class="branding-block-inner">
+                            <table align="left" width="100%" border="0" cellpadding="0" cellspacing="0" class="branding-block-container" style="min-width:100%;">
+                              <tbody>
+                                <tr>
+                                  <td class="message-footer-content">
+                                    {{ footer_text }}
+                                    <p class="site-link" style="width: 100%; text-align: center; display: block;">
+                                      {{ 'Website address: @link'|t({'@link': site_link}) }}
+                                    </p>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </center>
+    </div>
+  </body>
+</html>
+{% else %}
+{{ body }}
+{% endif %}

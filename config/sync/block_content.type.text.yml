@@ -1,0 +1,10 @@
+uuid: e8ef4933-e8a1-4ab5-8438-3e4525526702
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Zc3f8IH4cfAJMj6mIyQxEN8CUs_pTjEneZ-FN9XaUVk
+id: text
+label: Text
+revision: false
+description: 'A text block contains a title and a body.'

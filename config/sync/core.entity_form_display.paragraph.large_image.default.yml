@@ -1,0 +1,34 @@
+uuid: 0fd7be9d-7238-4273-a678-a4288e1ac717
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.large_image.field_image
+    - paragraphs.paragraphs_type.large_image
+  module:
+    - media_library
+    - media_library_edit
+_core:
+  default_config_hash: ItLVLWHnQz3sUcVFwRud3QPHF7MDL5m3XzOhRmuL_zQ
+id: paragraph.large_image.default
+targetEntityType: paragraph
+bundle: large_image
+mode: default
+content:
+  field_image:
+    type: media_library_widget
+    weight: 1
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

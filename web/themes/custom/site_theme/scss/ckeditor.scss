@@ -1,0 +1,13 @@
+@use "sass:meta";
+@import "//use.fontawesome.com/releases/v5.13.0/css/all.css";
+@import "//fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Roboto+Slab:wght@400;700&display=swap";
+@import "typography";
+@import "variables";
+.ck-editor__main {
+  .ck-content {
+    background-color: $body-bg !important;
+    color: $body-color !important;
+    font-family: $font-family-base;
+    @include meta.load-css("./style.scss");
+  }
+}

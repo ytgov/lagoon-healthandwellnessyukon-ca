@@ -2,6 +2,14 @@ uuid: 02761357-b3ee-4cc0-bdd4-a6fe5d6d9944
 langcode: en
 status: true
 dependencies:
+  config:
+    - node.type.blog
+    - node.type.board_member
+    - node.type.events
+    - node.type.homepage
+    - node.type.news
+    - node.type.page
+    - node.type.timeline_event
   module:
     - content_moderation
 id: editorial
@@ -19,6 +27,11 @@ type_settings:
       weight: -2
       published: false
       default_revision: false
+    needs_translation:
+      label: 'Needs Translation'
+      weight: 2
+      published: true
+      default_revision: true
     published:
       label: Published
       weight: 0
@@ -43,6 +56,15 @@ type_settings:
         - published
       to: draft
       weight: -2
+    needs_translation:
+      label: 'Needs Translation'
+      from:
+        - draft
+        - needs_translation
+        - published
+        - ready_for_review
+      to: needs_translation
+      weight: 4
     publish:
       label: Publish
       from:
@@ -68,5 +90,13 @@ type_settings:
         - draft
       to: ready_for_review
       weight: -1
-  entity_types: {  }
+  entity_types:
+    node:
+      - blog
+      - board_member
+      - events
+      - homepage
+      - news
+      - page
+      - timeline_event
   default_moderation_state: draft

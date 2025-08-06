@@ -7,8 +7,6 @@ display:
           submit_button: Appliquer
           reset_button_label: Réinitialiser
           exposed_sorts_label: 'Trier par'
-          sort_asc_label: Asc
-          sort_desc_label: Desc
       pager:
         options:
           expose:
@@ -27,36 +25,16 @@ display:
           label: Libellé
         type:
           label: Type
-        progress:
-          label: Progression
-        word_count:
-          label: Mots
-          separator: ', '
-        tags_count:
-          label: Étiquettes
-          separator: ', '
         changed:
           label: Modifié
         operations:
           label: Actions
-      title: 'Éléments de travail'
-      arguments:
-        tjid:
-          exception:
-            title: Tout
   checkout:
-    display_title: 'Passer la commande'
     display_options:
       fields:
         label:
           label: Libellé
         type:
           label: Type
-        word_count:
-          label: Mots
-          separator: ', '
         changed:
           label: Modifié
-          separator: ', '
-  submitted:
-    display_title: Soumis

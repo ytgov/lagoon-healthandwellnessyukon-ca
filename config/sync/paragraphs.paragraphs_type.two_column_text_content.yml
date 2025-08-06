@@ -1,0 +1,12 @@
+uuid: 96b6e06f-e009-40f6-af40-a90ceaf777b7
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Kc2C7iiWjUDlSHj0HjVt5cdz9EwH25SohJljez_oOrs
+id: two_column_text_content
+label: 'Text Content - Two Column'
+icon_uuid: null
+icon_default: null
+description: 'Two columns of formatted text content.'
+behavior_plugins: {  }

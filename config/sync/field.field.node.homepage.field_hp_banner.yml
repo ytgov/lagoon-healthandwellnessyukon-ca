@@ -1,0 +1,103 @@
+uuid: f1e8d632-a3d4-4ccc-8c7f-f9dd1e984614
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hp_banner
+    - node.type.homepage
+    - paragraphs.paragraphs_type.page_banner
+    - paragraphs.paragraphs_type.slideshow
+    - paragraphs.paragraphs_type.slideshow_with_caption
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: I6ceY4jmiWe6BX88p2GIdc3edK712aENaZm51vBBOjs
+id: node.homepage.field_hp_banner
+field_name: field_hp_banner
+entity_type: node
+bundle: homepage
+label: Banner/Slideshow
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      page_banner: page_banner
+      slideshow: slideshow
+      slideshow_with_caption: slideshow_with_caption
+    negate: 0
+    target_bundles_drag_drop:
+      accordion:
+        weight: 18
+        enabled: false
+      accordion_content:
+        weight: 19
+        enabled: false
+      button_with_icon:
+        weight: 20
+        enabled: false
+      buttons_with_icon:
+        weight: 26
+        enabled: false
+      cta_background_image:
+        weight: 21
+        enabled: false
+      embedded_audio:
+        weight: 22
+        enabled: false
+      embedded_video:
+        weight: 23
+        enabled: false
+      featured_content:
+        weight: 24
+        enabled: false
+      file_attachments:
+        weight: 25
+        enabled: false
+      image_gallery:
+        weight: 34
+        enabled: false
+      image_with_link:
+        weight: 35
+        enabled: false
+      images_with_links:
+        weight: 33
+        enabled: false
+      large_image:
+        weight: 26
+        enabled: false
+      page_banner:
+        weight: 27
+        enabled: true
+      private_file_attachments:
+        weight: 28
+        enabled: false
+      slideshow:
+        weight: 39
+        enabled: true
+      slideshow_item:
+        weight: 29
+        enabled: false
+      slideshow_with_caption:
+        weight: 41
+        enabled: true
+      social_media_icon_link:
+        weight: 30
+        enabled: false
+      text_content:
+        weight: 31
+        enabled: false
+      two_column_text_content:
+        weight: 32
+        enabled: false
+      view:
+        weight: 33
+        enabled: false
+      webform:
+        weight: 34
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,55 @@
+uuid: 19977705-d7e2-47ba-bc70-03943342fb4a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.slideshow.field_slideshow_description
+    - field.field.paragraph.slideshow.field_slideshow_media_items
+    - field.field.paragraph.slideshow.field_slideshow_title
+    - paragraphs.paragraphs_type.slideshow
+  module:
+    - fences
+    - text
+_core:
+  default_config_hash: qeHcbYmr1wgYA400r-HZ2NJH_rQ1RQtkvhftK7fbVk0
+id: paragraph.slideshow.default
+targetEntityType: paragraph
+bundle: slideshow
+mode: default
+content:
+  field_slideshow_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_slideshow_media_items:
+    type: entity_reference_entity_view
+    label: visually_hidden
+    settings:
+      view_mode: slideshow
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_slideshow_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: h2
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    weight: 1
+    region: content
+hidden:
+  field_animation_style: true
+  search_api_excerpt: true

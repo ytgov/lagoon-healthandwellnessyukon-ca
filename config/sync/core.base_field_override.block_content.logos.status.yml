@@ -1,0 +1,22 @@
+uuid: eaa790e2-e7ad-4a0f-a263-1fc4dbec732c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.logos
+id: block_content.logos.status
+field_name: status
+entity_type: block_content
+bundle: logos
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

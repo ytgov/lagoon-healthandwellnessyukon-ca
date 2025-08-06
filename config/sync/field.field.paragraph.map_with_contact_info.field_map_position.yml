@@ -1,0 +1,25 @@
+uuid: 1399a56c-25cc-43d0-be9f-5c01d3d2614d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_map_position
+    - paragraphs.paragraphs_type.map_with_contact_info
+  module:
+    - options
+_core:
+  default_config_hash: 7XxBvgJSMKhWM2VDUcVa-6NpWgLJIPwQx_XpxGSl9cU
+id: paragraph.map_with_contact_info.field_map_position
+field_name: field_map_position
+entity_type: paragraph
+bundle: map_with_contact_info
+label: 'Map Position'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: left
+default_value_callback: ''
+settings: {  }
+field_type: list_string

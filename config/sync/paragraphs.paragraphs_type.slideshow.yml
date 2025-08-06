@@ -1,0 +1,12 @@
+uuid: 99c0dabc-1ea4-4384-905e-281bb3bcc1da
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: GhMsTKtiW8llZXuoyH5A1xNoF5rMt-KdgRz1qtb1-us
+id: slideshow
+label: 'Slideshow with Description'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

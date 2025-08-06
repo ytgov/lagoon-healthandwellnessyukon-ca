@@ -1,0 +1,26 @@
+uuid: 3d1e7be3-86d1-4103-ab96-b8ee88be2a01
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cta_with_bg_text
+    - filter.format.rich_text
+    - paragraphs.paragraphs_type.cta_background_image
+  module:
+    - text
+_core:
+  default_config_hash: BnNG4sZAUhP4WUHIJ9Cv7SSAmMnqmNUgY-HWWs9mkkA
+id: paragraph.cta_background_image.field_cta_with_bg_text
+field_name: field_cta_with_bg_text
+entity_type: paragraph
+bundle: cta_background_image
+label: 'Text Content'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - rich_text
+field_type: text_long

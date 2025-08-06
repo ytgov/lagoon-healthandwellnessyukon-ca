@@ -1,0 +1,17 @@
+uuid: af038049-2f5c-4b90-8547-4685ad1cd49c
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: CDlTRJLidNpQwBNn9RjHJGxNTjWDradB9VdkPLDH13k
+name: event_image
+label: 'Event Image'
+effects:
+  38ce795a-43af-4d12-8777-749c22ff426a:
+    uuid: 38ce795a-43af-4d12-8777-749c22ff426a
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 480
+      height: 480
+      anchor: center-center

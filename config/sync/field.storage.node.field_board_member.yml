@@ -1,0 +1,18 @@
+uuid: ec234655-72f4-47ef-af8f-b4cfa336d67c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_board_member
+field_name: field_board_member
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

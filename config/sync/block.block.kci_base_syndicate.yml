@@ -1,0 +1,23 @@
+uuid: f7820d55-fa72-4b76-98b5-456a5d1fbd52
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+  theme:
+    - kci_base
+_core:
+  default_config_hash: 0gq3VPg-_UM69FCCWurLFIrrnIjC2HLKhwo9iQNtcUo
+id: kci_base_syndicate
+theme: kci_base
+region: alerts
+weight: 0
+provider: null
+plugin: node_syndicate_block
+settings:
+  id: node_syndicate_block
+  label: 'RSS feed'
+  label_display: '0'
+  provider: node
+  block_count: 10
+visibility: {  }
