@@ -155,7 +155,7 @@ kci_base_email_logo_path: themes/custom/site_theme/images/email-logo.png
 kci_base_email_title: ''
 kci_base_email_subtitle: ''
 kci_base_email_footer_text:
-  value: "<h4>[site:name]</h4>\r\n<p>123 Any Street, Yellowknife, NT X1A 1X1<br>\r\nPhone: 867-123-4567<br>\r\nEmail: <a href=\"mailto:test@example.com\">test@example.com</a></p>"
+  value: "<h4>Yukon Health Systems Transformation</h4>\r\n\r\nEmail: <a href=\"mailto: healthtransformation@yukon.ca \"> healthtransformation@yukon.ca </a></p>"
   format: email_html
 bootstrap_barrio_region_clean_top_nav: 0
 bootstrap_barrio_region_width_top_nav: 0
