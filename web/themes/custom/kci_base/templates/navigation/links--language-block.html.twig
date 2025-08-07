@@ -39,7 +39,7 @@
 {% if links %}
   <nav{{ attributes.addClass(['nav', 'links-inline']) }}>
     {%- for key, item in links -%}
-      <span{{ item.attributes.addClass(key|clean_class, 'nav-item') }}>
+      <span{{ item.attributes.addClass(key|clean_class, 'nav-item').removeAttribute('hreflang') }}>
         {%- if item.link -%}
           {{ item.link }}
         {%- elseif item.text_attributes -%}
