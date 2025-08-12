@@ -187,8 +187,13 @@ function site_theme_preprocess_views_view_unformatted__calendar_events(&$variabl
     $grouped_rows = [];
     foreach ($variables['rows'] as $row_data) {
       $row = $row_data['content']['#row'];
-      // Get the active translation of the event entity.
-      $event_translation = $row->_entity->getTranslation($current_language->getId());
+      // Get the active translation of the event entity, or fallback to default.
+      if ($row->_entity->hasTranslation($current_language->getId())) {
+        $event_translation = $row->_entity->getTranslation($current_language->getId());
+      }
+      else {
+        $event_translation = $row->_entity;
+      }
       // Set the event title and date.
       $event_title = $event_translation->getTitle();
       $start_date = $event_translation->get('field_event_date')->value;
