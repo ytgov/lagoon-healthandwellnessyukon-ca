@@ -1,0 +1,25 @@
+uuid: 5ffb3502-1558-4fb4-89c9-132c19bb3531
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_membership
+    - node.type.board_member
+  module:
+    - options
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: node.board_member.field_membership
+field_name: field_membership
+entity_type: node
+bundle: board_member
+label: Membership
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

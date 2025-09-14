@@ -4,11 +4,11 @@ status: true
 dependencies: {  }
 _core:
   default_config_hash: VkHuntUCGBKyh46JIqFipwUB1wvy2EsJ0OqycpLYXrg
-id: featured_content_image
 label: 'Featured Content Image'
+id: featured_content_image
 description: ''
 aspect_ratio: '3:2'
-soft_limit_width: 648
-soft_limit_height: 432
+soft_limit_width: 270
+soft_limit_height: 480
 hard_limit_width: null
 hard_limit_height: null

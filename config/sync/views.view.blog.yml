@@ -2370,7 +2370,7 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: ''
+          element_type: div
           element_class: ''
           element_label_type: ''
           element_label_class: ''
@@ -2392,7 +2392,7 @@ display:
         type: views_bootstrap_grid
         options:
           grouping: {  }
-          row_class: mb-4
+          row_class: 'mb-4 position-relative'
           default_row_class: true
           grid_class: gx-md-6
           col_xs: none

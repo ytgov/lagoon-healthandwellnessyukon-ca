@@ -5,7 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.search_result
     - field.field.node.board_member.field_biography
-    - field.field.node.board_member.field_board_member
+    - field.field.node.board_member.field_membership
     - field.field.node.board_member.field_photo
     - field.field.node.board_member.field_role
     - node.type.board_member
@@ -16,6 +16,11 @@ targetEntityType: node
 bundle: board_member
 mode: search_result
 content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }
@@ -24,7 +29,7 @@ content:
 hidden:
   addtoany: true
   field_biography: true
-  field_board_member: true
+  field_membership: true
   field_photo: true
   field_role: true
   langcode: true

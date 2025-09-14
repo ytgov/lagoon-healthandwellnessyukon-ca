@@ -137,7 +137,7 @@ settings:
   confirmation_type: message
   confirmation_url: '<front>'
   confirmation_title: ''
-  confirmation_message: '<p>Your message has been sent. &nbsp;Thank you.</p>'
+  confirmation_message: '<p>Your question has been sent. &nbsp;Thank you.</p>'
   confirmation_attributes: {  }
   confirmation_back: true
   confirmation_back_label: ''
@@ -159,7 +159,7 @@ settings:
   entity_limit_user_interval: null
   purge: none
   purge_days: null
-  results_disabled: false
+  results_disabled: true
   results_disabled_ignore: false
   results_customize: false
   token_view: false
@@ -225,7 +225,7 @@ handlers:
     settings:
       states:
         - completed
-      to_mail: info@healthandwellnessyukon.ca
+      to_mail: healthtransformation@yukon.ca
       to_options: {  }
       bcc_mail: ''
       bcc_options: {  }

@@ -31,7 +31,7 @@ elements: |-
     '#title_display': inline
     '#options':
       'yes': '<i class="fa-solid fa-thumbs-up fa-fw fs-4"></i>'
-      'no': '<i class="fa-solid fa-thumbs-down fa-fw fs-4""></i>'
+      'no': '<i class="fa-solid fa-thumbs-down fa-fw fs-4"></i>'
     '#options_display': two_columns
     '#wrapper_type': form_element
     '#wrapper_attributes':
@@ -281,7 +281,7 @@ handlers:
       bcc_options: {  }
       cc_mail: ''
       cc_options: {  }
-      from_mail: info@healthandwellnessyukon.ca
+      from_mail: _default
       from_options: {  }
       from_name: _default
       reply_to: ''
