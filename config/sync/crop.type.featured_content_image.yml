@@ -1,0 +1,14 @@
+uuid: 8e3332c5-5192-4c5a-b49c-77b2a9859661
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: VkHuntUCGBKyh46JIqFipwUB1wvy2EsJ0OqycpLYXrg
+label: 'Featured Content Image'
+id: featured_content_image
+description: ''
+aspect_ratio: '3:2'
+soft_limit_width: 270
+soft_limit_height: 480
+hard_limit_width: null
+hard_limit_height: null

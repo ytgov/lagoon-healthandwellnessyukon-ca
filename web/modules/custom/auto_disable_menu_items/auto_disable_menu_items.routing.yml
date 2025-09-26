@@ -1,0 +1,9 @@
+auto_disable_menu_items.settings:
+  path: 'admin/structure/menu/auto-disable-menu-items'
+  defaults:
+    _form: '\Drupal\auto_disable_menu_items\Form\AutoDisableMenuItemsSettingsForm'
+    _title: 'Auto-Disable Menu Items'
+  requirements:
+    _permission: 'administer auto disable menu items'
+  options:
+    _admin_route: TRUE

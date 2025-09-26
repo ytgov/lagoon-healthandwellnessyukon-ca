@@ -15,7 +15,7 @@ template: false
 archive: false
 id: contact
 title: Contact
-description: 'Basic email contact webform.'
+description: '<p>Basic email contact webform.</p>'
 categories: {  }
 elements: |
   name:
@@ -171,7 +171,7 @@ settings:
   entity_limit_user_interval: null
   purge: none
   purge_days: null
-  results_disabled: false
+  results_disabled: true
   results_disabled_ignore: false
   results_customize: false
   token_view: false
@@ -246,7 +246,7 @@ handlers:
       from_mail: _default
       from_options: {  }
       from_name: _default
-      reply_to: ''
+      reply_to: noreply@yukonhealthtransformation.com
       return_path: ''
       sender_mail: ''
       sender_name: ''
@@ -280,10 +280,10 @@ handlers:
       bcc_options: {  }
       cc_mail: ''
       cc_options: {  }
-      from_mail: '[webform_submission:values:email:raw]'
+      from_mail: _default
       from_options: {  }
       from_name: '[webform_submission:values:name:raw]'
-      reply_to: ''
+      reply_to: '[webform_submission:values:email:raw]'
       return_path: ''
       sender_mail: ''
       sender_name: ''

@@ -1,0 +1,43 @@
+uuid: 962a0cd9-3ff2-4c10-a84a-b4ad8e6b2d67
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.large_image.field_image
+    - paragraphs.paragraphs_type.large_image
+  module:
+    - fences
+_core:
+  default_config_hash: BTKK4JpyVV-PzwUCoovVMKh7VsbWr7ja_Gjkp4VnDnY
+id: paragraph.large_image.default
+targetEntityType: paragraph
+bundle: large_image
+mode: default
+content:
+  extra_field_frontend_editing:
+    type: extra_field_frontend_editing
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: content_fit
+      link: false
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: text-center
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    weight: 0
+    region: content
+hidden:
+  field_animation_style: true
+  search_api_excerpt: true

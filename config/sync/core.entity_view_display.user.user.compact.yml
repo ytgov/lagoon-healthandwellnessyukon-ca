@@ -1,0 +1,18 @@
+uuid: 6356beb7-2d56-402d-9a65-9cc6f32ece04
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.user.compact
+    - field.field.user.user.tmgmt_translation_skills
+  module:
+    - user
+id: user.user.compact
+targetEntityType: user
+bundle: user
+mode: compact
+content: {  }
+hidden:
+  langcode: true
+  member_for: true
+  tmgmt_translation_skills: true

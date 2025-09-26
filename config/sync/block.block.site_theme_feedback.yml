@@ -1,0 +1,26 @@
+uuid: 24c76785-1712-4e89-9557-b12dc926188e
+langcode: en
+status: true
+dependencies:
+  config:
+    - webform.webform.page_feedback
+  module:
+    - webform
+  theme:
+    - site_theme
+id: site_theme_feedback
+theme: site_theme
+region: featured_bottom_first
+weight: -11
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: Feedback
+  label_display: '0'
+  provider: webform
+  webform_id: page_feedback
+  default_data: ''
+  redirect: false
+  lazy: false
+visibility: {  }

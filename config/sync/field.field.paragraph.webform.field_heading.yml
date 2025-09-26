@@ -1,0 +1,21 @@
+uuid: 3390c237-b7f5-40ec-90a5-8d8f84957fb1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading
+    - paragraphs.paragraphs_type.webform
+_core:
+  default_config_hash: jeghZsL1TTVfOvMlBiSy9HsNuKpULTNGr35Znrxlba8
+id: paragraph.webform.field_heading
+field_name: field_heading
+entity_type: paragraph
+bundle: webform
+label: Heading/Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

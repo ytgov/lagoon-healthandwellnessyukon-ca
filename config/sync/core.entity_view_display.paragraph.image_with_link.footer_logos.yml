@@ -1,0 +1,57 @@
+uuid: 7a088386-018d-4ecb-a048-1c7c421c843c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.footer_logos
+    - field.field.paragraph.image_with_link.field_image_link_image
+    - field.field.paragraph.image_with_link.field_image_link_link
+    - image.style.footer_logo
+    - paragraphs.paragraphs_type.image_with_link
+  module:
+    - fences
+    - linked_field
+    - media
+_core:
+  default_config_hash: YjHvQkDx7NAXzGPWQNR4s4u2m2Xh2xN8OsynZXef99c
+id: paragraph.image_with_link.footer_logos
+targetEntityType: paragraph
+bundle: image_with_link
+mode: footer_logos
+content:
+  extra_field_frontend_editing:
+    type: extra_field_frontend_editing
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_image_link_image:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: footer_logo
+      image_loading:
+        attribute: lazy
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+      linked_field:
+        linked: '1'
+        type: field
+        destination: field_image_link_link
+        advanced:
+          class: hide-new-window-indicator
+        token: ''
+    weight: 0
+    region: content
+hidden:
+  field_image_link_link: true
+  search_api_excerpt: true

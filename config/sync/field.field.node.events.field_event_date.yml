@@ -1,0 +1,27 @@
+uuid: 668b215e-4afc-4ddc-9f3d-df948542ac57
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_date
+    - node.type.events
+  module:
+    - datetime_range
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+_core:
+  default_config_hash: pM-AZqBMNJVu6cBEEB8Ubp81s4ChkC7hEznsHnh9ZGo
+id: node.events.field_event_date
+field_name: field_event_date
+entity_type: node
+bundle: events
+label: Date
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: daterange

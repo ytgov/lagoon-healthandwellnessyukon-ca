@@ -1,0 +1,25 @@
+uuid: e6fe8399-0a08-4fe6-8370-f021f3bc3e75
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_slideshow_button_link
+    - paragraphs.paragraphs_type.slideshow_item
+  module:
+    - link
+_core:
+  default_config_hash: ThVUOAchPqfR_35ePl4zdGmJfD7VtKLKsAw7RYYQoCE
+id: paragraph.slideshow_item.field_slideshow_button_link
+field_name: field_slideshow_button_link
+entity_type: paragraph
+bundle: slideshow_item
+label: 'Slideshow Button Link'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 2
+  link_type: 17
+field_type: link

@@ -1,0 +1,36 @@
+uuid: 91c78888-20bc-4188-869e-b337e401c6cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.carousel
+    - field.field.paragraph.image_gallery.field_heading
+    - field.field.paragraph.image_gallery.field_image_gallery_images
+    - paragraphs.paragraphs_type.image_gallery
+_core:
+  default_config_hash: gkGJlXlDWCeAdtizebZO79tReESqq3SF3J7alf2M920
+id: paragraph.image_gallery.carousel
+targetEntityType: paragraph
+bundle: image_gallery
+mode: carousel
+content:
+  extra_field_frontend_editing:
+    type: extra_field_frontend_editing
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_image_gallery_images:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: image_gallery_carousel
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_animation_style: true
+  field_heading: true
+  search_api_excerpt: true
+  view_mode_selection: true

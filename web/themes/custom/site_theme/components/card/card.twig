@@ -1,0 +1,55 @@
+{% if card_link %}
+  {% set link_title %}
+    <span class="visually-hidden">
+      {{ card_link_title }}
+    </span>
+  {% endset %}
+  {% set card_link = link(link_title, link_url, {'class':[
+        'card-link',
+        'position-absolute w-100 h-100 top-0 start-0',
+        'hide-new-window-indicator',
+      ]}) %}
+{% endif %}
+
+
+<div {{ attributes.addClass('card') }}>
+  {% if card_img_top %}
+    <img src="{{ card_img_top }}" class="card-img-top" alt="{{ card_img_alt }}">
+  {% elseif block('card_img_top_block')|trim|length %}
+    {% block card_img_top_block %}
+      {{ card_img_top }}
+    {% endblock %}
+  {% endif %}
+
+  {% if card_header or block('card_header_block')|trim|length %}
+    <div class="card-header">
+      {% block card_header_block %}
+        {{ card_header }}
+      {% endblock %}
+    </div>
+  {% endif %}
+
+  {% if card_body or block('card_body_block')|trim|length %}
+    <div class="card-body">
+      {% block card_body_block %}
+        {% if card_title %}
+          <span class="card-title fs-2 fw-bold">{{ card_title }}</span>
+        {% endif %}
+        <span class="card-text">
+          {{ card_body }}
+        </span>
+        {% if card_link %}
+          {{ card_link }}
+        {% endif %}
+      {% endblock %}
+    </div>
+  {% endif %}
+
+  {% if card_footer or block('card_footer_block')|trim|length %}
+    <div class="card-footer">
+      {% block card_footer_block %}
+        {{ card_footer }}
+      {% endblock %}
+    </div>
+  {% endif %}
+</div>

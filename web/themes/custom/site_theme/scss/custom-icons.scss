@@ -1,0 +1,83 @@
+i.custom-icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$custom-icon-font-family}' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.custom-maps {
+  &:before {
+    content: $custom-maps;
+  }
+}
+.custom-registry-search {
+  &:before {
+    content: $custom-registry-search;
+  }
+}
+.custom-proposal-doc {
+  &:before {
+    content: $custom-proposal-doc;
+  }
+}
+.custom-process {
+  &:before {
+    content: $custom-process;
+  }
+}
+
+i[class^="icon-YHTS"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-YHTS-SK .path1 {
+  &:before {
+    content: $icon-YHTS-Shaw-Kwaa-icon-path1;
+    color: rgb(79, 80, 80);
+  }
+}
+.icon-YHTS-SK .path2 {
+  &:before {
+    content: $icon-YHTS-Shaw-Kwaa-icon-path2;
+    margin-left: -2.1005859375em;
+    color: rgb(254, 254, 254);
+  }
+}
+.icon-YHTS-SK .path3 {
+  &:before {
+    content: $icon-YHTS-Shaw-Kwaa-icon-path3;
+    margin-left: -2.1005859375em;
+    color: rgb(254, 254, 254);
+  }
+}
+.icon-YHTS-transformation-icon {
+  &:before {
+    content: $icon-YHTS-transformation-icon;
+    color: #4f5050;
+  }
+}
+.icon-YHTS-FAQ-icon {
+  &:before {
+    content: $icon-YHTS-FAQ-icon;
+    color: #4f5050;
+  }
+}

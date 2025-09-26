@@ -1,0 +1,43 @@
+uuid: af2b81fc-b9c5-4de3-b389-4351842c1758
+langcode: en
+status: true
+dependencies:
+  module:
+    - image_effects
+_core:
+  default_config_hash: mwjsCQgG_S4hT8Dpi3rbtb9LbBNrrzKm_V2AHxG1fFo
+name: gallery_carousel
+label: 'Gallery Carousel'
+effects:
+  0c6c4eb0-0c5a-44df-b2c2-27e36ff38e00:
+    uuid: 0c6c4eb0-0c5a-44df-b2c2-27e36ff38e00
+    id: image_scale
+    weight: -10
+    data:
+      width: 918
+      height: 500
+      upscale: true
+  c02ab6a1-ac30-4d0f-9230-824daf320cc0:
+    uuid: c02ab6a1-ac30-4d0f-9230-824daf320cc0
+    id: image_effects_set_canvas
+    weight: -8
+    data:
+      canvas_size: exact
+      canvas_color: ''
+      exact:
+        width: '918'
+        height: '500'
+        placement: center-center
+        x_offset: 0
+        y_offset: 0
+      relative:
+        left: 0
+        right: 0
+        top: 0
+        bottom: 0
+  1530f0e9-f82e-4039-92a0-eaf2fb7e7bcf:
+    uuid: 1530f0e9-f82e-4039-92a0-eaf2fb7e7bcf
+    id: image_convert
+    weight: -9
+    data:
+      extension: png

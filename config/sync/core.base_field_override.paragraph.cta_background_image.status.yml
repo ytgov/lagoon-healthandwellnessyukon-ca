@@ -1,0 +1,22 @@
+uuid: 64ea0746-5928-4263-86d7-2c1505066e01
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.cta_background_image
+id: paragraph.cta_background_image.status
+field_name: status
+entity_type: paragraph
+bundle: cta_background_image
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

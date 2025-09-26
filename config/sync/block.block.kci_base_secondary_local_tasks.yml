@@ -1,0 +1,22 @@
+uuid: 0c8c4466-342d-410c-aa05-c75a818174d4
+langcode: en
+status: true
+dependencies:
+  theme:
+    - kci_base
+_core:
+  default_config_hash: ydSxdq7R66I8UMC460rOzlfzvlUL4VRbdwc6z9DWaUI
+id: kci_base_secondary_local_tasks
+theme: kci_base
+region: highlighted
+weight: -2
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Secondary tabs'
+  label_display: '0'
+  provider: core
+  primary: false
+  secondary: true
+visibility: {  }

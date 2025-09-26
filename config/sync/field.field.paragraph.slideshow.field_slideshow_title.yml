@@ -1,0 +1,21 @@
+uuid: 5e2485c8-cc28-4fb9-a61b-ae64f3e9ad43
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_slideshow_title
+    - paragraphs.paragraphs_type.slideshow
+_core:
+  default_config_hash: 9Lrcm59TTrBJ_bDSHbcET1kKSZJOoEzbzeQCHK8mTLM
+id: paragraph.slideshow.field_slideshow_title
+field_name: field_slideshow_title
+entity_type: paragraph
+bundle: slideshow
+label: 'Slideshow Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

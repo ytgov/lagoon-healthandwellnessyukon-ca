@@ -1,0 +1,28 @@
+uuid: 5b1c214d-d64b-42e4-a4ca-2b318dca09e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.featured_content_image
+  module:
+    - crop
+_core:
+  default_config_hash: mhPoLetfLK7D1NRlWmXrJfFPxHuzinw3VfHSAi4SB0U
+name: content_fit_featured_content
+label: 'Featured Content Image'
+effects:
+  8a7613ed-6bf2-444b-bebb-6d4ff4d93d3c:
+    uuid: 8a7613ed-6bf2-444b-bebb-6d4ff4d93d3c
+    id: image_scale_and_crop
+    weight: -9
+    data:
+      width: 720
+      height: 480
+      anchor: center-center
+  2ed3b231-b22c-4476-a70c-85122d20c609:
+    uuid: 2ed3b231-b22c-4476-a70c-85122d20c609
+    id: crop_crop
+    weight: -10
+    data:
+      crop_type: featured_content_image
+      automatic_crop_provider: null

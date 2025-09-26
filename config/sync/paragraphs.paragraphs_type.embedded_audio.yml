@@ -1,0 +1,10 @@
+uuid: 99fd9bf6-26b2-4930-9172-954ae75ba5bd
+langcode: en
+status: true
+dependencies: {  }
+id: embedded_audio
+label: 'Embedded Audio'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

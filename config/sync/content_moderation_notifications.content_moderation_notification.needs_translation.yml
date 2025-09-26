@@ -1,0 +1,18 @@
+uuid: 5da74857-5009-4551-80ed-5bfa17bad48a
+langcode: en
+status: true
+dependencies: {  }
+id: needs_translation
+workflow: editorial
+transitions:
+  needs_translation: needs_translation
+roles:
+  translator: translator
+author: false
+site_mail: true
+emails: ''
+subject: 'Page Needs Translation'
+body:
+  value: '<p>The following page has been updated in [node:language:name] and it''s other translations are marked as outdated:</p><p><a href="https://absolute]">[node:title]</a></p><p>To add/update the translations, please <a href="https://login-url]">login to the site</a> with your administrator account, visit the page and use the Translate tab.</p><p>Once logged in, you can also view the moderation dashboard to review all content with outdated translations.</p>'
+  format: rich_text
+label: 'Needs Translation'

@@ -1,0 +1,22 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a link to a file.
+ *
+ * Available variables:
+ * - attributes: The HTML attributes for the containing element.
+ * - link: A link to the file.
+ * - file_size: The size of the file.
+ *
+ * @see template_preprocess_file_link()
+ * @see kci_base_preprocess_file_link()
+ *
+ * @ingroup themeable
+ */
+#}
+<span class="file-link-container d-inline-flex flex-grow-1 align-items-center rounded-3 px-3 py-1">
+  <span{{ attributes.addClass('flex-grow-1', 'text-break') }}>{{ link }}</span>
+  {% if file_size %}
+    <span class="file-size ms-2 text-nowrap">({{ file_size }})</span>
+  {% endif %}
+</span>

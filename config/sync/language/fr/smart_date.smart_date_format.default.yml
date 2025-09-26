@@ -1,0 +1,5 @@
+label: défaut
+time_hour_format: 'g:ia'
+ampm_reduce: '1'
+date_first: '1'
+site_time_toggle: '1'

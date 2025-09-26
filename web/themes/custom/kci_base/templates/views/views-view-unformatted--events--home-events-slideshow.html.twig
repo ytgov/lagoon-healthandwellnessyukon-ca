@@ -1,0 +1,36 @@
+{% if rows|length > 2 %}
+<div class="splide position-relative"
+     aria-label="list of projects"
+     data-perpage="3"
+     data-pagination="true"
+     data-gap="1em">
+
+  <div class="splide__track">
+    <ul class="splide__list">
+      {% for row in rows %}
+        <li class="splide__slide position-relative">
+          <div class="splide__slide__container h-100">
+            {{ row.content }}
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="splide__arrows d-flex justify-content-evenly align-items-center mt-5">
+    <button class="splide__arrow splide__arrow--prev d-flex fs-2 text-primary">
+      <i class="fa-solid fa-circle-chevron-left"></i>
+    </button>
+    <button class="splide__arrow splide__arrow--next d-flex fs-2 text-primary">
+      <i class="fa-solid fa-circle-chevron-right"></i>
+    </button>
+  </div>
+</div>
+{% else %}
+	<div class="news-row row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center">
+		{% for row in rows %}
+			<div class="col">{{ row.content }}</div>
+		{% endfor %}
+	</div>
+{% endif %}
+

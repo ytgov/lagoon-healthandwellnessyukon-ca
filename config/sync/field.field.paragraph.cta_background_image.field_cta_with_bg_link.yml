@@ -1,0 +1,25 @@
+uuid: 824a2742-a3f0-4f3e-9c2b-71dc41f2c1d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cta_with_bg_link
+    - paragraphs.paragraphs_type.cta_background_image
+  module:
+    - link
+_core:
+  default_config_hash: wREmTk4IHDcH8FobJcHEHpOYH5UMV6KhyzrLxptT7qQ
+id: paragraph.cta_background_image.field_cta_with_bg_link
+field_name: field_cta_with_bg_link
+entity_type: paragraph
+bundle: cta_background_image
+label: 'CTA link'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

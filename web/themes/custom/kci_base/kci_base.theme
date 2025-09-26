@@ -1,0 +1,1058 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the SASS Starterkit subtheme.
+ */
+
+declare(strict_types=1);
+
+use Drupal\Component\Utility\Html;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Link;
+use Drupal\Core\Render\Markup;
+use Drupal\Core\Template\Attribute;
+use Drupal\Core\Url;
+use Drupal\block\Entity\Block;
+use Drupal\file\IconMimeTypes;
+use Drupal\gin\GinSettings;
+use Drupal\node\NodeInterface;
+use Drupal\paragraphs\ParagraphInterface;
+
+/**
+ * Implements hook_theme().
+ *
+ * Specify custom templates and theme hooks.
+ */
+function kci_base_theme($existing, $type, $theme, $path) {
+  $items = [];
+  $items['large_icon_cta_link_text'] = [
+    'preprocess functions' => ['template_preprocess_large_icon_cta_link_text'],
+    'variables' => [
+      'icon' => NULL,
+      'description' => NULL,
+      'text' => NULL,
+      'paragraph' => NULL,
+      'view_mode' => NULL,
+    ],
+  ];
+  return $items;
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK().
+ */
+function kci_base_theme_suggestions_large_icon_cta_link_text_alter(array &$suggestions, array $variables) {
+  // Ensure the paragraph entity is available.
+  if (!empty($variables['paragraph']) && $variables['paragraph'] instanceof ParagraphInterface) {
+    /** @var \Drupal\paragraphs\ParagraphInterface $paragraph */
+    $paragraph = $variables['paragraph'];
+
+    // Get the view mode of the paragraph.
+    $view_mode = $variables['view_mode'] ?? 'default';
+
+    // Add a theme suggestion based on the view mode.
+    $suggestions[] = 'large_icon_cta_link_text__' . $view_mode;
+
+    // Optionally, add a suggestion based on the paragraph bundle and view mode.
+    $bundle = $paragraph->bundle();
+    $suggestions[] = 'large_icon_cta_link_text__' . $bundle;
+    $suggestions[] = 'large_icon_cta_link_text__' . $bundle . '__' . $view_mode;
+  }
+}
+
+/**
+ * Implements template_preprocess_page().
+ */
+function kci_base_preprocess_page(&$variables) {
+  $icons = theme_get_setting('bootstrap_barrio_icons');
+  if ($icons) {
+    $variables['#attached']['library'][] = ($icons == 'fontawesome_6' ? 'kci_base' : 'bootstrap_barrio') . '/' . $icons;
+  }
+
+  $site_config = \Drupal::config('system.site');
+  $variables['site_title'] = $site_config->get('name');
+  // Set the default header element attributes.
+  $variables['page_header_attributes'] = [
+    'id' => 'header',
+    'class' => ['header'],
+    'role' => 'banner',
+    'aria-label' => t('Site header'),
+  ];
+  // Affix.
+  $floating_header = theme_get_setting('kci_base_floating_header');
+  $floating_header_home_page_only = theme_get_setting('kci_base_floating_header_home_only');
+  $affix_whole_header = theme_get_setting('kci_base_whole_header_affix');
+  if ($floating_header || $affix_whole_header) {
+    // Make sure affix for specific navbar elements is removed.
+    unset($variables['navbar_top_attributes']['data-toggle']);
+    unset($variables['navbar_attributes']['data-toggle']);
+    $semi_transparent_header_on_scroll = theme_get_setting('kci_base_semi_transparent_header_on_scroll');
+    if ($semi_transparent_header_on_scroll) {
+      $variables['page_header_attributes']['class'][] = 'semi-transparent-on-scroll';
+    }
+  }
+
+  if ($floating_header) {
+    $is_front = \Drupal::service('path.matcher')->isFrontPage();
+    if (!$floating_header_home_page_only || ($floating_header_home_page_only && $is_front)) {
+      $variables['page_header_attributes']['class'][] = 'floating';
+    }
+  }
+  elseif ($affix_whole_header) {
+    if (!in_array('bootstrap_barrio/affix', $variables['#attached']['library'])) {
+      // Make sure affix library is attached if not already.
+      $variables['#attached']['library'][] = 'bootstrap_barrio/affix';
+    }
+    // Set affix on the header.
+    $variables['page_header_attributes']['data-toggle'] = 'affix';
+
+  }
+  $has_offcanvas_menu = (theme_get_setting('bootstrap_barrio_navbar_offcanvas') == 'offcanvas-collapse');
+  $variables['primary_menu_container_attributes'] = [];
+  $variables['navbar_use_full_width'] = theme_get_setting('kci_base_navbar_use_full_width');
+  if ($has_offcanvas_menu) {
+    $variables['page_header_attributes']['class'][] = 'has-offcanvas-menu';
+    if ($variables['navbar_use_full_width']) {
+      $full_width_nav_position = theme_get_setting('kci_base_navbar_full_width_position');
+      if (empty($full_width_nav_position)) {
+        $full_width_nav_position = 'start';
+      }
+      $variables['navbar_attributes']['class'][] = 'full-width-navbar';
+      $variables['primary_menu_container_attributes']['class'][] = 'justify-content-lg-' . $full_width_nav_position;
+    }
+    $is_doublewide_offcanvas = theme_get_setting('kci_base_navbar_offcanvas_doublewide');
+    $variables['primary_menu_container_attributes'] = [
+      'class' => [
+        'offcanvas',
+        'offcanvas-end',
+      ],
+      'tabindex' => '-1',
+      'id' => 'offCanvasMegaMenu',
+    ];
+    if ($is_doublewide_offcanvas) {
+      $variables['page_header_attributes']['class'][] = 'double-wide-offcanvas';
+    }
+    $variables['navbar_use_full_width'] = FALSE;
+  }
+  else {
+    $variables['navbar_use_full_width'] = theme_get_setting('kci_base_navbar_use_full_width');
+    $variables['primary_menu_container_attributes'] = [
+      'class' => [
+        'collapse',
+        'navbar-collapse',
+      ],
+      'id' => 'CollapsingNavbar',
+    ];
+    if ($variables['navbar_use_full_width']) {
+      $full_width_nav_position = theme_get_setting('kci_base_navbar_full_width_position');
+      if (empty($full_width_nav_position)) {
+        $full_width_nav_position = 'start';
+      }
+      $variables['navbar_attributes']['class'][] = 'full-width-navbar';
+      $variables['primary_menu_container_attributes']['class'][] = 'justify-content-lg-' . $full_width_nav_position;
+    }
+    else {
+      $primary_menu_blocks_stacked = theme_get_setting('kci_base_primary_menu_blocks_stacked');
+      $variables['primary_menu_container_attributes']['class'][] = 'd-lg-flex';
+      $variables['primary_menu_container_attributes']['class'][] = 'flex-lg-column';
+      $variables['primary_menu_container_attributes']['class'][] = 'flex-lg-grow-0';
+      if ($primary_menu_blocks_stacked) {
+        $variables['primary_menu_container_attributes']['class'][] = 'flex-column';
+        $variables['primary_menu_container_attributes']['class'][] = 'justify-content-lg-end';
+        $variables['primary_menu_container_attributes']['class'][] = 'align-items-lg-end';
+      }
+      else {
+        $variables['primary_menu_container_attributes']['class'][] = 'align-items-lg-end';
+        $variables['primary_menu_container_attributes']['class'][] = 'justify-content-lg-end';
+      }
+    }
+  }
+  $variables['primary_menu_container_attributes'] = new Attribute($variables['primary_menu_container_attributes']);
+  $variables['page_header_attributes'] = new Attribute($variables['page_header_attributes']);
+  if ($variables['sidebar_first_attributes']->hasClass('order-first')) {
+    $variables['sidebar_first_attributes']->removeClass('order-first')->addClass('order-last')->addClass('order-lg-first');
+  }
+
+  $sidebar_mobile_position = theme_get_setting('kci_base_sidebar_mobile_position');
+  if (!empty($sidebar_mobile_position)) {
+    !$variables['sidebar_first_attributes']->hasClass('order-last') ?: $variables['sidebar_first_attributes']->removeClass('order-last');
+    !$variables['sidebar_first_attributes']->hasClass('order-first') ?: $variables['sidebar_first_attributes']->removeClass('order-first');
+    $variables['sidebar_first_attributes']->addClass('order-' . $sidebar_mobile_position);
+  }
+}
+
+/**
+ * Implements template_preprocess_html().
+ */
+function kci_base_preprocess_html(&$variables) {
+  if (!empty($variables['node_type'])) {
+    if ($variables['node_type'] == 'page'|| $variables['node_type'] == 'landing_page' || $variables['node_type'] == 'homepage') {
+      // Pages might have a banner.
+      $node = \Drupal::routeMatch()->getParameter('node');
+      if ($node instanceof NodeInterface) {
+        try {
+          $banner = $node->get('field_page_banner')->getValue();
+        }
+        catch (\Exception $e) {
+          try {
+            $banner = $node->get('field_hp_banner')->getValue();
+          }
+          catch (\Exception $e) {
+            $banner = NULL;
+          }
+        }
+        if (!empty($banner)) {
+          // Add a class if the page has a banner.
+          $variables['attributes']['class'][] = 'has-banner';
+        }
+      }
+    }
+  }
+  /**
+   * @var \Drupal\Core\Site\Settings $settings
+   */
+  // $settings = \Drupal::classResolver(GinSettings::class);
+  // $gin_secondary_toolbar_frontend = $settings->get('secondary_toolbar_frontend');
+  // $gin_classic_toolbar = $settings->get('classic_toolbar');
+  // $is_classic_toolbar = $gin_classic_toolbar == 'classic';
+  // if ($gin_secondary_toolbar_frontend && !$is_classic_toolbar) {
+  //   // This class will allow the theme to leave room at the top for the front
+  //   // end toolbar. However, this only works properly when not using classic
+  //   // toolbar and either not using core navigation or using the core nav is
+  //   // installed as well as navigation top bar module.
+  //   $variables['attributes']['class'][] = 'gin--secondary-toolbar-frontend';
+  // }
+  // If the page has no banner, or it's a page that will never have
+  // a banner, add a different class.
+  if (!in_array('has-banner', $variables['attributes']['class'])) {
+    $variables['attributes']['class'][] = 'no-banner';
+  }
+  $floating_header = theme_get_setting('kci_base_floating_header');
+  if ($floating_header) {
+    $variables['attributes']['class'][] = 'has-floating-header';
+  }
+
+  $safari_theme_color = theme_get_setting('kci_base_safari_theme_color');
+  if (!empty($safari_theme_color)) {
+    $safari_theme_color = str_replace('#', '', $safari_theme_color);
+    if (ctype_xdigit($safari_theme_color) && strlen($safari_theme_color) == 6) {
+      $theme_color = [
+        '#tag' => 'meta',
+        '#attributes' => [
+          'name' => 'theme-color',
+          'content' => '#' . $safari_theme_color,
+        ],
+      ];
+      $variables['page']['#attached']['html_head'][] = [
+        $theme_color,
+        'theme-color',
+      ];
+    }
+  }
+  if (kci_base_floating_local_tasks_enabled()) {
+    $variables['attributes']['class'][] = 'floating-local-tasks';
+  }
+}
+
+/**
+ * Implements template_preprocess_paragraph().
+ *
+ * Provided variables such as colour options to paragraph twig templates.
+ */
+function kci_base_preprocess_paragraph(&$variables) {
+  /**
+   * @var \Drupal\paragraphs\ParagraphInterface $paragraph
+   */
+  $paragraph = $variables['paragraph'];
+
+  // Set a variable indicating if the paragraph is within a landing page
+  // content type.
+  $variables['landing_page_paragraph'] = FALSE;
+  // Determine the entity type of the paragraphs parent.
+  $parent = $paragraph->getParentEntity();
+  if (isset($parent->type)) {
+    $parent_type = $parent->type->target_id;
+    if ($parent_type == 'landing_page' || $parent_type == 'homepage') {
+      $variables['landing_page_paragraph'] = TRUE;
+    }
+  }
+
+  $bundle = $paragraph->bundle();
+  // Next call any bundle-specific preprocess functions.
+  $paragraph_preprocess_function = 'kci_base_preprocess_paragraph_' . $bundle;
+  if (function_exists($paragraph_preprocess_function)) {
+    $paragraph_preprocess_function($variables);
+  }
+  // Now get the machine name of the default theme and see if a preprocess
+  // function exists in that theme for the paragraph bundle.
+  $default_theme = \Drupal::config('system.theme')->get('default');
+  $default_theme_preprocess_function = $default_theme . '_preprocess_paragraph_' . $bundle;
+  if (function_exists($default_theme_preprocess_function)) {
+    $default_theme_preprocess_function($variables);
+  }
+
+  // Finally call functions that are common to all paragraph types if they
+  // have certain fields.
+  kci_base_preprocess_paragraph_with_colour_field($variables, $paragraph);
+  kci_base_preprocess_paragraph_animation_classes($variables, $paragraph);
+}
+
+/**
+ * Preprocess function for the paragraphs with an animation style field.
+ */
+function kci_base_preprocess_paragraph_animation_classes(&$variables, ParagraphInterface $paragraph) {
+  $variables['animation_classes'] = '';
+  if ($paragraph->hasField('field_animation_style')) {
+    $animation_style_field = $paragraph->get('field_animation_style');
+    $animation_style = $animation_style_field->value;
+    if (!empty($animation_style)) {
+      $variables['animation_classes'] = 'show-on-scroll ' . $animation_style;
+    }
+  }
+}
+
+/**
+ * Preprocess function for the paragraphs with a colour term ref field.
+ */
+function kci_base_preprocess_paragraph_with_colour_field(&$variables, ParagraphInterface $paragraph) {
+
+  // @todo Use a config file in site_theme to add fields as needed.
+  $color_field_names = [
+    'field_cta_colour_option',
+  ];
+
+  foreach ($color_field_names as $color_field_name) {
+    if ($paragraph->hasField($color_field_name)) {
+      $colour_field = $paragraph->get($color_field_name);
+      /**
+       * @var \Drupal\taxonomy\TermInterface $term
+       */
+      $term = $colour_field->entity;
+      if (!empty($term)) {
+        $primary_color = $term->get('field_cta_color_option_colour')->color;
+        $accent_color = $term->get('field_accent_colour')->color;
+        $variables['primary_color'] = '';
+        $variables['accent_color'] = '';
+        if (!empty($primary_color)) {
+          $variables['primary_color'] = $primary_color;
+        }
+        if (!empty($accent_color)) {
+          $variables['accent_color'] = $accent_color;
+        }
+      }
+    }
+  }
+
+}
+
+/**
+ * Preprocess function for the cta_background_image paragraph type.
+ */
+function kci_base_preprocess_paragraph_cta_background_image(&$variables) {
+  if (!empty($variables['content']['field_cta_with_bg_link'])) {
+    $variables['content']['field_cta_with_bg_link'][0]['#attributes']['class'] = [
+      'btn',
+      'btn-cta',
+    ];
+  }
+}
+
+/**
+ * Preprocess function for the cta_background_image paragraph type.
+ */
+function kci_base_preprocess_paragraph_button_with_icon(&$variables) {
+  $title_text = $variables['content']['field_cta_link'][0]['#title'];
+  $variables['content']['field_cta_link'][0]['#title'] = Markup::create('<span class="icon">' . $variables['content']['field_icon'][0]['#markup'] . '</span><span class="cta-text">' . $title_text . '</span>');
+  $variables['content']['field_cta_link'][0]['#attributes']['class'] = [
+    'cta-button',
+    'd-block',
+    'd-lg-inline-flex',
+    'justify-content-center',
+    'align-items-center',
+  ];
+}
+
+/**
+ * Preprocess function for the cta_background_image paragraph type.
+ */
+function kci_base_preprocess_paragraph_map_with_contact_info(&$variables) {
+  /**
+   * @var \Drupal\paragraphs\ParagraphInterface $paragraph
+   */
+  $paragraph = $variables['paragraph'];
+  $map_position = $paragraph->get('field_map_position')->value;
+  if ($map_position == 'left') {
+    $variables['map_order_class'] = 'order-1';
+    $variables['text_order_class'] = 'order-2';
+  }
+  else {
+    $variables['map_order_class'] = 'order-2';
+    $variables['text_order_class'] = 'order-1';
+  }
+}
+
+/**
+ * Preprocess function for the cta_background_image paragraph type.
+ */
+function kci_base_preprocess_paragraph_large_icon_ctas(&$variables) {
+  /**
+   * @var \Drupal\paragraphs\ParagraphInterface $paragraph
+   */
+  $paragraph = $variables['paragraph'];
+  if (empty($paragraph->field_colour_application)) {
+    return;
+  }
+  $colour_application = $paragraph->get('field_colour_application')->value;
+  if (!empty($colour_application)) {
+    $variables['attributes']['class'][] = 'color-application-' . $colour_application;
+  }
+  if (empty($variables['primary_color'])) {
+    $variables['attributes']['class'][] = 'uses-default-color';
+  }
+  else {
+    $variables['primary_color'] = '';
+    $variables['accent_color'] = '';
+    if (!empty($primary_color)) {
+      $variables['primary_color'] = $primary_color;
+    }
+    if (!empty($accent_color)) {
+      $variables['accent_color'] = $accent_color;
+    }
+  }
+}
+
+/**
+ * Implements template_preprocess_field().
+ */
+function kci_base_preprocess_field(&$variables) {
+  if ($variables['field_name'] == 'field_image_gallery_images' && $variables['element']['#view_mode'] == 'carousel') {
+    $variables['image_thumbnails'] = [];
+    foreach ($variables['items'] as $item) {
+      $item['content']['#view_mode'] = 'image_gallery_carousel_thumnail';
+      $variables['image_thumbnails'][] = [
+        '#type' => 'container',
+        '#attributes' => new Attribute([
+          'class' => [
+            'slide thumbnail',
+            'text-center',
+            'py-3',
+            'px-2',
+            'field__item',
+          ],
+        ]),
+        'thumbnail' => $item['content'],
+      ];
+    }
+  }
+  if ($variables['field_name'] == 'field_icon_cta_link' && $variables['element']['#entity_type'] == 'paragraph' && $variables['element']['#bundle'] == 'large_icon_cta') {
+    /**
+     * @var \Drupal\paragraphs\ParagraphInterface $paragraph
+     */
+    $paragraph = $variables['element']['#object'];
+    $view_mode = $variables['element']['#view_mode'] ?? 'default';
+
+    foreach ($variables['items'] as $index => &$item) {
+      $description = $paragraph->get('field_plain_description')->value;
+      $description = trim((string) $description);
+      $description = nl2br($description);
+      /*
+       * Aside from overriding the main template from this theme, templates
+       * can be used based on the paragraph bundle and/or view mode as follows:
+       *
+       * - large-icon-cta-link-text--[view_mode]
+       * - large-icon-cta-link-text--[paragraph_bundle]
+       * - large-icon-cta-link-text--[paragraph_bundle]--[view_mode]
+       *
+       * Examples:
+       *
+       * - large-icon-cta-link-text--default
+       * - large-icon-cta-link-text--large_icon_cta
+       * - large-icon-cta-link-text--large_icon_cta--default
+       */
+      $original_title = $item['content']['#title'];
+      $item['content']['#title'] = [
+        '#theme' => 'large_icon_cta_link_text',
+        '#icon' => $paragraph->get('field_cta_icon')->view($view_mode),
+        '#description' => (!empty($description) ? [
+          '#markup' => $description,
+        ] : NULL),
+        '#text' => $original_title,
+        '#paragraph' => $paragraph,
+        '#view_mode' => $view_mode,
+      ];
+      $item['content']['#attributes']['class'][] = 'large-icon-cta-link';
+      $item['content']['#attributes']['class'][] = 'd-flex';
+      $item['content']['#attributes']['class'][] = 'flex-column';
+      $item['content']['#attributes']['class'][] = 'flex-fill';
+      $item['content']['#attributes']['class'][] = 'text-center';
+      $item['content']['#attributes']['class'][] = 'px-3';
+      $item['content']['#attributes']['class'][] = 'py-2';
+      $item['content']['#attributes']['class'][] = 'hide-new-window-indicator';
+    }
+  }
+  if ($variables['field_name'] == 'field_social_media_link' && $variables['element']['#entity_type'] == 'paragraph' && $variables['element']['#bundle'] == 'social_media_icon_link') {
+    $paragraph = $variables['element']['#object'];
+    foreach ($variables['items'] as $index => $item) {
+      $icon = $paragraph->field_social_media_icon->view()[0]['#markup'];
+      // Get the text after the icon:
+      $icon_text = trim(preg_replace('/^.*\<\/i\>/', '', $icon));
+      // If the icon text contains "Twitter" and "(X)", just use "X" as the
+      // text.
+      if (stristr($icon_text, 'Twitter') && stristr($icon_text, '(x)')) {
+        $icon_text = 'X';
+      }
+      else {
+        // Use the first word found in the text, as that's the name of the
+        // platform.
+        $icon_text = explode(' ', $icon_text)[0];
+      }
+      // Remove any text after the icon:
+      $icon = preg_replace('/\<\/i\>.*$/', '</i>', $icon);
+      $new_link_text = Markup::create($icon);
+      $variables['items'][$index]['content']['#title'] = $new_link_text;
+      $variables['items'][$index]['content']['#attributes']['title'] = $icon_text;
+      $variables['items'][$index]['content']['#attributes']['target'] = '_blank';
+      $variables['items'][$index]['content']['#attributes']['class'][] = 'hide-new-window-indicator';
+      $variables['items'][$index]['content']['#attributes']['class'][] = 'social-media-icon';
+      $variables['items'][$index]['content']['#attributes']['class'][] = 'd-block';
+      $variables['items'][$index]['content']['#attributes']['class'][] = 'd-lg-inline-flex';
+      $variables['items'][$index]['content']['#attributes']['class'][] = 'justify-content-center';
+      $variables['items'][$index]['content']['#attributes']['class'][] = 'align-items-center';
+    }
+  }
+  if ($variables['field_name'] == 'field_media_oembed_video') {
+    foreach ($variables['items'] as $index => $item) {
+      unset($item['content']['#attributes']['frameborder'], $item['content']['#attributes']['allowtransparency'], $item['content']['#attributes']['scrolling'], $item['content']['#attributes']['width'], $item['content']['#attributes']['height']);
+      $variables['items'][$index] = $item;
+    }
+  }
+  if ($variables['field_name'] == 'field_featured_link') {
+
+    $link_classes = [
+      'btn',
+      'btn-feature',
+      'hide-new-window-indicator',
+    ];
+
+    foreach ($variables['items'] as &$item) {
+      $link_options = $item['content']['#url']->getOptions();
+      $link_options['attributes']['class'] = $link_classes;
+      $item['content']['#url']->setOptions($link_options);
+    }
+  }
+  if ($variables['label_display'] == 'inline') {
+    // If label is displayed inline then it should
+    // be bold and have a colon after it.
+    $variables['title_attributes']['class'][] = 'fw-bold';
+    $variables['title_attributes']['class'][] = 'colon-after';
+  }
+}
+
+/**
+ * Implements template_preprocess_file_link().
+ *
+ * Use the media entity name as file link text if there is no description.
+ */
+function kci_base_preprocess_file_link(&$variables) {
+  if (is_string($variables['link'])) {
+    return;
+  }
+  if (is_object($variables['link'])) {
+    // Ensure we are working with a renderable array, as that's
+    // just easier.
+    $variables['link'] = $variables['link']->toRenderable();
+  }
+  $file = $variables['file'];
+  // Use the description as the link text if available.
+  if (!empty($variables['description'])) {
+    $link_text = $variables['description'];
+  }
+  else {
+    $link_text = $file->getFilename();
+    $result = \Drupal::service('file.usage')->listUsage($file);
+    if (!empty($result['file']['media'])) {
+      $mids = array_keys($result['file']['media']);
+      $mid = reset($mids);
+      /** @var \Drupal\media\MediaInterface $media */
+      $media = \Drupal::entityTypeManager()->getStorage('media')->load($mid);
+      $current_lid = \Drupal::languageManager()->getCurrentLanguage()->getId();
+      if ($media->hasTranslation($current_lid)) {
+        $media = $media->getTranslation($current_lid);
+      }
+
+      $link_text = $media->label();
+    }
+  }
+  $icon = kci_base_get_file_link_fontawesome_icon($variables['link']);
+  $link_text = Markup::create('<span class="icon pe-2 fs-4">' . $icon . '</span><span class="link-text flex-grow-1">' . $link_text . '</span>');
+  // And now set the link text.
+  $variables['link']['#title'] = $link_text;
+  $variables['link']['#attributes']['class'][] = 'd-flex';
+  $variables['link']['#attributes']['class'][] = 'align-items-center';
+  $variables['link']['#attributes']['target'] = '_blank';
+}
+
+/**
+ * Return a fontawesome icon for a file link based on the mime type.
+ */
+function kci_base_get_file_link_fontawesome_icon($file_link) {
+  if (!is_array($file_link)) {
+    return;
+  }
+  $options = $file_link['#url']->getOptions();
+  $mime_type = $options['attributes']['type'];
+  // Use the icon class, since that takes care of mapping all the various
+  // mime types to something we can easily work with.
+  $icon_class = IconMimeTypes::getIconClass($mime_type);
+  // Default to generic icon.
+  $icon = '<i class="fas fa-file" aria-hidden="true"></i>';
+  switch ($icon_class) {
+    case 'package-x-generic':
+      $icon = '<i class="fas fa-box-open fa-fw" aria-hidden="true"></i>';
+      break;
+
+    case 'x-office-spreadsheet':
+      $icon = '<i class="fas fa-file-excel fa-fw" aria-hidden="true"></i>';
+      break;
+
+    case 'x-office-document':
+      $icon = '<i class="fas fa-file-word fa-fw" aria-hidden="true"></i>';
+      break;
+
+    case 'x-office-presentation':
+      $icon = '<i class="fas fa-file-powerpoint fa-fw" aria-hidden="true"></i>';
+      break;
+
+    case 'text-x-script':
+      $icon = '<i class="fas fa-file-code fa-fw" aria-hidden="true"></i>';
+      break;
+
+    case 'text-html':
+      $icon = '<i class="fas fa-file-code fa-fw" aria-hidden="true"></i>';
+      break;
+
+    case 'text-plain':
+    case 'text':
+      $icon = '<i class="fas fa-file-alt fa-fw" aria-hidden="true"></i>';
+      break;
+
+    case 'application-pdf':
+      $icon = '<i class="fas fa-file-pdf fa-fw" aria-hidden="true"></i>';
+      break;
+
+    case 'application-x-executable':
+      $icon = '<i class="fas fa-desktop fa-fw" aria-hidden="true"></i>';
+      break;
+
+    case 'audio':
+      $icon = '<i class="fas fa-file-audio fa-fw" aria-hidden="true"></i>';
+      break;
+
+    case 'video':
+      $icon = '<i class="fas fa-file-video fa-fw" aria-hidden="true"></i>';
+      break;
+
+    case 'image':
+      $icon = '<i class="fas fa-file-image fa-fw" aria-hidden="true"></i>';
+      break;
+  }
+
+  return $icon;
+}
+
+/**
+ * Implements hook_theme_suggestions_field_alter().
+ *
+ * Add theme suggestion based on display mode.
+ */
+function kci_base_theme_suggestions_field_alter(&$suggestions, array $variables) {
+  $element = $variables['element'];
+  $suggestions[] = 'field__' . $element['#entity_type'] . '__' .
+  $element['#field_name'] . '__' . $element['#bundle'] . '__' .
+  $element['#view_mode'];
+}
+
+/**
+ * Implements template_preprocess_block() for block templates.
+ */
+function kci_base_preprocess_block(&$variables) {
+  // Add a class for custom blocks based on the custom block type.
+  if (isset($variables['elements']['content']['#block_content'])) {
+    $block_type = $variables['elements']['content']['#block_content']->type->getValue()[0]['target_id'];
+    $variables['attributes']['class'][] = 'block-' . $block_type;
+  }
+  switch ($variables['base_plugin_id']) {
+    case 'system_branding_block':
+      // Updates the site logo based on region and language.
+      if (!empty($variables['site_logo'])) {
+        $file_url_generator = \Drupal::service('file_url_generator');
+        $language = \Drupal::languageManager()->getCurrentLanguage();
+        $block_id = $variables['elements']['#id'] ?? NULL;
+
+        if ($block_id) {
+          /**
+           * @var \Drupal\block\BlockInterface $block
+           */
+          $block = \Drupal::entityTypeManager()->getStorage('block')->load($block_id);
+          $region_id = $block->getRegion();
+          $footer_logo_path = theme_get_setting('kci_base_footer_logo_path');
+
+          // Handle footer-specific logo.
+          if (stristr($region_id, 'footer') && !empty($footer_logo_path)) {
+            $logo_path = kci_base_get_language_specific_logo_path($footer_logo_path, $language->getId());
+          }
+          else {
+            $logo_path = kci_base_get_language_specific_logo_path($variables['site_logo'], $language->getId());
+          }
+
+          $variables['site_logo'] = $file_url_generator->generateString($logo_path);
+        }
+      }
+      // Make sure we use the site name as alt text for the logo.
+      // This will also be used for the branding link title.
+      $variables['logo_alt_text'] = $variables['content']['site_name']['#markup'];
+      break;
+
+    case 'system_menu_block':
+      $block_id = $variables["elements"]["#id"];
+      $block = Block::load($block_id);
+      $region_id = $block->getRegion();
+      if ($region_id == 'primary_menu') {
+        $has_offcanvas_menu = (theme_get_setting('bootstrap_barrio_navbar_offcanvas') == 'offcanvas-collapse');
+        if (!$has_offcanvas_menu) {
+          $variables['attributes']['class'][] = 'd-lg-flex';
+          $variables['attributes']['class'][] = 'align-items-lg-stretch';
+        }
+      }
+      break;
+
+    case 'local_tasks_block':
+      if (kci_base_floating_local_tasks_enabled()) {
+        $variables['attributes']['class'][] = 'floating-local-tasks';
+      }
+      break;
+  }
+}
+
+/**
+ * Helper function to generate a language-specific logo path.
+ */
+function kci_base_get_language_specific_logo_path($file_path, $language_id) {
+  $pathinfo = pathinfo($file_path);
+  $path = $pathinfo['dirname'] . '/' . $pathinfo['filename'] . '-' . $language_id . '.' . $pathinfo['extension'];
+  $path = ltrim($path, '/');
+  // Check if the file exists.
+  if (file_exists(DRUPAL_ROOT . '/' . $path)) {
+    return $path;
+  }
+  return $file_path;
+}
+
+/**
+ * Determine if floating local tasks are enabled for the current page.
+ *
+ * @return bool
+ *   TRUE if floating local tasks are enabled, FALSE otherwise.
+ */
+function kci_base_floating_local_tasks_enabled() {
+  if (!\Drupal::currentUser()->hasPermission('access administration pages')) {
+    return FALSE;
+  }
+  // Floating tabs should only ever be applied for admin users, but we
+  // also want to respect the theme setting for paths where the floating
+  // tabs should be disabled regardless.
+  $floating_tabs_disabled_paths = theme_get_setting('kci_base_floating_tabs_disable_paths');
+  if (empty($floating_tabs_disabled_paths)) {
+    // Always disable on user paths, regardless of any settings.
+    $floating_tabs_disabled_paths = "/user\n/user/*";
+  }
+  // The value of $floating_tabs_disabled_paths is a string with one path
+  // per line. Paths can include * as a wildcard.
+  $floating_tabs_disabled_paths = explode("\n", $floating_tabs_disabled_paths);
+  // We want to check if the currant actual path or it's path alias
+  // matches any of the disabled paths, accounting for wildcards.
+  $current_path = \Drupal::service('path.current')->getPath();
+  $current_path = trim($current_path, '/');
+  $current_path_parts = explode('/', $current_path);
+  $current_path_parts_count = count($current_path_parts);
+  $floating_tabs_disabled = FALSE;
+  foreach ($floating_tabs_disabled_paths as $path) {
+    $path = trim($path, '/');
+    $path_parts = explode('/', $path);
+    $path_parts_count = count($path_parts);
+    if ($path_parts_count == $current_path_parts_count) {
+      $match = TRUE;
+      foreach ($path_parts as $index => $part) {
+        if ($part != '*' && $part != $current_path_parts[$index]) {
+          $match = FALSE;
+          break;
+        }
+      }
+      if ($match) {
+        $floating_tabs_disabled = TRUE;
+        break;
+      }
+    }
+  }
+  return !$floating_tabs_disabled;
+}
+
+/**
+ * Implements template_preprocess_menu().
+ */
+function kci_base_preprocess_menu(&$variables) {
+  if ($variables['menu_name'] == 'main') {
+    $variables['navbar_use_full_width'] = theme_get_setting('kci_base_navbar_use_full_width');
+    $variables['has_offcanvas_menu'] = (theme_get_setting('bootstrap_barrio_navbar_offcanvas') == 'offcanvas-collapse');
+    $variables['double_wide_offcanvas'] = $variables['has_offcanvas_menu'] && theme_get_setting('kci_base_navbar_offcanvas_doublewide');
+  }
+  if ($variables['menu_name'] == 'footer') {
+    $variables['footer_navbar_horizontal'] = theme_get_setting('kci_base_footer_navbar_is_horizontal');
+  }
+}
+
+/**
+ * Implements template_preprocess_simple_gmap_output().
+ */
+function kci_base_preprocess_simple_gmap_output(&$variables) {
+  if ($variables['include_map']) {
+    // Make sure width and height vars are CSS compliant.
+    $width = $variables['iframe_width']['#plain_text'];
+    $height = $variables['iframe_height']['#plain_text'];
+    if (empty($width)) {
+      // Fill width if not set.
+      $width = '100%';
+    }
+    else {
+      if (!stristr($width, '%') && !stristr($width, 'px')) {
+        // If not px or percent is in the width, ensure
+        // it is an int followed by "px".
+        $width = (int) $width . 'px';
+      }
+    }
+    if (empty($height)) {
+      // Set a safe default so it looks ok.
+      $height = '400px';
+    }
+    else {
+      if (!stristr($height, '%') && !stristr($height, 'px')) {
+        // If not px or percent is in the height, ensure
+        // it is an int followed by "px".
+        $height = (int) $height . 'px';
+      }
+    }
+    $variables['width']['#plain_text'] = $width;
+    $variables['height']['#plain_text'] = $height;
+  }
+}
+
+/**
+ * Implements template_preprocess_image_formatter().
+ */
+function kci_base_preprocess_image_formatter(&$variables) {
+  if (!empty($variables['url'])) {
+    $link_options = $variables['url']->getOption('attributes');
+    // Create attributes object.
+    if (!empty($link_options)) {
+      $link_attributes = new Attribute($link_options);
+      $variables['link_attributes'] = $link_attributes;
+    }
+  }
+  if (empty($variables['image']['#alt'])) {
+    $item = $variables['item'];
+    $file_entity = $item->entity;
+    $media_ids = \Drupal::entityQuery('media')
+      ->condition('bundle', 'image')
+      ->condition('field_media_image.target_id', $file_entity->id())
+      ->accessCheck(TRUE)
+      ->execute();
+    if (!empty($media_ids)) {
+      $media_entity = \Drupal::entityTypeManager()->getStorage('media')->load(reset($media_ids));
+      $image_meta = $media_entity->field_media_image->getValue();
+      $alt_text = $image_meta[0]['alt'];
+      $variables['image']['#alt'] = $alt_text;
+    }
+  }
+}
+
+/**
+ * Implements template_preprocess_links().
+ */
+function kci_base_preprocess_links(&$variables) {
+  if ($variables['theme_hook_original'] == 'links__language_block') {
+    $languages = \Drupal::languageManager()->getLanguages();
+    foreach ($languages as $language) {
+      $lid = $language->getId();
+      if (empty($variables['links'][$lid])) {
+        continue;
+      }
+      // The hreflang attribute is not allowed on the span, but is
+      // nevertheless set as an attribute on the item.
+      // As such, we want to move that to the link.
+      unset($variables['links'][$lid]['link']['#options']['attributes']['hreflang']);
+      $variables['links'][$lid]['link']['#options']['attributes']['hreflang'] = $lid;
+      // Now add the class we want.
+      $variables['links'][$lid]['link']['#options']['attributes']['class'][] = 'nav-link';
+    }
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function kci_base_form_views_exposed_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if ($form['#id'] == 'views-exposed-form-search-page') {
+    $form['#attributes']['class'][] = 'views-exposed-form-search-page';
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ *
+ * Disables HTML5 validation for all forms.
+ */
+function kci_base_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if (strpos($form_id, 'node_preview_form_select') !== FALSE) {
+    $form['previewmode_text'] = [
+      '#type' => 'container',
+      '#attributes' => [
+        'class' => [
+          'previewmode-text',
+        ],
+      ],
+      '#weight' => 5,
+      'text_content' => [
+        '#markup' => t('Preview'),
+      ],
+    ];
+    $form['backlink']['#weight'] = 0;
+    $form['view_mode']['#weight'] = 10;
+  }
+}
+
+/**
+ * Implements template_preprocess_form().
+ */
+function kci_base_preprocess_form(&$variables) {
+  $variables['attributes']['id'] = Html::getUniqueId($variables['attributes']['id']);
+}
+
+/**
+ * Implements template_preprocess_form_element().
+ */
+function kci_base_preprocess_form_element(&$variables) {
+  if (!empty($variables['name']) && $variables['name'] == 'keywords') {
+    $variables['label']['#attributes'] = [
+      'class' => [
+        'd-none',
+      ],
+    ];
+  }
+}
+
+/**
+ * Implements template_preprocess_input().
+ */
+function kci_base_preprocess_input(&$variables) {
+  if (!empty($variables['element']['#id']) && substr($variables['element']['#id'], 0, 18) == 'edit-submit-search') {
+    $variables['attributes']->addClass('search-form-submit-button');
+    $variables['safe_value_label'] = '<i class="fas fa-search"></i><span class="visually-hidden">' . t('Submit search') . '</span>';
+  }
+}
+
+/**
+ * Implements template_preprocess_views_view_fullcalendar()
+ */
+function kci_base_preprocess_views_view_fullcalendar(array &$variables) {
+  foreach ($variables['view']->result as $index => $result_row) {
+    if (!empty($result_row->_relationship_entities['field_event_type']) && !empty($result_row->_relationship_entities['field_event_type']->field_category_colour)) {
+      $colours[$result_row->_entity->id()] = $result_row->_relationship_entities['field_event_type']->field_category_colour->color;
+    }
+  }
+  // Loop through the calendar views (there should be only
+  // one, but this is safe).
+  foreach ($variables['#attached']['drupalSettings']['fullCalendarView'] as $index => $calendar_view) {
+    // Decode the calendar options.
+    $calendar_options = json_decode($calendar_view['calendar_options']);
+    // Set a darker background colour for the active event.
+    foreach ($calendar_options->events as $index2 => $event) {
+      if (!empty($colours[$event->eid])) {
+        $calendar_options->events[$index2]->backgroundColor = $colours[$event->eid];
+      }
+    }
+    // Re-encode the calendar options and put them back in
+    // the right place.
+    $variables['#attached']['drupalSettings']['fullCalendarView'][$index]['calendar_options'] = json_encode($calendar_options);
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function kci_base_theme_suggestions_form_alter(&$suggestions, $variables) {
+  $element = $variables['element'];
+  $suggestions[] = 'form__' . str_replace('-', '_', $element['#id']);
+}
+
+/**
+ * Implements template_preprocess_table().
+ */
+function kci_base_preprocess_views_view_table(&$variables) {
+  // Adding table sort indicator CSS class for inactive sort link.
+  // @todo Revisit after https://www.drupal.org/node/3025726 or
+  // https://www.drupal.org/node/1973418 is in.
+  if (!empty($variables['header'])) {
+    foreach ($variables['header'] as &$header_cell) {
+      if (!empty($header_cell['url']) && stristr($header_cell['url'], 'sort=')) {
+        $header_cell['attributes']->addClass('sortable-heading');
+        if (empty($header_cell['sort_indicator'])) {
+          $header_cell['sort_indicator'] = [
+            '#theme' => 'tablesort_indicator',
+            '#style' => 'inactive',
+          ];
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Implements template_preprocess_menu_local_task().
+ */
+function kci_base_preprocess_menu_local_task(&$variables) {
+  $variables['attributes']['class'][] = 'text-center';
+  $variables['attributes']['class'][] = 'flex-fill';
+}
+
+/**
+ * Implements template_preprocess_email_wrap().
+ */
+function kci_base_preprocess_email_wrap(array &$variables): void {
+  $site_config = \Drupal::config('system.site');
+  $footer_text = theme_get_setting('kci_base_email_footer_text') ?: [
+    'value' => '<h4>[site:name]</h4>
+<p>123 Any Street, Yellowknife, NT X1A 1X1<br>
+Phone: 867-123-4567<br>
+Email: <a href="mailto:test@example.com">test@example.com</a></p>',
+    'format' => 'email_html',
+  ];
+
+  $site_url  = Url::fromUserInput('/', ['absolute' => TRUE]);
+  $site_link = Link::fromTextAndUrl($site_url->toString(), $site_url);
+  $logo_path = theme_get_setting('kci_base_email_logo_path') ?: 'themes/custom/site_theme/images/email-logo.png';
+  $logo_url  = Url::fromUserInput('/' . ltrim($logo_path, '/'), ['absolute' => TRUE])->toString();
+
+  // Now set the template variables.
+  $variables['header_alignment'] = theme_get_setting('kci_base_email_header_alignment') ?: 'left';
+  $variables['logo_url']         = $logo_url;
+  $variables['mail_title']       = theme_get_setting('kci_base_email_title') ?: $site_config->get('name');
+  $variables['mail_subtitle']    = theme_get_setting('kci_base_email_subtitle') ?: $site_config->get('slogan');
+  $variables['logo_position']    = theme_get_setting('kci_base_email_logo_position') ?: 'inline';
+  $variables['site_link']        = Markup::create($site_link->toString());
+  $variables['footer_text']      = [
+    '#type'   => 'processed_text',
+    '#text'   => $footer_text['value'],
+    '#format' => $footer_text['format'],
+  ];
+}

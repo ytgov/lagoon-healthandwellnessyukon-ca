@@ -1,0 +1,36 @@
+uuid: 9812f22e-46e5-448a-b507-31ee298cacc9
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.teaser
+    - field.field.paragraph.text_content_full_width.field_heading
+    - field.field.paragraph.text_content_full_width.field_text_content
+    - paragraphs.paragraphs_type.text_content_full_width
+  module:
+    - fences
+    - text
+id: paragraph.text_content_full_width.teaser
+targetEntityType: paragraph
+bundle: text_content_full_width
+mode: teaser
+content:
+  field_text_content:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 0
+    region: content
+hidden:
+  extra_field_frontend_editing: true
+  field_heading: true

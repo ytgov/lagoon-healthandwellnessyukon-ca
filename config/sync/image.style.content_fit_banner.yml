@@ -1,0 +1,17 @@
+uuid: c3acd6ef-3684-47d2-9543-491ac93890ed
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: vrlAnV9QQrLeT1YqZeaQBQR6v8thT9z1M9BEvANBLYc
+name: content_fit_banner
+label: 'Content Fit Banner'
+effects:
+  1296e246-d9d0-4559-85cb-f74bd5b12aef:
+    uuid: 1296e246-d9d0-4559-85cb-f74bd5b12aef
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1400
+      height: 500
+      anchor: center-center

@@ -1,0 +1,18 @@
+uuid: 05c0e8a3-1ded-4514-b8d3-37214e27e141
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.board_member
+id: node.board_member.created
+field_name: created
+entity_type: node
+bundle: board_member
+label: 'Authored on'
+description: 'The date and time that the content was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

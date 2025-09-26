@@ -1,6 +1,6 @@
 {
-    "name": "ytgov/lagoon-boutique-template",
-    "description": "Starting point for all YG boutique Drupal CMS websites.",
+    "name": "ytgov/lagoon-healthandwellnessyukon-ca",
+    "description": "Health and Wellness Yukon - Health Authority",
     "type": "project",
     "license": "MIT",
     "repositories": [
@@ -11,17 +11,74 @@
         {
             "type": "vcs",
             "url": "git@github.com:ytgov/lagoon-boutique-base-image.git"
+        },
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
         }
     ],
     "require": {
-        "ytgov/lagoon-boutique-base-image": "dev-prod"
+        "ytgov/lagoon-boutique-base-image": "dev-prod",
+        "drupal/bootstrap_sass": "^5.0",
+        "oomphinc/composer-installers-extender": "^2.0",
+        "npm-asset/splidejs--splide": "^4.1",
+        "drupal/block_visibility_conditions": "^2.1",
+        "drupal/blockgroup": "^2.0",
+        "drupal/block_classes": "^1.0",
+        "drupal/fences": "^3.0",
+        "drupal/image_widget_crop": "^3.0",
+        "drupal/media_library_edit": "^3.0",
+        "drupal/smart_date": "^4.2",
+        "drupal/simple_gmap": "^4.0",
+        "drupal/viewfield": "^3.0@beta",
+        "drupal/linked_field": "^1.7",
+        "drupal/fullcalendar_view": "^5.2",
+        "drupal/pathologic": "^2.0@alpha",
+        "drupal/token_filter": "^2.2",
+        "drupal/views_bootstrap": "^5.4",
+        "drupal/ckeditor_media_resize": "^1.0",
+        "drupal/media_pdf_thumbnail": "^7.0",
+        "drupal/frontend_editing": "^1.8",
+        "drupal/ckeditor_link_styles": "^1.1",
+        "drupal/eca": "^2.1",
+        "drupal/bpmn_io": "^2.0",
+        "drupal/draggableviews": "^2.1",
+        "wikimedia/composer-merge-plugin": "^2.1",
+        "drupal/paragraphs_edit": "^3.0",
+        "drupal/media_file_delete": "^1.3",
+        "drupal/media_entity_file_replace": "^1.3",
+        "drupal/dropzonejs": "^2.11",
+        "drupal/photoswipe": "^5.0",
+        "bower-asset/photoswipe": "^5",
+        "npm-asset/photoswipe-dynamic-caption-plugin": "^1.2",
+        "drupal/maxlength": "^3.1",
+        "spatie/color": "^1.8",
+        "drupal/back_to_top": "^3.0",
+        "drupal/simple_timeline": "^2.0",
+        "drupal/menu_admin_per_menu": "^1.7",
+        "drupal/role_delegation": "^1.4",
+        "drupal/content_moderation_notifications": "^3.7",
+        "drupal/editor_advanced_link": "^2.3",
+        "drupal/media_entity_download": "^2.4"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "extra": {
+        "merge-plugin": {
+            "include": [
+                "web/modules/contrib/webform/composer.libraries.json",
+                "web/modules/contrib/dropzonejs/composer.libraries.json",
+                "web/modules/contrib/image_widget_crop/composer.libraries.json",
+                "web/modules/contrib/moderation_dashboard/composer.libraries.json"
+            ]
+        },
         "installer-paths": {
             "web/core": ["type:drupal-core"],
-            "web/libraries/{$name}": ["type:drupal-library"],
+            "web/libraries/{$name}": [
+                "type:drupal-library",
+                "type:bower-asset",
+                "type:npm-asset"
+            ],
             "web/modules/contrib/{$name}": ["type:drupal-module"],
             "web/profiles/contrib/{$name}": ["type:drupal-profile"],
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
@@ -35,6 +92,30 @@
                 "sites/development.services.yml",
                 "sites/example.settings.local.php"
             ]
+        },
+        "installer-types": [
+            "bower-asset",
+            "npm-asset"
+        ],
+        "composer-exit-on-patch-failure": true,
+        "enable-patching": true,
+        "patchLevel": {
+            "drupal/core": "-p2"
+        },
+        "patches": {
+            "drupal/media_library_edit": {
+                "3246687 - Don't unset the #submit callback": "https://git.drupalcode.org/project/media_library_edit/-/merge_requests/11.diff"
+            },
+            "drupal/image_widget_crop": {
+                "3214365 - Crop widget not adjusting crop box when crop is applied": "https://www.drupal.org/files/issues/2021-06-09/crop_widget_not_adjusting_to_existing_crop-3214365-9.patch",
+                "3119005 - When Drop Drupal 8.8 Support: Remove call to deprecated Libraries function libraries_detect()": "https://www.drupal.org/files/issues/2023-02-21/3119005-18.patch"
+            },
+            "drupal/paragraphs_edit": {
+                "2914976 - Revisions log does not attribute author or timestamp correctly": "https://git.drupalcode.org/project/paragraphs_edit/-/merge_requests/14.diff"
+            },
+            "drupal/ckeditor_media_resize": {
+                "3531299 - Plugin not found error": "https://www.drupal.org/files/issues/2025-06-28/ckeditor_media_resize--2025-06-28--3531299--mr-16.patch"
+            }
         }
     },
     "config": {
@@ -43,7 +124,12 @@
             "drupal/core-composer-scaffold": true,
             "cweagans/composer-patches": true,
             "composer/installers": true,
-            "dealerdirect/phpcodesniffer-composer-installer": true
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "oomphinc/composer-installers-extender": true,
+            "wikimedia/composer-merge-plugin": true
         }
+    },
+    "require-dev": {
+        "drupal/devel": "^5.3"
     }
 }

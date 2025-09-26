@@ -1,0 +1,28 @@
+uuid: f6aac974-3562-4d8f-9fc8-874ca5c7c59a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.slideshow_with_caption.field_sshow_items
+    - paragraphs.paragraphs_type.slideshow_with_caption
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: W54JtRrG--cVGuO6l4PbOOvhBFL0Zq9_lN_StSVyH1w
+id: paragraph.slideshow_with_caption.default
+targetEntityType: paragraph
+bundle: slideshow_with_caption
+mode: default
+content:
+  field_sshow_items:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_animation_style: true
+  search_api_excerpt: true

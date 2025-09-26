@@ -1,0 +1,24 @@
+display:
+  default:
+    display_title: 'Par défaut'
+    display_options:
+      fields:
+        id:
+          label: 'Identifiant (ID)'
+        changed:
+          label: Modifié
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Éléments par page'
+            items_per_page_options_all_label: '- Tout -'
+            offset_label: Décalage
+      exposed_form:
+        options:
+          submit_button: Appliquer
+          reset_button_label: Réinitialiser
+          exposed_sorts_label: 'Trier par'
+      filters:
+        changed_2:
+          expose:
+            label: Modifié

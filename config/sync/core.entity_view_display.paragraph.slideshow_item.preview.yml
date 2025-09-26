@@ -1,0 +1,52 @@
+uuid: c7248402-5cf2-4a89-83f3-c2303aaba4e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.slideshow_item.field_slideshow_button_link
+    - field.field.paragraph.slideshow_item.field_slideshow_caption
+    - field.field.paragraph.slideshow_item.field_slideshow_item
+    - image.style.medium
+    - paragraphs.paragraphs_type.slideshow_item
+  module:
+    - link
+    - media
+    - text
+_core:
+  default_config_hash: yTgAghjYHgmmpLlvZBpQXcGgX2kJ9X-U1nrq1jdosvc
+id: paragraph.slideshow_item.preview
+targetEntityType: paragraph
+bundle: slideshow_item
+mode: preview
+content:
+  field_slideshow_button_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_slideshow_caption:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_slideshow_item:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: medium
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

@@ -1,0 +1,35 @@
+uuid: 63408a1b-4ac6-4f65-8007-8641cddb8ac9
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_result
+    - field.field.node.board_member.field_biography
+    - field.field.node.board_member.field_membership
+    - field.field.node.board_member.field_photo
+    - field.field.node.board_member.field_role
+    - node.type.board_member
+  module:
+    - user
+id: node.board_member.search_result
+targetEntityType: node
+bundle: board_member
+mode: search_result
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  addtoany: true
+  field_biography: true
+  field_membership: true
+  field_photo: true
+  field_role: true
+  langcode: true

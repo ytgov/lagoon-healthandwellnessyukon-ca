@@ -1,0 +1,22 @@
+uuid: df573ef8-f42a-4d3e-a518-b697b95bd74d
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - kci_base
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: kci_base_content
+theme: kci_base
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,12 @@
+uuid: 8de6a902-1e44-4b70-9c61-33f31423fcb5
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: STsHeIWHEBO_9gTmh5JJJo-blx9h1ImEV1b6_cS4tXI
+id: page_banner
+label: 'Multimedia Hero Banner'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

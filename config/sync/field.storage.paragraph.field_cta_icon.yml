@@ -1,0 +1,231 @@
+uuid: 23dbcbd0-759b-40c1-95ff-e33ff55e695c
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_cta_icon
+field_name: field_cta_icon
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: custom-process
+      label: '<i class="custom-icon custom-process" aria-hidden="true" ></i>'
+    -
+      value: custom-proposal-doc
+      label: '<i class="custom-icon custom-proposal-doc" aria-hidden="true" ></i>'
+    -
+      value: custom-registry-search
+      label: '<i class="custom-icon custom-registry-search" aria-hidden="true" ></i>'
+    -
+      value: custom-maps
+      label: '<i class="custom-icon custom-maps" aria-hidden="true" ></i>'
+    -
+      value: briefcase
+      label: '<i class="fa-solid fa-fw fa-briefcase" aria-hidden="true" ></i>'
+    -
+      value: file-contract
+      label: '<i class="fa-solid fa-fw fa-file-contract" aria-hidden="true" ></i>'
+    -
+      value: bookmark
+      label: '<i class="fa-solid fa-fw fa-bookmark" aria-hidden="true" ></i>'
+    -
+      value: book
+      label: '<i class="fa-solid fa-fw fa-book" aria-hidden="true" ></i>'
+    -
+      value: wrench
+      label: '<i class="fa-solid fa-fw fa-wrench" aria-hidden="true" ></i>'
+    -
+      value: paper-plane
+      label: '<i class="fa-solid fa-fw fa-paper-plane" aria-hidden="true" ></i>'
+    -
+      value: paw
+      label: '<i class="fa-solid fa-fw fa-paw" aria-hidden="true" ></i>'
+    -
+      value: phone
+      label: '<i class="fa-solid fa-fw fa-phone" aria-hidden="true" ></i>'
+    -
+      value: plane
+      label: '<i class="fa-solid fa-fw fa-plane" aria-hidden="true" ></i>'
+    -
+      value: poll
+      label: '<i class="fa-solid fa-fw fa-poll" aria-hidden="true" ></i>'
+    -
+      value: rocket
+      label: '<i class="fa-solid fa-fw fa-rocket" aria-hidden="true" ></i>'
+    -
+      value: ruler
+      label: '<i class="fa-solid fa-fw fa-ruler" aria-hidden="true" ></i>'
+    -
+      value: snowplow
+      label: '<i class="fa-solid fa-fw fa-snowplow" aria-hidden="true" ></i>'
+    -
+      value: university
+      label: '<i class="fa-solid fa-fw fa-university" aria-hidden="true" ></i>'
+    -
+      value: landmark
+      label: '<i class="fa-solid fa-fw fa-landmark" aria-hidden="true" ></i>'
+    -
+      value: user-tie
+      label: '<i class="fa-solid fa-fw fa-user-tie" aria-hidden="true" ></i>'
+    -
+      value: hiking
+      label: '<i class="fa-solid fa-fw fa-hiking" aria-hidden="true" ></i>'
+    -
+      value: life-ring
+      label: '<i class="fa-solid fa-fw fa-life-ring" aria-hidden="true" ></i>'
+    -
+      value: lightbulb
+      label: '<i class="fa-solid fa-fw fa-lightbulb" aria-hidden="true" ></i>'
+    -
+      value: mail-bulk
+      label: '<i class="fa-solid fa-fw fa-mail-bulk" aria-hidden="true" ></i>'
+    -
+      value: map-marked
+      label: '<i class="fa-solid fa-fw fa-map-marked" aria-hidden="true" ></i>'
+    -
+      value: map-marker-alt
+      label: '<i class="fa-solid fa-fw fa-map-marker-alt" aria-hidden="true" ></i>'
+    -
+      value: map-pin
+      label: '<i class="fa-solid fa-fw fa-map-pin" aria-hidden="true" ></i>'
+    -
+      value: map-signs
+      label: '<i class="fa-solid fa-fw fa-map-signs" aria-hidden="true" ></i>'
+    -
+      value: mountain
+      label: '<i class="fa-solid fa-fw fa-mountain" aria-hidden="true" ></i>'
+    -
+      value: folder
+      label: '<i class="fa-solid fa-fw fa-folder" aria-hidden="true" ></i>'
+    -
+      value: fort-awesome
+      label: '<i class="fab fa-fort-awesome" aria-hidden="true" ></i>'
+    -
+      value: globe-americas
+      label: '<i class="fa-solid fa-fw fa-globe-americas" aria-hidden="true" ></i>'
+    -
+      value: guitar
+      label: '<i class="fa-solid fa-fw fa-guitar" aria-hidden="true" ></i>'
+    -
+      value: hammer
+      label: '<i class="fa-solid fa-fw fa-hammer" aria-hidden="true" ></i>'
+    -
+      value: hand-holding
+      label: '<i class="fa-solid fa-fw fa-hand-holding" aria-hidden="true" ></i>'
+    -
+      value: hand-point-up
+      label: '<i class="fa-solid fa-fw fa-hand-point-up" aria-hidden="true" ></i>'
+    -
+      value: hard-hat
+      label: '<i class="fa-solid fa-fw fa-hard-hat" aria-hidden="true" ></i>'
+    -
+      value: virus
+      label: '<i class="fa-solid fa-fw fa-virus" aria-hidden="true" ></i>'
+    -
+      value: head-side-mask
+      label: '<i class="fa-solid fa-fw fa-head-side-mask" aria-hidden="true" ></i>'
+    -
+      value: helicopter
+      label: '<i class="fa-solid fa-fw fa-helicopter" aria-hidden="true" ></i>'
+    -
+      value: cookie-bite
+      label: '<i class="fa-solid fa-fw fa-cookie-bite" aria-hidden="true" ></i>'
+    -
+      value: crown
+      label: '<i class="fa-solid fa-fw fa-crown" aria-hidden="true" ></i>'
+    -
+      value: drum
+      label: '<i class="fa-solid fa-fw fa-drum" aria-hidden="true" ></i>'
+    -
+      value: envelope
+      label: '<i class="fa-solid fa-fw fa-envelope" aria-hidden="true" ></i>'
+    -
+      value: feather
+      label: '<i class="fa-solid fa-fw fa-feather" aria-hidden="true" ></i>'
+    -
+      value: feather-alt
+      label: '<i class="fa-solid fa-fw fa-feather-alt" aria-hidden="true" ></i>'
+    -
+      value: fire
+      label: '<i class="fa-solid fa-fw fa-fire" aria-hidden="true" ></i>'
+    -
+      value: fish
+      label: '<i class="fa-solid fa-fw fa-fish" aria-hidden="true" ></i>'
+    -
+      value: fist-raised
+      label: '<i class="fa-solid fa-fw fa-fist-raised" aria-hidden="true" ></i>'
+    -
+      value: flag
+      label: '<i class="fa-solid fa-fw fa-flag" aria-hidden="true" ></i>'
+    -
+      value: box
+      label: '<i class="fa-solid fa-fw fa-box" aria-hidden="true" ></i>'
+    -
+      value: box-open
+      label: '<i class="fa-solid fa-fw fa-box-open" aria-hidden="true" ></i>'
+    -
+      value: archive
+      label: '<i class="fa-solid fa-fw fa-archive" aria-hidden="true" ></i>'
+    -
+      value: bus
+      label: '<i class="fa-solid fa-fw fa-bus" aria-hidden="true" ></i>'
+    -
+      value: calculator
+      label: '<i class="fa-solid fa-fw fa-calculator" aria-hidden="true" ></i>'
+    -
+      value: calendar-alt
+      label: '<i class="fa-solid fa-fw fa-calendar-alt" aria-hidden="true" ></i>'
+    -
+      value: calendar-check
+      label: '<i class="fa-solid fa-fw fa-calendar-check" aria-hidden="true" ></i>'
+    -
+      value: campground
+      label: '<i class="fa-solid fa-fw fa-campground" aria-hidden="true" ></i>'
+    -
+      value: canadian-maple-leaf
+      label: '<i class="fab fa-canadian-maple-leaf" aria-hidden="true" ></i>'
+    -
+      value: car
+      label: '<i class="fa-solid fa-fw fa-car" aria-hidden="true" ></i>'
+    -
+      value: copy
+      label: '<i class="fa-solid fa-fw fa-copy" aria-hidden="true" ></i>'
+    -
+      value: crow
+      label: '<i class="fa-solid fa-fw fa-crow" aria-hidden="true" ></i>'
+    -
+      value: address-book
+      label: '<i class="fa-solid fa-fw fa-address-book" aria-hidden="true" ></i>'
+    -
+      value: id-card
+      label: '<i class="fa-solid fa-fw fa-id-card" aria-hidden="true" ></i>'
+    -
+      value: book-open
+      label: '<i class="fa-solid fa-fw fa-book-open" aria-hidden="true" ></i>'
+    -
+      value: book-reader
+      label: '<i class="fa-solid fa-fw fa-book-reader" aria-hidden="true" ></i>'
+    -
+      value: brain
+      label: '<i class="fa-solid fa-fw fa-brain" aria-hidden="true" ></i>'
+    -
+      value: question
+      label: '<i class="icon-YHTS-FAQ-icon" aria-hidden="true"></i>'
+    -
+      value: i_class_icon_yhts_shaw_kwaa_icon_span_class_path1_span_span_class_path2_span_span_class_path3_span_i
+      label: '<i class="icon-YHTS-SK" aria-hidden="true"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>'
+    -
+      value: i_class_icon_yhts_transformation_icon_i
+      label: '<i class="icon-YHTS-transformation-icon" aria-hidden="true"></i>'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

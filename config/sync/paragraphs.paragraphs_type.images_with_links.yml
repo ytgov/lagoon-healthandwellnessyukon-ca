@@ -1,0 +1,12 @@
+uuid: 49a4d16b-3cbc-4d90-a37b-b04c40e5c55d
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: qcBMz8l8Bsv4L7ES3dlT1BY-5eu2znUpYZopEMgQMcg
+id: images_with_links
+label: 'Images with Links'
+icon_uuid: null
+icon_default: null
+description: 'A group of images each with an optional link.  This paragraph can be displayed as either a row of images or a carousel. '
+behavior_plugins: {  }

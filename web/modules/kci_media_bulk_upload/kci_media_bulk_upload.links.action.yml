@@ -1,0 +1,13 @@
+kci_media.bulk_upload:
+  route_name: kci_media.bulk_upload
+  title: 'Bulk upload'
+  appears_on:
+    - entity.media.collection
+    - view.media_library.page
+    - entity.media.add_page
+
+kci_media.bulk_upload.by_type:
+  route_name: kci_media.bulk_upload.by_type
+  title: 'Bulk upload'
+  appears_on:
+    - entity.media.add_form

@@ -1,0 +1,24 @@
+uuid: 3bc87c99-68b1-4291-974d-ca9882441ef8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_timeline_description
+    - filter.format.rich_text
+    - node.type.timeline_event
+  module:
+    - text
+id: node.timeline_event.field_timeline_description
+field_name: field_timeline_description
+entity_type: node
+bundle: timeline_event
+label: Description
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - rich_text
+field_type: text_long

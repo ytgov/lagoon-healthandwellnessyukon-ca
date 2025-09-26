@@ -1,0 +1,53 @@
+uuid: 27a1e934-60fd-4742-9bcf-4d2e4397af7b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.slideshow.field_slideshow_description
+    - field.field.paragraph.slideshow.field_slideshow_media_items
+    - field.field.paragraph.slideshow.field_slideshow_title
+    - paragraphs.paragraphs_type.slideshow
+  module:
+    - text
+_core:
+  default_config_hash: 2zrUx_pMqlaipmDFyMJAquhh677QAkwz8eWfyNKKTeY
+id: paragraph.slideshow.preview
+targetEntityType: paragraph
+bundle: slideshow
+mode: preview
+content:
+  field_animation_style:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_slideshow_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_slideshow_media_items:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: thumbnail
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_slideshow_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  extra_field_frontend_editing: true
+  search_api_excerpt: true

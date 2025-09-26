@@ -1,0 +1,10 @@
+uuid: 8fbe52a4-1feb-4953-bb33-be2632f3e278
+langcode: en
+status: true
+dependencies: {  }
+id: large_icon_ctas
+label: 'Large Icon CTAs'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,128 @@
+uuid: 2f781cbe-36e7-4639-aebb-30c5ec1b0db9
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.map_with_contact_info.field_map_location
+    - field.field.paragraph.map_with_contact_info.field_map_position
+    - field.field.paragraph.map_with_contact_info.field_text_content
+    - paragraphs.paragraphs_type.map_with_contact_info
+  module:
+    - field_group
+    - options
+    - simple_gmap
+    - text
+third_party_settings:
+  field_group:
+    group_row:
+      children:
+        - group_fill_1
+        - group_fill_2
+      label: Row
+      parent_name: ''
+      region: content
+      weight: 2
+      format_type: html_element
+      format_settings:
+        classes: 'row row-cols-lg-2'
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+    group_fill_1:
+      children:
+        - field_map_location
+      label: 'Fill 1'
+      parent_name: group_row
+      region: content
+      weight: 20
+      format_type: html_element
+      format_settings:
+        classes: flex-fill
+        show_empty_fields: false
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+    group_fill_2:
+      children:
+        - field_text_content
+      label: 'Fill 2'
+      parent_name: group_row
+      region: content
+      weight: 21
+      format_type: html_element
+      format_settings:
+        classes: flex-fill
+        show_empty_fields: false
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+_core:
+  default_config_hash: Ik-KE_KiQtj4TVQ5tWFtKM-mwGE_gbowKG8OGchXe4U
+id: paragraph.map_with_contact_info.preview
+targetEntityType: paragraph
+bundle: map_with_contact_info
+mode: preview
+content:
+  field_animation_style:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_map_location:
+    type: simple_gmap
+    label: hidden
+    settings:
+      include_map: true
+      include_static_map: false
+      include_link: false
+      include_text: false
+      iframe_height: 400px
+      iframe_width: 100%
+      iframe_title: ''
+      static_scale: 1
+      zoom_level: 14
+      link_text: 'View larger map'
+      map_type: m
+      langcode: en
+      apikey: ''
+      alt_text: 'Map location: %address'
+    third_party_settings: {  }
+    weight: 21
+    region: content
+  field_map_position:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_text_content:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  extra_field_frontend_editing: true
+  search_api_excerpt: true

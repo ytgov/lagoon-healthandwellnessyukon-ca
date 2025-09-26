@@ -1,0 +1,126 @@
+uuid: 36b207b7-104e-4953-a062-8934302ad842
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.blog.field_comments
+    - field.field.node.blog.field_content
+    - field.field.node.blog.field_date
+    - field.field.node.blog.field_news_image
+    - field.field.node.blog.field_page_banner
+    - node.type.blog
+  module:
+    - comment
+    - datetime
+    - media_library
+    - media_library_edit
+    - paragraphs
+    - path
+id: node.blog.default
+targetEntityType: node
+bundle: blog
+mode: default
+content:
+  field_comments:
+    type: comment_default
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_content:
+    type: paragraphs
+    weight: 6
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: preview
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: modal
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        add_above: add_above
+        collapse_edit_all: collapse_edit_all
+        convert: convert
+        duplicate: duplicate
+    third_party_settings: {  }
+  field_date:
+    type: datetime_default
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_news_image:
+    type: media_library_widget
+    weight: 5
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
+        edit_form_mode: default
+  field_page_banner:
+    type: paragraphs
+    weight: 0
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: preview
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        convert: '0'
+        duplicate: '0'
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 8
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  promote: true
+  simple_sitemap: true
+  simple_sitemap_index_now: true
+  sticky: true
+  uid: true
+  url_redirects: true

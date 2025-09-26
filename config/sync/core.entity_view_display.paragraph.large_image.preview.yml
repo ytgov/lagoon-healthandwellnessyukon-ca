@@ -1,0 +1,39 @@
+uuid: 62071b73-5b22-40ba-93dc-21987aacd910
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.large_image.field_image
+    - image.style.medium
+    - paragraphs.paragraphs_type.large_image
+  module:
+    - media
+_core:
+  default_config_hash: d2DW5pBz-XrzKxA1EZjZjDCSzWfT_o_lI0ZFpDHiZRk
+id: paragraph.large_image.preview
+targetEntityType: paragraph
+bundle: large_image
+mode: preview
+content:
+  field_animation_style:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_image:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: medium
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  extra_field_frontend_editing: true
+  search_api_excerpt: true

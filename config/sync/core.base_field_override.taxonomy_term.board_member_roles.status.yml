@@ -1,0 +1,22 @@
+uuid: 4cad027e-9734-4394-b0d4-4b2fd52d9d78
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.board_member_roles
+id: taxonomy_term.board_member_roles.status
+field_name: status
+entity_type: taxonomy_term
+bundle: board_member_roles
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

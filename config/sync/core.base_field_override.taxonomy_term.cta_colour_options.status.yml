@@ -1,0 +1,22 @@
+uuid: 593f0ac6-f1f5-4f14-8781-52512905920d
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.cta_colour_options
+id: taxonomy_term.cta_colour_options.status
+field_name: status
+entity_type: taxonomy_term
+bundle: cta_colour_options
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

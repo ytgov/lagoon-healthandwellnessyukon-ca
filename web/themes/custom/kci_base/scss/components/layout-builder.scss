@@ -1,0 +1,33 @@
+// Fixes for layout builder when sticky header interferes with the UI, plus some other minor tweaks.
+
+.ui-dialog .ui-dialog-titlebar-close:after {
+  // Prevent a double x-icon from appearing in the dialog titlebar.
+  // Our theme already has an x-icon in the dialog titlebar using the :before
+  // pseudo-element.
+  display: none !important;
+}
+
+.glb-sidebar {
+  // Must be higher than the z-index of the sticky header.
+  z-index: 1040 !important;
+}
+
+.glb-body {
+  .page-content {
+    margin: 0 !important;
+  }
+  &.gin--classic-toolbar.toolbar-fixed .glb-sidebar,
+  &.gin--classic-toolbar.toolbar-vertical .glb-sidebar,
+  &.gin--horizontal-toolbar.toolbar-fixed .glb-sidebar {
+    top: var(--gin-toolbar-height);
+  }
+  &.gin--vertical-toolbar.gin--secondary-toolbar-frontend .glb-sidebar,
+  &.gin--navigation.gin--secondary-toolbar-frontend .glb-sidebar {
+    top: var(--gin-toolbar-secondary-height);
+  }
+  &.gin--classic-toolbar.toolbar-fixed.gin--secondary-toolbar-frontend .glb-sidebar,
+  &.gin--classic-toolbar.toolbar-vertical.gin--secondary-toolbar-frontend .glb-sidebar,
+  &.gin--horizontal-toolbar.toolbar-fixed.gin--secondary-toolbar-frontend .glb-sidebar {
+    top: calc(var(--gin-toolbar-secondary-height) + var(--gin-toolbar-height));
+  }
+}

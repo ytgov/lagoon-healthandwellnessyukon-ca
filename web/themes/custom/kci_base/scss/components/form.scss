@@ -1,0 +1,193 @@
+/**
+ * @file
+ * Visual styles for Bootstrap Barrio's form components.
+ */
+
+.form-required::after {
+    content: '';
+    vertical-align: super;
+    display: inline-block;
+    background-image: url(../images/required.svg);
+    background-repeat: no-repeat;
+    background-size: 10px;
+    width: 10px;
+    height: 10px;
+    margin: 0 0.3em;
+}
+
+.form-row>fieldset,
+.form-row>div {
+  padding-right: 5px;
+  padding-left: 5px;
+  flex: 0 1 auto;
+  width: auto;
+  max-width: none;
+}
+
+.form-row .form-actions {
+  align-self: flex-end;
+}
+
+form .filter-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+form .form-type-textarea {
+    margin-bottom: 0;
+}
+
+.form-type-checkboxes,
+.form-type-radios {
+  .checkbox,
+  .radio {
+    label {
+      font-weight: normal;
+    }
+  }
+}
+
+.views-exposed-form-search-page {
+  #navbar-top & {
+    display: none;
+    @include media-breakpoint-up(lg) {
+      display: block;
+    }
+  }
+  #navbar-main .offcanvas-body & {
+    display: block !important;
+  }
+  #main-content & {
+    @include media-breakpoint-up(md) {
+      max-width: 60%;
+      margin: 2rem auto;
+    }
+  }
+  .row {
+    position: relative;
+    margin: 0 !important;
+    > div {
+      margin: 0 !important;
+    }
+    .form-item-keywords {
+      padding-left: 5px;
+      padding-right: 5px;
+      .form-control {
+        padding-right: 2.5rem;
+        border-color: $search-keywords-field-border-color;
+      }
+    }
+    .form-actions {
+      padding: 0;
+      position: absolute;
+      right: 6px;
+      top: 1px;
+      bottom: 1px;
+      width: 2.5rem !important;
+      .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        padding: 0 !important;
+        background-color: transparent !important;
+        color: $search-submit-button-color !important;
+        border: none;
+        box-shadow: none;
+        &:focus,
+        &:focus-visible {
+          box-shadow: $input-focus-box-shadow;
+        }
+      }
+    }
+  }
+}
+
+.field--name-field-social-media-icon .form-radios .radio,
+.field--name-field-icon .form-radios .radio,
+.field--name-field-cta-icon .form-radios .radio {
+  float: left;
+  margin: 10px;
+  position: relative;
+  padding: 0;
+}
+.field--name-field-social-media-icon .form-radios .radio input,
+.field--name-field-icon .form-radios .radio input,
+.field--name-cta-icon .form-radios .radio input,
+.field--name-field-social-media-icon .form-radios .radio label,
+.field--name-field-icon .form-radios .radio label,
+.field--name-field-cta-icon .form-radios .radio label {
+  display: inline-block;
+}
+
+.field--name-field-social-media-icon .form-radios .radio label,
+.field--name-field-icon .form-radios .radio label,
+.field--name-field-cta-icon .form-radios .radio label {
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.field--name-field-social-media-icon .form-radios .radio label i,
+.field--name-field-icon .form-radios .radio label i,
+.field--name-field-cta-icon .form-radios .radio label i {
+  display: block;
+  font-size: 3rem;
+  margin-bottom: 5px;
+}
+
+.field--name-field-social-media-icon .form-radios .radio input,
+.field--name-field-icon .form-radios .radio input,
+.field--name-field-cta-icon .form-radios .radio input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.field--name-field-social-media-icon .form-radios .radio:hover label.form-check-label,
+.field--name-field-icon .form-radios .radio:hover label.form-check-label,
+.field--name-field-cta-icon .form-radios .radio:hover label.form-check-label {
+  box-shadow: 0 0 0 5px #555555;
+}
+
+.field--name-field-social-media-icon .form-radios .radio input:checked ~ label.form-check-label,
+.field--name-field-icon .form-radios .radio input:checked ~ label.form-check-label,
+.field--name-field-cta-icon .form-radios .radio input:checked ~ label.form-check-label {
+  box-shadow: 0 0 0 5px #0071b8;
+}
+
+.js-media-library-widget {
+  .js-media-library-selection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2rem;
+    .js-media-library-item {
+      position: relative;
+      padding: 2px;
+      border-radius: 1rem;
+      overflow: hidden;
+      transition: $standard-transition;
+      cursor: move;
+      border: 2px dashed transparent;
+      &:hover {
+        border-color: $gray-800;
+      }
+      img {
+        border-radius: 0.9rem;
+        width: 250px;
+      }
+      .btn {
+        background-color: $white;
+        padding: 0.5rem;
+      }
+      a[target="_blank"]:after {
+        display: none;
+      }
+    }
+  }
+}

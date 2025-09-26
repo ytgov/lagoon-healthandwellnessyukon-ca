@@ -1,0 +1,52 @@
+uuid: 285c0260-c998-4c22-93a2-71bb8b8b7d59
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.webform.field_description
+    - field.field.paragraph.webform.field_heading
+    - field.field.paragraph.webform.field_webform
+    - paragraphs.paragraphs_type.webform
+  module:
+    - text
+    - webform
+_core:
+  default_config_hash: PmPwcz7KhsXyuNRtVn-NufH6R2ZYB9BLO26wjZsVGMw
+id: paragraph.webform.default
+targetEntityType: paragraph
+bundle: webform
+mode: default
+content:
+  extra_field_frontend_editing:
+    type: extra_field_frontend_editing
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_heading:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_webform:
+    type: webform_entity_reference_entity_view
+    label: hidden
+    settings:
+      source_entity: true
+      lazy: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  field_animation_style: true
+  search_api_excerpt: true

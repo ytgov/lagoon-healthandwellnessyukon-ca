@@ -1,0 +1,12 @@
+uuid: 4eb7e982-fa79-48ea-90cf-9cdfad8c28df
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: IiGeW8AqIDH2i0gfy0CoDeD9SbN19dRYqrHibimCrnc
+id: view
+label: View
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

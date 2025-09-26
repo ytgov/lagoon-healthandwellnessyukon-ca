@@ -1,0 +1,47 @@
+uuid: 80178dde-0050-4740-a729-b536c235d53f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.large_icon_ctas.field_large_icon_ctas
+    - paragraphs.paragraphs_type.large_icon_ctas
+  module:
+    - entity_reference_revisions
+    - fences
+    - frontend_editing
+id: paragraph.large_icon_ctas.default
+targetEntityType: paragraph
+bundle: large_icon_ctas
+mode: default
+content:
+  extra_field_frontend_editing:
+    type: extra_field_frontend_editing
+    settings:
+      form_display: default
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_large_icon_ctas:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+      frontend_editing:
+        ajax_content_update: '1'
+        move_up_down: '1'
+        add_items: '1'
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

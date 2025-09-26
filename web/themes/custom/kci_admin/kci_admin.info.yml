@@ -1,0 +1,22 @@
+name: KCI Admin Extension
+type: theme
+description: KCI extensions for the base site admin theme.
+core_version_requirement: ^10.3 || ^11
+base theme: claro
+
+libraries:
+  - kci_admin/fontawesome
+  - kci_admin/kci-styling
+
+regions:
+  header: 'Header'
+  pre_content: 'Pre-content'
+  breadcrumb: Breadcrumb
+  highlighted: Highlighted
+  help: Help
+  content: Content
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  sidebar_first: 'First sidebar'
+regions_hidden:
+  - sidebar_first

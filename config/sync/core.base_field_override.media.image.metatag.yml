@@ -1,0 +1,20 @@
+uuid: 608fd4a2-4fa0-4107-b841-1e14c6ff1eee
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.image
+  module:
+    - metatag
+id: media.image.metatag
+field_name: metatag
+entity_type: media
+bundle: image
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The computed meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag_computed

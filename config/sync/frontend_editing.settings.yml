@@ -1,0 +1,47 @@
+_core:
+  default_config_hash: 9cjIqf_VAbqkAJjiQDJIEuBb5WIYRUHeW2eZ-ouHTBo
+entity_types:
+  paragraph:
+    - accordion
+    - accordion_content
+    - card
+    - cta_background_image
+    - featured_content
+    - file_attachments
+    - google_map
+    - highlighted_panel
+    - images_with_links
+    - image_gallery
+    - image_with_link
+    - large_icon_ctas
+    - large_image
+    - map_with_contact_info
+    - page_banner
+    - row_group
+    - slideshow
+    - slideshow_item
+    - slideshow_with_caption
+    - small_card
+    - small_card_group
+    - text_content
+    - text_content_full_width
+    - two_column_text_content
+    - view
+    - webform
+sidebar_width: 30
+full_width: 70
+ajax_content_update: true
+hover_highlight: false
+exclude_fields: {  }
+automatic_preview: false
+primary_color: '#002aff'
+ui_toggle: true
+ui_toggle_settings:
+  offset_top: ''
+  offset_bottom: '50'
+  offset_left: ''
+  offset_right: '50'
+duplicate_action_links:
+  height: 300
+action_links_in_viewport: null
+allow_detach: false

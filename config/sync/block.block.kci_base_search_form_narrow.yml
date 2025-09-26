@@ -1,0 +1,23 @@
+uuid: 1a2f02ea-0e74-45f1-a4e9-b7fe46bd61e6
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - kci_base
+_core:
+  default_config_hash: yEBET0cqDbk8dkWzaJw-8CKft0961VBflsISoSR6Lj8
+id: kci_base_search_form_narrow
+theme: kci_base
+region: primary_menu
+weight: -4
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form (narrow)'
+  label_display: '0'
+  provider: search
+  page_id: ''
+visibility: {  }

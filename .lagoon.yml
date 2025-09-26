@@ -1,5 +1,5 @@
 docker-compose-yaml: docker-compose.yml
-project: lagoon-boutique-template
+project: lagoon-healthandwellnessyukon-ca
 environment_variables:
   git_sha: true
 container-registries:
@@ -20,8 +20,8 @@ tasks:
         command: |
           # Only if we don't have a database yet
           if tables=$(drush sqlq 'show tables;') && [ -z "$tables" ]; then
-              drush sql-sync @lagoon.lagoon-boutique-template-lagoon-test @self -y
-              drush rsync @lagoon.lagoon-boutique-template-lagoon-test:%files @self:%files -- --omit-dir-times --no-perms --no-group --no-owner --chmod=ugo=rwX
+              drush sql-sync @lagoon.lagoon-healthandwellnessyukon-ca-lagoon-test @self -y
+              drush rsync @lagoon.lagoon-healthandwellnessyukon-ca-lagoon-test:%files @self:%files -- --omit-dir-times --no-perms --no-group --no-owner --chmod=ugo=rwX
           fi
         service: cli
         when: LAGOON_ENVIRONMENT_TYPE != "production"
@@ -46,7 +46,7 @@ environments:
   lagoon-uat:
     routes:
       - nginx:
-          - lagoon-boutique-template.test.yukon.ca:
+          - lagoon-healthandwellnessyukon-ca.test.yukon.ca:
               insecure: Redirect
     cronjobs:
       - name: drush cron

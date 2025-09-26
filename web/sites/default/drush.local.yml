@@ -1,0 +1,17 @@
+# Local drush configuration.
+#
+# This allows the site uri to be set to a specific domain in a local environment for drush commands.
+#
+# To activate this feature, copy this file to 'sites/default/' and rename it to 'drush.local.yml' such that its path plus
+# filename is 'sites/default/drush.local.yml'
+#
+# It may me helpful to also create a drush.stage.yml and drush.prod.yml for staging and production environments
+# that can be copied to the respectivce server when ready to deploy.
+#
+# See 'drush/drush.yml' for related configuration.
+#
+# Copy this file to sites/default/drush.local.yml, then uncomment and modify the uri line as needed.
+
+options:
+  # URI of the local site.
+  uri: 'yg-hss-transformation.sp83.kellett.ca'

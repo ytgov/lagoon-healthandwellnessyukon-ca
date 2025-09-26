@@ -1,0 +1,88 @@
+// Override styles in modules/contrib/simple_timeline/scss/timeline.scss.
+
+ul.timeline-list {
+  &:after {
+    background-color: $yghss-red;
+  }
+
+  li.timeline-item {
+    .timeline-item-wrapper {
+      span.timeline-marker {
+        background-image: url("../images/target.png");
+        background-color: transparent;
+        background-size: contain;
+        width: 25px;
+        height: 25px;
+        background-repeat: no-repeat;
+        border-radius: 0;
+        border: none;
+      }
+    }
+  }
+
+  &.alternate {
+    li.timeline-item {
+      .timeline-item-wrapper {
+        width: 100%;
+
+        @include media-breakpoint-up(lg) {
+          width: 50%;
+        }
+      }
+
+      &.odd {
+        .timeline-item-wrapper {
+          float: right;
+          text-align: left;
+          padding-right: 0;
+          padding-left: 1rem;
+
+          .timeline-marker {
+            left: 0;
+            right: auto;
+            transform: translateX(-50%);
+          }
+
+          @include media-breakpoint-up(lg) {
+            float: left;
+            text-align: right;
+            padding-right: 1rem;
+            padding-left: 0;
+
+            .timeline-marker {
+              right: 0;
+              left: auto;
+              transform: translateX(50%);
+            }
+          }
+        }
+      }
+
+      &.even {
+        .timeline-item-wrapper {
+          .timeline-marker {
+            left: 0;
+            transform: translateX(-50%);
+          }
+        }
+      }
+    }
+
+    &:after {
+      left: 0;
+
+      @include media-breakpoint-up(lg) {
+        left: 50%;
+      }
+    }
+  }
+
+}
+
+.milestone-label {
+  color: $yghss-purple;
+}
+
+.views-field-field-timeline-description {
+  line-height: normal;
+}

@@ -1,0 +1,30 @@
+uuid: c409e8ed-c6d8-41f6-8951-9981952bdff1
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.carousel
+    - field.field.paragraph.images_with_links.field_image_with_link
+    - paragraphs.paragraphs_type.images_with_links
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: KFllCpe2z-S_xqN6-senoaGWJIZLtSvnzyxUlpVEeVU
+id: paragraph.images_with_links.carousel
+targetEntityType: paragraph
+bundle: images_with_links
+mode: carousel
+content:
+  field_image_with_link:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_animation_style: true
+  search_api_excerpt: true
+  view_mode_selection: true

@@ -1,0 +1,28 @@
+uuid: d93454e0-170b-4225-b2c5-0055f90988ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_cta_color_option_colour
+    - taxonomy.vocabulary.cta_colour_options
+  module:
+    - color_field
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+_core:
+  default_config_hash: DkPUQ0XQWTv7jJv68t002dBHPax6Ou80Y_YgaNnG1i4
+id: taxonomy_term.cta_colour_options.field_cta_color_option_colour
+field_name: field_cta_color_option_colour
+entity_type: taxonomy_term
+bundle: cta_colour_options
+label: 'Text Colour'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type

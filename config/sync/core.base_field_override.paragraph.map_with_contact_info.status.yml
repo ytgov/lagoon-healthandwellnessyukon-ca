@@ -1,0 +1,22 @@
+uuid: 54536094-8a39-4523-904d-f4e5aed0882e
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.map_with_contact_info
+id: paragraph.map_with_contact_info.status
+field_name: status
+entity_type: paragraph
+bundle: map_with_contact_info
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

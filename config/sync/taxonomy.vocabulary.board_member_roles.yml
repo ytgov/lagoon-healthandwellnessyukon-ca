@@ -1,0 +1,9 @@
+uuid: 1f6635a8-0368-43d8-8be7-9a8e99c162cc
+langcode: en
+status: true
+dependencies: {  }
+name: 'Board Member Roles'
+vid: board_member_roles
+description: null
+weight: 0
+new_revision: false

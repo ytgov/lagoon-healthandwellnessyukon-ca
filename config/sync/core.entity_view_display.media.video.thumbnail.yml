@@ -1,0 +1,49 @@
+uuid: ed0c5326-cd1b-4eed-b5c6-6206ace78980
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.thumbnail
+    - field.field.media.video.field_media_in_library
+    - field.field.media.video.field_media_video_file
+    - image.style.square_library_thumbnail
+    - media.type.video
+  module:
+    - fences
+    - image
+_core:
+  default_config_hash: '-z4WoZApOm7TxzKbhP5vUZC01dvPKhEQc8-snmUcq8M'
+id: media.video.thumbnail
+targetEntityType: media
+bundle: video
+mode: thumbnail
+content:
+  thumbnail:
+    type: image
+    label: visually_hidden
+    settings:
+      image_link: ''
+      image_style: square_library_thumbnail
+      image_loading:
+        attribute: lazy
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    weight: 0
+    region: content
+hidden:
+  addtoany: true
+  created: true
+  field_media_in_library: true
+  field_media_video_file: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  uid: true

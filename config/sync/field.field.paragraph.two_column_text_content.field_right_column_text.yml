@@ -1,0 +1,26 @@
+uuid: 04dd7d4b-f65c-4ba8-b026-5aeb869d8291
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_right_column_text
+    - filter.format.rich_text
+    - paragraphs.paragraphs_type.two_column_text_content
+  module:
+    - text
+_core:
+  default_config_hash: lwDPziaG1o7iAsA1wDt7XoM-fQHdL-SLjNRAIlaJzJ0
+id: paragraph.two_column_text_content.field_right_column_text
+field_name: field_right_column_text
+entity_type: paragraph
+bundle: two_column_text_content
+label: 'Right Column Text'
+description: 'If you want to leave a blank space on the right, enter a line break without any text.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - rich_text
+field_type: text_long

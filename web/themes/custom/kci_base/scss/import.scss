@@ -1,0 +1,25 @@
+/* IMPORTS */
+
+// IMPORTANT: Typography and variables from the base theme must be imported
+// in the site theme right after the local typography and variables files.
+
+// bootstrap
+@import "bootstrap";
+// material design bootstrap
+// @import "../node_modules/mdbootstrap/scss/mdb-free.scss";
+// mixins
+@import "mixins";
+// Barrio imports. This will import all the main components.
+@import "barrio";
+
+// Custom components not part of barrio.
+@import "./components/accordions";
+@import "./components/calendar";
+@import "./components/carousel";
+@import "./components/mega-menu";
+@import "./components/paragraphs";
+@import "./components/slideshow";
+@import "./components/slideshow-with-individual-captions";
+@import "./components/modules";
+@import "./components/blocks";
+@import "./components/layout-builder";

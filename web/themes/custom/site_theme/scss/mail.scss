@@ -1,0 +1,264 @@
+@import "typography";
+@import "../../kci_base/scss/typography";
+@import "variables";
+@import "../../kci_base/scss/variables";
+
+#mimemail-body {
+  p {
+    margin: 10px 0;
+    padding: 0;
+  }
+  table {
+    border-collapse: collapse;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+  img,
+  a img {
+    border: 0;
+    height: auto;
+    outline: none;
+    text-decoration: none;
+  }
+
+  body {
+    @media only screen and (max-width: 480px) {
+      width: 100% !important;
+      min-width: 100% !important;
+    }
+  }
+
+  body,
+  #bodyTable,
+  #bodyCell {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: $font-family-base;
+  }
+  .mcnPreviewText {
+    display: none !important;
+  }
+  #outlook a {
+    padding: 0;
+  }
+  img {
+    -ms-interpolation-mode: bicubic;
+  }
+  table {
+    mso-table-lspace: 0;
+    mso-table-rspace: 0;
+  }
+  .ReadMsgBody {
+    width: 100%;
+  }
+
+  p,
+  a,
+  li,
+  td,
+  blockquote {
+    mso-line-height-rule: exactly;
+  }
+
+  a[href^="tel"],
+  a[href^="sms"] {
+    color: inherit;
+    cursor: default;
+    text-decoration: none;
+  }
+
+  p,
+  a,
+  li,
+  td,
+  body,
+  table,
+  blockquote {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  .ExternalClass {
+    width: 100%;
+    &, p, td, div, span, font {
+      line-height: 100%;
+    }
+  }
+
+  a[x-apple-data-detectors] {
+    color: inherit !important;
+    text-decoration: none !important;
+    font-size: inherit !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+  }
+
+  .message-container {
+    border: 0;
+    max-width: 900px !important;
+  }
+  .message-content {
+    word-break: break-word;
+    .align-center {
+      &, p {
+        text-align: center;
+      }
+    }
+    .align-left {
+      float: left;
+      margin-right: 1.25rem;
+    }
+    .align-right {
+      float: right;
+      margin-left: 1.25rem;
+    }
+    img {
+      height: auto !important;
+      max-width: 100%;
+    }
+  }
+
+  body,
+  #bodyTable {
+    background-color: $body-table-bg;
+  }
+
+  #bodyCell {
+    padding: 10px;
+    border-top: 0;
+    @media only screen and (max-width: 480px) {
+      padding-top: 10px !important;
+    }
+  }
+
+  #message-header {
+    background-color: $white;
+    border-top: 0;
+    border-bottom: 0;
+    padding-top: 9px;
+    padding-bottom: 0;
+    color: $email-header-text-color;
+    .message-branding {
+      text-align: center;
+      @media screen and (min-width: 852px) {
+        text-align: left;
+      }
+      .site-name {
+        padding-left: 16px;
+        display: inline-block;
+        text-align: center;
+        @media screen and (min-width: 852px) {
+          margin-top: 0;
+        }
+        .title, .subtitle {
+          text-align: center;
+          display: block;
+        }
+        .title {
+          font-size: 1.5rem;
+        }
+        .subtitle {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  #message-body {
+    background-color: $body-bg;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-top: 0;
+    padding-top: 0;
+    padding-bottom: 9px;
+    .message-content {
+      &,
+      p {
+        color: $body-color;
+        font-family: $font-family-base;
+        font-size: 16px;
+        line-height: 150%;
+        text-align: left;
+        @media only screen and (max-width: 480px) {
+          font-size: 16px !important;
+          line-height: 150% !important;
+        }
+      }
+      a,
+      p a {
+        color: $link-color;
+        font-weight: normal;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  #message-footer {
+    background-color: $white;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-top: 0;
+    border-bottom: 2px solid #eaeaea;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    text-align: center;
+    .message-footer-content {
+      font-size: 0.8rem;
+      &,
+      p, a {
+        color: $body-color;
+      }
+      a,
+      p a {
+        font-weight: normal;
+        text-decoration: underline;
+        &:hover {
+          color: $primary-light;
+        }
+      }
+    }
+  }
+
+  // Responsive Styles
+
+  @media only screen and (max-width: 480px) {
+    body,
+    table,
+    td,
+    p,
+    a,
+    li,
+    blockquote {
+      -webkit-text-size-adjust: none !important;
+    }
+  }
+
+  @media only screen and (max-width: 480px) {
+    .text-content-container {
+      max-width: 100% !important;
+      width: 100% !important;
+    }
+  }
+  @media only screen and (max-width: 480px) {
+    .message-content,
+    .message-content-container {
+      padding-right: 18px !important;
+      padding-left: 18px !important;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+uuid: fc77a3ca-4728-4866-8fdc-6586d3cabd96
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.page_banner
+  module:
+    - node
+    - views
+  theme:
+    - site_theme
+_core:
+  default_config_hash: SOwU-oT-Fg2Kjb8B495nJPCnKFUehYuZUkgrjXL7gK0
+id: views_block__page_banner_page_banner_block
+theme: site_theme
+region: featured_top
+weight: -6
+provider: null
+plugin: 'views_block:page_banner-page_banner_block'
+settings:
+  id: 'views_block:page_banner-page_banner_block'
+  label: ''
+  label_display: '0'
+  provider: views
+  context_mapping:
+    nid: '@node.node_route_context:node'
+  views_label: ''
+  items_per_page: none
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      blog: blog
+      events: events
+      news: news
+      page: page

@@ -1,0 +1,29 @@
+uuid: 559c531d-1e96-473b-997e-1de92644948e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.home_landing_hero
+    - field.field.paragraph.slideshow_with_caption.field_sshow_items
+    - paragraphs.paragraphs_type.slideshow_with_caption
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: w9MONQTablZ0rgNMSqufs3pvH90NVkTzn8guBcHuPKQ
+id: paragraph.slideshow_with_caption.home_landing_hero
+targetEntityType: paragraph
+bundle: slideshow_with_caption
+mode: home_landing_hero
+content:
+  field_sshow_items:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: home_landing_hero
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_animation_style: true
+  search_api_excerpt: true

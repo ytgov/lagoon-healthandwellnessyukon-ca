@@ -1,0 +1,18 @@
+uuid: ce549c5b-e215-4f28-81a7-0cc494978fec
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.social_media
+id: block_content.social_media.changed
+field_name: changed
+entity_type: block_content
+bundle: social_media
+label: Changed
+description: 'The time that the content block was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

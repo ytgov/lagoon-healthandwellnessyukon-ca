@@ -1,0 +1,5 @@
+display:
+  default:
+    display_title: 'Par défaut'
+  page_banner_block:
+    display_title: Bloc

@@ -1,0 +1,20 @@
+uuid: eef34ad4-5b79-4604-9f68-e1179c4c87ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.cta_colour_options
+  module:
+    - path
+id: taxonomy_term.cta_colour_options.path
+field_name: path
+entity_type: taxonomy_term
+bundle: cta_colour_options
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

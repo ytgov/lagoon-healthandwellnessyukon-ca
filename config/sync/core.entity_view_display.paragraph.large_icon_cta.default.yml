@@ -1,0 +1,55 @@
+uuid: e52204a9-c433-4c85-9a32-1f593a138fb4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.large_icon_cta.field_cta_icon
+    - field.field.paragraph.large_icon_cta.field_icon_cta_link
+    - field.field.paragraph.large_icon_cta.field_plain_description
+    - paragraphs.paragraphs_type.large_icon_cta
+  module:
+    - fences
+    - link
+    - options
+id: paragraph.large_icon_cta.default
+targetEntityType: paragraph
+bundle: large_icon_cta
+mode: default
+content:
+  field_cta_icon:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 0
+    region: content
+  field_icon_cta_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_plain_description:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  search_api_excerpt: true

@@ -1,0 +1,19 @@
+uuid: 5ee9694b-f8d3-4ecb-919e-1f1efa1257c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_plain_description
+    - paragraphs.paragraphs_type.large_icon_cta
+id: paragraph.large_icon_cta.field_plain_description
+field_name: field_plain_description
+entity_type: paragraph
+bundle: large_icon_cta
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

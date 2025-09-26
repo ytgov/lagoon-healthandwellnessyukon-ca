@@ -1,0 +1,24 @@
+uuid: fd8b9bd9-18c2-4241-a8ae-91a5d37c9e25
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading
+    - paragraphs.paragraphs_type.highlighted_panel
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.highlighted_panel.field_heading
+field_name: field_heading
+entity_type: paragraph
+bundle: highlighted_panel
+label: Heading/Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

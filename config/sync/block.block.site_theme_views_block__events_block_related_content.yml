@@ -1,0 +1,33 @@
+uuid: 31be49a4-d792-40e2-b530-940db34e3495
+langcode: fr
+status: true
+dependencies:
+  config:
+    - views.view.events
+  module:
+    - node
+    - views
+  theme:
+    - site_theme
+id: site_theme_views_block__events_block_related_content
+theme: site_theme
+region: sidebar_second
+weight: -12
+provider: null
+plugin: 'views_block:events-block_related_content'
+settings:
+  id: 'views_block:events-block_related_content'
+  label: ''
+  label_display: visible
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      events: events

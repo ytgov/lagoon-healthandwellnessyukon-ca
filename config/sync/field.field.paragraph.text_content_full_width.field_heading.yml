@@ -1,0 +1,21 @@
+uuid: 7d0d89f0-2235-4853-8177-3da0b55a627f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading
+    - paragraphs.paragraphs_type.text_content_full_width
+_core:
+  default_config_hash: SqzaYQm-yPG-8LOK65yd_WBkbW0ti4XbXdaegQWGFEo
+id: paragraph.text_content_full_width.field_heading
+field_name: field_heading
+entity_type: paragraph
+bundle: text_content_full_width
+label: Heading/Title
+description: 'Optional pre-formatted heading or title for this block of text.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

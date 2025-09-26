@@ -1,0 +1,20 @@
+uuid: deb2b15d-724a-4348-828c-fb4b56549a14
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.featured_content_image
+  module:
+    - crop
+_core:
+  default_config_hash: 6_rLXWiypxzazYXN822sg5FUx6mZ-ZsEGV1WaJ0Lf3A
+name: crop_featured_content_image
+label: 'Cropped: Featured Content Image'
+effects:
+  7f51a748-8ba7-4e61-bc36-b6272c4afb89:
+    uuid: 7f51a748-8ba7-4e61-bc36-b6272c4afb89
+    id: crop_crop
+    weight: null
+    data:
+      crop_type: featured_content_image
+      automatic_crop_provider: null

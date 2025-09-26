@@ -1,0 +1,21 @@
+uuid: 3c7382d8-cac4-439b-a567-37478302d3f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading
+    - paragraphs.paragraphs_type.view
+_core:
+  default_config_hash: r0YV9Z0TcD_hyiYChSCuQPrLNrOkc9ZvC6p9iaT3gqc
+id: paragraph.view.field_heading
+field_name: field_heading
+entity_type: paragraph
+bundle: view
+label: Heading/Title
+description: 'An optional heading/title to display above the view.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

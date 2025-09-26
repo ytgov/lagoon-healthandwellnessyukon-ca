@@ -1,0 +1,23 @@
+uuid: 62e95d8c-260e-4d7d-9570-b3394bd1f30c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_social_media_link
+    - paragraphs.paragraphs_type.social_media_icon_link
+  module:
+    - link
+id: paragraph.social_media_icon_link.field_social_media_link
+field_name: field_social_media_link
+entity_type: paragraph
+bundle: social_media_icon_link
+label: Link
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 17
+field_type: link

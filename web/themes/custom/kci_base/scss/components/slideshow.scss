@@ -1,0 +1,42 @@
+/* Media Slideshow */
+.block-content-slideshow,
+.paragraph-content-slideshow {
+  margin: 0;
+  // Arguments should match the width and height of the applied image style
+  @include responsive_media_slideshow ($slideshow-width, $slideshow-height);
+  .background-cover {
+    @include banner-color-overlay($banner-overlay-bg-color);
+  }
+  .slideshow-caption {
+    @include banner_caption_overlay($banner-caption-text-color);
+    @if $banner-cta-menu-overlay-banner {
+      @include media-breakpoint-up(lg) {
+        margin-top: -35px;
+      }
+    }
+  }
+  .carousel-indicators {
+    @if $banner-cta-menu-overlay-banner {
+      // move the indicators up if there is a CTA menu overlaying the
+      // banner.
+      @include media-breakpoint-up(lg) {
+        bottom: 70px;
+      }
+    }
+    li {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      &::marker {
+        color: transparent;
+    }
+    }
+  }
+  .carousel-indicators,
+  .carousel-control {
+    z-index: 30;
+  }
+  .has-floating-header & .dropbutton-wrapper {
+    top: 110px;
+  }
+}

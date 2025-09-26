@@ -1,0 +1,38 @@
+uuid: 8ac9525d-a896-472f-9a14-d72f4f6c892d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.images_with_links.field_image_with_link
+    - paragraphs.paragraphs_type.images_with_links
+  module:
+    - paragraphs
+_core:
+  default_config_hash: VO5dsW-iMGno0hKE3yB9cG4wbIRZEYG2xVKTY9i8YwU
+id: paragraph.images_with_links.default
+targetEntityType: paragraph
+bundle: images_with_links
+mode: default
+content:
+  field_image_with_link:
+    type: paragraphs
+    weight: 2
+    region: content
+    settings:
+      title: 'Image Link'
+      title_plural: 'Image Links'
+      edit_mode: closed
+      closed_mode: preview
+      autocollapse: all
+      closed_mode_threshold: 0
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: image_with_link
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

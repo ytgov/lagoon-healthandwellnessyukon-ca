@@ -1,0 +1,50 @@
+uuid: 6941870e-53cf-4cd2-aa46-0049f057d22a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.accordion.field_accordion_content
+    - field.field.paragraph.accordion.field_heading
+    - paragraphs.paragraphs_type.accordion
+  module:
+    - entity_reference_revisions
+    - fences
+    - frontend_editing
+id: paragraph.accordion.preview
+targetEntityType: paragraph
+bundle: accordion
+mode: preview
+content:
+  field_accordion_content:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: preview
+      link: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+      frontend_editing:
+        ajax_content_update: 0
+        move_up_down: 0
+        add_items: 0
+    weight: 1
+    region: content
+  field_heading:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  extra_field_frontend_editing: true

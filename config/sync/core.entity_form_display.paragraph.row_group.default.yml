@@ -1,0 +1,46 @@
+uuid: 6aa0f64f-d6b9-4f2c-8475-63440d5b21d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.row_group.field_content
+    - field.field.paragraph.row_group.field_heading
+    - paragraphs.paragraphs_type.row_group
+  module:
+    - paragraphs
+id: paragraph.row_group.default
+targetEntityType: paragraph
+bundle: row_group
+mode: default
+content:
+  field_content:
+    type: paragraphs
+    weight: 1
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: preview
+      autocollapse: all
+      closed_mode_threshold: 0
+      add_mode: modal
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        add_above: add_above
+        collapse_edit_all: collapse_edit_all
+        convert: convert
+        duplicate: duplicate
+    third_party_settings: {  }
+  field_heading:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

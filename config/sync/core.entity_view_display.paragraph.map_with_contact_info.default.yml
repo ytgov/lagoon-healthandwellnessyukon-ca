@@ -1,0 +1,57 @@
+uuid: fa9a9be2-db5c-4239-acd6-d60b228f1083
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.map_with_contact_info.field_map_location
+    - field.field.paragraph.map_with_contact_info.field_map_position
+    - field.field.paragraph.map_with_contact_info.field_text_content
+    - paragraphs.paragraphs_type.map_with_contact_info
+  module:
+    - options
+    - simple_gmap
+    - text
+_core:
+  default_config_hash: V8wGqaADlObQjkqQg-MeYe9XTVxrBdYI5ZhDJbBRfro
+id: paragraph.map_with_contact_info.default
+targetEntityType: paragraph
+bundle: map_with_contact_info
+mode: default
+content:
+  field_map_location:
+    type: simple_gmap
+    label: hidden
+    settings:
+      include_map: true
+      include_static_map: false
+      include_link: false
+      include_text: false
+      iframe_height: 400px
+      iframe_width: 100%
+      iframe_title: ''
+      static_scale: 1
+      zoom_level: 14
+      link_text: 'View larger map'
+      map_type: m
+      langcode: en
+      apikey: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_map_position:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_text_content:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_animation_style: true
+  search_api_excerpt: true

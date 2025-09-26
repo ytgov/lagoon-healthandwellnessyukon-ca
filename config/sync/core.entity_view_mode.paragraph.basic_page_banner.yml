@@ -1,0 +1,13 @@
+uuid: 397853c5-900f-401a-87ce-415edf1ee7b7
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: P4kebMwAy61sHuW3EqsKzoZPy6GR0BSJnSEXbDgb4X8
+id: paragraph.basic_page_banner
+label: 'Basic Page Banner'
+description: ''
+targetEntityType: paragraph
+cache: true

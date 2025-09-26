@@ -1,0 +1,25 @@
+uuid: edbc5ea6-254e-4f45-995c-f8a73f70441d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.google_map.field_map_location
+    - paragraphs.paragraphs_type.google_map
+_core:
+  default_config_hash: ff4zOtsFQZh8DGmr_VDjZH6pmvgkC845grD4feMFIQw
+id: paragraph.google_map.default
+targetEntityType: paragraph
+bundle: google_map
+mode: default
+content:
+  field_map_location:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

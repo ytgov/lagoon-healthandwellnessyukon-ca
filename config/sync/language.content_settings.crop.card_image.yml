@@ -1,0 +1,13 @@
+uuid: 2d4d252a-7b7d-4f13-a676-901b57638c24
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.card_image
+_core:
+  default_config_hash: S0BJBX0sDK29FOxde417N-lv_qk2mag024AVmxjZKG8
+id: crop.card_image
+target_entity_type_id: crop
+target_bundle: card_image
+default_langcode: site_default
+language_alterable: false

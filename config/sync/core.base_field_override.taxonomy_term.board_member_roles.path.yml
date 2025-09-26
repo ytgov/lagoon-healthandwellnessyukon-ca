@@ -1,0 +1,20 @@
+uuid: c3c5d6cd-bec1-49cc-b43f-6194cf366660
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.board_member_roles
+  module:
+    - path
+id: taxonomy_term.board_member_roles.path
+field_name: path
+entity_type: taxonomy_term
+bundle: board_member_roles
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

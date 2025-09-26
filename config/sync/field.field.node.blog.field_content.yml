@@ -1,0 +1,123 @@
+uuid: 2f9913b1-7976-4197-b2b9-68e832e7c2d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content
+    - node.type.blog
+    - paragraphs.paragraphs_type.accordion_content
+    - paragraphs.paragraphs_type.image_with_link
+    - paragraphs.paragraphs_type.large_icon_cta
+    - paragraphs.paragraphs_type.page_banner
+    - paragraphs.paragraphs_type.slideshow
+    - paragraphs.paragraphs_type.slideshow_item
+    - paragraphs.paragraphs_type.slideshow_with_caption
+    - paragraphs.paragraphs_type.social_media_icon_link
+    - paragraphs.paragraphs_type.view
+  module:
+    - entity_reference_revisions
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: node.blog.field_content
+field_name: field_content
+entity_type: node
+bundle: blog
+label: Content
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      large_icon_cta: large_icon_cta
+      accordion_content: accordion_content
+      image_with_link: image_with_link
+      page_banner: page_banner
+      slideshow: slideshow
+      slideshow_item: slideshow_item
+      slideshow_with_caption: slideshow_with_caption
+      view: view
+      social_media_icon_link: social_media_icon_link
+    negate: 1
+    target_bundles_drag_drop:
+      accordion:
+        weight: -47
+        enabled: false
+      accordion_content:
+        weight: -34
+        enabled: true
+      card:
+        weight: -46
+        enabled: false
+      cta_background_image:
+        weight: -44
+        enabled: false
+      featured_content:
+        weight: -43
+        enabled: false
+      file_attachments:
+        weight: -42
+        enabled: false
+      google_map:
+        weight: -41
+        enabled: false
+      highlighted_panel:
+        weight: -48
+        enabled: false
+      image_gallery:
+        weight: -39
+        enabled: false
+      image_with_link:
+        weight: -33
+        enabled: true
+      images_with_links:
+        weight: -40
+        enabled: false
+      large_icon_cta:
+        weight: -35
+        enabled: true
+      large_icon_ctas:
+        weight: -45
+        enabled: false
+      large_image:
+        weight: -38
+        enabled: false
+      map_with_contact_info:
+        weight: -37
+        enabled: false
+      page_banner:
+        weight: -32
+        enabled: true
+      slideshow:
+        weight: -31
+        enabled: true
+      slideshow_item:
+        weight: -30
+        enabled: true
+      slideshow_with_caption:
+        weight: -29
+        enabled: true
+      social_media_icon_link:
+        weight: -27
+        enabled: true
+      text_content:
+        weight: -50
+        enabled: false
+      text_content_full_width:
+        weight: -51
+        enabled: false
+      two_column_text_content:
+        weight: -49
+        enabled: false
+      view:
+        weight: -28
+        enabled: true
+      webform:
+        weight: -36
+        enabled: false
+field_type: entity_reference_revisions

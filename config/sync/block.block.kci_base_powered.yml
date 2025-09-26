@@ -1,0 +1,22 @@
+uuid: e7054f18-c189-4b9b-aa2d-ed4b8f3fbe42
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - kci_base
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: kci_base_powered
+theme: kci_base
+region: alerts
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

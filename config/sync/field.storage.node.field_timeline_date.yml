@@ -1,0 +1,20 @@
+uuid: c7e1853c-494b-4f05-b9f2-c5b2e8336072
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - node
+id: node.field_timeline_date
+field_name: field_timeline_date
+entity_type: node
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

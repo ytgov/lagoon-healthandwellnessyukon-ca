@@ -1,0 +1,104 @@
+uuid: e50ef8a8-534e-44ef-8fd0-0eb2c34d6957
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.two_column_text_content.field_heading
+    - field.field.paragraph.two_column_text_content.field_left_column_text
+    - field.field.paragraph.two_column_text_content.field_right_column_text
+    - paragraphs.paragraphs_type.two_column_text_content
+  module:
+    - field_group
+    - text
+third_party_settings:
+  field_group:
+    group_row:
+      children:
+        - group_column_left
+        - group_column_right
+      label: Row
+      parent_name: ''
+      region: content
+      weight: 1
+      format_type: html_element
+      format_settings:
+        classes: 'row row-cols-1 row-cols-xl-2'
+        show_empty_fields: false
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+    group_column_left:
+      children:
+        - field_left_column_text
+      label: 'Column Left'
+      parent_name: group_row
+      region: content
+      weight: 3
+      format_type: html_element
+      format_settings:
+        classes: col
+        show_empty_fields: false
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+    group_column_right:
+      children:
+        - field_right_column_text
+      label: 'Column Right'
+      parent_name: group_row
+      region: content
+      weight: 4
+      format_type: html_element
+      format_settings:
+        classes: col
+        show_empty_fields: false
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+_core:
+  default_config_hash: HFBjoaM_RFRq1AjDg2DZNi4WLRM4YF_gPttRmPWPiqQ
+id: paragraph.two_column_text_content.default
+targetEntityType: paragraph
+bundle: two_column_text_content
+mode: default
+content:
+  field_heading:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_left_column_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_right_column_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+hidden:
+  field_animation_style: true
+  search_api_excerpt: true

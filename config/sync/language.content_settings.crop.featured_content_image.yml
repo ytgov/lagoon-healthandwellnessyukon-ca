@@ -1,0 +1,13 @@
+uuid: 7070ff71-bc21-4d3e-84f0-28ed9e860b31
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.featured_content_image
+_core:
+  default_config_hash: zQQKOSBfWfuOnLG4sWm_1cDi-T4AijIkhcI-GeszkAQ
+id: crop.featured_content_image
+target_entity_type_id: crop
+target_bundle: featured_content_image
+default_langcode: site_default
+language_alterable: false

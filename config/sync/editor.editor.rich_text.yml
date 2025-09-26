@@ -1,0 +1,97 @@
+uuid: 5378897e-8fd3-43b0-b80f-1d8e1aca28a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.rich_text
+  module:
+    - ckeditor5
+_core:
+  default_config_hash: ALtg1mSm8LFNzPg3BzcTSUS28XpEdeBNqViJxsuKwvQ
+format: rich_text
+editor: ckeditor5
+settings:
+  toolbar:
+    items:
+      - heading
+      - '|'
+      - bold
+      - italic
+      - strikethrough
+      - superscript
+      - subscript
+      - removeFormat
+      - '|'
+      - alignment
+      - '|'
+      - link
+      - drupalMedia
+      - insertTable
+      - '|'
+      - bulletedList
+      - numberedList
+      - indent
+      - outdent
+      - '|'
+      - blockQuote
+      - horizontalLine
+      - '-'
+      - sourceEditing
+  plugins:
+    ckeditor5_alignment:
+      enabled_alignments:
+        - center
+        - left
+        - right
+    ckeditor5_heading:
+      enabled_headings:
+        - heading2
+        - heading3
+        - heading4
+        - heading5
+        - heading6
+    ckeditor5_list:
+      properties:
+        reversed: true
+        startIndex: true
+      multiBlock: true
+    ckeditor5_sourceEditing:
+      allowed_tags: {  }
+    ckeditor_link_styles_linkStyles:
+      styles:
+        -
+          label: 'Primary Button'
+          element: '<a class="btn btn-primary">'
+        -
+          label: 'Secondary Button'
+          element: '<a class="btn btn-secondary">'
+        -
+          label: 'Warning Button'
+          element: '<a class="btn btn-warning">'
+        -
+          label: 'Danger Button'
+          element: '<a class="btn btn-danger">'
+    ckeditor_media_resize_mediaResize:
+      apply_image_styles: true
+      image_styles:
+        - cke_media_resize_small
+        - cke_media_resize_medium
+        - cke_media_resize_large
+        - cke_media_resize_xl
+    editor_advanced_link_link:
+      enabled_attributes:
+        - target
+        - title
+    linkit_extension:
+      linkit_enabled: true
+      linkit_profile: default
+    media_media:
+      allow_view_mode_override: true
+image_upload:
+  status: true
+  scheme: public
+  directory: inline-images
+  max_size: null
+  max_dimensions:
+    width: null
+    height: null
