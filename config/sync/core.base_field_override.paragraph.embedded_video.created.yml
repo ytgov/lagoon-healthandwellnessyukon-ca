@@ -1,17 +1,17 @@
-uuid: 0aec81bf-fd21-4fa2-9272-d42ec59f2f17
+uuid: 2f4ef754-88e2-4716-9215-2bad8034f780
 langcode: en
 status: true
 dependencies:
   config:
-    - paragraphs.paragraphs_type.slideshow_with_caption
-id: paragraph.slideshow_with_caption.created
+    - paragraphs.paragraphs_type.embedded_video
+id: paragraph.embedded_video.created
 field_name: created
 entity_type: paragraph
-bundle: slideshow_with_caption
+bundle: embedded_video
 label: 'Authored on'
 description: 'The time that the Paragraph was created.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
