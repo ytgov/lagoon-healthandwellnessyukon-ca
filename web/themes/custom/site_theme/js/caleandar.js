@@ -156,6 +156,10 @@ function createCalendar(calendar, element, adjuster) {
       prevIcon.setAttribute('aria-hidden', 'true');
       rwd.appendChild(prevIcon);
       datetime.appendChild(rwd);
+      var prevIconLabel = document.createElement('span');
+      prevIconLabel.classList.add('visually-hidden');
+      prevIconLabel.innerHTML = Drupal.t('Previous Month');
+      rwd.appendChild(prevIconLabel);
     }
     var today = document.createElement('div');
     today.classList.add('today');
@@ -171,6 +175,10 @@ function createCalendar(calendar, element, adjuster) {
       nextIcon.setAttribute('aria-hidden', 'true');
       fwd.appendChild(nextIcon);
       datetime.appendChild(fwd);
+      var nextIconLabel = document.createElement('span');
+      nextIconLabel.classList.add('visually-hidden');
+      nextIconLabel.innerHTML = Drupal.t('Next Month');
+      fwd.appendChild(nextIconLabel);
     }
     if (calendar.Options.DatetimeLocation) {
       document.getElementById(calendar.Options.DatetimeLocation).innerHTML = "";

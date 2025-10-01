@@ -15,4 +15,4 @@ id: paragraph.large_icon_cta
 target_entity_type_id: paragraph
 target_bundle: large_icon_cta
 default_langcode: site_default
-language_alterable: true
+language_alterable: false

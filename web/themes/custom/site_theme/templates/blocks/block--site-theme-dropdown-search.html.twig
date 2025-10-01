@@ -46,6 +46,7 @@
     <div{{ content_attributes.addClass('content') }}>
       <button class="bg-transparent border-0 text-decoration-none ms-2" role="button" id="searchBlockDropdown" data-bs-toggle="dropdown" aria-expanded="false">
         <i class="fas fa-search" title="{{ 'Search'|t }}"></i>
+        <span class="visually-hidden">{{ 'Open Search Bar'|t }}</span>
       </button>
       <div class="dropdown-menu dropdown-search dropdown-menu-lg-end p-3 rounded-4">
         {{ content }}

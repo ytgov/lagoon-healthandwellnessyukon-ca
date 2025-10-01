@@ -59,7 +59,8 @@
         "drupal/role_delegation": "^1.4",
         "drupal/content_moderation_notifications": "^3.7",
         "drupal/editor_advanced_link": "^2.3",
-        "drupal/media_entity_download": "^2.4"
+        "drupal/media_entity_download": "^2.4",
+        "drupal/menu_breadcrumb": "^2.0"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,

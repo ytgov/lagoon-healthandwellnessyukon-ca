@@ -1920,8 +1920,8 @@ display:
           label: ''
           exclude: true
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '{{ title__value | raw }}'
             make_link: false
             path: ''
             absolute: false

@@ -1,9 +1,9 @@
-uuid: 51b4e6ea-d126-45d0-ae3a-2150f083b7df
+uuid: 3f83042a-5d5a-4762-b487-b9be448b3283
 langcode: en
 status: true
 dependencies:
   config:
-    - paragraphs.paragraphs_type.row_group
+    - paragraphs.paragraphs_type.embedded_video
   module:
     - content_translation
 third_party_settings:
@@ -11,8 +11,8 @@ third_party_settings:
     enabled: true
     bundle_settings:
       untranslatable_fields_hide: '1'
-id: paragraph.row_group
+id: paragraph.embedded_video
 target_entity_type_id: paragraph
-target_bundle: row_group
+target_bundle: embedded_video
 default_langcode: site_default
 language_alterable: false
