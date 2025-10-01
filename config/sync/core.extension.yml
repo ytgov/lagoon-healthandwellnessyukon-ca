@@ -77,6 +77,7 @@ module:
   media_library_edit: 0
   media_pdf_thumbnail: 0
   menu_block: 0
+  menu_breadcrumb: 0
   menu_link_content: 0
   menu_ui: 0
   metatag: 0

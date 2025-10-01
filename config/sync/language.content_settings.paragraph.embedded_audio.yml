@@ -1,9 +1,9 @@
-uuid: 51b4e6ea-d126-45d0-ae3a-2150f083b7df
+uuid: f7e007da-1123-435a-87c1-f44fafd1a744
 langcode: en
 status: true
 dependencies:
   config:
-    - paragraphs.paragraphs_type.row_group
+    - paragraphs.paragraphs_type.embedded_audio
   module:
     - content_translation
 third_party_settings:
@@ -11,8 +11,8 @@ third_party_settings:
     enabled: true
     bundle_settings:
       untranslatable_fields_hide: '1'
-id: paragraph.row_group
+id: paragraph.embedded_audio
 target_entity_type_id: paragraph
-target_bundle: row_group
+target_bundle: embedded_audio
 default_langcode: site_default
 language_alterable: false
