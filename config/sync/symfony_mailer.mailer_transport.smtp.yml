@@ -1,0 +1,18 @@
+uuid: 28a33ad8-88eb-4bb2-8330-ffc16cb77f4d
+langcode: en
+status: true
+dependencies: {  }
+id: smtp
+label: SMTP
+plugin: smtp
+configuration:
+  user: ''
+  pass: ''
+  host: smtp.gov.yk.ca
+  port: 25
+  query:
+    verify_peer: false
+    local_domain: yukonhealthtransformation.ca
+    restart_threshold: null
+    restart_threshold_sleep: null
+    ping_threshold: null

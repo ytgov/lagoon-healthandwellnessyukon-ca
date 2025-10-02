@@ -225,7 +225,7 @@ handlers:
     settings:
       states:
         - completed
-      to_mail: healthtransformation@yukon.ca
+      to_mail: _default
       to_options: {  }
       bcc_mail: ''
       bcc_options: {  }

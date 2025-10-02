@@ -3,11 +3,11 @@ _core:
 session:
   parameter: language
 url:
-  source: path_prefix
+  source: domain
   prefixes:
     en: ''
     fr: fr
   domains:
-    en: ''
-    fr: ''
+    en: yukonhealthtransformation.ca
+    fr: reforme-sante-yukon.ca
 selected_langcode: site_default
