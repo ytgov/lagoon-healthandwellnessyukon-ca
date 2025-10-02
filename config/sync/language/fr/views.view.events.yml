@@ -6,3 +6,16 @@ display:
       fields:
         edit_node:
           text: Modifier
+  block_past_events:
+    display_options:
+      fields:
+        view_node:
+          text: 'En savoir plus'
+        nothing:
+          alter:
+            text: "<span class=\"d-block display-5 news-events-title my-3 text-decoration-underline\">{{ title }}</span>\r\n<div class=\"d-flex align-items-start\">\r\n  {% if field_sharing_thumbnail %}\r\n  <div class=\"me-3\">\r\n    {{ field_sharing_thumbnail }}\r\n  </div>\r\n  {% endif %}\r\n  <div class=\"event-details flex-grow-1\">\r\n    <p class=\"fw-bold\">{{ field_event_date }}</p>\r\n    <p>{{ field_content }}</p>\r\n    <div class=\"text-end\"><a href=\"{{ view_node }}\" class=\"btn btn-primary rounded-pill stretched-link\"  title=\"{{ title_1}}>En savoir plus</a></div>\r\n  </div>\r\n</div>"
+  home_upcoming_events_slide:
+    display_options:
+      fields:
+        view_node:
+          text: 'En savoir plus'
