@@ -1211,20 +1211,7 @@ display:
           empty_zero: false
           hide_alter_empty: true
           destination: true
-      empty:
-        area:
-          id: area
-          table: views
-          field: area
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: text
-          empty: true
-          content:
-            value: '<p><strong>Sorry, there are no other blogs available at this time.</strong></p>'
-            format: rich_text
-          tokenize: false
+      empty: {  }
       arguments:
         nid:
           id: nid
@@ -1301,6 +1288,7 @@ display:
           metatags: {  }
           tokenize: false
         simple_sitemap_display_extender: {  }
+      block_hide_empty: true
     cache_metadata:
       max-age: -1
       contexts:
