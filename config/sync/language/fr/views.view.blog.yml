@@ -4,11 +4,22 @@ display:
       fields:
         view_node:
           text: 'En savoir plus'
+      empty:
+        area:
+          content:
+            value: '<p><strong>Désolé, il n’y a aucun autre billet en ligne pour le moment.</strong></p>'
+            format: rich_text
   block_blog_sidebar:
     display_options:
       fields:
         view_node:
           text: 'En savoir plus'
+      title: 'Publications récentes'
+      empty:
+        area:
+          content:
+            value: '<p><strong>Désolé, il n’y a aucun autre billet en ligne pour le moment.</strong></p>'
+            format: rich_text
   full_blog_block:
     display_options:
       fields:
